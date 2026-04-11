@@ -1,0 +1,50 @@
+name: Update Dashboard Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at UTC 06:00 (Beijing 14:00)
+  workflow_dispatch:       # Manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests geojson flask flask-cors websocket-client
+
+      - name: Run data pipeline
+        env:
+          AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
+        run: cd dashboard && python -m pipeline.run_all
+
+      - name: Copy data to public directory for static serving
+        run: |
+          # Conflict events (pipeline-generated)
+          cp -r dashboard/data/conflicts/ dashboard/public/data/conflicts/
+
+          # Maritime vessels snapshot (pipeline-generated)
+          cp dashboard/data/maritime/vessels_snapshot.geojson dashboard/public/data/maritime/ 2>/dev/null || true
+
+          # Static data (already in repo, ensure copies exist in public)
+          cp dashboard/data/bases/military_bases.geojson dashboard/public/data/bases/
+          cp dashboard/data/trade/strategic_flows.geojson dashboard/public/data/trade/
+          cp dashboard/data/trade/country_centroids.json dashboard/public/data/trade/
+          cp dashboard/data/maritime/chokepoints.geojson dashboard/public/data/maritime/
+
+          # Metadata
+          cp dashboard/data/_meta/last_update.json dashboard/public/data/_meta/ 2>/dev/null || true
+
+      - name: Commit and push updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update dashboard data [automated]'
+          file_pattern: 'dashboard/public/data/**'

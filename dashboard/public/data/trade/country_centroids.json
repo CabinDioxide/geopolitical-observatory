@@ -1,0 +1,207 @@
+{
+  "CHN": {
+    "name": "China",
+    "lat": 35.86,
+    "lon": 104.2
+  },
+  "USA": {
+    "name": "United States",
+    "lat": 37.09,
+    "lon": -95.71
+  },
+  "JPN": {
+    "name": "Japan",
+    "lat": 36.2,
+    "lon": 138.25
+  },
+  "DEU": {
+    "name": "Germany",
+    "lat": 51.17,
+    "lon": 10.45
+  },
+  "GBR": {
+    "name": "United Kingdom",
+    "lat": 55.38,
+    "lon": -3.44
+  },
+  "FRA": {
+    "name": "France",
+    "lat": 46.23,
+    "lon": 2.21
+  },
+  "ITA": {
+    "name": "Italy",
+    "lat": 41.87,
+    "lon": 12.57
+  },
+  "CAN": {
+    "name": "Canada",
+    "lat": 56.13,
+    "lon": -106.35
+  },
+  "KOR": {
+    "name": "South Korea",
+    "lat": 35.91,
+    "lon": 127.77
+  },
+  "IND": {
+    "name": "India",
+    "lat": 20.59,
+    "lon": 78.96
+  },
+  "TWN": {
+    "name": "Taiwan",
+    "lat": 23.7,
+    "lon": 120.96
+  },
+  "RUS": {
+    "name": "Russia",
+    "lat": 61.52,
+    "lon": 105.32
+  },
+  "AUS": {
+    "name": "Australia",
+    "lat": -25.27,
+    "lon": 133.78
+  },
+  "BRA": {
+    "name": "Brazil",
+    "lat": -14.24,
+    "lon": -51.93
+  },
+  "SAU": {
+    "name": "Saudi Arabia",
+    "lat": 23.89,
+    "lon": 45.08
+  },
+  "IRN": {
+    "name": "Iran",
+    "lat": 32.43,
+    "lon": 53.69
+  },
+  "NLD": {
+    "name": "Netherlands",
+    "lat": 52.13,
+    "lon": 5.29
+  },
+  "IDN": {
+    "name": "Indonesia",
+    "lat": -0.79,
+    "lon": 113.92
+  },
+  "TUR": {
+    "name": "Turkey",
+    "lat": 38.96,
+    "lon": 35.24
+  },
+  "ISR": {
+    "name": "Israel",
+    "lat": 31.05,
+    "lon": 34.85
+  },
+  "VNM": {
+    "name": "Vietnam",
+    "lat": 14.06,
+    "lon": 108.28
+  },
+  "MEX": {
+    "name": "Mexico",
+    "lat": 23.63,
+    "lon": -102.55
+  },
+  "QAT": {
+    "name": "Qatar",
+    "lat": 25.35,
+    "lon": 51.18
+  },
+  "ARE": {
+    "name": "UAE",
+    "lat": 23.42,
+    "lon": 53.85
+  },
+  "IRQ": {
+    "name": "Iraq",
+    "lat": 33.22,
+    "lon": 43.68
+  },
+  "CHL": {
+    "name": "Chile",
+    "lat": -35.68,
+    "lon": -71.54
+  },
+  "PER": {
+    "name": "Peru",
+    "lat": -9.19,
+    "lon": -75.02
+  },
+  "COD": {
+    "name": "DR Congo",
+    "lat": -4.04,
+    "lon": 21.76
+  },
+  "NOR": {
+    "name": "Norway",
+    "lat": 60.47,
+    "lon": 8.47
+  },
+  "ZAF": {
+    "name": "South Africa",
+    "lat": -30.56,
+    "lon": 22.94
+  },
+  "GIN": {
+    "name": "Guinea",
+    "lat": 9.95,
+    "lon": -9.7
+  },
+  "MMR": {
+    "name": "Myanmar",
+    "lat": 21.91,
+    "lon": 95.96
+  },
+  "ARG": {
+    "name": "Argentina",
+    "lat": -38.42,
+    "lon": -63.62
+  },
+  "AGO": {
+    "name": "Angola",
+    "lat": -11.2,
+    "lon": 17.87
+  },
+  "NGA": {
+    "name": "Nigeria",
+    "lat": 9.08,
+    "lon": 8.68
+  },
+  "UKR": {
+    "name": "Ukraine",
+    "lat": 48.38,
+    "lon": 31.17
+  },
+  "SGP": {
+    "name": "Singapore",
+    "lat": 1.35,
+    "lon": 103.82
+  },
+  "THA": {
+    "name": "Thailand",
+    "lat": 15.87,
+    "lon": 100.99
+  },
+  "PAK": {
+    "name": "Pakistan",
+    "lat": 30.38,
+    "lon": 69.35
+  },
+  "KWT": {
+    "name": "Kuwait",
+    "lat": 29.31,
+    "lon": 47.48
+  },
+  "OMN": {
+    "name": "Oman",
+    "lat": 21.51,
+    "lon": 55.92
+  }
+}
