@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geopolitical Observatory — Conflict Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Control Panel -->
+  <div id="control-panel">
+    <h2>Geopolitical Observatory</h2>
+    <div class="meta" id="last-updated"></div>
+
+    <!-- Preset Views -->
+    <div class="section" id="preset-section">
+      <h3>Views</h3>
+      <div class="preset-grid" id="preset-grid">
+        <button class="preset-btn active" data-preset="overview">🌍 Overview</button>
+        <button class="preset-btn" data-preset="energy">⛽ Energy</button>
+        <button class="preset-btn" data-preset="new_energy">🔋 New Energy</button>
+        <button class="preset-btn" data-preset="ai">🤖 AI</button>
+        <button class="preset-btn" data-preset="semiconductor">🏭 Chips</button>
+        <button class="preset-btn" data-preset="balance">⚖️ Balance</button>
+        <button class="preset-btn" data-preset="conflicts">⚔️ Conflicts</button>
+        <button class="preset-btn" data-preset="full">⚡ All Layers</button>
+      </div>
+      <div class="preset-grid" id="country-grid">
+        <button class="preset-btn country-btn" data-country="CHN">🇨🇳 China</button>
+        <button class="preset-btn country-btn" data-country="USA">🇺🇸 US</button>
+        <button class="preset-btn country-btn" data-country="JPN">🇯🇵 Japan</button>
+        <button class="preset-btn country-btn" data-country="DEU">🇩🇪 Germany</button>
+        <button class="preset-btn country-btn" data-country="GBR">🇬🇧 UK</button>
+        <button class="preset-btn country-btn" data-country="FRA">🇫🇷 France</button>
+        <button class="preset-btn country-btn" data-country="ITA">🇮🇹 Italy</button>
+        <button class="preset-btn country-btn" data-country="CAN">🇨🇦 Canada</button>
+        <button class="preset-btn country-btn" data-country="KOR">🇰🇷 Korea</button>
+        <button class="preset-btn country-btn" data-country="IND">🇮🇳 India</button>
+        <button class="preset-btn country-btn" data-country="TWN">🇹🇼 Taiwan</button>
+        <button class="preset-btn country-btn" data-country="RUS">🇷🇺 Russia</button>
+      </div>
+    </div>
+
+    <!-- Collapsible Filters (shown when "Full Layers" active) -->
+    <div id="filters-section" class="collapsed">
+      <div class="section collapsible">
+        <h3 class="collapse-header" data-target="source-content">▸ Data Sources</h3>
+        <div id="source-content" class="collapse-body hidden">
+          <div class="layer-toggles" id="source-toggles"></div>
+        </div>
+      </div>
+      <div class="section collapsible">
+        <h3 class="collapse-header" data-target="type-content">▸ Event Types</h3>
+        <div id="type-content" class="collapse-body hidden">
+          <div class="layer-toggles" id="type-toggles"></div>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Date Range</h3>
+        <div class="date-controls">
+          <input type="date" id="date-from"><span>—</span><input type="date" id="date-to">
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="section">
+      <div id="stats" class="stats"></div>
+    </div>
+  </div>
+
+  <!-- Detail Panel (overlay) -->
+  <div id="detail-panel" class="hidden">
+    <button class="close-btn" onclick="closeDetail()">&times;</button>
+    <div id="detail-content"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js?v=20260411c"></script>
+</body>
+</html>
