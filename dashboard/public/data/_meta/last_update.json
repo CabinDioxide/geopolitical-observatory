@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-04-10T10:06:27.989881Z",
-  "duration_seconds": 27.5,
+  "last_run": "2026-04-12T07:05:04.205641Z",
+  "duration_seconds": 129.5,
   "sources": {
     "gdelt": {
       "status": "ok",
-      "features": 1360
+      "features": 556
     },
     "acled": {
       "status": "skipped",
@@ -15,12 +15,12 @@
       "features": 1298
     },
     "bellingcat": {
-      "status": "ok",
-      "features": 2515
+      "status": "skipped",
+      "reason": "no data"
     },
     "ais": {
-      "status": "skipped",
-      "reason": "no API key or no data"
+      "status": "ok",
+      "features": 55
     }
   }
 }
