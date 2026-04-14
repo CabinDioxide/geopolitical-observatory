@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>半导体供应链的六层迷宫 / The Six-Layer Labyrinth of the Semiconductor Supply Chain</title>
+<link rel="stylesheet" href="reports.css">
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Helvetica Neue', sans-serif;
+  max-width: 820px; margin: 0 auto; padding: 40px 28px 80px;
+  background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px;
+}
+h1 {
+  font-size: 26px; border-bottom: 2px solid #4f46e5;
+  padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3;
+}
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 16px; }
+.meta-box {
+  background: #eef2f7; border-left: 3px solid #4f46e5;
+  padding: 10px 14px; margin: 20px 0 28px;
+  font-size: 13px; color: #444; line-height: 1.6;
+}
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 36px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 22px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #4f46e5; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+tr:hover td { background: #f0f0f0; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 24px 0; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 14px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #f0e7ff; border-left: 3px solid #7c3aed; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+.footer { text-align: center; font-size: 12px; color: #888; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<!-- ============ Chinese version ============ -->
+<section lang="zh">
+
+<h1>半导体供应链的六层迷宫</h1>
+<h1>The Six-Layer Labyrinth of the Semiconductor Supply Chain</h1>
+
+<div class="meta-box">
+<strong>报告类型</strong>：产业链深挖 · <strong>时间</strong>：2026年4月<br>
+<strong>副标题</strong>：超越台积电的脆弱性分析——为什么"先进制程卡脖子"只是故事的一半
+</div>
+
+<div class="tldr">
+<h3>核心论点</h3>
+<p>半导体供应链<strong>不是一条供应链，而是六条嵌套的、并行运行的供应链</strong>。公共叙事压倒性地聚焦于台积电在先进制程上的垄断，但这只是最显眼的一层。在它之上还有至少四个同等关键的结构性扼制点——其中几个比台积电本身更集中——并且AI算力的约束条件已经<strong>从晶圆制造上移到先进封装</strong>。中国的替代进展在层级间极不均衡：某些层已接近自立，另一些在结构上无路可走。被西方分析普遍低估的，是<em>日本材料帝国</em>——它在EUV光刻胶、CMP浆料、溅射靶材、键合丝等专业材料上的安静垄断，构成供应链中最难替代的节点。</p>
+</div>
+
+<h2>六条嵌套的供应链</h2>
+<p>把"半导体供应链"当作单数是一种误导性的简化。为了理解真实的脆弱性，必须将其分解为六条<em>独立运行、相互依赖、各自有独立集中度画像</em>的子供应链：</p>
+
+<table>
+<thead><tr><th>层级</th><th>核心节点</th><th>关键参与者</th><th>地理集中度</th></tr></thead>
+<tbody>
+<tr><td>1. 设计</td><td>EDA软件、IP核、芯片设计</td><td>Synopsys、Cadence（美）、Arm（英/软银）、Nvidia、AMD、Apple</td><td>美国深度主导</td></tr>
+<tr><td>2. 材料</td><td>硅晶圆、光刻胶、气体、CMP浆料、高纯石英、溅射靶材、光掩膜毛坯</td><td>信越、SUMCO、JSR、TOK、Sumitomo Chemical（日）、Cabot（美）、Tanaka（日）、Hoya（日）</td><td>日本系统性垄断</td></tr>
+<tr><td>3. 设备</td><td>光刻、刻蚀、沉积、检测、离子注入</td><td>ASML（荷）、AMAT、Lam、KLA（美）、TEL（日）、Zeiss（德）</td><td>美荷日三国寡头</td></tr>
+<tr><td>4. 晶圆制造</td><td>逻辑代工、存储制造</td><td>TSMC（台）、三星（韩）、Intel（美）、SMIC（中）；HBM：三星、SK海力士、美光</td><td>先进制程台韩双寡头；成熟制程中国主导（~80%）</td></tr>
+<tr><td>5. 封装测试</td><td>传统OSAT、先进封装（CoWoS、Foveros、2.5D/3D）</td><td>ASE、Amkor、JCET、Tongfu；先进封装TSMC、Intel、三星</td><td>传统封装东亚广泛分布；先进封装TSMC近乎垄断</td></tr>
+<tr><td>6. 基板与辅料</td><td>ABF基板、引线框架、键合丝、焊料</td><td>Ibiden、Unimicron、Nanya PCB、AT&S、Shinko</td><td>日本+台湾双重集中</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+这六层中<strong>任何一层的中断都会停止下游生产</strong>。但注意：六层并非同等脆弱，也并非同等可替代。第1、3、4层是公共讨论的焦点，第2、5、6层在战略分析中被系统性低估。
+</div>
+
+<h2>被低估的上游：日本材料帝国</h2>
+<p>如果你只知道"ASML控制EUV光刻"和"台积电控制先进代工"，你只理解了供应链的一半。日本在专业材料上的垄断同样严重，但因为高度分散在许多细分市场中，公众很少意识到。</p>
+
+<h3>光刻胶：EUV层面几乎单一供应商</h3>
+<p>全球光刻胶市场由四家日本公司主导：JSR、东京应化（TOK）、信越化学、住友化学——共占约70-90%全球份额（不同制程节点）。但在<strong>EUV光刻胶</strong>这一先进节点专用品上，集中度更高：<em>JSR一家公司占据绝对主导</em>（估计>60%），其余份额由TOK和信越瓜分。美国几乎不生产EUV光刻胶。</p>
+<p>这意味着一个不常被讨论的情景：日本对中国的EUV光刻胶出口管制（2023年已部分实施），从供应链角度<strong>与ASML不卖EUV机器同等致命</strong>——因为没有光刻胶，EUV机器无法运行。</p>
+
+<h3>CMP浆料：化学机械抛光的美日寡头</h3>
+<p>CMP（化学机械抛光）浆料是每个晶圆制造节点都需要的消耗品。市场由Cabot（美）、DuPont（美）、Fujimi（日）、Hitachi Chemical（日，现昭和电工）主导，共占全球80%以上。浆料配方高度专业化——每种金属层、每种节点都需要不同的浆料。<em>替代一家供应商需要6-12个月的晶圆厂重新认证流程</em>。</p>
+
+<h3>溅射靶材：贵金属加工的日本垄断</h3>
+<p>溅射靶材（用于沉积薄膜金属层）由Tanaka Kikinzoku、JX Nippon Mining、三井金属等日本公司主导。高纯度（6N以上）贵金属靶材的全球份额日本占60-80%。</p>
+
+<h3>光掩膜毛坯：单一公司的全球中枢</h3>
+<p>光掩膜毛坯（mask blanks）是制作光刻掩膜的基底材料。<strong>Hoya一家日本公司占全球~70%市场份额</strong>，包括EUV光掩膜毛坯中的支配地位。这是整个半导体行业中集中度最高的单点故障之一——一家公司的一个工厂停产就能影响全球所有先进芯片设计的流片。</p>
+
+<h3>键合丝与封装金属</h3>
+<p>Tanaka（日）和Heraeus（德）主导金线、铜线和特殊合金键合丝市场。</p>
+
+<div class="callout">
+<strong>Japan的系统性地位</strong>：如果美国在设计层（EDA + 芯片架构）是帝国，日本在材料层（EUV光刻胶、CMP浆料、光掩膜毛坯、溅射靶材、键合丝）是一个被低估的帝国。两者的关键区别：美国的控制通过合同和出口管制施行，需要显性的政治决定。日本的控制通过数十年的工艺积累和隐性的工程文化施行，没有政治决定也无法被快速替代。
+</div>
+
+<h2>先进封装：新的卡脖子节点</h2>
+<p>2023-2026年，一个结构性变化悄然发生：<strong>AI算力的约束条件从晶圆制造上移到了先进封装</strong>。Nvidia的GPU供应瓶颈不是台积电先进制程产能不够——是CoWoS（Chip on Wafer on Substrate）封装产能不够。</p>
+
+<h3>CoWoS的台积电单点垄断</h3>
+<p>CoWoS是将逻辑芯片、HBM堆叠和硅中介层整合的先进封装工艺。台积电是<em>唯一能规模化生产高端CoWoS的厂商</em>（三星有类似方案但产能和良率落后）。截至2026年，CoWoS月产能在扩产中仍然是Nvidia H200/B200 GPU交付的首要瓶颈。</p>
+
+<h3>HBM三寡头与SK海力士的决定性位置</h3>
+<p>高带宽存储器（HBM）是AI芯片不可或缺的组件——Nvidia H100有80GB HBM3，B200有192GB HBM3e。HBM由三家供应：<strong>SK海力士（韩）、三星（韩）、美光（美）</strong>。SK海力士在HBM3e代际具备最领先的良率和Nvidia认证——使这家韩国公司在AI算力供应链中处于结构性关键位置。</p>
+
+<h3>ABF基板：被忽视的实体约束</h3>
+<p>ABF（Ajinomoto Build-up Film）基板是将封装好的芯片连接到PCB的关键组件。由<strong>Ibiden（日）、Unimicron（台）、Nanya PCB（台）、AT&S（奥）、Shinko（日）</strong>主导。2021-2022年的汽车芯片短缺部分源于ABF基板短缺而非晶圆短缺。高端ABF基板（用于AI GPU）产能扩张需要2-3年建设周期。</p>
+
+<div class="insight">
+"芯片短缺"的真实含义已经改变。2020-2022年时它主要指晶圆产能不足。2024-2026年，它越来越指<strong>先进封装产能 + HBM供应 + ABF基板</strong>的三重约束。把晶圆产能作为分析单位会错过约束条件的迁移。
+</div>
+
+<h2>被低估的石英：斯普鲁斯松的单点故障</h2>
+<p>制造硅晶圆需要在超高纯度石英坩埚中熔化多晶硅。达到所需纯度的天然石英来自<em>全世界两个地方</em>：北卡罗来纳州斯普鲁斯松（Spruce Pine）和巴西的米纳斯吉拉斯州——但后者质量略逊。Spruce Pine的矿权由Sibelco和The Quartz Corp两家公司控制。</p>
+<p>2024年9月飓风海伦（Hurricane Helene）袭击北卡罗来纳州西部，Spruce Pine的矿区被迫停产数周。虽然最终没有造成全球性影响（库存缓冲了冲击），但这个事件<strong>暴露了整个半导体行业对一个特定地理位置的全球性依赖</strong>。如果Spruce Pine遭遇更长期的中断（大型地震、长时间洪水、环境事件），全球硅晶圆生产都将受限。</p>
+
+<h2>成熟制程的被遗忘战场</h2>
+<p>公共讨论和政策聚焦于先进制程（5nm、3nm、2nm）。但<em>工业社会运行在成熟制程上</em>：</p>
+<ul>
+<li><strong>汽车</strong>：一辆现代车含~1500颗芯片，其中95%以上是28nm或更老工艺</li>
+<li><strong>家电</strong>：几乎100%使用成熟制程</li>
+<li><strong>工业IoT、电机控制、电源管理</strong>：几乎全部成熟制程</li>
+<li><strong>MCU、模拟芯片、功率器件</strong>：绝大多数成熟制程</li>
+</ul>
+<p>中国在成熟制程上占据约80%的全球产能。这是<strong>极少被作为战略资产讨论的事实</strong>。美国CHIPS法案重点资助先进制程回流，但如果中国明天停止成熟制程芯片出口，美国汽车业和家电业将在数周内停摆——与AI产业受冲击的规模相当。</p>
+
+<div class="callout">
+这揭示了一个不对称：西方对中国施压主要在先进制程（拒绝ASML EUV、拒绝EDA顶端工具），而中国可能回击在成熟制程（按需断供汽车/家电芯片）。两者的经济和政治影响不在同一量级——先进制程影响AI前沿，成熟制程影响日常工业运行。对中国而言，<em>成熟制程垄断可能比稀土更快被武器化</em>。
+</div>
+
+<h2>中国替代进展——分层评估</h2>
+<p>"中国能不能赶上"的二元问题是错误的。正确的问题是：<strong>在哪一层能赶上，在哪一层不能，以及赶上的速度差异有多大</strong>。</p>
+
+<table>
+<thead><tr><th>层级</th><th>中国位置</th><th>缺口大小</th><th>追赶前景</th></tr></thead>
+<tbody>
+<tr><td>设计</td><td>EDA追赶困难（华大九天等），但RISC-V生态快速增长</td><td>大</td><td>10+年</td></tr>
+<tr><td>先进材料</td><td>本土EUV光刻胶（华懋化工等）起步；CMP浆料本土化~60%；光掩膜毛坯几乎零</td><td>中到大</td><td>5-10年</td></tr>
+<tr><td>基础材料</td><td>多晶硅、硅晶圆大部分自给；普通气体自给</td><td>小</td><td>已基本自立</td></tr>
+<tr><td>先进设备</td><td>SMEE光刻机在DUV浸没式水平；EUV无进展</td><td>巨大（EUV）/中（DUV）</td><td>EUV 10+年；DUV 3-5年</td></tr>
+<tr><td>成熟设备</td><td>Naura、AMEC在刻蚀和沉积上接近全球水平</td><td>小</td><td>已接近自立</td></tr>
+<tr><td>晶圆制造</td><td>中芯国际经DUV多重曝光实现7nm级别；华为昇腾有限产能</td><td>中（良率和成本仍差距大）</td><td>5-8年</td></tr>
+<tr><td>HBM</td><td>长鑫存储、长江存储HBM研发中</td><td>大</td><td>3-5年追上HBM2e，HBM3/3e更远</td></tr>
+<tr><td>先进封装</td><td>江苏长电（JCET）、通富微电具备2.5D/3D封装基础</td><td>中</td><td>3-5年（CoWoS相当产能）</td></tr>
+<tr><td>ABF基板</td><td>国内产能增长中，但高端仍依赖日台</td><td>中</td><td>3-5年</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+"中国半导体追赶"应该按层级报告，而不是一个整体判断。在基础材料和成熟设备上，中国已基本自立；在先进封装和HBM上，差距正在快速缩小；在EUV光刻和EDA顶端工具上，结构上不可能在本十年内赶上。<strong>这种不均衡意味着"完全脱钩"在数学上不可能——因为脱钩需要两边都自立，而每一边都有几层无法替代对方</strong>。
+</div>
+
+<h2>级联风险情景</h2>
+<p>供应链脆弱性不是单点故障问题——它是级联故障问题。让我们按时间尺度排列几个代表性情景：</p>
+
+<h3>即时级联（小时到天）</h3>
+<ul>
+<li><strong>EDA断供</strong>：即刻停止所有晶圆厂的新设计流片。现有生产继续，但6-12个月后新产品管线枯竭</li>
+<li><strong>ASML EUV服务暂停</strong>：现有EUV机器在3-6个月内因缺少服务和耗材而降效</li>
+<li><strong>JSR EUV光刻胶中断</strong>：库存通常为数周；之后先进制程生产受限</li>
+</ul>
+
+<h3>短期级联（周到月）</h3>
+<ul>
+<li><strong>Hoya光掩膜毛坯中断</strong>：数周库存后，所有使用EUV掩膜的制程受阻</li>
+<li><strong>CMP浆料中断（任何主要供应商）</strong>：4-8周内全球产能下降</li>
+<li><strong>CoWoS停产</strong>：Nvidia AI GPU供应立即下降；整个AI算力扩张减速</li>
+<li><strong>Taiwan Strait事件（海上封锁）</strong>：全球先进芯片供应立即停止；台积电上游和下游同时断裂</li>
+</ul>
+
+<h3>中期级联（月到季度）</h3>
+<ul>
+<li><strong>Spruce Pine长期中断</strong>：2-6个月后硅晶圆供应紧张；全球产能降低</li>
+<li><strong>中国成熟制程出口管制</strong>：6-12个月内全球汽车/家电供应链严重受损</li>
+<li><strong>日本EUV光刻胶出口管制（对中国）</strong>：中芯国际/华为先进制程路线失效</li>
+</ul>
+
+<h2>战略含义</h2>
+
+<h3>1. 硅盾比预想更脆弱</h3>
+<p>"台湾半导体是硅盾"的叙事假设台积电的垄断能威慑中国入侵。但本报告揭示：台积电的运营依赖四个不同国家的持续合作（荷兰ASML、美国EDA、日本材料、德国光学）。<em>硅盾是一个悬链结构，任何一根链条断裂都会使整个结构失效</em>——而这些链条的断裂不一定源于中国行动，可能来自日韩争端、欧洲能源危机或美国政策突变。</p>
+
+<h3>2. 日本是被低估的地缘玩家</h3>
+<p>在EUV光刻胶、CMP浆料、光掩膜毛坯、溅射靶材等领域，日本的垄断地位比台积电在先进制程的垄断更集中。<strong>但日本公共话语中几乎不讨论这些资产的战略价值</strong>。东京政府的"经济安全保障"立法是对这一资产的迟到认知。未来十年，日本材料集群将成为中美供应链博弈中<em>最难预测的变量</em>——因为日本对"中立"的放弃程度将决定多个关键供应链的方向。</p>
+
+<h3>3. 先进封装是2026-2030的关键战场</h3>
+<p>CoWoS、HBM、ABF基板构成新的产业瓶颈。这场战斗不在台积电的晶圆厂里，而在其封装厂、SK海力士的HBM线、Ibiden的基板产线上。任何不把先进封装视为独立供应链的分析都在系统性低估脆弱性。</p>
+
+<h3>4. 中国的不对称反击能力在成熟制程</h3>
+<p>如果西方继续在先进制程上对中国施压，中国可能不在先进制程上反击（它无法），而是在<em>成熟制程</em>上反击（它主导）。这将表现为：对特定国家的汽车/工业用芯片实施出口许可、延迟发货、技术认证障碍。这种反击的政治敏感性低于稀土管制（因为不是"关键矿物"），但经济影响可能更直接。</p>
+
+<h3>5. 完全脱钩在结构上不可能</h3>
+<p>西方对中国脱钩需要替代中国成熟制程产能、重建本土CMP浆料和先进光刻胶、建设无日本材料的替代供应链——这些任务在5年内无法完成。中国对西方脱钩需要本土EUV、本土EDA顶端工具、本土ABF基板高端产能——这些在10年内无法完成。<strong>双方都在追求脱钩的话语，但都在深化依赖的现实</strong>。结果是"冷分叉"——平行技术栈共存，核心相互依赖持续。</p>
+
+<h2>结论：六层迷宫的地缘含义</h2>
+<p>半导体供应链不是一条线，而是一座六层迷宫。公共讨论基本停留在前两层（设计和晶圆制造）——这是可见的部分。但供应链的<em>结构性脆弱</em>藏在下面的四层：材料（日本主导）、设备（欧美日）、封装（台日）、基板（台日）。任何以"台积电"为单一关注点的脆弱性分析，都是对迷宫一层的分析——它必然错过其他五层同时发生的动态。</p>
+<p>这与<a href="supply-chain-mad.html">[[供应链MAD]]</a>框架一致：没有"胜利"的脱钩路径，只有<em>向六层迷宫的更深依赖</em>或<em>对其某些层的武器化</em>。2027-2032年的危险窗口中，最可能被首先武器化的不是台积电（因为冲击过于直接），而是第二层材料（日本可以拒售光刻胶）、第五层先进封装（台积电减产或选择性供应），或第四层成熟制程（中国可以对欧美汽车工业断供）。这些层级的中断更隐蔽、更可控、更难以判定为"战争行为"——也因此更危险。</p>
+
+</section>
+
+<!-- ============ English version ============ -->
+<section lang="en">
+
+<h1>The Six-Layer Labyrinth of the Semiconductor Supply Chain</h1>
+<h1>半导体供应链的六层迷宫</h1>
+
+<div class="meta-box">
+<strong>Report type</strong>: Supply chain deep dive · <strong>Date</strong>: April 2026<br>
+<strong>Subtitle</strong>: Vulnerability Analysis Beyond TSMC — Why "Advanced-Node Chokehold" Is Only Half the Story
+</div>
+
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>The semiconductor supply chain <strong>is not one supply chain but six nested, parallel-running supply chains</strong>. Public narratives overwhelmingly focus on TSMC's monopoly in advanced nodes, but this is only the most visible layer. Above and around it sit at least four equally critical structural chokepoints — some more concentrated than TSMC itself — and the binding constraint on AI compute has <strong>already shifted from wafer fabrication to advanced packaging</strong>. China's substitution progress is extremely uneven across layers: some are near self-sufficiency, others are structurally blocked. The most systematically underestimated element in Western analysis is the <em>Japanese materials empire</em> — a quiet monopoly across EUV photoresists, CMP slurries, sputtering targets, and bonding wire that forms the least substitutable nodes in the entire chain.</p>
+</div>
+
+<h2>Six Nested Supply Chains</h2>
+<p>Treating "the semiconductor supply chain" as singular is a misleading simplification. Understanding real vulnerability requires decomposing it into six <em>independently operating, mutually dependent sub-chains, each with its own concentration profile</em>:</p>
+
+<table>
+<thead><tr><th>Layer</th><th>Core nodes</th><th>Key players</th><th>Geographic concentration</th></tr></thead>
+<tbody>
+<tr><td>1. Design</td><td>EDA software, IP cores, chip design</td><td>Synopsys, Cadence (US), Arm (UK/SoftBank), Nvidia, AMD, Apple</td><td>Deep US dominance</td></tr>
+<tr><td>2. Materials</td><td>Silicon wafers, photoresists, gases, CMP slurry, high-purity quartz, sputtering targets, photomask blanks</td><td>Shin-Etsu, SUMCO, JSR, TOK, Sumitomo Chemical (JP), Cabot (US), Tanaka (JP), Hoya (JP)</td><td>Systematic Japanese monopoly</td></tr>
+<tr><td>3. Equipment</td><td>Lithography, etch, deposition, inspection, implantation</td><td>ASML (NL), AMAT, Lam, KLA (US), TEL (JP), Zeiss (DE)</td><td>US-NL-JP oligopoly</td></tr>
+<tr><td>4. Wafer fab</td><td>Logic foundry, memory manufacturing</td><td>TSMC (TW), Samsung (KR), Intel (US), SMIC (CN); HBM: Samsung, SK Hynix, Micron</td><td>Advanced-node TW/KR duopoly; mature-node China-dominant (~80%)</td></tr>
+<tr><td>5. Packaging & test</td><td>Conventional OSAT, advanced packaging (CoWoS, Foveros, 2.5D/3D)</td><td>ASE, Amkor, JCET, Tongfu; advanced packaging: TSMC, Intel, Samsung</td><td>Conventional widely distributed across East Asia; advanced near-monopolized by TSMC</td></tr>
+<tr><td>6. Substrates & consumables</td><td>ABF substrates, lead frames, bonding wire, solder</td><td>Ibiden, Unimicron, Nanya PCB, AT&S, Shinko</td><td>Japan + Taiwan dual-concentration</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>Disruption in any one of these layers halts downstream production.</strong> But note: the six layers are not equally fragile and not equally substitutable. Layers 1, 3, and 4 dominate public discussion. Layers 2, 5, and 6 are systematically underweighted in strategic analysis.
+</div>
+
+<h2>The Overlooked Upstream: The Japanese Materials Empire</h2>
+<p>If you only know that "ASML controls EUV lithography" and "TSMC controls advanced foundry," you understand only half of the supply chain. Japan's monopolies in specialty materials are equally severe but, because they are distributed across many niche markets, the public rarely perceives them.</p>
+
+<h3>Photoresists: Near-Single-Supplier at the EUV Frontier</h3>
+<p>The global photoresist market is dominated by four Japanese companies: JSR, Tokyo Ohka Kogyo (TOK), Shin-Etsu Chemical, and Sumitomo Chemical — together holding roughly 70-90% of global share (varying by node). But in <strong>EUV photoresist</strong> — the specialty product for leading-edge nodes — concentration is even tighter: <em>JSR alone dominates</em> (estimated >60%), with TOK and Shin-Etsu splitting the remainder. The US produces essentially no EUV photoresist.</p>
+<p>This implies a rarely discussed scenario: Japanese EUV photoresist export controls against China (partially implemented in 2023) are, from a supply chain perspective, <strong>as lethal as ASML refusing to sell EUV machines</strong> — because EUV machines cannot run without photoresist.</p>
+
+<h3>CMP Slurry: A US-Japanese Oligopoly</h3>
+<p>CMP (chemical mechanical planarization) slurry is a consumable every wafer manufacturing node requires. The market is dominated by Cabot (US), DuPont (US), Fujimi (JP), and Hitachi Chemical (JP, now Showa Denko), holding over 80% combined. Slurry formulations are highly specialized — each metal layer, each node requires different slurries. <em>Substituting a supplier requires 6-12 months of fab re-qualification.</em></p>
+
+<h3>Sputtering Targets: The Japanese Precious-Metals Monopoly</h3>
+<p>Sputtering targets (used for thin-film metal deposition) are dominated by Tanaka Kikinzoku, JX Nippon Mining, and Mitsui Mining & Smelting — all Japanese. For high-purity (6N+) precious metal targets, Japan holds 60-80% of global share.</p>
+
+<h3>Photomask Blanks: One Company as Global Hub</h3>
+<p>Photomask blanks — the substrate from which lithography masks are made — are dominated by a single Japanese company: <strong>Hoya holds ~70% of the global market</strong>, including a dominant position in EUV mask blanks. This is among the most concentrated single points of failure in the entire semiconductor industry — one company's one facility going offline could affect tape-out of every advanced chip design globally.</p>
+
+<h3>Bonding Wire & Packaging Metals</h3>
+<p>Tanaka (JP) and Heraeus (DE) dominate the gold wire, copper wire, and specialty alloy bonding wire markets.</p>
+
+<div class="callout">
+<strong>Japan's systemic position</strong>: If the US is an empire at the design layer (EDA + chip architecture), Japan is an underestimated empire at the materials layer (EUV photoresists, CMP slurry, photomask blanks, sputtering targets, bonding wire). The critical difference: US control is exercised through contracts and export controls, requiring explicit political decisions. Japanese control is exercised through decades of process accumulation and tacit engineering culture — it requires no political decision and cannot be quickly substituted.
+</div>
+
+<h2>Advanced Packaging: The New Chokepoint</h2>
+<p>Between 2023 and 2026, a structural shift occurred quietly: <strong>the binding constraint on AI compute migrated from wafer fabrication to advanced packaging</strong>. Nvidia's GPU supply bottleneck is not insufficient TSMC advanced-node wafer capacity — it is insufficient CoWoS (Chip on Wafer on Substrate) packaging capacity.</p>
+
+<h3>CoWoS: TSMC's Single-Point Monopoly</h3>
+<p>CoWoS is the advanced packaging process that integrates logic chips, HBM stacks, and silicon interposers. TSMC is <em>the only manufacturer capable of volume production of high-end CoWoS</em> (Samsung has comparable technology but lags in capacity and yield). As of 2026, CoWoS monthly capacity remains the primary bottleneck for Nvidia H200/B200 GPU shipments despite aggressive expansion.</p>
+
+<h3>HBM's Three-Way Oligopoly and SK Hynix's Decisive Position</h3>
+<p>High Bandwidth Memory (HBM) is indispensable for AI chips — Nvidia H100 carries 80GB of HBM3, B200 carries 192GB of HBM3e. HBM is supplied by three companies: <strong>SK Hynix (KR), Samsung (KR), and Micron (US)</strong>. SK Hynix holds the most advanced yield and Nvidia qualification at the HBM3e generation — placing this Korean company in a structurally critical position in the AI compute supply chain.</p>
+
+<h3>ABF Substrates: The Overlooked Physical Constraint</h3>
+<p>ABF (Ajinomoto Build-up Film) substrates are the key component connecting packaged chips to PCBs. Dominated by <strong>Ibiden (JP), Unimicron (TW), Nanya PCB (TW), AT&S (AT), and Shinko (JP)</strong>. The 2021-2022 automotive chip shortage was partly ABF substrate shortage, not wafer shortage. High-end ABF substrate capacity (for AI GPUs) expansion requires 2-3 years of construction.</p>
+
+<div class="insight">
+The meaning of "chip shortage" has changed. In 2020-2022 it primarily meant insufficient wafer capacity. In 2024-2026, it increasingly means a triple constraint of <strong>advanced packaging capacity + HBM supply + ABF substrates</strong>. Using wafer capacity as the analytical unit misses the migration of the binding constraint.
+</div>
+
+<h2>The Overlooked Quartz: Spruce Pine's Single-Point Failure</h2>
+<p>Manufacturing silicon wafers requires melting polysilicon in ultra-high-purity quartz crucibles. Natural quartz of required purity comes from <em>two places in the entire world</em>: Spruce Pine, North Carolina, and Minas Gerais, Brazil — but Brazilian quality is inferior. Spruce Pine mining rights are controlled by two companies: Sibelco and The Quartz Corp.</p>
+<p>In September 2024, Hurricane Helene struck western North Carolina, forcing Spruce Pine mining operations offline for weeks. Although no global impact materialized (inventory buffered the shock), the event <strong>exposed the entire semiconductor industry's global dependence on a single geographic location</strong>. A longer-duration disruption at Spruce Pine (major earthquake, sustained flooding, environmental event) would constrain global silicon wafer production.</p>
+
+<h2>The Forgotten Battlefield of Mature Nodes</h2>
+<p>Public discussion and policy focus on advanced nodes (5nm, 3nm, 2nm). But <em>industrial society runs on mature nodes</em>:</p>
+<ul>
+<li><strong>Automotive</strong>: a modern car contains ~1,500 chips, of which 95%+ are 28nm or older</li>
+<li><strong>Home appliances</strong>: nearly 100% mature node</li>
+<li><strong>Industrial IoT, motor control, power management</strong>: almost entirely mature node</li>
+<li><strong>MCUs, analog chips, power devices</strong>: overwhelmingly mature node</li>
+</ul>
+<p>China holds approximately 80% of global mature node capacity. This is <strong>rarely discussed as a strategic asset</strong>. The US CHIPS Act focuses on reshoring advanced nodes, but if China halted mature-node chip exports tomorrow, US automotive and appliance industries would halt within weeks — at a scale comparable to the AI industry shock.</p>
+
+<div class="callout">
+This reveals an asymmetry: Western pressure on China is concentrated at advanced nodes (refusing ASML EUV, refusing top EDA tools), while Chinese retaliation may be concentrated at mature nodes (on-demand denial of automotive/appliance chips). The two lie in different orders of economic and political impact — advanced nodes affect the AI frontier, mature nodes affect daily industrial operation. For China, <em>mature node dominance may be weaponized faster than rare earths</em>.
+</div>
+
+<h2>China's Substitution Progress — Layer-by-Layer Assessment</h2>
+<p>The binary question "can China catch up" is the wrong question. The correct question is: <strong>in which layer can it catch up, in which cannot, and how does the catch-up speed differ across layers</strong>.</p>
+
+<table>
+<thead><tr><th>Layer</th><th>Chinese position</th><th>Gap size</th><th>Catch-up horizon</th></tr></thead>
+<tbody>
+<tr><td>Design</td><td>EDA catch-up difficult (Empyrean et al.); RISC-V ecosystem growing fast</td><td>Large</td><td>10+ years</td></tr>
+<tr><td>Advanced materials</td><td>Domestic EUV photoresist (Jiangsu Nata) emerging; CMP slurry ~60% localized; photomask blanks near-zero</td><td>Medium to large</td><td>5-10 years</td></tr>
+<tr><td>Basic materials</td><td>Polysilicon and silicon wafers largely self-sufficient; generic gases self-sufficient</td><td>Small</td><td>Near self-sufficient</td></tr>
+<tr><td>Advanced equipment</td><td>SMEE at DUV immersion level; zero EUV progress</td><td>Huge (EUV) / Medium (DUV)</td><td>EUV 10+ years; DUV 3-5 years</td></tr>
+<tr><td>Mature equipment</td><td>Naura, AMEC approaching global level in etch and deposition</td><td>Small</td><td>Near self-sufficient</td></tr>
+<tr><td>Wafer fab</td><td>SMIC at 7nm-equivalent via DUV multi-patterning; Huawei Ascend at limited volume</td><td>Medium (yield and cost gaps large)</td><td>5-8 years</td></tr>
+<tr><td>HBM</td><td>CXMT and YMTC HBM in R&D</td><td>Large</td><td>3-5 years to HBM2e; HBM3/3e further out</td></tr>
+<tr><td>Advanced packaging</td><td>JCET, Tongfu have 2.5D/3D packaging foundations</td><td>Medium</td><td>3-5 years to CoWoS-equivalent capacity</td></tr>
+<tr><td>ABF substrates</td><td>Domestic capacity growing; high-end still depends on Japan/Taiwan</td><td>Medium</td><td>3-5 years</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+"Chinese semiconductor catch-up" should be reported layer by layer, not as a single judgment. In basic materials and mature equipment, China is near self-sufficient. In advanced packaging and HBM, the gap is closing fast. In EUV lithography and top EDA tools, structural catch-up within this decade is impossible. <strong>This unevenness means "full decoupling" is mathematically impossible — decoupling requires both sides to achieve self-sufficiency, and each side has several layers where the other cannot be replaced.</strong>
+</div>
+
+<h2>Cascade Risk Scenarios</h2>
+<p>Supply chain vulnerability is not a single-point-failure problem — it is a cascade problem. Representative scenarios ordered by time scale:</p>
+
+<h3>Immediate cascade (hours to days)</h3>
+<ul>
+<li><strong>EDA cutoff</strong>: instantly halts all new chip tape-out globally. Existing production continues, but product pipelines dry up in 6-12 months</li>
+<li><strong>ASML EUV service suspension</strong>: existing EUV machines degrade in 3-6 months without service and consumables</li>
+<li><strong>JSR EUV photoresist disruption</strong>: inventories typically hold weeks; leading-edge production constrained thereafter</li>
+</ul>
+
+<h3>Short-term cascade (weeks to months)</h3>
+<ul>
+<li><strong>Hoya photomask blank disruption</strong>: after weeks of inventory, all EUV-mask-using processes affected</li>
+<li><strong>CMP slurry disruption (any major supplier)</strong>: global capacity decline within 4-8 weeks</li>
+<li><strong>CoWoS production halt</strong>: Nvidia AI GPU supply immediately drops; global AI compute expansion decelerates</li>
+<li><strong>Taiwan Strait event (maritime blockade)</strong>: global advanced chip supply halts immediately; TSMC's upstream and downstream sever simultaneously</li>
+</ul>
+
+<h3>Medium-term cascade (months to quarters)</h3>
+<ul>
+<li><strong>Prolonged Spruce Pine disruption</strong>: silicon wafer supply tightens after 2-6 months; global capacity reduced</li>
+<li><strong>Chinese mature-node export controls</strong>: global automotive/appliance supply chains severely impacted within 6-12 months</li>
+<li><strong>Japanese EUV photoresist export controls (targeting China)</strong>: SMIC/Huawei advanced-node path disabled</li>
+</ul>
+
+<h2>Strategic Implications</h2>
+
+<h3>1. The Silicon Shield Is More Fragile Than Assumed</h3>
+<p>The "Taiwanese semiconductors as silicon shield" narrative assumes TSMC's monopoly deters Chinese invasion. But this report reveals: TSMC's operation depends on continued cooperation from four different countries (Dutch ASML, US EDA, Japanese materials, German optics). <em>The silicon shield is a suspension chain — any single link breaking disables the entire structure</em> — and these links can break from sources other than Chinese action: Japan-Korea disputes, European energy crises, or abrupt US policy shifts.</p>
+
+<h3>2. Japan Is the Underestimated Geopolitical Player</h3>
+<p>In EUV photoresists, CMP slurry, photomask blanks, and sputtering targets, Japan's monopoly is more concentrated than TSMC's in advanced nodes. <strong>But Japanese public discourse barely discusses the strategic value of these assets.</strong> Tokyo's "Economic Security Promotion Act" is a belated recognition of this. Over the next decade, the Japanese materials cluster will be <em>the least predictable variable in US-China supply chain competition</em> — because how far Japan abandons "neutrality" determines the direction of several critical supply chains.</p>
+
+<h3>3. Advanced Packaging Is the Critical Battleground for 2026-2030</h3>
+<p>CoWoS, HBM, and ABF substrates constitute the new industrial bottleneck. This battle is not fought in TSMC's wafer fabs but in its packaging plants, SK Hynix's HBM lines, and Ibiden's substrate facilities. Any analysis that does not treat advanced packaging as a distinct supply chain systematically underestimates vulnerability.</p>
+
+<h3>4. China's Asymmetric Retaliation Capability Lies in Mature Nodes</h3>
+<p>If the West continues pressuring China at advanced nodes, China may retaliate not at advanced nodes (where it cannot) but at <em>mature nodes</em> (where it dominates). This would manifest as: export licensing on automotive/industrial chips to specific countries, shipment delays, qualification barriers. The political sensitivity of such retaliation is lower than rare earth controls (not a "critical mineral"), but the economic impact may be more direct.</p>
+
+<h3>5. Full Decoupling Is Structurally Impossible</h3>
+<p>Western decoupling from China requires replacing Chinese mature-node capacity, rebuilding domestic CMP slurry and advanced photoresist supply, and constructing supply chains independent of Japanese materials — these tasks cannot be completed within 5 years. Chinese decoupling from the West requires indigenous EUV, indigenous top-tier EDA tools, and indigenous high-end ABF substrate capacity — none achievable within 10 years. <strong>Both sides pursue the rhetoric of decoupling while deepening the reality of dependence.</strong> The outcome is a "cold fork" — parallel technology stacks coexisting while core interdependencies persist.</p>
+
+<h2>Conclusion: The Geopolitical Meaning of the Six-Layer Labyrinth</h2>
+<p>The semiconductor supply chain is not a line but a six-layer labyrinth. Public discussion largely remains at the first two layers (design and wafer fabrication) — the visible portion. But the supply chain's <em>structural fragility</em> resides in the four layers below: materials (Japan-dominated), equipment (US-EU-JP), packaging (TW-JP), substrates (TW-JP). Any vulnerability analysis that fixes on "TSMC" as a single focal point is an analysis of one layer of the labyrinth — it necessarily misses the simultaneous dynamics in the other five.</p>
+<p>This aligns with the <a href="supply-chain-mad.html">Supply Chain MAD</a> framework: there is no "winning" decoupling path, only <em>deeper dependence on the six-layer labyrinth</em> or <em>weaponization of specific layers within it</em>. In the 2027-2032 danger window, the first weaponization target is most likely not TSMC (the impact is too direct) but Layer 2 materials (Japan refusing photoresist sales), Layer 5 advanced packaging (TSMC reducing or selectively allocating capacity), or Layer 4 mature nodes (China cutting off automotive chips to the US/EU). Disruptions at these layers are more covert, more controllable, and harder to characterize as "acts of war" — which is precisely why they are more dangerous.</p>
+
+</section>
+
+<div class="footer">
+<span lang="zh">© 2026 Geopolitical Observatory · 关联wiki条目：<code>wiki/concepts/semiconductor-supply-chain.md</code> · 关联报告：<a href="supply-chain-mad.html">供应链MAD</a>、<a href="https://geopolitical-observatory.vercel.app/reports/TWN.html">台湾</a>、<a href="https://geopolitical-observatory.vercel.app/reports/JPN.html">日本</a></span>
+<span lang="en">© 2026 Geopolitical Observatory · Related wiki: <code>wiki/concepts/semiconductor-supply-chain.md</code> · Related reports: <a href="supply-chain-mad.html">Supply Chain MAD</a>, <a href="https://geopolitical-observatory.vercel.app/reports/TWN.html">Taiwan</a>, <a href="https://geopolitical-observatory.vercel.app/reports/JPN.html">Japan</a></span>
+</div>
+
+<script src="reports.js"></script>
+</body>
+</html>
