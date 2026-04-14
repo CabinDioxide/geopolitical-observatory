@@ -6,23 +6,31 @@
 <title>中国供应链脆弱性评估 / China Supply Chain Vulnerability Assessment (2026)</title>
 <link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
-h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
-h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
-th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
-td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px; }
+h1 { font-size: 26px; border-bottom: 2px solid #e63946; padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 14px; }
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 32px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 20px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #e63946; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 7px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 22px; margin-bottom: 14px; }
-li { margin: 6px 0; }
-strong { color: #e63946; }
-em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 .back-links { margin-bottom: 20px; font-size: 14px; }
 .back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
 .back-links a:hover { text-decoration: underline; }
 .score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
 .score-line strong { font-size: 28px; color: #e63946; font-weight: 800; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 20px 0 28px; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 13px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #fef3e2; border-left: 3px solid #d97706; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+.chain-trace { background: #f5f0ff; border: 1px solid #c4b5fd; border-radius: 6px; padding: 14px 16px; margin: 16px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; line-height: 1.6; white-space: pre-line; }
 </style>
 </head>
 <body data-lang="zh">
@@ -46,72 +54,201 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>China Supply Chain Vulnerability Assessment (2026)</h1>
 <div class="score-line">风险评分：<strong>83/100</strong> — 净脆弱 / NET VULNERABLE</div>
 
-<h2>执行摘要</h2>
-<p>中国占据一个悖论式的位置：既是全球最大的制造业经济体，又是结构性脆弱性最高的国家之一。北京在稀土、电池材料、成熟制程半导体等上游扼制节点占据决定性地位，但其能源进口、先进芯片、铁矿石和粮食的依赖使其对海上封锁和技术断供高度暴露。2026年霍尔木兹封锁与深化的中美技术管制同时放大了这两个维度的脆弱性。</p>
+<div class="tldr">
+<h3>核心论点</h3>
+<p>中国占据一个<strong>结构性自我矛盾</strong>的位置：既是全球最大制造业经济体和关键矿产加工的上游控制者，又同时是海运石油、先进半导体、工业化所需铁矿石和蛋白质食物的深度下游依赖者。这一结构的内在不稳定性通过"<em>三重绞杀</em>"显现——人口坍塌、地缘政治围堵、供应链断裂三条下行曲线在2027-2032年同时加速。中国目前持有的矿产加工杠杆是其唯一真正的不对称工具，但该杠杆的<strong>时间半衰期短于结构性脆弱性的到期时间</strong>：矿产优势在2030年前后因西方替代产能上线而衰减，而先进芯片天花板和马六甲依赖是永久性约束。这种"杠杆衰减快于约束衰减"的不对称是理解北京激励结构的关键。</p>
+</div>
 
-<h2>进口依赖（关键/高）</h2>
+<h2>一、结构性画像</h2>
+<p>中国在全球生产网络中的位置不能用单一标签描述。它同时是：</p>
+<ul>
+<li><strong>上游控制者</strong>（在关键矿产加工层）——稀土87%、钴80%、石墨100%、镓98%、锂60%全球精炼份额，这在<a href="supply-chain-mad.html">供应链MAD</a>框架中构成真正的非对称威慑</li>
+<li><strong>中游巨无霸</strong>（在成熟制程半导体、电池组装、大宗化学品、太阳能组件等领域）——成熟制程（28nm+）全球产能约80%</li>
+<li><strong>下游囚徒</strong>（在能源、先进芯片、铁矿、蛋白质食物层）——石油70%+进口、先进芯片几乎完全进口、铁矿石>70%进口、大豆80%+进口</li>
+</ul>
+<p>这种<em>"上游-下游同时"</em>的异质结构是其他主要经济体没有的。它意味着任何单一维度的分析都会产生误导：只看上游会高估中国韧性，只看下游会低估中国反击能力。真实的战略计算必须<strong>同时权衡两个方向</strong>。</p>
+
+<h2>二、进口依赖（关键/高）</h2>
 <table>
 <thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
 <tbody>
-<tr><td>台湾</td><td>先进半导体芯片</td><td>$52.0B</td><td>关键</td></tr>
-<tr><td>美国</td><td>AI加速器芯片（受限）</td><td>$5.0B</td><td>关键</td></tr>
-<tr><td>澳大利亚</td><td>铁矿石</td><td>$82.0B</td><td>关键</td></tr>
-<tr><td>刚果（金）</td><td>钴（原矿与精炼）</td><td>$5.5B</td><td>关键</td></tr>
-<tr><td>缅甸</td><td>重稀土矿石（镝、铽）</td><td>$0.8B</td><td>关键</td></tr>
-<tr><td>巴西</td><td>大豆</td><td>$36.0B</td><td>关键</td></tr>
-<tr><td>韩国</td><td>DRAM和NAND存储</td><td>$28.0B</td><td>高</td></tr>
-<tr><td>沙特阿拉伯</td><td>原油</td><td>$65.0B</td><td>高</td></tr>
+<tr><td>台湾</td><td>先进半导体芯片</td><td>$52.0B</td><td>关键 — 不可替代</td></tr>
+<tr><td>美国</td><td>AI加速器芯片（受限）</td><td>$5.0B</td><td>关键 — 已被管制</td></tr>
+<tr><td>澳大利亚</td><td>铁矿石</td><td>$82.0B</td><td>关键 — 钢铁产业命脉</td></tr>
+<tr><td>刚果（金）</td><td>钴（原矿+精炼）</td><td>$5.5B</td><td>关键 — 电池正极材料</td></tr>
+<tr><td>缅甸</td><td>重稀土矿石（Dy、Tb）</td><td>$0.8B</td><td>关键 — 边境不稳定加剧</td></tr>
+<tr><td>巴西</td><td>大豆</td><td>$36.0B</td><td>关键 — 肉类价格稳定支撑</td></tr>
+<tr><td>韩国</td><td>DRAM与NAND存储</td><td>$28.0B</td><td>高</td></tr>
+<tr><td>沙特阿拉伯</td><td>原油</td><td>$65.0B</td><td>高 — 经霍尔木兹</td></tr>
 <tr><td>日本</td><td>半导体设备（受限）</td><td>$7.8B</td><td>高</td></tr>
-<tr><td>卡塔尔</td><td>液化天然气</td><td>$16.0B</td><td>高</td></tr>
+<tr><td>卡塔尔</td><td>LNG</td><td>$16.0B</td><td>高 — 经霍尔木兹</td></tr>
 <tr><td>智利</td><td>铜</td><td>$22.0B</td><td>高</td></tr>
-<tr><td>印度尼西亚</td><td>镍</td><td>$18.0B</td><td>高</td></tr>
-<tr><td>德国</td><td>机床</td><td>$24.0B</td><td>高</td></tr>
+<tr><td>印度尼西亚</td><td>镍</td><td>$18.0B</td><td>高 — 已部分中国投资本土化</td></tr>
+<tr><td>德国</td><td>机床</td><td>$24.0B</td><td>高 — 中游制造关键</td></tr>
 <tr><td>澳大利亚</td><td>锂辉石</td><td>$8.0B</td><td>高</td></tr>
-<tr><td>巴西</td><td>铁矿石</td><td>$30.0B</td><td>高</td></tr>
+<tr><td>巴西</td><td>铁矿石</td><td>$30.0B</td><td>高 — 澳洲替代</td></tr>
 </tbody>
 </table>
 
-<h2>出口杠杆</h2>
+<h2>三、出口杠杆（具备"反击能力"）</h2>
 <table>
 <thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
 <tbody>
-<tr><td>美国</td><td>稀土永磁体（NdFeB）</td><td>$3.0B</td><td>关键 — 垄断供应</td></tr>
+<tr><td>美国</td><td>稀土磁铁（NdFeB）</td><td>$3.0B</td><td>关键 — 垄断供应，F-35依赖</td></tr>
 <tr><td>日本</td><td>精炼稀土</td><td>$2.5B</td><td>关键 — 近乎完全依赖</td></tr>
-<tr><td>韩国</td><td>电池正/负极材料</td><td>$15.0B</td><td>关键 — 电池供应链</td></tr>
+<tr><td>韩国</td><td>电池正/负极材料</td><td>$15.0B</td><td>关键 — 电池供应链命门</td></tr>
 <tr><td>韩国</td><td>氢氧化锂/碳酸锂</td><td>$6.0B</td><td>关键 — 精炼垄断</td></tr>
 <tr><td>美国</td><td>镓与锗</td><td>$0.5B</td><td>关键 — 国防/半导体</td></tr>
 <tr><td>印度</td><td>药物API</td><td>$6.5B</td><td>关键 — 医疗体系依赖</td></tr>
 <tr><td>美国</td><td>石墨负极材料</td><td>$3.0B</td><td>关键 — EV电池垄断</td></tr>
 <tr><td>印度</td><td>太阳能硅片与电池</td><td>$8.0B</td><td>关键 — 能源转型</td></tr>
 <tr><td>美国</td><td>消费电子</td><td>$145.0B</td><td>高 — 规模依赖</td></tr>
-<tr><td>德国</td><td>电动汽车与太阳能板</td><td>$42.0B</td><td>高 — 市场主导</td></tr>
+<tr><td>德国</td><td>EV与太阳能板</td><td>$42.0B</td><td>高 — 市场主导</td></tr>
 </tbody>
 </table>
 
-<h2>咽喉要道暴露</h2>
-<p>中国的供应线跨越七大咽喉要道：<strong>霍尔木兹海峡</strong>（海湾原油 — 现已封锁）、<strong>曼德海峡</strong>（红海能源通道）、<strong>苏伊士运河</strong>（欧洲及中东流向）、<strong>马六甲海峡</strong>（承载中国70%以上石油进口）、<strong>台湾海峡</strong>（半导体与区域航运）、<strong>好望角</strong>（替代路线）、<strong>土耳其海峡</strong>（黑海大宗商品）。2026年霍尔木兹封锁直接威胁约650亿美元沙特原油和160亿美元卡塔尔LNG。马六甲仍是北京最根本的海上脆弱性——即所谓"马六甲困境"，这一困境正是驱动北京投资俄罗斯和缅甸管道的核心动因。</p>
+<h2>四、三重绞杀的传导链分析</h2>
+<p>把中国的脆弱性分解为三条独立但相互强化的传导链，比单一的"供应链风险"标签更准确。</p>
 
-<h2>主要风险（2026年背景）</h2>
+<h3>绞杀链1：霍尔木兹 → 东亚半导体 → 中国工业</h3>
+<div class="chain-trace">伊朗打击卡塔尔LNG设施
+  ↓
+卡塔尔氦气产能（全球1/3）下线
+  ↓
+韩国（64.7%氦气依赖卡塔尔）+ 台湾半导体制程受限
+  ↓
+三星/SK海力士HBM + TSMC先进制程减产
+  ↓
+中国从韩台进口的$80B+芯片（DRAM/NAND/先进逻辑）供应收缩
+  ↓
+中国AI、电动车、消费电子产能受阻 → 出口竞争力受损
+  ↓
+同时：中国从沙特$65B原油 + 卡塔尔$16B LNG直接断供
+  ↓
+国内工业电力/交通燃料紧张 → 通胀 + 社会压力</div>
+<p>这条链的关键洞察：<strong>中国不需要霍尔木兹直接影响自己就会受损</strong>。氦气这条传导链是<a href="supply-chain-mad.html">供应链MAD</a>报告的第三方触发器机制的典型案例——通过与中国"表面无关"的中东冲突传导到中国核心产业。</p>
+
+<h3>绞杀链2：马六甲 → 能源 + 粮食 → 政权稳定</h3>
+<div class="chain-trace">台海/马六甲封锁或保险市场拒保
+  ↓
+中国80%石油进口受阻（日消费~1500万桶中~1200万桶经此通道）
+  ↓
+战略石油储备（约80天）被迅速消耗
+  ↓
++同时：巴西大豆（$36B）经印度洋/马六甲供应链受阻
+  ↓
+猪肉/禽肉价格飙升（饲料短缺）
+  ↓
+食物通胀 → CPI冲击 → 社会稳定压力
+  ↓
+(决策者层面)能源配给/粮食配给 → 经济活动减速 → 失业率上升</div>
+<p>这条链的时间尺度很短：SPR从使用第一天起覆盖约80天，LNG储备约2-3周。中俄陆上管道（Power of Siberia、中缅、中哈）的理论产能不足以替代海运——即使全开也只能覆盖约30-40%的石油进口。</p>
+
+<h3>绞杀链3：技术封锁 → 先进制程 → AI/军工</h3>
+<div class="chain-trace">美国EDA断供 + 对华ASML EUV禁令 + 日本光刻胶出口管制（2023起）
+  ↓
+中芯国际被锁定在DUV多重曝光（~7nm级别）
+  ↓
+每代制程差距复利扩大——2027年的2nm与中国7nm的鸿沟 >> 2024年的3nm与中国7nm
+  ↓
+华为昇腾等AI芯片性能受限
+  ↓
+中国AI训练效率 vs. 美国差距扩大（每代GPU 1.5-2x性能提升复利）
+  ↓
+国防：北斗、高超音速、隐形战机等系统的迭代速度受芯片限制</div>
+<p>与前两条链不同，这条链<em>没有时间终点</em>——只要联盟架构（荷/日/韩/台追随美国）不崩溃，技术差距就会永久扩大。这是中国真正无法通过国内投资解决的约束。</p>
+
+<h2>五、时间变量：杠杆与约束的衰减曲线</h2>
+<p>中国的战略位置不是静止的——每个杠杆和约束都在不同的时间尺度上演化。2026年的"权力快照"掩盖了结构趋势：</p>
+
+<table>
+<thead><tr><th>维度</th><th>2025峰值/当前</th><th>2030预期</th><th>2040预期</th></tr></thead>
+<tbody>
+<tr><td>矿产加工杠杆（稀土、锂、钴）</td><td><em>历史峰值</em> ~85%平均</td><td>衰减至60-70%（MP Materials、Lynas上线）</td><td>进一步衰减至50%以下</td></tr>
+<tr><td>成熟制程（28nm+）份额</td><td>80%</td><td>保持（西方不会大规模建成熟制程产能）</td><td>可能上升</td></tr>
+<tr><td>先进芯片自给率</td><td>~5-10%（7nm有限）</td><td>~15-25%（DUV multi-patterning成熟）</td><td>仍远落后前沿（EUV差距持续）</td></tr>
+<tr><td>石油对外依赖</td><td>72%</td><td>65-70%（可再生扩张）</td><td>45-55%（如果EV普及+新能源）</td></tr>
+<tr><td>劳动年龄人口</td><td>9.84亿（被印度超越）</td><td>9.5亿</td><td>8.5亿</td></tr>
+<tr><td>出生人口</td><td>792万（1949年最低）</td><td>600-700万（趋势延续）</td><td>可能 <500万</td></tr>
+<tr><td>债务/GDP</td><td>~300%（含地方平台）</td><td>若不降杠杆则 >350%</td><td>结构性约束加深</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>时间轴上的矛盾激励</strong>：中国的<em>唯一真正增长的杠杆</em>是成熟制程份额；其他所有维度都在衰减或其约束在加深。这意味着北京面对的是一个<strong>"杠杆先衰减，压力先到来"</strong>的结构：矿产武器在2030年前后衰减之前必须充分使用，否则将永远失去议价空间。这是<a href="supply-chain-mad.html">供应链MAD</a>报告中"误判风险"章节所述的1914年德国"现在或永远"逻辑的中国版本。
+</div>
+
+<h2>六、情景分析</h2>
+
+<h3>情景A：霍尔木兹持续封锁6+个月（正在发生）</h3>
 <ul>
-<li><strong>霍尔木兹封锁</strong>：沙特原油（650亿美元）与卡塔尔LNG（160亿美元）直接中断；伊朗原油通过陆路/灰色市场渠道持续流入但规模收缩</li>
-<li><strong>美国技术管制</strong>：AI加速器芯片限制持续收紧；ASML对中国DUV设备的服务处于审查中；华为的国产替代仍落后2-3代</li>
-<li><strong>台海冲突情景</strong>：来自台积电的520亿美元先进芯片代表一项不可替代的依赖；任何台海危机将同时切断供应并触发全面西方制裁</li>
-<li><strong>粮食安全</strong>：对巴西（360亿美元）和美国（150亿美元）的大豆依赖形成可在贸易冲突中被武器化的杠杆</li>
-<li><strong>矿产加工反制</strong>：西方IRA/CRMA立法目标是在5-8年内打破中国在锂、钴、稀土的精炼垄断</li>
+<li><strong>触发条件</strong>：已发生</li>
+<li><strong>传导</strong>：SPR消耗→动用战备+伊朗灰色市场原油→沙特供给减半→俄罗斯/委内瑞拉补足约50%→成本上升+供应紧张持续</li>
+<li><strong>落空条件（判断情景失效）</strong>：(i) 霍尔木兹在3个月内重新开放；(ii) 美伊达成临时协议；(iii) 俄罗斯大规模增产</li>
+<li><strong>结构性影响</strong>：加速"东数西算"电力集中化，但加剧化石燃料依赖。副作用：俄罗斯议价权上升</li>
 </ul>
 
-<h2>结构性评估（产缘政治框架）</h2>
-<p>中国是"组装谬误"的反向典型——通常被视为单纯的组装国，但过去十年系统性地向上游扩展至关键材料加工和元器件制造。在稀土、锂精炼、钴处理、石墨、镓、锗等领域，中国控制全球中游精炼的60-90%。这不是下游组装者的位置，而是上游物质扼制点控制者的位置。北京的揭示偏好——在非洲和拉丁美洲激进投资矿物加工产能、对镓锗实施出口管制——证明中国战略家理解并主动利用生产网络主权。</p>
-<p>然而，中国在两个决定性领域仍处于结构下游：先进半导体和能源。半导体差距是<em>质的</em>——中芯国际最先进节点仍落后台积电约两代，缺少EUV光刻将使这一差距无法通过渐进改进弥合。能源差距是<em>量的</em>——中国70%以上的原油进口依赖海运，任何管道组合（西伯利亚力量、缅甸走廊）都无法替代穿越霍尔木兹和马六甲的海上流量。</p>
-<p>因此，中国大战略的结构性张力存在于其上游矿产杠杆（鼓励果断行动）与下游芯片/能源脆弱性（鼓励审慎）之间。2026年霍尔木兹危机直接测试这一平衡：中国既从廉价伊朗原油中获益，又承受无可替代的沙特和卡塔尔流量中断。</p>
-
-<h2>建议</h2>
+<h3>情景B：台海危机（2027-2032窗口）</h3>
 <ul>
-<li><strong>加速马六甲绕行</strong>：扩大缅甸（皎漂）和巴基斯坦（瓜达尔）管道容量，将海运石油依赖降至60%以下</li>
-<li><strong>建设战略石油储备</strong>：目标120+天进口覆盖（目前约80天），以应对霍尔木兹与潜在台海情景同时发生</li>
-<li><strong>多元化半导体供应</strong>：投资三星在华工厂与国内RISC-V生态作为对台积电依赖的部分对冲</li>
-<li><strong>保障重稀土供应</strong>：缅甸边境不稳定威胁镝/铽供应；不顾环境成本开发江西/广东的离子型黏土矿床</li>
-<li><strong>预置粮食储备</strong>：通过巴西长期合同扩大大豆压榨产能，降低对美贸易杠杆的脆弱性</li>
+<li><strong>触发条件</strong>：台湾独立公投、美舰过境升级、或大陆内部政治危机驱动"转移注意力"</li>
+<li><strong>传导（四根MAD支柱同时激活）</strong>：
+<ol>
+<li>台积电停产 → 中国$52B芯片进口即刻归零 + 全球AI产业停转</li>
+<li>台海航运切断 → 中国出口链受损（影响$500B+出口）</li>
+<li>西方全面金融制裁（SWIFT踢出、美元资产冻结） → $3T+储备瞬时受冲击</li>
+<li>联盟信誉传导 → 日韩欧加强对华技术封锁</li>
+</ol>
+</li>
+<li><strong>落空条件</strong>：(i) 2030年前北京明确放弃武统选项；(ii) 台湾重大政治转向（亲大陆党执政）；(iii) 中国内部经济崩溃优先于台海</li>
+<li><strong>结构性影响</strong>：这是唯一一个同时激活中国所有四大脆弱性的情景。没有"部分失败"版本——一旦激活，传导全面且不可控</li>
+</ul>
+
+<h3>情景C：矿产武器过度使用 → 自我实现的脱钩（2026-2030）</h3>
+<ul>
+<li><strong>触发条件</strong>：北京判断"2030窗口关闭"并在此前发动全面矿产管制</li>
+<li><strong>传导</strong>：每一次管制（钨→锑→镓→锗→锂→石墨）都加速西方投资替代产能 + 提高价格让替代项目ROI变好 + 推动盟友追随管制政策</li>
+<li><strong>落空条件</strong>：西方无法在10年内建立替代加工产能；但现实中IRA + CRMA已在2028-2032年间陆续上线</li>
+<li><strong>结构性影响</strong>：中国可能在2028-2030年"赢得"短期战术但<em>丢失</em>长期杠杆。每次管制是永久性的市场份额转移信号，一旦失去不可逆恢复</li>
+</ul>
+
+<h2>七、结构性评估</h2>
+
+<h3>"三个中国"与产业基础</h3>
+<p>理解中国供应链能力必须区分<strong>哈耶克中国</strong>（长三角/珠三角，自发秩序涌现的制造业生态，2.5-3亿人口）、<strong>基层中国</strong>（约10亿人口，内需消费基础）、<strong>共产党中国</strong>（北京政治决策层）。供应链主权的物质基础来自哈耶克中国——但对其战略运用的决定来自共产党中国。这种<em>"生产者与决策者不同身份"</em>是中国供应链政策的根本张力——每一次产业政策干预都有可能破坏产生这种能力的自发秩序本身。</p>
+
+<h3>组装工厂而非制造工厂</h3>
+<p>西方分析中常见的"中国不可替代"叙事有一个根本误解：中国主要是<strong>组装</strong>的枢纽，而非<strong>从原材料到终端的全链制造</strong>枢纽。组装的规模依赖两个条件：(a) 能源+原材料进口顺畅；(b) 出口市场开放。任何一个条件被冲击，组装优势就悬空。这就是为什么<em>石油海运依赖和市场准入风险</em>是中国的两大结构性风险，而不是"人口红利消失"——组装模式在人口减少前就会因上述两个条件恶化而崩溃。</p>
+
+<h3>与主题报告的交叉链接</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">供应链MAD</a></strong>：中国持有的矿产加工杠杆是MAD的主要中国方支柱。但其三个结构性差异（异质/时变/无共识刻度）对中国尤为不利——矿产杠杆时变，技术约束加强，升级无共识刻度意味着每次矿产管制都可能触发误读</li>
+<li><strong><a href="semiconductor-supply-chain.html">半导体六层迷宫</a></strong>：中国在六层中的分布极不均衡——基础材料和成熟设备接近自立，先进封装差距可能缩小，但EUV和顶级EDA结构上不可能在本十年赶上</li>
+<li><strong><a href="ai-power-infrastructure.html">AI物理约束</a></strong>：中国的AI瓶颈恰好与美国相反——电力充足（东数西算可利用）但芯片受限。这种不对称意味着中美AI竞赛不会有"一方速胜"</li>
+</ul>
+
+<h2>八、建议（按时间分层）</h2>
+
+<h3>2026-2028 紧急（"持住杠杆"）</h3>
+<ul>
+<li>加速马六甲绕行：缅甸皎漂管道 + 巴基斯坦瓜达尔产能扩张至国内石油需求的30-35%</li>
+<li>SPR目标从80天提升至120+天，应对同时发生的霍尔木兹+台海情景</li>
+<li><em>克制</em>矿产武器的过度使用——每次管制都在永久削弱未来的议价空间</li>
+<li>江西/广东国内离子型稀土开采增产，对冲缅甸边境不稳定</li>
+</ul>
+
+<h3>2028-2032 结构调整（"杠杆替代"）</h3>
+<ul>
+<li>把战略重心从"抢夺先进制程"转向"巩固成熟制程"——成熟制程是唯一可持续增长的杠杆</li>
+<li>通过扩大对巴西、俄罗斯、东南亚的长期粮食/能源合约，降低食物通胀风险</li>
+<li>对印尼镍、刚果钴的持续投资锁定资源端而非精炼端杠杆</li>
+<li>与Samsung、SK海力士建立直接股权关系（中国车厂+韩国电池厂）锁定联盟脆弱性</li>
+</ul>
+
+<h3>2032+ 结构性对冲（"人口+债务"）</h3>
+<ul>
+<li>自动化密度继续提升以对冲劳动力下降，但需认识到<em>机器人不消费</em>——必须同时建立消费保障</li>
+<li>长期债务重组，避免地方平台级联违约</li>
+<li>准备生育率持续低于1.0的场景——不是"如何提高"，而是"低出生率下的社会组织"</li>
 </ul>
 
 </section>
@@ -123,41 +260,52 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>中国供应链脆弱性评估</h1>
 <div class="score-line">Risk Score: <strong>83/100</strong> — NET VULNERABLE</div>
 
-<h2>Executive Summary</h2>
-<p>China occupies a paradoxical position as both the world's largest manufacturing economy and one of its most structurally vulnerable. While Beijing controls decisive upstream chokepoints in rare earths, battery materials, and legacy semiconductors, its dependence on imported energy, advanced chips, iron ore, and food renders it acutely exposed to maritime interdiction and technology denial. The 2026 Hormuz blockade and deepening US-China tech controls have amplified both dimensions simultaneously.</p>
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>China occupies a <strong>structurally self-contradictory</strong> position: simultaneously the world's largest manufacturing economy and the upstream controller of critical mineral processing, yet also a deep downstream dependent for seaborne oil, advanced semiconductors, industrial iron ore, and protein. The instability of this structure manifests through <em>"triple strangulation"</em> — demographic collapse, geopolitical encirclement, and supply chain disruption — three downward curves accelerating simultaneously in the 2027-2032 window. China's mineral processing leverage is its only genuine asymmetric tool, but the <strong>time half-life of that leverage is shorter than the expiration date of its structural vulnerabilities</strong>: mineral dominance decays by 2030 as Western substitute capacity comes online, while advanced-chip ceilings and the Malacca dependency are permanent. This "leverage decaying faster than constraints" asymmetry is the key to understanding Beijing's incentive structure.</p>
+</div>
 
-<h2>Import Dependencies (Critical/High)</h2>
+<h2>I. Structural Profile</h2>
+<p>China's position in the global production network cannot be captured by a single label. It is simultaneously:</p>
+<ul>
+<li><strong>Upstream controller</strong> (critical mineral processing) — 87% rare earths, 80% cobalt, 100% graphite, 98% gallium, 60% lithium global refining shares, constituting the genuine asymmetric deterrent in the <a href="supply-chain-mad.html">Supply Chain MAD</a> framework</li>
+<li><strong>Midstream juggernaut</strong> (mature-node semiconductors, battery assembly, bulk chemicals, solar modules) — about 80% of global mature-node (28nm+) capacity</li>
+<li><strong>Downstream prisoner</strong> (energy, advanced chips, iron ore, protein) — 72% oil imports, near-total advanced chip imports, >70% iron ore imports, 80%+ soybean imports</li>
+</ul>
+<p>This <em>"upstream-and-downstream simultaneously"</em> heterogeneous structure is unique among major economies. It means any single-dimensional analysis misleads: looking only upstream overestimates Chinese resilience; looking only downstream underestimates Chinese counterattack capability. Genuine strategic calculus must <strong>weigh both directions simultaneously</strong>.</p>
+
+<h2>II. Import Dependencies (Critical/High)</h2>
 <table>
 <thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr><td>Taiwan</td><td>Advanced Semiconductor Chips</td><td>$52.0B</td><td>Critical</td></tr>
-<tr><td>United States</td><td>AI Accelerator Chips (restricted)</td><td>$5.0B</td><td>Critical</td></tr>
-<tr><td>Australia</td><td>Iron Ore</td><td>$82.0B</td><td>Critical</td></tr>
-<tr><td>DR Congo</td><td>Cobalt (Raw and Refined)</td><td>$5.5B</td><td>Critical</td></tr>
-<tr><td>Myanmar</td><td>Heavy Rare Earth Ores (Dy, Tb)</td><td>$0.8B</td><td>Critical</td></tr>
-<tr><td>Brazil</td><td>Soybeans</td><td>$36.0B</td><td>Critical</td></tr>
+<tr><td>Taiwan</td><td>Advanced Semiconductor Chips</td><td>$52.0B</td><td>Critical — irreplaceable</td></tr>
+<tr><td>United States</td><td>AI Accelerator Chips (restricted)</td><td>$5.0B</td><td>Critical — already controlled</td></tr>
+<tr><td>Australia</td><td>Iron Ore</td><td>$82.0B</td><td>Critical — steel lifeline</td></tr>
+<tr><td>DR Congo</td><td>Cobalt (raw + refined)</td><td>$5.5B</td><td>Critical — battery cathode</td></tr>
+<tr><td>Myanmar</td><td>Heavy REE Ores (Dy, Tb)</td><td>$0.8B</td><td>Critical — border instability</td></tr>
+<tr><td>Brazil</td><td>Soybeans</td><td>$36.0B</td><td>Critical — meat price stability</td></tr>
 <tr><td>South Korea</td><td>DRAM and NAND Memory</td><td>$28.0B</td><td>High</td></tr>
-<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$65.0B</td><td>High</td></tr>
+<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$65.0B</td><td>High — via Hormuz</td></tr>
 <tr><td>Japan</td><td>Semiconductor Equipment (restricted)</td><td>$7.8B</td><td>High</td></tr>
-<tr><td>Qatar</td><td>LNG</td><td>$16.0B</td><td>High</td></tr>
+<tr><td>Qatar</td><td>LNG</td><td>$16.0B</td><td>High — via Hormuz</td></tr>
 <tr><td>Chile</td><td>Copper</td><td>$22.0B</td><td>High</td></tr>
-<tr><td>Indonesia</td><td>Nickel</td><td>$18.0B</td><td>High</td></tr>
-<tr><td>Germany</td><td>Machine Tools</td><td>$24.0B</td><td>High</td></tr>
+<tr><td>Indonesia</td><td>Nickel</td><td>$18.0B</td><td>High — partly localized via Chinese investment</td></tr>
+<tr><td>Germany</td><td>Machine Tools</td><td>$24.0B</td><td>High — midstream manufacturing</td></tr>
 <tr><td>Australia</td><td>Lithium Spodumene</td><td>$8.0B</td><td>High</td></tr>
-<tr><td>Brazil</td><td>Iron Ore</td><td>$30.0B</td><td>High</td></tr>
+<tr><td>Brazil</td><td>Iron Ore</td><td>$30.0B</td><td>High — Australian alternative</td></tr>
 </tbody>
 </table>
 
-<h2>Export Leverage</h2>
+<h2>III. Export Leverage (Counterstrike Capability)</h2>
 <table>
-<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage type</th></tr></thead>
 <tbody>
-<tr><td>United States</td><td>Rare Earth Magnets (NdFeB)</td><td>$3.0B</td><td>Critical — monopoly supplier</td></tr>
+<tr><td>United States</td><td>Rare Earth Magnets (NdFeB)</td><td>$3.0B</td><td>Critical — monopoly, F-35 dependency</td></tr>
 <tr><td>Japan</td><td>Processed Rare Earths</td><td>$2.5B</td><td>Critical — near-total dependency</td></tr>
-<tr><td>South Korea</td><td>Battery Cathode/Anode Materials</td><td>$15.0B</td><td>Critical — battery supply chain</td></tr>
+<tr><td>South Korea</td><td>Battery Cathode/Anode Materials</td><td>$15.0B</td><td>Critical — battery supply chain jugular</td></tr>
 <tr><td>South Korea</td><td>Lithium Hydroxide/Carbonate</td><td>$6.0B</td><td>Critical — refining monopoly</td></tr>
 <tr><td>United States</td><td>Gallium and Germanium</td><td>$0.5B</td><td>Critical — defense/semiconductor</td></tr>
-<tr><td>India</td><td>Pharma APIs</td><td>$6.5B</td><td>Critical — health system dependency</td></tr>
+<tr><td>India</td><td>Pharma APIs</td><td>$6.5B</td><td>Critical — healthcare system dependency</td></tr>
 <tr><td>United States</td><td>Graphite Anode Material</td><td>$3.0B</td><td>Critical — EV battery monopoly</td></tr>
 <tr><td>India</td><td>Solar Wafers and Cells</td><td>$8.0B</td><td>Critical — energy transition</td></tr>
 <tr><td>United States</td><td>Consumer Electronics</td><td>$145.0B</td><td>High — scale dependency</td></tr>
@@ -165,30 +313,148 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>Chokepoint Exposure</h2>
-<p>China's supply lines transit seven major chokepoints: <strong>Strait of Hormuz</strong> (Gulf crude — now blockaded), <strong>Bab el-Mandeb</strong> (Red Sea energy transit), <strong>Suez Canal</strong> (Europe-bound and Middle East flows), <strong>Strait of Malacca</strong> (70%+ of China's oil imports), <strong>Taiwan Strait</strong> (semiconductor and regional shipping), <strong>Cape of Good Hope</strong> (alternative routing), and <strong>Turkish Straits</strong> (Black Sea commodities). The 2026 Hormuz blockade directly threatens approximately $65B of Saudi crude and $16B in Qatari LNG. Malacca remains Beijing's foundational maritime vulnerability — the so-called "Malacca Dilemma" that has driven pipeline construction to Russia and Myanmar.</p>
+<h2>IV. Triple Strangulation: Transmission Chain Analysis</h2>
+<p>Decomposing Chinese vulnerability into three independent but mutually reinforcing transmission chains is more accurate than the single label of "supply chain risk."</p>
 
-<h2>Key Risks (2026 Context)</h2>
+<h3>Strangulation 1: Hormuz → East Asian Semiconductors → Chinese Industry</h3>
+<div class="chain-trace">Iran strikes Qatar LNG facilities
+  ↓
+Qatari helium capacity (1/3 of global) offline
+  ↓
+South Korea (64.7% helium from Qatar) + Taiwan semiconductor processes constrained
+  ↓
+Samsung/SK Hynix HBM + TSMC advanced nodes reduce output
+  ↓
+China's $80B+ chip imports from Korea/Taiwan (DRAM/NAND/advanced logic) contract
+  ↓
+Chinese AI, EV, consumer electronics capacity impeded → export competitiveness damaged
+  ↓
+Simultaneously: $65B Saudi crude + $16B Qatari LNG to China directly cut off
+  ↓
+Domestic industrial power/transport fuel tight → inflation + social pressure</div>
+<p>The key insight: <strong>China doesn't need to be directly affected by Hormuz to suffer</strong>. The helium chain is a paradigmatic case of the third-party trigger mechanism in the <a href="supply-chain-mad.html">Supply Chain MAD</a> report — transmitting through a Middle East conflict "superficially unrelated" to China into China's core industries.</p>
+
+<h3>Strangulation 2: Malacca → Energy + Food → Regime Stability</h3>
+<div class="chain-trace">Taiwan Strait/Malacca blockade or insurance market refusal
+  ↓
+80% of China's oil imports disrupted (~12M of ~15M bpd via this channel)
+  ↓
+Strategic petroleum reserves (~80 days) rapidly consumed
+  ↓
++ Simultaneously: Brazilian soybeans ($36B) supply chain via Indian Ocean/Malacca impeded
+  ↓
+Pork/poultry prices surge (feed shortage)
+  ↓
+Food inflation → CPI shock → social stability pressure
+  ↓
+(Decision-maker level) Energy rationing/food rationing → economic slowdown → rising unemployment</div>
+<p>This chain's timescale is short: SPR covers roughly 80 days from day one of use, LNG reserves 2-3 weeks. China-Russia/Myanmar/Kazakhstan overland pipelines have theoretical capacity insufficient to replace maritime flows — even fully open, they cover only 30-40% of oil imports.</p>
+
+<h3>Strangulation 3: Tech Blockade → Advanced Nodes → AI/Military</h3>
+<div class="chain-trace">US EDA cutoff + ASML EUV export ban to China + Japanese photoresist controls (from 2023)
+  ↓
+SMIC locked at DUV multi-patterning (~7nm equivalent)
+  ↓
+Each generation process gap compounds — 2027's 2nm vs China's 7nm gap >> 2024's 3nm vs China's 7nm
+  ↓
+Huawei Ascend and other AI chips performance-limited
+  ↓
+China AI training efficiency vs US gap widens (compounding effect of each GPU generation's 1.5-2x)
+  ↓
+Defense: iteration speed of BeiDou, hypersonics, stealth aircraft limited by chips</div>
+<p>Unlike the first two, this chain has <em>no time endpoint</em> — as long as the alliance architecture (NL/JP/KR/TW following the US) doesn't collapse, the technology gap will permanently widen. This is the real constraint China cannot solve via domestic investment.</p>
+
+<h2>V. Time-Variant: Decay Curves of Leverage and Constraints</h2>
+<p>China's strategic position is not static — each leverage and constraint evolves on a different timescale. The 2026 "power snapshot" masks structural trends:</p>
+
+<table>
+<thead><tr><th>Dimension</th><th>2025 peak/current</th><th>2030 expected</th><th>2040 expected</th></tr></thead>
+<tbody>
+<tr><td>Mineral processing leverage (REE, Li, Co)</td><td><em>Historical peak</em> ~85% avg</td><td>Decays to 60-70% (MP Materials, Lynas online)</td><td>Further decay to <50%</td></tr>
+<tr><td>Mature node (28nm+) share</td><td>80%</td><td>Holds (West won't build mature capacity at scale)</td><td>Possibly rising</td></tr>
+<tr><td>Advanced chip self-sufficiency</td><td>~5-10% (limited 7nm)</td><td>~15-25% (DUV multi-patterning matures)</td><td>Still far behind frontier (EUV gap persists)</td></tr>
+<tr><td>Oil import dependence</td><td>72%</td><td>65-70% (renewables expansion)</td><td>45-55% (if EV + new energy succeed)</td></tr>
+<tr><td>Working-age population</td><td>984M (surpassed by India)</td><td>950M</td><td>850M</td></tr>
+<tr><td>Annual births</td><td>7.92M (lowest since 1949)</td><td>6-7M (trend continues)</td><td>Possibly <5M</td></tr>
+<tr><td>Debt/GDP</td><td>~300% (inc. local gov't vehicles)</td><td>>350% if no deleveraging</td><td>Deepening structural constraint</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>The contradiction of incentives across time</strong>: China's <em>only genuinely rising leverage</em> is mature-node share; every other dimension decays or its constraint deepens. This means Beijing faces a structure where <strong>"leverage decays before pressure arrives"</strong>: mineral weapons must be fully used before they decay around 2030, or bargaining room is permanently lost. This is the Chinese version of the "now or never" logic from the 1914 German analogy in the <a href="supply-chain-mad.html">Supply Chain MAD</a> report's misjudgment-risk chapter.
+</div>
+
+<h2>VI. Scenarios</h2>
+
+<h3>Scenario A: Prolonged Hormuz Blockade, 6+ months (Ongoing)</h3>
 <ul>
-<li><strong>Hormuz blockade</strong>: Saudi crude supply ($65B) and Qatari LNG ($16B) directly disrupted; Iran oil continues via overland/gray-market routes but at reduced volume</li>
-<li><strong>US tech controls</strong>: AI accelerator chip restrictions tightening; ASML servicing of Chinese DUV tools under review; Huawei's domestic alternatives still 2-3 generations behind</li>
-<li><strong>Taiwan contingency</strong>: $52B in advanced chips from TSMC represents an irreplaceable dependency; any Taiwan Strait crisis would simultaneously sever supply and trigger full Western sanctions</li>
-<li><strong>Food security</strong>: Soybean dependence on Brazil ($36B) and US ($15B) creates leverage that could be weaponized in trade conflicts</li>
-<li><strong>Mineral processing backlash</strong>: Western IRA/CRMA legislation aims to break Chinese refining monopoly in lithium, cobalt, and rare earths within 5-8 years</li>
+<li><strong>Trigger</strong>: Already occurred</li>
+<li><strong>Transmission</strong>: SPR drawdown → reserve deployment + Iranian gray-market crude → Saudi supply halved → Russia/Venezuela replace ~50% → cost rise + supply tight persists</li>
+<li><strong>Falsification conditions (signs the scenario is failing)</strong>: (i) Hormuz reopens within 3 months; (ii) US-Iran interim deal; (iii) Russia ramps up production at scale</li>
+<li><strong>Structural consequences</strong>: Accelerates East-Data-West-Compute power centralization but deepens fossil dependency. Side effect: Russian bargaining power rises</li>
 </ul>
 
-<h2>Structural Assessment (Supply Chain Geopolitics Framework)</h2>
-<p>China is the preeminent case of the "assembly fallacy" in reverse — widely perceived as a mere assembler, it has systematically moved upstream into critical material processing and component manufacturing over the past decade. In rare earths, lithium refining, cobalt processing, graphite, gallium, and germanium, China controls 60-90% of global midstream refining. This is not the position of a downstream assembler but of an upstream controller of material chokepoints. Beijing's revealed preference — aggressive investment in mineral processing capacity across Africa and Latin America, export controls on gallium/germanium — confirms that Chinese strategists understand and exploit production network sovereignty.</p>
-<p>However, China remains structurally downstream in two decisive domains: advanced semiconductors and energy. The semiconductor gap is qualitative — SMIC's best nodes remain roughly two generations behind TSMC, and without access to EUV lithography, this gap cannot close through incremental improvement. The energy gap is quantitative — China imports over 70% of its crude oil, and no combination of pipelines (Power of Siberia, Myanmar corridor) can substitute for seaborne flows that transit Hormuz and Malacca.</p>
-<p>The structural tension in Chinese grand strategy is therefore between its upstream leverage in materials (which counsels assertiveness) and its downstream vulnerability in chips and energy (which counsels caution). The 2026 Hormuz crisis tests this balance directly: China benefits from cheaper Iranian crude but suffers from disrupted Saudi and Qatari flows that no pipeline can replace at scale.</p>
-
-<h2>Recommendations</h2>
+<h3>Scenario B: Taiwan Strait Crisis (2027-2032 window)</h3>
 <ul>
-<li><strong>Accelerate Malacca bypass</strong>: Expand pipeline capacity through Myanmar (Kyaukphyu) and Pakistan (Gwadar) to reduce seaborne oil dependency below 60%</li>
-<li><strong>Build strategic petroleum reserves</strong>: Target 120+ days of import cover (currently ~80 days) given simultaneous Hormuz and potential Taiwan Strait scenarios</li>
-<li><strong>Diversify semiconductor sourcing</strong>: Invest in Samsung's China fabs and domestic RISC-V ecosystem as partial hedges against TSMC dependency</li>
-<li><strong>Secure heavy rare earth supply</strong>: Myanmar's border instability threatens dysprosium and terbium supply — develop domestic ionic clay deposits in Jiangxi/Guangdong despite environmental costs</li>
-<li><strong>Pre-position food reserves</strong>: Expand soybean crushing capacity using Brazilian long-term contracts to reduce vulnerability to US trade leverage</li>
+<li><strong>Trigger</strong>: Taiwan independence referendum, US vessel transit escalation, or PRC internal political crisis driving "attention diversion"</li>
+<li><strong>Transmission (all four MAD pillars activate simultaneously)</strong>:
+<ol>
+<li>TSMC halts → China's $52B chip imports instantly zero + global AI industry stops</li>
+<li>Taiwan Strait shipping cut → Chinese export chain damaged ($500B+ exports affected)</li>
+<li>Full Western financial sanctions (SWIFT cutoff, dollar asset freeze) → $3T+ reserves instantly shocked</li>
+<li>Alliance credibility transmission → Japan/Korea/EU tighten China tech blockade</li>
+</ol>
+</li>
+<li><strong>Falsification conditions</strong>: (i) Beijing explicitly renounces military unification before 2030; (ii) Taiwan major political turn (pro-mainland party in power); (iii) Chinese internal economic collapse prioritizes before Taiwan</li>
+<li><strong>Structural consequences</strong>: The only scenario activating all four Chinese vulnerabilities simultaneously. No "partial failure" version — once triggered, transmission is comprehensive and uncontrollable</li>
+</ul>
+
+<h3>Scenario C: Mineral Weapon Overuse → Self-fulfilling Decoupling (2026-2030)</h3>
+<ul>
+<li><strong>Trigger</strong>: Beijing judges "2030 window closing" and launches comprehensive mineral controls before then</li>
+<li><strong>Transmission</strong>: Each control (W → Sb → Ga → Ge → Li → graphite) accelerates Western investment in substitute capacity + raises prices making alternative project ROI better + pushes allies to follow control policies</li>
+<li><strong>Falsification conditions</strong>: The West cannot establish substitute processing capacity within 10 years; but in reality IRA + CRMA are coming online 2028-2032</li>
+<li><strong>Structural consequences</strong>: China may "win" short-term tactics in 2028-2030 but <em>lose</em> long-term leverage. Each control is a permanent market share transfer signal — once lost, irreversibly unrecoverable</li>
+</ul>
+
+<h2>VII. Structural Assessment</h2>
+
+<h3>"Three Chinas" and the Industrial Base</h3>
+<p>Understanding Chinese supply chain capacity requires distinguishing <strong>Hayekian China</strong> (Yangtze/Pearl Delta, the self-organized manufacturing ecosystem of 250-300M), <strong>Grassroots China</strong> (~1B population, the domestic consumption base), and <strong>Communist Party China</strong> (Beijing's political leadership). The material basis of supply chain sovereignty comes from Hayekian China — but decisions on its strategic deployment come from Communist Party China. This <em>"producer-and-decision-maker at different identities"</em> asymmetry is the fundamental tension of Chinese supply chain policy — every industrial policy intervention risks damaging the self-organized order that produced the capability in the first place.</p>
+
+<h3>Assembly Hub, Not Manufacturing Hub</h3>
+<p>Western analysis often contains the fundamental misconception of "China irreplaceability." In truth, China is primarily an <strong>assembly</strong> hub, not a <strong>raw-material-to-end-product full chain manufacturing</strong> hub. Assembly scale depends on two conditions: (a) smooth energy + raw material imports; (b) open export markets. If either condition is shocked, assembly advantage hangs in air. This is why <em>seaborne oil dependency and market access risk</em> are China's two structural risks, not "demographic dividend loss" — the assembly model would collapse from the above two conditions deteriorating before population decline even hits.</p>
+
+<h3>Cross-Links with Thematic Reports</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">Supply Chain MAD</a></strong>: China's mineral processing leverage is the main Chinese pillar in MAD. But its three structural asymmetries (heterogeneity/time-variance/no consensus scale) are especially unfavorable to China — mineral leverage decays while tech constraints intensify; lack of consensus scale means every mineral control risks misreading</li>
+<li><strong><a href="semiconductor-supply-chain.html">Semiconductor Six-Layer Labyrinth</a></strong>: China's distribution across the six layers is extremely uneven — basic materials and mature equipment near self-sufficiency, advanced packaging gap closing, but EUV and top EDA structurally impossible to catch up in this decade</li>
+<li><strong><a href="ai-power-infrastructure.html">AI Physical Constraints</a></strong>: China's AI bottleneck is the inverse of the US — power abundant (East-Data-West-Compute exploits) but chips restricted. This asymmetry means the US-China AI race will not see "quick victory" for either side</li>
+</ul>
+
+<h2>VIII. Recommendations (By Time Horizon)</h2>
+
+<h3>2026-2028 Emergency ("Hold the Leverage")</h3>
+<ul>
+<li>Accelerate Malacca bypass: Myanmar Kyaukphyu pipeline + Pakistan Gwadar capacity expansion to 30-35% of domestic oil demand</li>
+<li>SPR target from 80 days to 120+ days, addressing simultaneous Hormuz + Taiwan scenarios</li>
+<li><em>Restrain</em> overuse of mineral weapons — each control permanently weakens future bargaining space</li>
+<li>Domestic ionic-clay REE production in Jiangxi/Guangdong, hedging Myanmar border instability</li>
+</ul>
+
+<h3>2028-2032 Structural Adjustment ("Leverage Replacement")</h3>
+<ul>
+<li>Shift strategic focus from "seizing advanced nodes" to "consolidating mature nodes" — mature nodes are the only sustainably rising leverage</li>
+<li>Expand long-term food/energy contracts with Brazil, Russia, Southeast Asia to reduce food inflation risk</li>
+<li>Sustained investment in Indonesian nickel and Congolese cobalt locks resource-end rather than refining-end leverage</li>
+<li>Build direct equity relationships with Samsung and SK Hynix (Chinese automakers + Korean battery makers) to lock alliance vulnerability</li>
+</ul>
+
+<h3>2032+ Structural Hedging ("Demographics + Debt")</h3>
+<ul>
+<li>Continue raising robot density to hedge labor decline, but recognize <em>robots don't consume</em> — must simultaneously build consumption security</li>
+<li>Long-term debt restructuring, avoiding local-government vehicle cascading defaults</li>
+<li>Prepare for scenarios of fertility sustaining below 1.0 — not "how to raise it" but "social organization under low fertility"</li>
 </ul>
 
 </section>
