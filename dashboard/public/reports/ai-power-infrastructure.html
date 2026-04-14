@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI的物理约束 / The Physical Constraints of AI — Geopolitical Observatory</title>
+<link rel="stylesheet" href="reports.css">
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Helvetica Neue', sans-serif;
+  max-width: 820px; margin: 0 auto; padding: 40px 28px 80px;
+  background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px;
+}
+h1 { font-size: 26px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 16px; }
+.meta-box { background: #eef2f7; border-left: 3px solid #0284c7; padding: 10px 14px; margin: 20px 0 28px; font-size: 13px; color: #444; line-height: 1.6; }
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 36px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 22px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #0284c7; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+tr:hover td { background: #f0f0f0; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 24px 0; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 14px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #f0e7ff; border-left: 3px solid #7c3aed; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+.footer { text-align: center; font-size: 12px; color: #888; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<!-- ============ Chinese version ============ -->
+<section lang="zh">
+
+<h1>AI的物理约束：数据中心、电力基建与算力地缘政治</h1>
+<h1>The Physical Constraints of AI: Data Centers, Power Infrastructure, and Compute Geopolitics</h1>
+
+<div class="meta-box">
+<strong>报告类型</strong>：产业链深挖 · <strong>时间</strong>：2026年4月<br>
+<strong>副标题</strong>：为什么AI算力的卡脖子节点已经从芯片转移到变压器
+</div>
+
+<div class="tldr">
+<h3>核心论点</h3>
+<p>AI算力不是一个资源——它是<strong>五层串联约束</strong>：芯片、数据中心建筑、电力供应、冷却系统、网络互联。公共讨论聚焦第一层（Nvidia GPU、台积电产能），但<em>约束条件已经迁移到第三层</em>——电力基建。具体而言：燃气轮机（GE Vernova、Siemens Energy、Mitsubishi Power三寡头，订单积压到2029年）、超高压变压器（2-3年交付周期、依赖少数GOES电工钢生产商）、以及电网并网排队（美国5-7年等待）。每个超大规模数据中心都不在竞争AI talent或GPU分配——它在<em>竞争一台五年前订购但还没交付的变压器</em>。这是一个全新的地缘政治形态：AI军备竞赛的真正约束不是算法或芯片，而是<strong>工业革命时代的基础设施产能</strong>。</p>
+</div>
+
+<h2>五层串联约束</h2>
+<p>公共叙事把"AI"描述为一个软件现象。但物理现实是：每一个token生成背后都串联五层基础设施，任何一层瓶颈都让整个链条受限。</p>
+
+<table>
+<thead><tr><th>层级</th><th>核心要素</th><th>当前状态</th><th>瓶颈点</th></tr></thead>
+<tbody>
+<tr><td>1. 芯片</td><td>GPU、HBM、先进封装</td><td>扩产中，CoWoS仍是瓶颈</td><td>见<a href="semiconductor-supply-chain.html">半导体报告</a></td></tr>
+<tr><td>2. 数据中心建筑</td><td>白地、土建、机房设备</td><td>可在18-24月内建成</td><td>选址（电力+水+土地）</td></tr>
+<tr><td>3. 电力供应</td><td>发电机组、变压器、开关设备</td><td><strong>严重短缺</strong></td><td>燃气轮机4-5年、变压器2-3年</td></tr>
+<tr><td>4. 冷却</td><td>冷水机组、冷却塔、液冷系统、水资源</td><td>过渡到直接芯片液冷中</td><td>水资源（干旱地区）</td></tr>
+<tr><td>5. 网络互联</td><td>数据中心间光纤、海底电缆、传输设备</td><td>AI集群分布式训练推升需求</td><td>海底电缆修复船（全球仅~60艘）</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>约束条件的迁移</strong>：2023年AI瓶颈是Nvidia GPU；2024年是HBM和CoWoS；<em>2025-2028年将是电力基建</em>。这不是因为芯片问题解决了，而是因为芯片扩产比电力基建扩产快。一个新晶圆厂18-24个月建成；一台新超大型燃气轮机厂商排队订单已延到2029年。
+</div>
+
+<h2>燃气轮机寡头：三家公司控制AI的电力生成</h2>
+<p>超大规模数据中心的首选发电方式是燃气轮机（通常为联合循环燃气轮机CCGT）——快速可调、基荷能力强、比核电快上线。全球燃气轮机市场被<strong>三家公司垄断</strong>：</p>
+<ul>
+<li><strong>GE Vernova</strong>（美，从GE分拆独立）：市场份额~35%，最新HA级重型燃机在美国和欧洲大幅订单积压</li>
+<li><strong>Siemens Energy</strong>（德）：~30%市场，SGT5-9000HL是旗舰；截至2025年报告订单积压约1130亿欧元，交付延至2028-2029</li>
+<li><strong>Mitsubishi Power</strong>（日）：~25%市场，M701JAC级燃机是日亚太主力</li>
+</ul>
+<p>这三家剩余份额来自Ansaldo（意）和Kawasaki（日）的小型产品线。<em>没有中国玩家</em>——中国的哈尔滨电气和上海电气虽有大型燃机能力，但H级（最先进级别）的全套技术仍依赖西方授权。</p>
+
+<h3>订单积压与产能物理约束</h3>
+<p>2024-2025年间，全球燃气轮机订单积压达到历史峰值。Siemens Energy在2025年财报中明确指出其Gas Services部门订单已"远超产能"，新订单交付期推至2028年以后。GE Vernova类似。</p>
+<p>关键物理约束：<strong>单一晶体叶片</strong>（用于高温段的涡轮叶片）的制造需要真空熔铸和精密加工——全球仅有少数设施能制造H级级燃机所需的大型单晶叶片。这是比GPU晶圆产能更狭窄的瓶颈，因为：扩产需要5-7年、需要大量高端工程师、且军用发动机（F-35引擎、军舰燃气轮机）在竞争同一产能。</p>
+
+<div class="callout">
+<strong>结构性讽刺</strong>：AI驱动的数据中心需求与欧洲能源转型后重建天然气电站需求在同一时间爆发，又与军用发动机产能在结构上共享产能。这三股需求竞争同一瓶颈（单晶叶片 + 高温合金 + 精密焊接），<em>任何一方的扩张都间接推高其他两方的成本和交付期</em>。
+</div>
+
+<h2>变压器危机：电工钢作为隐藏扼制点</h2>
+<p>数据中心需要从电网取电，这意味着需要<strong>超高压（EHV）变压器</strong>——通常在345kV或500kV等级。这些变压器不是标准化产品：每一台都是为特定电网位置定制的，且制造周期从订单到交付一般2-3年。</p>
+
+<h3>GOES：冷轧晶粒取向电工钢</h3>
+<p>所有大型变压器的核心是铁芯——由<strong>晶粒取向电工钢（Grain-Oriented Electrical Steel, GOES）</strong>制成。GOES是一种极度专业化的钢种，其晶体结构经过冷轧取向以最小化磁滞损耗。全球GOES产能高度集中：</p>
+<ul>
+<li><strong>日本制铁（Nippon Steel）</strong>：全球最大高等级GOES产能之一</li>
+<li><strong>POSCO</strong>（韩）：大型产能</li>
+<li><strong>ThyssenKrupp Steel</strong>（德）：欧洲产能</li>
+<li><strong>Baowu</strong>（中国宝武）：近年快速追赶</li>
+<li><strong>AK Steel</strong>（美，现Cleveland-Cliffs）：美国唯一GOES产能，产量有限</li>
+</ul>
+<p>美国的大部分GOES需要进口——这在表面上不是问题，直到你意识到：<strong>美国供应链中大型变压器的约25%在国内制造，且这些制造商大量依赖进口GOES</strong>。对日本和韩国的关税或供应中断将直接传导到美国电网变压器产能。</p>
+
+<h3>变压器制造商集中度</h3>
+<p>大型（100 MVA以上）变压器制造由少数玩家主导：Hitachi Energy（瑞日合资）、Siemens Energy、GE Prolec（美墨合资）、CG Power（印）、<strong>TBEA（中国特变电工）</strong>、Toshiba。<em>美国国内产能不足国内需求的50%</em>——这意味着任何大规模电力基建扩张（无论是AI数据中心还是能源转型）都结构上依赖进口。</p>
+
+<h2>电网并网：排队吃掉美国</h2>
+<p>假设你是一家超大规模数据中心开发商。你订购了GPU（交付12-18月）、签约了燃气轮机（交付3-5年），还需要做什么？<strong>排队并网</strong>——向区域电力运营商（如PJM、ERCOT、CAISO）申请将数据中心连接到电网。</p>
+<p>2024年底的数据：美国<strong>并网排队积压超过2.6 TW</strong>（终端功率）——这超过美国现有总装机量。平均等待时间从2015年的约2年上升到2024年的5年以上，部分地区7年以上。</p>
+
+<h3>结果：超越电网的自我供电</h3>
+<p>面对并网等待，越来越多超大规模用户绕过电网：</p>
+<ul>
+<li><strong>专属核电PPA</strong>：微软2024年与Constellation Energy签约重启三哩岛核电站（Unit 1），专供Azure；亚马逊收购Talen Energy的Susquehanna核电站旁数据中心园区（930MW）</li>
+<li><strong>专属天然气电站</strong>："behind-the-meter"天然气发电机组，不依赖公用事业调度</li>
+<li><strong>小型模块化反应堆（SMR）协议</strong>：Google与Kairos Power签约、Amazon与X-energy签约——但SMR商业可用性最早2030年后</li>
+</ul>
+
+<div class="insight">
+<strong>这是一个被低估的战略反转</strong>：过去百年，电力生产被公用事业垄断，工业用户是被动消费者。现在超大规模数据中心运营商（Microsoft、Amazon、Meta、Google）拥有的电力购买量超过许多中型国家，他们正在成为<em>独立的电力生产者</em>。这重塑能源政治——核电站复活不是因为政策转向，而是因为AI需求。
+</div>
+
+<h2>核电文艺复兴——由AI驱动</h2>
+<p>全球核电的"复兴"叙事在2024-2026年加速，其经济驱动力<strong>不是气候政策，而是AI</strong>。原因：超大规模数据中心需要24/7基荷电力，且对价格相对不敏感（电力成本占AI训练总成本约5-10%，远低于GPU成本）。这使得核电相对高昂的每千瓦时成本对AI买家而言可以接受。</p>
+
+<h3>主要案例</h3>
+<ul>
+<li><strong>三哩岛Unit 1</strong>：2019年关闭，2024年微软-Constellation 20年PPA协议带动重启，预计2028年上线</li>
+<li><strong>帕利塞兹核电站</strong>（密歇根，2022年关闭）：Holtec寻求重启，可能用于数据中心</li>
+<li><strong>杜安阿诺德核电站</strong>（爱荷华，2020年关闭）：重启中</li>
+<li><strong>Susquehanna</strong>（宾州）：Amazon与Talen 960MW直供协议</li>
+</ul>
+
+<h3>SMR的战略重要性与时间差</h3>
+<p>小型模块化反应堆（SMR）被视为下一代方案——可以在数据中心园区内部署而无需大型电网连接。主要玩家：</p>
+<ul>
+<li><strong>NuScale</strong>（美）：曾领先，但2023年主要项目被取消；处于重新定位期</li>
+<li><strong>X-energy</strong>（美，Amazon投资）：Xe-100高温气冷堆</li>
+<li><strong>Kairos Power</strong>（美，Google投资）：熔盐冷却，2030年代初首堆</li>
+<li><strong>TerraPower</strong>（美，比尔·盖茨投资）：钠冷快堆Natrium</li>
+<li><strong>Rolls-Royce SMR</strong>（英）：470MW PWR</li>
+<li><strong>CNNC ACP100</strong>（中国海南玲龙一号）：已在建，~2027年完工，<em>可能是全球首批商业运营SMR之一</em></li>
+</ul>
+<p><em>SMR的时间差至关重要</em>：如果美国SMR在2031-2033年才商业化，而中国ACP100在2027年开始运行，中国可能在SMR规模化上先发。这对AI算力部署的电力配置产生结构性影响——谁能在数据中心旁快速建堆，谁就能在分布式AI部署上领先。</p>
+
+<h2>水与冷却：从Hyperscaler到干旱区</h2>
+<p>一个大型AI数据中心的耗水量可以与中型城市相当。传统蒸发冷却塔每MWh计算消耗0.5-2加仑水。典型1GW AI数据中心年耗水可达<strong>数十亿加仑</strong>。</p>
+<p>问题：数据中心因电价便宜和气候凉爽倾向于选址干旱区（亚利桑那、内华达、德州西部）——这些地区水资源紧张。2023-2024年，亚利桑那州颁布新建数据中心水资源审批要求；Google在2023年披露Dalles(Oregon)数据中心用水量，引发社区争议。</p>
+
+<h3>冷却技术迁移</h3>
+<p>应对水约束和AI功率密度上升（H100 700W, B200 1200W, GB200 2700W等每芯片TDP飙升），冷却从空冷+蒸发转向<strong>直接芯片液冷（Direct-to-Chip）</strong>和<strong>沉浸式冷却（Immersion）</strong>。这需要：</p>
+<ul>
+<li>冷却液生产（3M、Solvay、Chemours等专业氟化液制造商——2024年3M宣布逐步退出PFAS使部分冷却液供应紧张）</li>
+<li>冷板与分液器制造（Vertiv、Schneider Electric、CoolIT Systems）</li>
+<li>数据中心重构——空冷设计的老数据中心不易改造为液冷</li>
+</ul>
+
+<div class="callout">
+PFAS管制（欧盟REACH、美国EPA）与AI液冷需求在结构上冲突。部分液冷工质是PFAS类化合物——如果全面禁用，需要数年开发替代品。<em>这是另一个被忽视的"非故意chokepoint"——环保政策与AI基础设施需求在化学品层面碰撞</em>。
+</div>
+
+<h2>海底电缆与分布式训练</h2>
+<p>大型AI训练从单数据中心模式走向多数据中心分布式模式（如Meta的Catalina架构、Google的TPU集群跨区）。这要求<strong>超大带宽、超低延迟的数据中心间连接</strong>。对长距离跨洋链接意味着：</p>
+<ul>
+<li>专属超高带宽海底电缆——Google、Meta、Amazon、Microsoft正在自投自建（如Meta的2Africa、Google的Firmina）</li>
+<li>海底电缆修复船全球仅约60艘；胡塞红海袭击（2024.2 切断多条红海电缆）后修复延迟数周，暴露产能约束</li>
+<li>电缆制造——SubCom（美）、Alcatel Submarine Networks（法/芬）、NEC（日）、<strong>HMN Technologies</strong>（中，原华为海洋）</li>
+</ul>
+<p>海底电缆层级上已经形成"西方电缆"和"中国电缆"的分叉：美国2020年起压力迫使多条新电缆避开HMN，但HMN仍在建设亚非拉多条电缆。这构成算力地缘政治的<em>物理层分叉</em>。</p>
+
+<h2>中国的不同瓶颈</h2>
+<p>讨论AI算力容易陷入美国中心视角。但中国的约束条件结构<strong>完全不同</strong>：</p>
+
+<table>
+<thead><tr><th>约束</th><th>美国</th><th>中国</th></tr></thead>
+<tbody>
+<tr><td>先进芯片</td><td>充足（自产 + Nvidia）</td><td>严重受限（Nvidia出口管制、SMIC 7nm有限）</td></tr>
+<tr><td>电力</td><td>不足（并网排队、变压器延迟）</td><td>充足（过剩煤电 + 快速扩张可再生）</td></tr>
+<tr><td>土地与水</td><td>干旱区冲突</td><td>西部资源充足（甘肃、宁夏、内蒙）</td></tr>
+<tr><td>网络</td><td>成熟</td><td>东数西算工程促进数据中心西迁</td></tr>
+</tbody>
+</table>
+
+<p>中国的"<strong>东数西算</strong>"工程（2022年启动）明确利用西部廉价电力和土地建设AI基础设施，东部负责数据消费。这本质上是<em>以电力换算力</em>的战略设计——中国用其不缺的资源（电、土地、人口）<em>补</em>其缺的资源（先进芯片）。DeepSeek的训练成本优势部分来自这一结构。</p>
+
+<div class="insight">
+<strong>中美AI竞赛的瓶颈不对称性</strong>：美国有最好的芯片但电力短缺；中国有充足电力但芯片受限。这决定了：<em>美国AI扩展受制于工业时代基础设施（变压器、涡轮机），中国AI扩展受制于半导体供应链</em>。两者在结构上对称但不可简单互换——你无法用涡轮机替代先进芯片，也无法用GPU替代电网。这种不对称意味着一场"持久战"，而非一方能快速压倒另一方。
+</div>
+
+<h2>级联风险情景</h2>
+
+<h3>情景1：变压器危机级联（2026-2028）</h3>
+<p>假设美国一家主要GOES供应商（如宝武海外出口或POSCO产能）受贸易冲突或自然灾害影响，GOES价格上涨50%。传导：</p>
+<ol>
+<li>大型变压器制造成本上升、交付期延至3-4年</li>
+<li>数据中心并网时间进一步延长</li>
+<li>超大规模用户转向自备电源（燃气/核电直接PPA）</li>
+<li>燃气轮机订单积压加剧</li>
+<li>最终：<em>美国AI算力部署速度显著放缓</em>（不是因为缺芯片，是缺电）</li>
+</ol>
+
+<h3>情景2：涡轮机争夺战（2027-2030）</h3>
+<p>GE Vernova和Siemens Energy的产能同时被三股需求挤压：数据中心、欧洲能源转型、军用发动机。假设一场台海危机爆发，美国军用燃气轮机需求（船舶、应急电源）紧急扩张，挤占商业订单。结果：</p>
+<ul>
+<li>数据中心燃气电站建设延迟</li>
+<li>欧洲能源转型延迟</li>
+<li><em>AI扩张从物理基础设施层面被军事需求"征用"</em></li>
+</ul>
+
+<h3>情景3：SMR时间差（2027-2032）</h3>
+<p>中国ACP100在海南商业运营（2027年），随后快速复制到西部数据中心。美国SMR（X-energy、Kairos）因监管审批延迟推到2032年后。期间中国建立<em>约10-20座</em>SMR配套数据中心，美国仍在排队并网。结果：中国AI算力基础设施的物理部署超过美国，但芯片仍是中国的瓶颈。双方在不同层级互相制约的格局加深。</p>
+
+<h2>战略含义</h2>
+
+<h3>1. AI地缘政治已经是基础设施地缘政治</h3>
+<p>分析"AI竞赛"如果只看算法、模型、芯片是看一半。真正的长期竞争是：<strong>谁能在2030年前建成1-2 TW的新电力基础设施</strong>。这决定哪国能部署多少AI算力，而不是谁有更好的模型。模型优势是短期的、可学习的；发电能力、变压器、涡轮机产能是长期的、物理的。</p>
+
+<h3>2. 日本和德国在基础设施层面有隐藏杠杆</h3>
+<p>Nippon Steel的GOES、Siemens Energy的H级燃机、日立能源的变压器——这些日德专业能力构成AI算力基础设施的隐藏扼制点。与<a href="semiconductor-supply-chain.html">半导体报告</a>的日本材料帝国平行，电力基建领域日德仍是不可或缺。中美都需要与之合作。</p>
+
+<h3>3. 电力基建可能在2027-2030成为首个"断供"点</h3>
+<p>与芯片出口管制不同，电力基建不需要政府管制——它可以通过<em>产能分配</em>自然配给。GE Vernova或Siemens Energy选择优先哪个市场（美欧军用 vs 商业数据中心 vs 中国客户）本身就是地缘政治行为。这种"产能政治"是<a href="supply-chain-mad.html">供应链MAD</a>框架中非常适合的武器——难以被指控为"制裁"，但效果相当。</p>
+
+<h3>4. 环境约束是未被充分理论化的AI约束</h3>
+<p>水资源、PFAS管制、碳排放——这些不是AI扩张的"次要考虑"，而是结构性约束。亚利桑那的数据中心因水而受限；欧洲可能因PFAS而延迟液冷部署；加州可能因碳排放而拒绝新建天然气数据中心。AI的未来部署<em>不是技术问题，是资源治理问题</em>。</p>
+
+<h3>5. "算力-能源耦合"是新型联盟的基础</h3>
+<p>传统地缘政治联盟围绕军事和意识形态。未来十年可能形成新型联盟：<em>算力-能源伙伴关系</em>。例如：美国芯片 + 加拿大水电（魁北克数据中心已在发生）、美国芯片 + 海湾国家廉价电（阿联酋、沙特数据中心园区）、日本材料 + 东南亚地热/核能。这些组合可能比传统联盟更稳定——因为两边都在物理上锁定对方。</p>
+
+<h2>结论：AI的工业革命约束</h2>
+<p>一个反直觉的真相：2020年代的"AI革命"在瓶颈上是19世纪工业革命的重演。决定AI扩张速度的不是算法天才或芯片设计，而是<em>能不能生产足够多的电工钢、能不能焊接足够多的涡轮机叶片、能不能在2030年前铺设足够多的超高压电缆</em>。这些是工业制造的基本命题——只不过200年前决定的是铁路、蒸汽机、钢铁产能，今天决定的是变压器、燃气轮机、高压直流输电（HVDC）设备。</p>
+<p>这对战略分析的含义：<strong>AI竞赛的胜负更可能在材料、精密制造、能源基建这些"老经济"领域决出，而非在软件和数据中心。</strong>控制AI未来的国家是控制GOES产能、能制造H级燃机、能在2030年前建成GW级SMR的国家——与百年前控制铁路、钢铁和煤矿的国家在结构上惊人地相似。<em>AI产业不是信息时代的产物，而是工业时代基础设施的最新一层</em>。</p>
+
+</section>
+
+<!-- ============ English version ============ -->
+<section lang="en">
+
+<h1>The Physical Constraints of AI: Data Centers, Power Infrastructure, and Compute Geopolitics</h1>
+<h1>AI的物理约束：数据中心、电力基建与算力地缘政治</h1>
+
+<div class="meta-box">
+<strong>Report type</strong>: Supply chain deep dive · <strong>Date</strong>: April 2026<br>
+<strong>Subtitle</strong>: Why the binding constraint on AI compute has migrated from chips to transformers
+</div>
+
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>AI compute is not a single resource — it is <strong>a five-layer chained constraint</strong>: chips, data center buildings, power supply, cooling, and network interconnection. Public discussion focuses on the first layer (Nvidia GPUs, TSMC capacity), but <em>the binding constraint has already migrated to Layer 3 — power infrastructure</em>. Specifically: gas turbines (the GE Vernova / Siemens Energy / Mitsubishi Power triopoly, with order backlogs stretching to 2029), extra-high-voltage transformers (2-3 year lead times, dependent on a small number of grain-oriented electrical steel producers), and grid interconnection queues (5-7 year waits in the US). Every hyperscaler is no longer competing for AI talent or GPU allocation — they are <em>competing for a transformer ordered five years ago that still hasn't arrived</em>. This is a new form of geopolitics: the real binding constraint on the AI arms race is not algorithms or chips, but <strong>the industrial-age capacity to build physical infrastructure</strong>.</p>
+</div>
+
+<h2>The Five-Layer Chained Constraint</h2>
+<p>Public narratives describe "AI" as a software phenomenon. But the physical reality is that every token generated sits atop a five-layer infrastructure chain, and any layer's bottleneck constrains the whole.</p>
+
+<table>
+<thead><tr><th>Layer</th><th>Core elements</th><th>Current state</th><th>Bottleneck</th></tr></thead>
+<tbody>
+<tr><td>1. Chips</td><td>GPU, HBM, advanced packaging</td><td>Expanding; CoWoS still a bottleneck</td><td>See <a href="semiconductor-supply-chain.html">Semiconductor report</a></td></tr>
+<tr><td>2. Buildings</td><td>White space, construction, rack infrastructure</td><td>Build in 18-24 months</td><td>Siting (power + water + land)</td></tr>
+<tr><td>3. Power supply</td><td>Generation, transformers, switchgear</td><td><strong>Acute shortage</strong></td><td>Gas turbines 4-5y, transformers 2-3y</td></tr>
+<tr><td>4. Cooling</td><td>Chillers, cooling towers, liquid cooling, water</td><td>Transitioning to direct-to-chip liquid</td><td>Water (arid regions)</td></tr>
+<tr><td>5. Networking</td><td>Inter-DC fiber, subsea cables, transmission gear</td><td>AI cluster distributed training driving demand</td><td>Subsea cable repair ships (~60 globally)</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>Migration of the binding constraint</strong>: In 2023 the AI bottleneck was Nvidia GPUs; in 2024 it was HBM and CoWoS; <em>in 2025-2028 it will be power infrastructure</em>. This is not because the chip problem was solved, but because chip fabs can expand faster than power infrastructure. A new fab takes 18-24 months; a new large gas turbine manufacturer's backlog stretches to 2029.
+</div>
+
+<h2>Gas Turbine Oligopoly: Three Companies Controlling AI's Generation</h2>
+<p>Hyperscaler data centers' preferred generation mode is gas turbines (typically combined-cycle gas turbines, CCGT) — dispatchable, baseload-capable, faster to deploy than nuclear. The global gas turbine market is <strong>dominated by three companies</strong>:</p>
+<ul>
+<li><strong>GE Vernova</strong> (US, spun out from GE): ~35% share; latest HA-class heavy-duty turbines have substantial order backlog in US and Europe</li>
+<li><strong>Siemens Energy</strong> (Germany): ~30% share; SGT5-9000HL is the flagship. Order backlog reported around €113 billion as of 2025, with delivery stretching to 2028-2029</li>
+<li><strong>Mitsubishi Power</strong> (Japan): ~25% share; M701JAC-class turbines dominate the Japan/Asia-Pacific market</li>
+</ul>
+<p>The remaining share is split among Ansaldo (Italy) and Kawasaki (Japan) in smaller classes. <em>There are no Chinese players</em> at the top tier — Harbin Electric and Shanghai Electric have large turbine capability, but H-class (the most advanced) technology still depends on Western licensing.</p>
+
+<h3>Order Backlogs and Physical Capacity Constraints</h3>
+<p>Between 2024 and 2025, global gas turbine order backlogs hit historic highs. Siemens Energy explicitly noted in its 2025 financial report that its Gas Services division is operating "far beyond capacity," with new orders pushed to 2028 or later. GE Vernova is in a similar position.</p>
+<p>The critical physical constraint: <strong>single-crystal turbine blades</strong> (the high-temperature-section turbine blades) require vacuum investment casting and precision machining — globally, only a handful of facilities can manufacture H-class blades. This is a narrower bottleneck than GPU wafer capacity, because: expansion takes 5-7 years, requires many high-end engineers, and military engine manufacturers (F-35 engines, naval turbines) are competing for the same capacity.</p>
+
+<div class="callout">
+<strong>Structural irony</strong>: AI-driven data center demand, post-Russia-gas European energy transition demand, and military engine demand all ramped up simultaneously — and all three structurally share capacity at the single-crystal-blade / high-temperature-alloy / precision-welding bottleneck. <em>Any one's expansion indirectly raises the cost and lead time for the other two.</em>
+</div>
+
+<h2>Transformer Crisis: Electrical Steel as Hidden Chokepoint</h2>
+<p>Data centers must connect to the grid, which means <strong>extra-high-voltage (EHV) transformers</strong> — typically at 345kV or 500kV. These are not standardized products: each is custom-built for a specific grid location, with lead times of 2-3 years from order to delivery.</p>
+
+<h3>GOES: Grain-Oriented Electrical Steel</h3>
+<p>The core of every large transformer is an iron core made from <strong>grain-oriented electrical steel (GOES)</strong>, a highly specialized steel grade with its crystal structure cold-rolled to minimize hysteresis loss. Global GOES capacity is highly concentrated:</p>
+<ul>
+<li><strong>Nippon Steel</strong> (Japan): one of the world's largest producers of high-grade GOES</li>
+<li><strong>POSCO</strong> (Korea): significant capacity</li>
+<li><strong>ThyssenKrupp Steel</strong> (Germany): European capacity</li>
+<li><strong>Baowu</strong> (China): rapidly catching up in recent years</li>
+<li><strong>AK Steel</strong> (US, now Cleveland-Cliffs): the only US GOES producer, with limited output</li>
+</ul>
+<p>Most US GOES needs must be met via imports — which looks like a non-issue until you realize: <strong>only about 25% of large transformers in the US supply chain are domestically manufactured, and these manufacturers heavily depend on imported GOES</strong>. A trade conflict with or supply disruption from Japan or Korea transmits directly to US grid transformer capacity.</p>
+
+<h3>Transformer Manufacturer Concentration</h3>
+<p>Large (100 MVA+) transformer manufacturing is dominated by a handful of players: Hitachi Energy (Swiss-Japanese JV), Siemens Energy, GE Prolec (US-Mexican JV), CG Power (India), <strong>TBEA</strong> (China), Toshiba. <em>US domestic capacity is below 50% of domestic demand</em> — meaning any major power infrastructure expansion (AI data centers or energy transition) structurally depends on imports.</p>
+
+<h2>Grid Interconnection: The Queue That Ate America</h2>
+<p>Imagine you are a hyperscale data center developer. You've ordered GPUs (12-18 month delivery), signed for gas turbines (3-5 year delivery) — what else do you need? <strong>To queue for grid interconnection</strong> — to apply to the regional grid operator (PJM, ERCOT, CAISO) to connect your data center to the grid.</p>
+<p>Data as of late 2024: the US <strong>interconnection backlog exceeds 2.6 TW</strong> (of end-point capacity) — greater than the US total installed capacity. Average wait times have risen from about 2 years in 2015 to more than 5 years in 2024, and 7 years in some regions.</p>
+
+<h3>The Consequence: Bypassing the Grid</h3>
+<p>Facing interconnection waits, more hyperscalers bypass the grid:</p>
+<ul>
+<li><strong>Dedicated nuclear PPAs</strong>: Microsoft signed a 2024 deal with Constellation Energy to restart Three Mile Island Unit 1 to supply Azure; Amazon acquired a data center campus adjacent to Talen Energy's Susquehanna nuclear plant (930 MW)</li>
+<li><strong>Dedicated natural gas plants</strong>: "behind-the-meter" gas generation units not dependent on utility dispatch</li>
+<li><strong>Small modular reactor (SMR) agreements</strong>: Google signed with Kairos Power; Amazon with X-energy — but commercial SMR availability is 2030 or later</li>
+</ul>
+
+<div class="insight">
+<strong>This is an underappreciated strategic reversal</strong>: for the last century, electricity generation was monopolized by utilities, and industrial users were passive consumers. Now hyperscalers (Microsoft, Amazon, Meta, Google) each have power purchase volumes that exceed those of many mid-sized countries — they are becoming <em>independent electricity producers</em>. This is reshaping energy politics: nuclear resurrection isn't happening because of policy shifts, but because of AI demand.
+</div>
+
+<h2>The Nuclear Renaissance — Driven by AI</h2>
+<p>The global "nuclear renaissance" narrative accelerated in 2024-2026, and its economic driver is <strong>not climate policy, but AI</strong>. Reason: hyperscalers need 24/7 baseload power and are relatively price-insensitive (electricity costs are 5-10% of AI training total cost, far below GPU costs). This makes nuclear's relatively high per-kWh cost acceptable to AI buyers.</p>
+
+<h3>Key Cases</h3>
+<ul>
+<li><strong>Three Mile Island Unit 1</strong>: shut down in 2019; a 20-year Microsoft-Constellation PPA in 2024 drives restart, expected online 2028</li>
+<li><strong>Palisades Nuclear Plant</strong> (Michigan, closed 2022): Holtec seeking restart, potentially for data centers</li>
+<li><strong>Duane Arnold</strong> (Iowa, closed 2020): restart in progress</li>
+<li><strong>Susquehanna</strong> (Pennsylvania): Amazon-Talen 960 MW direct-supply agreement</li>
+</ul>
+
+<h3>SMR Strategic Importance and the Timing Gap</h3>
+<p>Small modular reactors (SMRs) are seen as the next-generation option — deployable at data center sites without needing large grid connections. Key players:</p>
+<ul>
+<li><strong>NuScale</strong> (US): once the leader, but a major project was canceled in 2023; currently repositioning</li>
+<li><strong>X-energy</strong> (US, Amazon-backed): Xe-100 high-temperature gas-cooled reactor</li>
+<li><strong>Kairos Power</strong> (US, Google-backed): molten-salt cooled, first reactor in early 2030s</li>
+<li><strong>TerraPower</strong> (US, Bill Gates-backed): sodium-cooled fast reactor Natrium</li>
+<li><strong>Rolls-Royce SMR</strong> (UK): 470 MW PWR</li>
+<li><strong>CNNC ACP100</strong> (China, Hainan's Linglong One): under construction, ~2027 completion, <em>potentially one of the world's first commercially operating SMRs</em></li>
+</ul>
+<p><em>The SMR timing gap matters strategically</em>: if US SMRs commercialize only in 2031-2033, while China's ACP100 begins operating in 2027, China could be first to scale SMRs. This has structural implications for AI compute deployment — whoever can build reactors adjacent to data centers quickly will lead in distributed AI deployment.</p>
+
+<h2>Water and Cooling: From Hyperscaler to Arid Regions</h2>
+<p>A large AI data center can consume as much water as a mid-sized city. Traditional evaporative cooling uses 0.5-2 gallons of water per MWh of compute. A typical 1 GW AI data center can consume <strong>billions of gallons annually</strong>.</p>
+<p>The problem: data centers often site in arid regions (Arizona, Nevada, West Texas) for cheap electricity and cool climate — but these regions have stressed water resources. In 2023-2024, Arizona required new water-use approvals for new data centers; Google's disclosure in 2023 of its Dalles, Oregon data center water use triggered community controversy.</p>
+
+<h3>Cooling Technology Migration</h3>
+<p>To address water constraints and rising AI power density (H100 at 700W, B200 at 1200W, GB200 at 2700W — per-chip TDP soaring), cooling is shifting from air + evaporation to <strong>direct-to-chip liquid cooling</strong> and <strong>immersion cooling</strong>. This requires:</p>
+<ul>
+<li>Cooling fluid manufacturers (3M, Solvay, Chemours, specialized fluorocarbon fluid makers — 3M's announced 2024 PFAS phaseout tightened some coolant supplies)</li>
+<li>Cold plate and manifold manufacturers (Vertiv, Schneider Electric, CoolIT Systems)</li>
+<li>Data center retrofit — air-cooled legacy facilities are hard to convert to liquid cooling</li>
+</ul>
+
+<div class="callout">
+PFAS regulation (EU REACH, US EPA) and AI liquid cooling demand are on structural collision course. Some coolant fluids are PFAS-class compounds — a comprehensive ban requires years to develop substitutes. <em>This is another overlooked "unintentional chokepoint" — environmental policy and AI infrastructure demand colliding at the chemical layer</em>.
+</div>
+
+<h2>Subsea Cables and Distributed Training</h2>
+<p>Large AI training is moving from single-data-center to multi-data-center distributed architectures (e.g., Meta's Catalina architecture, Google's cross-region TPU clusters). This requires <strong>ultra-high bandwidth, ultra-low latency inter-data-center connections</strong>. For long-distance cross-ocean links, this means:</p>
+<ul>
+<li>Dedicated ultra-high-bandwidth subsea cables — Google, Meta, Amazon, Microsoft are self-financing and building (e.g., Meta's 2Africa, Google's Firmina)</li>
+<li>Subsea cable repair ships: only ~60 globally; Houthi attacks (Feb 2024 cut multiple Red Sea cables) caused weeks of repair delay, exposing capacity constraint</li>
+<li>Cable manufacturing — SubCom (US), Alcatel Submarine Networks (France/Finland), NEC (Japan), <strong>HMN Technologies</strong> (China, former Huawei Marine)</li>
+</ul>
+<p>A fork between "Western cables" and "Chinese cables" has already formed at the subsea layer: from 2020, US pressure forced several new cables to avoid HMN, but HMN continues building cables across Asia-Africa-Latin America. This represents the <em>physical-layer bifurcation</em> of compute geopolitics.</p>
+
+<h2>China's Different Bottleneck</h2>
+<p>Discussion of AI compute can easily slip into a US-centric perspective. But China's constraint structure is <strong>fundamentally different</strong>:</p>
+
+<table>
+<thead><tr><th>Constraint</th><th>US</th><th>China</th></tr></thead>
+<tbody>
+<tr><td>Advanced chips</td><td>Abundant (domestic + Nvidia)</td><td>Severely restricted (Nvidia export controls, limited SMIC 7nm)</td></tr>
+<tr><td>Power</td><td>Insufficient (interconnection queue, transformer delays)</td><td>Abundant (coal surplus + rapid renewables expansion)</td></tr>
+<tr><td>Land & water</td><td>Arid-region conflicts</td><td>Abundant western resources (Gansu, Ningxia, Inner Mongolia)</td></tr>
+<tr><td>Network</td><td>Mature</td><td>"East Data, West Compute" project drives westward data center migration</td></tr>
+</tbody>
+</table>
+
+<p>China's "<strong>East Data, West Compute</strong>" project (launched 2022) explicitly uses western China's cheap power and land to build AI infrastructure, while the east handles data consumption. This is essentially a <em>compute-for-power exchange</em> — using resources China has in abundance (electricity, land, workforce) to <em>compensate</em> for what it lacks (advanced chips). Part of DeepSeek's training cost advantage derives from this structural logic.</p>
+
+<div class="insight">
+<strong>The asymmetry of US-China AI race bottlenecks</strong>: the US has the best chips but faces power shortages; China has abundant power but faces chip restrictions. This means: <em>US AI scaling is constrained by industrial-age infrastructure (transformers, turbines), while Chinese AI scaling is constrained by semiconductor supply chains</em>. The two are structurally symmetric but not simply interchangeable — you cannot substitute turbines for advanced chips, and you cannot substitute GPUs for the power grid. This asymmetry means a "long war," not a race in which one side quickly overwhelms the other.
+</div>
+
+<h2>Cascade Risk Scenarios</h2>
+
+<h3>Scenario 1: Transformer Crisis Cascade (2026-2028)</h3>
+<p>Suppose a major GOES supplier for the US (e.g., Baowu overseas exports, or POSCO capacity) is disrupted by trade conflict or natural disaster, raising GOES prices 50%. Transmission:</p>
+<ol>
+<li>Large transformer manufacturing costs rise; lead times extend to 3-4 years</li>
+<li>Data center interconnection delays further extend</li>
+<li>Hyperscalers shift to self-generation (gas/nuclear direct PPAs)</li>
+<li>Gas turbine order backlogs intensify</li>
+<li>Net result: <em>US AI compute deployment slows significantly — not because of chip shortage but because of power shortage</em></li>
+</ol>
+
+<h3>Scenario 2: Turbine Scramble (2027-2030)</h3>
+<p>GE Vernova's and Siemens Energy's capacity is squeezed simultaneously by three demand streams: data centers, European energy transition, and military engines. A Taiwan Strait crisis breaks out, and US military gas turbine demand (shipboard, emergency generation) surges, crowding out commercial orders. Results:</p>
+<ul>
+<li>Data center gas plant construction delayed</li>
+<li>European energy transition delayed</li>
+<li><em>AI expansion is "conscripted" by military demand at the physical infrastructure layer</em></li>
+</ul>
+
+<h3>Scenario 3: SMR Timing Gap (2027-2032)</h3>
+<p>China's ACP100 enters commercial operation in Hainan in 2027, then is rapidly replicated at western data centers. US SMRs (X-energy, Kairos) are delayed past 2032 by regulatory review. During the gap, China builds <em>around 10-20</em> SMR-paired data centers, while the US is still interconnection-queueing. Result: China's AI compute infrastructure physical deployment exceeds that of the US, but chips remain China's bottleneck. The pattern of each side constraining the other at a different layer deepens.</p>
+
+<h2>Strategic Implications</h2>
+
+<h3>1. AI Geopolitics Is Already Infrastructure Geopolitics</h3>
+<p>Analyzing the "AI race" through algorithms, models, or chips alone is half-sighted. The real long-term competition is: <strong>who can build 1-2 TW of new power infrastructure before 2030</strong>. This determines how much AI compute each country can deploy — not who has the better models. Model advantages are short-term and learnable; generation capacity, transformers, and turbine manufacturing capacity are long-term and physical.</p>
+
+<h3>2. Japan and Germany Have Hidden Leverage at the Infrastructure Layer</h3>
+<p>Nippon Steel's GOES, Siemens Energy's H-class turbines, Hitachi Energy's transformers — these Japanese and German specialty capabilities constitute hidden chokepoints in AI compute infrastructure. Parallel to the Japanese materials empire in the <a href="semiconductor-supply-chain.html">semiconductor report</a>, Japan and Germany remain indispensable in power infrastructure. Both the US and China need to cooperate with them.</p>
+
+<h3>3. Power Infrastructure May Be the First "Cutoff" Point in 2027-2030</h3>
+<p>Unlike chip export controls, power infrastructure cutoffs do not require government policy — they can be allocated naturally through <em>capacity prioritization</em>. The choice by GE Vernova or Siemens Energy of which market to serve first (US/European military vs. commercial data centers vs. Chinese customers) is itself a geopolitical act. This "capacity politics" is a particularly fitting weapon in the <a href="supply-chain-mad.html">Supply Chain MAD</a> framework — hard to characterize as "sanctions," but effectively equivalent.</p>
+
+<h3>4. Environmental Constraints Are the Under-Theorized AI Constraint</h3>
+<p>Water, PFAS regulation, carbon emissions — these are not "secondary considerations" for AI scaling but structural constraints. Arizona data centers are constrained by water; Europe may delay liquid cooling due to PFAS; California may reject new gas-fired data centers due to emissions. The future of AI deployment is <em>not a technology problem, it's a resource governance problem</em>.</p>
+
+<h3>5. "Compute-Energy Coupling" as the Basis for New Alliances</h3>
+<p>Traditional geopolitical alliances form around military and ideological lines. The next decade may see a new kind of alliance: <em>compute-energy partnerships</em>. Examples: US chips + Canadian hydropower (Quebec data centers are already underway); US chips + Gulf low-cost power (UAE, Saudi data center campuses); Japanese materials + Southeast Asian geothermal/nuclear. These combinations may prove more stable than traditional alliances — because each side is physically locked into the other.</p>
+
+<h2>Conclusion: AI's Industrial-Revolution Constraint</h2>
+<p>A counterintuitive truth: the bottlenecks of the 2020s "AI revolution" replay the 19th-century industrial revolution. What determines the pace of AI scaling is not algorithmic genius or chip design, but <em>whether you can produce enough electrical steel, weld enough turbine blades, and lay enough extra-high-voltage cable by 2030</em>. These are basic manufacturing propositions — except that 200 years ago the decisive capacities were railroads, steam engines, and steel, and today they are transformers, gas turbines, and HVDC equipment.</p>
+<p>The implication for strategic analysis: <strong>the AI race will more likely be decided in materials, precision manufacturing, and energy infrastructure — the "old economy" — than in software and data centers.</strong> The countries controlling the AI future are those controlling GOES capacity, capable of manufacturing H-class turbines, able to build GW-scale SMRs before 2030 — structurally remarkably similar to the countries that controlled railroads, steel, and coal a century ago. <em>The AI industry is not an artifact of the information age; it is the latest layer atop industrial-age infrastructure.</em></p>
+
+</section>
+
+<div class="footer">
+<span lang="zh">© 2026 Geopolitical Observatory · 关联报告：<a href="semiconductor-supply-chain.html">半导体供应链</a>、<a href="supply-chain-mad.html">供应链MAD</a>、<a href="https://geopolitical-observatory.vercel.app/reports/JPN.html">日本</a>、<a href="https://geopolitical-observatory.vercel.app/reports/DEU.html">德国</a></span>
+<span lang="en">© 2026 Geopolitical Observatory · Related reports: <a href="semiconductor-supply-chain.html">Semiconductor Supply Chain</a>, <a href="supply-chain-mad.html">Supply Chain MAD</a>, <a href="https://geopolitical-observatory.vercel.app/reports/JPN.html">Japan</a>, <a href="https://geopolitical-observatory.vercel.app/reports/DEU.html">Germany</a></span>
+</div>
+
+<script src="reports.js"></script>
+</body>
+</html>
