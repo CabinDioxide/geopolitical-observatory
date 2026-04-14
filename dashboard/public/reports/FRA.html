@@ -1,80 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>France Supply Chain Vulnerability Assessment (2026)</title>
+<title>法国供应链脆弱性评估 / France Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<section lang="zh">
+
+<h1>法国供应链脆弱性评估（2026）</h1>
 <h1>France Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 42/100 — BALANCED</h2>
+<div class="score-line">风险评分：<strong>42/100</strong> — 平衡 / BALANCED</div>
+
+<h2>执行摘要</h2>
+<p>法国因其核电主导的电网、本土国防工业和相对多元的能源采购，在主要欧洲经济体中拥有结构性优势位置。然而，航空航天和国防项目对中国稀土的依赖、对中国消费电子日益增长的依赖、以及有限的国内关键矿产加工能力造成了法国工业基础难以消化的脆弱性。法国的核电优势——70%以上电力来自国内反应堆——提供了德国和意大利所缺乏的能源韧性缓冲。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>中国</td><td>航空航天与国防用稀土</td><td>$2.0B</td><td>关键 — 阵风、勒克莱尔、梭鱼计划</td></tr>
+<tr><td>中国</td><td>消费电子与电信</td><td>$18.0B</td><td>高 — 规模依赖</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>印度</td><td>阵风战机与海军系统</td><td>$5.5B</td><td>中等 — 国防关系</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>法国的供应线跨越<strong>苏伊士运河</strong>（亚欧集装箱流）、<strong>曼德海峡</strong>（亚洲货物红海路线）、<strong>马六甲海峡</strong>（东南亚供应链）。法国受益于地中海港口准入（马赛-福斯），为中东和北非提供更短的路线，减少部分供应线的马六甲暴露。核燃料供应链（来自尼日尔、哈萨克斯坦、加拿大的铀）主要陆运或经大西洋路线，基本绕过主要海上咽喉。2026年霍尔木兹封锁对法国能源直接影响有限，但推高LNG现货价格，影响残余的天然气需求。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>国防用中国稀土依赖</strong>：阵风战机发动机、卫星系统、精确弹药需要中国NdFeB磁铁和钐钴合金；无规模化欧洲来源</li>
+<li><strong>核燃料供应集中</strong>：尼日尔政变（2023）扰乱传统铀采购；法国正转向哈萨克斯坦和加拿大供应，但过渡仍在进行</li>
+<li><strong>霍尔木兹间接效应</strong>：法国天然气进口（美国LNG、阿尔及利亚管道）虽然直接的海湾依赖极小，但仍因全球市场中断遭受价格上涨</li>
+<li><strong>消费电子依赖</strong>：180亿美元中国电子进口反映欧盟产业政策未解决的结构性制造缺口</li>
+<li><strong>非洲安全环境</strong>：从萨赫勒撤出削弱法国对西非关键矿产供应路线（几内亚铝土矿、尼日尔铀）的影响力</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>法国在产缘政治框架中占据不寻常位置：在两个专业领域（核技术和国防/航空航天系统）维持真正的上游控制，同时在广泛的消费和工业品上接受下游依赖。这是一项<em>有意的战略选择</em>——法国历史上在核能和国防制造上优先主权而非消费品自给自足，这一优先级的等级反映了戴高乐式的战略文化。</p>
+<p>核电优势是法国最独特的生产网络资产。德国和日本努力替代化石燃料能源的同时，法国70%以上的电力来自国内反应堆，提供对霍尔木兹封锁和俄罗斯天然气切断的结构性绝缘。这不仅是一项能源政策——它是一项塑造法国整体工业成本结构和脆弱性画像的生产网络主权决策。</p>
+<p>然而，法国国防主权——其自我形象的基石——因中国稀土依赖而受损。每一架阵风战机、每一艘梭鱼潜艇、每一枚阿斯特导弹都需要法国无法国产的稀土磁铁。欧洲战略自主的声明意图与继续中国矿产采购的揭示偏好相撞。法国加入欧盟关键原材料法案的努力，但尚未以工业规模投资国内稀土分离产能——话语与资本配置之间的差距，在产缘政治框架中会被识别为<em>信誉赤字</em>。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>建立欧洲稀土分离产能</strong>：与德国主导联盟在法国或斯堪的纳维亚进行稀土加工；利用Orano的核材料专业知识进行矿物加工</li>
+<li><strong>确保铀供应多元化</strong>：加速从尼日尔到哈萨克斯坦和加拿大铀的转换；发展战略铀储备（目前2+年供应——保持并扩大）</li>
+<li><strong>利用核电优势制定产业政策</strong>：用低碳电力成本优势吸引能源密集型制造（铝冶炼、数据中心、绿色氢）到法国</li>
+<li><strong>深化印太国防关系</strong>：扩大对印度、阿联酋、印尼的阵风销售和海军合作，在中国轨道外建立替代供应链关系</li>
+<li><strong>投资法国海外领土关键矿产勘探</strong>：新喀里多尼亚镍、法属圭亚那金矿、留尼汪稀土前景，如果开发将提供主权矿产准入</li>
+</ul>
+
+</section>
+
+<section lang="en">
+
+<h1>France Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>法国供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>42/100</strong> — BALANCED</div>
+
 <h2>Executive Summary</h2>
 <p>France enjoys a structurally favorable position among major European economies due to its nuclear-powered electricity grid, domestic defense industry, and relatively diversified energy sourcing. However, dependencies on Chinese rare earths for aerospace and defense programs, growing reliance on Chinese consumer electronics, and limited domestic critical mineral processing capacity create vulnerabilities that France's industrial base cannot easily absorb. France's nuclear advantage — 70%+ of electricity from domestic reactors — provides an energy resilience buffer that Germany and Italy lack.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>China</td>
-<td>Rare Earths for Aerospace and Defense</td>
-<td>$2.0B</td>
-<td>Critical — Rafale, Leclerc, Barracuda programs</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Consumer Electronics and Telecom</td>
-<td>$18.0B</td>
-<td>High — scale dependency</td>
-</tr>
+<tr><td>China</td><td>Rare Earths for Aerospace and Defense</td><td>$2.0B</td><td>Critical — Rafale, Leclerc, Barracuda programs</td></tr>
+<tr><td>China</td><td>Consumer Electronics and Telecom</td><td>$18.0B</td><td>High — scale dependency</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>India</td>
-<td>Rafale Fighter Jets and Naval Systems</td>
-<td>$5.5B</td>
-<td>Medium — defense relationship</td>
-</tr>
+<tr><td>India</td><td>Rafale Fighter Jets and Naval Systems</td><td>$5.5B</td><td>Medium — defense relationship</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>France's supply lines transit <strong>Suez Canal</strong> (Asia-Europe container flows), <strong>Bab el-Mandeb</strong> (Red Sea routing for Asian goods), and <strong>Strait of Malacca</strong> (Southeast Asian supply chains). France benefits from Mediterranean port access (Marseille-Fos) that provides shorter routing from Middle East and North Africa, reducing Malacca exposure for some supply lines. Nuclear fuel supply chains (uranium from Niger, Kazakhstan, Canada) travel primarily overland or via Atlantic routing, largely bypassing major maritime chokepoints. The 2026 Hormuz blockade has limited direct impact on French energy but drives up LNG spot prices affecting residual gas demand.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Chinese rare earth dependency for defense</strong>: Rafale engines, satellite systems, and precision munitions require Chinese-sourced NdFeB magnets and samarium-cobalt alloys; no European source exists at scale</li>
@@ -83,10 +130,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Consumer electronics dependency</strong>: $18B in Chinese electronics imports reflects structural manufacturing gap that EU industrial policy has not addressed</li>
 <li><strong>African security environment</strong>: Withdrawal from Sahel reduces France's influence over critical mineral supply routes in West Africa (bauxite from Guinea, uranium from Niger)</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
-<p>France occupies an unusual position in the chanyuan framework: it maintains genuine upstream control in two specialized domains (nuclear technology and defense/aerospace systems) while accepting downstream dependency in broad consumer and industrial goods. This is a deliberate strategic choice — France has historically prioritized sovereignty in nuclear energy and defense manufacturing over consumer goods self-sufficiency, a hierarchy of priorities that reflects Gaullist strategic culture.</p>
+<p>France occupies an unusual position in the chanyuan framework: it maintains genuine upstream control in two specialized domains (nuclear technology and defense/aerospace systems) while accepting downstream dependency in broad consumer and industrial goods. <em>This is a deliberate strategic choice</em> — France has historically prioritized sovereignty in nuclear energy and defense manufacturing over consumer goods self-sufficiency, a hierarchy of priorities that reflects Gaullist strategic culture.</p>
 <p>The nuclear advantage is France's most distinctive production network asset. While Germany and Japan scramble to replace fossil fuel energy sources, France generates 70%+ of its electricity from domestic reactors, providing structural insulation from both the Hormuz blockade and Russian gas cutoff. This is not merely an energy policy — it is a production network sovereignty decision that shapes France's entire industrial cost structure and vulnerability profile.</p>
-<p>However, France's defense sovereignty — the cornerstone of its self-image — is compromised by Chinese rare earth dependency. Every Rafale fighter, every Barracuda submarine, every Aster missile requires rare earth magnets that France cannot source domestically. The stated intention of European strategic autonomy collides with the revealed preference of continued Chinese mineral procurement. France has joined EU Critical Raw Materials Act efforts but has not yet invested in domestic rare earth separation capacity at industrial scale, a gap between rhetoric and capital allocation that the chanyuan framework would identify as a credibility deficit.</p>
+<p>However, France's defense sovereignty — the cornerstone of its self-image — is compromised by Chinese rare earth dependency. Every Rafale fighter, every Barracuda submarine, every Aster missile requires rare earth magnets that France cannot source domestically. The stated intention of European strategic autonomy collides with the revealed preference of continued Chinese mineral procurement. France has joined EU Critical Raw Materials Act efforts but has not yet invested in domestic rare earth separation capacity at industrial scale, a gap between rhetoric and capital allocation that the chanyuan framework would identify as a <em>credibility deficit</em>.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Build European rare earth separation capacity</strong>: Lead consortium with Germany for rare earth processing in France or Scandinavia; leverage Orano's nuclear materials expertise for mineral processing</li>
@@ -95,5 +144,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Deepen Indo-Pacific defense relationships</strong>: Expand Rafale sales and naval cooperation with India, UAE, and Indonesia to build alternative supply chain relationships outside Chinese orbit</li>
 <li><strong>Invest in critical mineral exploration in French overseas territories</strong>: New Caledonia nickel, French Guiana gold, and Reunion rare earth prospects offer sovereign mineral access if developed</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

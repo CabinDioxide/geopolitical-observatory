@@ -1,80 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canada Supply Chain Vulnerability Assessment (2026)</title>
+<title>加拿大供应链脆弱性评估 / Canada Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #4ade80; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
-strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+strong { color: #059669; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #059669; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<section lang="zh">
+
+<h1>加拿大供应链脆弱性评估（2026）</h1>
 <h1>Canada Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 4/100 — NET LEVERAGE HOLDER</h2>
+<div class="score-line">风险评分：<strong>4/100</strong> — 净杠杆持有者 / NET LEVERAGE HOLDER</div>
+
+<h2>执行摘要</h2>
+<p>加拿大在所有G7经济体中拥有结构上最安全的位置，将大规模能源出口、关键矿产禀赋和与美国深度的大陆一体化结合在一起。凭借对美800亿美元原油出口、对华显著的农产品出口、以及新兴的关键矿产潜力（锂、稀土、钾碱），加拿大压倒性地是一个供应者而非依赖者。其唯一关键脆弱性是一体化的美加汽车供应链，其中断将向两个方向同时流动。加拿大的地理位置——无海上咽喉暴露、与美国有直接管道连接——提供无可匹敌的供应链韧性。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>美国</td><td>汽车与零部件</td><td>$45.0B</td><td>关键 — 深度一体化的大陆供应链</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>美国</td><td>原油（油砂，经Keystone/Enbridge）</td><td>$80.0B</td><td>高 — 美国主要能源供应商</td></tr>
+<tr><td>中国</td><td>油菜与小麦</td><td>$6.0B</td><td>高 — 粮食安全杠杆</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>加拿大在其主要贸易流向上<strong>零海上咽喉暴露</strong>。美加能源和货物贸易经由管道（Keystone、Enbridge、跨山管道）和陆路铁路/卡车移动。加拿大对中国的出口（油菜、小麦）从温哥华直接跨太平洋而不经过任何争议海峡。2026年霍尔木兹封锁对加拿大供应链无直接影响。加拿大唯一显著的基础设施脆弱性是油砂出口管道容量集中——这是一个国内基础设施约束而非地缘政治咽喉。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>美加汽车供应链一体化</strong>：450亿美元双边汽车贸易形成相互依赖；任何美国贸易政策中断（关税、边境摩擦）将同时在两个经济体中级联</li>
+<li><strong>中国农业杠杆</strong>：北京曾将油菜进口武器化（2019外交争端）——加拿大对华农业出口存在政治暴露</li>
+<li><strong>关键矿产开发节奏</strong>：加拿大拥有锂、稀土、钴和镍矿床，但开采和加工开发比中国投资时间表慢5-10年</li>
+<li><strong>管道容量约束</strong>：跨山扩建已运营，但对亚洲市场的额外油砂出口容量仍有限</li>
+<li><strong>霍尔木兹间接效应</strong>：霍尔木兹封锁引发的全球油价上涨利好加拿大生产者（800亿美元原油出口变得更有价值），但同时提高国内消费成本</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>加拿大在产缘政治框架中占据最罕见的位置之一：一个资源出口型经济体，通过物质禀赋建立生产网络杠杆的同时维持制度质量与民主治理。与大多数资源出口国（俄罗斯、沙特阿拉伯、委内瑞拉）不同，加拿大的杠杆来自多样化的关键投入篮子——石油、天然气、钾碱、铀、油菜、小麦、木材、镍、锂——而非对单一商品的依赖。这种多元化，再加上法治治理和对美市场近邻，使加拿大的供应链杠杆在结构上持久而非周期性脆弱。</p>
+<p>美加关系代表世界上最深度一体化的双边生产网络。汽车供应链本身涉及零部件在成品装配前跨越边境6-8次。这种一体化意味着"依赖"是双边且对称的——美国无法在不扰乱自身生产的情况下扰乱加拿大供应，反之亦然。在产缘政治术语中，这是<em>"互为上游纠缠"</em>而非层级依赖。</p>
+<p>加拿大的揭示偏好一直是对其资源位置的谨慎利用。渥太华没有将能源出口武器化（不像俄罗斯），并在外交紧张时期维持对华开放的农业贸易。然而，新兴的关键矿产机会——魁北克和安大略的锂、萨斯喀彻温和西北地区的稀土、安大略的钴——代表从被动资源出口国向主动生产网络控制者的潜在转变。<strong>加拿大能否建立国内加工产能</strong>（而非向中国出口原料精炼）将决定它在产缘政治层级中上升还是仍是原料供应商。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>加速关键矿产加工</strong>：在国内建设氢氧化锂、稀土分离和钴精炼产能，而非出口矿石；利用IRA和CRMA条款发展北美加工</li>
+<li><strong>多元化原油出口市场</strong>：扩大跨山管道容量，开发LNG Canada（基蒂马特）以降低对美国唯一原油市场准入的依赖</li>
+<li><strong>深化美加供应链一体化</strong>：正式化双边汽车、国防和关键矿产供应链韧性协议，降低关税/政策扰动风险</li>
+<li><strong>开发钾碱作为战略杠杆</strong>：加拿大控制全球30%以上的钾碱供应——在与中国和印度的地缘政治谈判中使用这一农业投入杠杆</li>
+<li><strong>投资北极基础设施</strong>：北方资源开发需要港口、道路和破冰船能力；随着气候变化打开新的开采可能性，将加拿大定位为可靠的北极资源供应商</li>
+</ul>
+
+</section>
+
+<section lang="en">
+
+<h1>Canada Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>加拿大供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>4/100</strong> — NET LEVERAGE HOLDER</div>
+
 <h2>Executive Summary</h2>
 <p>Canada holds the most structurally secure position of any G7 economy, combining massive energy exports, critical mineral endowments, and deep continental integration with the United States. With $80B in crude oil exports to the US, significant agricultural exports to China, and emerging critical mineral potential (lithium, rare earths, potash), Canada is overwhelmingly a supplier rather than a dependent. Its sole critical vulnerability is the integrated US-Canada automotive supply chain, where disruption would flow in both directions. Canada's geographic position — no maritime chokepoint exposure, direct pipeline connections to the US — provides unmatched supply chain resilience.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>United States</td>
-<td>Automobiles and Auto Parts</td>
-<td>$45.0B</td>
-<td>Critical — deeply integrated continental supply chain</td>
-</tr>
+<tr><td>United States</td><td>Automobiles and Auto Parts</td><td>$45.0B</td><td>Critical — deeply integrated continental supply chain</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>United States</td>
-<td>Crude Oil (Oil Sands via Keystone/Enbridge)</td>
-<td>$80.0B</td>
-<td>High — primary US energy supplier</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Canola and Wheat</td>
-<td>$6.0B</td>
-<td>High — food security leverage</td>
-</tr>
+<tr><td>United States</td><td>Crude Oil (Oil Sands via Keystone/Enbridge)</td><td>$80.0B</td><td>High — primary US energy supplier</td></tr>
+<tr><td>China</td><td>Canola and Wheat</td><td>$6.0B</td><td>High — food security leverage</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>Canada has <strong>zero maritime chokepoint exposure</strong> for its primary trade flows. The US-Canada energy and goods trade moves via pipeline (Keystone, Enbridge, Trans Mountain) and overland rail/truck. Canadian exports to China (canola, wheat) transit the Pacific directly from Vancouver without passing through contested straits. The 2026 Hormuz blockade has no direct impact on Canadian supply chains. Canada's only significant infrastructure vulnerability is the concentration of pipeline capacity for oil sands exports — a domestic infrastructure constraint rather than a geopolitical chokepoint.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>US-Canada auto supply chain integration</strong>: $45B bilateral auto trade creates mutual dependency; any US trade policy disruption (tariffs, border friction) would cascade through both economies simultaneously</li>
@@ -83,10 +130,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Pipeline capacity constraints</strong>: Trans Mountain expansion operational, but additional oil sands export capacity to Asian markets remains limited</li>
 <li><strong>Indirect Hormuz effects</strong>: Global oil price increases from Hormuz blockade benefit Canadian producers ($80B crude exports become more valuable) but raise consumer costs domestically</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
 <p>Canada is the rarest of positions in the chanyuan framework: a resource-exporting economy that has maintained institutional quality and democratic governance while building production network leverage through material endowments. Unlike most resource exporters (Russia, Saudi Arabia, Venezuela), Canada's leverage derives from a diversified basket of critical inputs — oil, natural gas, potash, uranium, canola, wheat, lumber, nickel, lithium — rather than dependency on a single commodity. This diversification, combined with rule-of-law governance and proximity to the US market, makes Canadian supply chain leverage structurally durable rather than cyclically vulnerable.</p>
-<p>The US-Canada relationship represents the most deeply integrated bilateral production network in the world. The automotive supply chain alone involves parts crossing the border 6-8 times before final assembly. This integration means that "dependency" is bilateral and symmetric — the US cannot disrupt Canadian supply without disrupting its own production, and vice versa. In chanyuan terms, this is "mutual upstream entanglement" rather than hierarchical dependency.</p>
-<p>Canada's revealed preference has been cautious exploitation of its resource position. Ottawa has not weaponized energy exports (unlike Russia) and has maintained open agricultural trade with China despite diplomatic tensions. However, the emerging critical mineral opportunity — lithium in Quebec and Ontario, rare earths in Saskatchewan and the NWT, cobalt in Ontario — represents a potential shift from passive resource exporter to active production network controller. Whether Canada can build domestic processing capacity (rather than exporting raw material to China for refining) will determine whether it ascends in the chanyuan hierarchy or remains a raw-material supplier.</p>
+<p>The US-Canada relationship represents the most deeply integrated bilateral production network in the world. The automotive supply chain alone involves parts crossing the border 6-8 times before final assembly. This integration means that "dependency" is bilateral and symmetric — the US cannot disrupt Canadian supply without disrupting its own production, and vice versa. In chanyuan terms, this is <em>"mutual upstream entanglement"</em> rather than hierarchical dependency.</p>
+<p>Canada's revealed preference has been cautious exploitation of its resource position. Ottawa has not weaponized energy exports (unlike Russia) and has maintained open agricultural trade with China despite diplomatic tensions. However, the emerging critical mineral opportunity — lithium in Quebec and Ontario, rare earths in Saskatchewan and the NWT, cobalt in Ontario — represents a potential shift from passive resource exporter to active production network controller. <strong>Whether Canada can build domestic processing capacity</strong> (rather than exporting raw material to China for refining) will determine whether it ascends in the chanyuan hierarchy or remains a raw-material supplier.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Accelerate critical mineral processing</strong>: Build lithium hydroxide, rare earth separation, and cobalt refining capacity domestically rather than exporting concentrates; leverage IRA and CRMA provisions for North American processing</li>
@@ -95,5 +144,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Develop potash as strategic leverage</strong>: Canada controls 30%+ of global potash supply — use this agricultural input leverage in geopolitical negotiations (particularly with China and India)</li>
 <li><strong>Invest in Arctic infrastructure</strong>: Northern resource development requires ports, roads, and icebreaker capacity; position Canada as reliable Arctic resource supplier as climate change opens new extraction possibilities</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

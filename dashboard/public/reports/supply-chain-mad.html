@@ -4,49 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>供应链确保相互摧毁——不稳定的均衡 / Supply Chain MAD</title>
+<link rel="stylesheet" href="reports.css">
 <style>
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Helvetica Neue', sans-serif;
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 40px 28px 80px;
-  background: #fafafa;
-  color: #1a1a1a;
-  line-height: 1.75;
-  font-size: 15px;
+  max-width: 820px; margin: 0 auto; padding: 40px 28px 80px;
+  background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px;
 }
 h1 {
-  font-size: 26px;
-  border-bottom: 2px solid #e63946;
-  padding-bottom: 10px;
-  margin-bottom: 4px;
-  line-height: 1.3;
+  font-size: 26px; border-bottom: 2px solid #e63946;
+  padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3;
 }
-h1 .en { display: block; font-size: 16px; color: #666; font-weight: 500; margin-top: 4px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 16px; }
 .subtitle { color: #555; font-size: 14px; margin-bottom: 6px; }
 .meta-box {
-  background: #eef2f7;
-  border-left: 3px solid #2a9d8f;
-  padding: 10px 14px;
-  margin: 20px 0 28px;
-  font-size: 13px;
-  color: #444;
-  line-height: 1.6;
+  background: #eef2f7; border-left: 3px solid #2a9d8f;
+  padding: 10px 14px; margin: 20px 0 28px;
+  font-size: 13px; color: #444; line-height: 1.6;
 }
 h2 {
-  font-size: 20px;
-  color: #1a1a1a;
-  margin-top: 36px;
-  margin-bottom: 12px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
+  font-size: 20px; color: #1a1a1a; margin-top: 36px;
+  margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd;
 }
-h3 {
-  font-size: 16px;
-  color: #333;
-  margin-top: 22px;
-  margin-bottom: 8px;
-}
+h3 { font-size: 16px; color: #333; margin-top: 22px; margin-bottom: 8px; }
 p { margin-bottom: 14px; }
 ul, ol { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 5px 0; }
@@ -56,51 +36,28 @@ table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px;
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
 td { padding: 8px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-a.back {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: #2a9d8f;
-  text-decoration: none;
-  font-size: 14px;
-}
-a.back:hover { text-decoration: underline; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
 .tldr {
-  background: #fff8e1;
-  border: 1px solid #f4c542;
-  border-radius: 6px;
-  padding: 14px 18px;
-  margin: 24px 0;
-  font-size: 15px;
+  background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px;
+  padding: 14px 18px; margin: 24px 0; font-size: 15px;
 }
 .tldr h3 {
-  margin-top: 0;
-  font-size: 14px;
-  color: #8a6a00;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin-top: 0; font-size: 14px; color: #8a6a00;
+  text-transform: uppercase; letter-spacing: 1px;
 }
 .callout {
-  background: #f5f0ff;
-  border-left: 3px solid #7c3aed;
-  padding: 12px 16px;
-  margin: 18px 0;
-  font-size: 14px;
+  background: #f5f0ff; border-left: 3px solid #7c3aed;
+  padding: 12px 16px; margin: 18px 0; font-size: 14px;
 }
 .corrected {
-  background: #fef3e2;
-  padding: 1px 6px;
-  border-radius: 3px;
-  font-size: 12px;
-  color: #a05a00;
-  margin-left: 4px;
+  background: #fef3e2; padding: 1px 6px; border-radius: 3px;
+  font-size: 12px; color: #a05a00; margin-left: 4px;
 }
 .verification {
-  background: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 16px 20px;
-  margin-top: 40px;
-  font-size: 13px;
+  background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px;
+  padding: 16px 20px; margin-top: 40px; font-size: 13px;
 }
 .verification h3 { margin-top: 10px; font-size: 14px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
 .verification ul { margin-bottom: 6px; }
@@ -109,21 +66,30 @@ a.back:hover { text-decoration: underline; }
 .verification .flagged { color: #dc2626; }
 hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 .footer {
-  text-align: center;
-  font-size: 12px;
-  color: #888;
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
+  text-align: center; font-size: 12px; color: #888;
+  margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;
 }
 </style>
 </head>
-<body>
-<a class="back" href="/reports/">← 返回报告页</a> &nbsp; <a class="back" href="/">← 返回地图</a>
+<body data-lang="zh">
 
-<h1>供应链确保相互摧毁——不稳定的均衡
-<span class="en">Supply Chain Mutually Assured Disruption: The Unstable Equilibrium</span>
-</h1>
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<!-- ============ Chinese version ============ -->
+<section lang="zh">
+
+<h1>供应链确保相互摧毁——不稳定的均衡</h1>
+<h1>Supply Chain Mutually Assured Disruption: The Unstable Equilibrium</h1>
 
 <div class="meta-box">
 <strong>报告类型</strong>：系统框架分析 · <strong>时间</strong>：2026年4月<br>
@@ -137,7 +103,6 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 
 <h2>什么是"确保相互摧毁"</h2>
 <p>"确保相互摧毁"（MAD）是冷战时期形成的核威慑概念：当双方都拥有足以在遭受第一次打击后仍能毁灭对方的核反击能力时，任何一方率先使用核武器都将导致自身毁灭，因此双方都被理性地阻止在先发打击之外。这一逻辑的核心不在于军事平衡，而在于不可承受的报复代价——它使进攻变得无利可图。</p>
-
 <p>本文论证的是：中美之间正在形成一种供应链版本的MAD。但与核MAD存在关键差异。核弹头是均质的——一千枚弹头的威慑力不随时间衰减，且双方对"什么构成第一次打击"拥有共识。供应链杠杆则完全不同：它们是<strong>异质的</strong>（技术否决权与矿物垄断不在同一维度上）、<strong>时变的</strong>（矿物杠杆会因替代产能上线而衰减，技术差距则因复利效应而扩大）、且<strong>缺乏共识刻度</strong>（双方对"什么算升级"没有统一定义）。这三个差异使供应链MAD远比核MAD更不稳定——它不是一种可以依赖的均衡，而是一个随时可能倾覆的过渡态。</p>
 
 <h2>一、供应链MAD的四根支柱</h2>
@@ -147,7 +112,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 <p>关键在于：<em>这种控制不需要开火</em>。和平时期的海上存在、联合巡逻、保险市场信号和港口准入限制，足以构成一种慢性绞杀能力。美国不需要封锁马六甲——只需让保险公司拒绝承保途经该水域的中国籍油轮，效果等同于封锁。这是一种成本极低、否认空间极大的战略杠杆。</p>
 
 <h3>支柱二：技术否决权</h3>
-<p>如果说航道控制是物理空间的扼制，EDA软件（电子设计自动化）则是信息空间的扼制。Synopsys与Cadence两家美国公司合计FY2024营收约<strong>107.7亿美元</strong>（Synopsys $61.3亿 + Cadence $46.4亿），在全球EDA市场合计占据~60%份额<span class="corrected">原报告称68亿美元市场规模，已核查修正</span>。不存在任何可用的替代产品——这一点往往被低估。EDA不是一种可以投入资源快速追赶的通用技术，而是数十年工程迭代累积的系统级产品，每一代芯片设计都依赖前一代工具链的验证数据。断供EDA之日，即全球每一家晶圆厂的新设计停滞之时。</p>
+<p>如果说航道控制是物理空间的扼制，EDA软件（电子设计自动化）则是信息空间的扼制。Synopsys与Cadence两家美国公司合计FY2024营收约<strong>107.7亿美元</strong>（Synopsys $61.3亿 + Cadence $46.4亿），在全球EDA市场合计占据~60%份额<span class="corrected">原报告称68亿美元市场规模，已核查修正</span>。不存在任何可用的替代产品。EDA不是一种可以投入资源快速追赶的通用技术，而是数十年工程迭代累积的系统级产品，每一代芯片设计都依赖前一代工具链的验证数据。断供EDA之日，即全球每一家晶圆厂的新设计停滞之时。</p>
 <p>在此之上，EUV光刻构成第二层否决权。ASML的极紫外光刻机之所以不可替代，不在于其物理原理不可复制——中国理论上可以在10到15年内自研出原型。壁垒在于系统集成：光源来自德国通快（Trumpf）、反射镜来自德国蔡司（Zeiss）、光刻胶来自日本JSR，核心供应商全部位于美国的条约盟国体系之内。<strong>更致命的是</strong>，半导体制程的进步本身是复利式的——每一代制程需要下一代光刻工具，差距不是线性缩小，而是指数扩大。</p>
 
 <h3>支柱三：加工垄断</h3>
@@ -165,8 +130,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 <tr><td>钨（开采）</td><td>83%</td><td>~90%</td></tr>
 </tbody>
 </table>
-<p>Congo supplies 74-76% of global cobalt mining (USGS 2025)，但矿石80%被运到中国精炼。</p>
-<p>钨的具体案例尤为突出：全球钨供应链中，中国开采占83%，加上俄罗斯和朝鲜——后两者在制裁下只能经由中国出口——使中国实际控制NATO可获取钨的90%。美国2015年停止国内钨开采，零产能<span class="corrected">原报告称"北约90%弹药原材料需中/俄/朝许可"系对钨的特定数据的泛化，已修正</span>。</p>
+<p>刚果供应全球74-76%的钴矿（USGS 2025），但矿石80%被运到中国精炼。钨的案例尤为突出：中国开采占83%，加上俄罗斯和朝鲜——后两者在制裁下只能经由中国出口——使中国实际控制NATO可获取钨的90%。美国2015年停止国内钨开采，零产能<span class="corrected">原报告"北约90%弹药原材料需中/俄/朝许可"系对钨的特定数据的泛化，已修正</span>。</p>
 
 <h3>支柱四：制造锁定</h3>
 <p>1450亿美元的年度消费电子对美出口只是这根支柱的表层数字。更深层的锁定是结构性的：数十年间形成的供应商生态共址效应、物流基础设施集聚、工人技能积累，使得大规模制造回流在十年内不具结构可行性。</p>
@@ -194,7 +158,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 <p>核MAD的基本假设是双方控制升级节奏。供应链MAD没有这一前提。若干关键节点不在中美任何一方的控制范围内，却有能力同时触发双方的弱点。</p>
 <ul>
 <li><strong>台湾</strong>是最危险的节点——不仅因为台积电占据全球90%以上的先进制程产能，还因为台湾海峡同时是半导体咽喉和航运咽喉（全球88%的最大集装箱船途经此处）。<strong>台海危机将是唯一一个同时激活四根MAD支柱的事件。</strong></li>
-<li><strong>刚果（金）</strong>供应全球74-76%的钴矿（USGS 2025）。M23叛军2025年1月27日攻占戈马。卢旺达2024年矿产出口总额17.5亿美元（<em>戈马陷落前数据</em>），2025年同比增长46.2%<span class="corrected">原报告称"500%暴增"系误读：$1.75B是戈马陷落前年度总额，2025增长46.2%</span>。Umicore在Kokkola（芬兰）的工厂是中国以外唯一的大规模钴精炼厂；Glencore在多地也有显著产能。</li>
+<li><strong>刚果（金）</strong>供应全球74-76%的钴矿（USGS 2025）。M23叛军2025年1月27日攻占戈马。卢旺达2024年矿产出口总额17.5亿美元（<em>戈马陷落前数据</em>），2025年同比增长46.2%<span class="corrected">原报告"500%暴增"系误读：$1.75B是戈马陷落前年度总额</span>。Umicore在Kokkola（芬兰）的工厂是中国以外唯一的大规模钴精炼厂；Glencore在多地也有显著产能。</li>
 <li><strong>红海方向</strong>：胡塞武装袭击导致2023年12月-2024年2月苏伊士集装箱通行量下降90%，航运被迫改道好望角，每航次增加10至14天，船舶保险费率从船舶价值的0.07%飙升至1%。</li>
 </ul>
 
@@ -226,7 +190,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 <h2>四、帝国的幻觉</h2>
 
 <h3>美国路径：军事-企业帝国</h3>
-<p>美国的应对逻辑是以军事-技术优势的强化来抵消供应链弱点。国防预算从2024财年的8860亿美元攀升<span class="corrected">原报告称FY2026达1.05万亿美元+17%，DoD预算实际约$925B；$1.05T可能指更广义"国家防务"口径，该具体数字未证实</span>。AUKUS框架承诺3680亿澳元用于核潜艇项目。RTX集团（原雷神）以886亿美元营收和2680亿美元积压订单成为这一逻辑的企业化身。Palantir、Anduril、SpaceX/Starshield正在模糊硅谷与五角大楼的边界。</p>
+<p>美国的应对逻辑是以军事-技术优势的强化来抵消供应链弱点。国防预算从2024财年的8860亿美元持续攀升<span class="corrected">原报告称FY2026达1.05万亿美元+17%，DoD预算实际约$925B；$1.05T可能指更广义"国家防务"口径，该具体数字未证实</span>。AUKUS框架承诺3680亿澳元用于核潜艇项目。RTX集团（原雷神）以886亿美元营收和2680亿美元积压订单成为这一逻辑的企业化身。Palantir、Anduril、SpaceX/Starshield正在模糊硅谷与五角大楼的边界。</p>
 <p>然而<strong>帝国硬化不等于解除依赖</strong>。F-35——这一帝国的王牌武器系统——依赖中国稀土永磁体。弗吉尼亚级攻击核潜艇的年产能约为1艘，远不足以满足AUKUS承诺所需的每年2艘。同时在台湾海峡、霍尔木兹海峡、北约东翼和红海维持军事存在，正在接近海军兵力的承载极限。</p>
 
 <h3>中国路径：工业化帝国</h3>
@@ -258,12 +222,153 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 <p style="margin:0;"><strong>外部供应链博弈的最终结果，很可能取决于内部凝聚力：谁能更持久地承受战略竞争的经济与社会成本，谁就将定义2030年后的国际秩序。</strong></p>
 </div>
 
+</section>
+
+<!-- ============ English version ============ -->
+<section lang="en">
+
+<h1>Supply Chain Mutually Assured Disruption: The Unstable Equilibrium</h1>
+<h1>供应链确保相互摧毁——不稳定的均衡</h1>
+
+<div class="meta-box">
+<strong>Report type</strong>: System framework analysis · <strong>Date</strong>: April 2026<br>
+<strong>Data verification</strong>: 17 specific numeric claims were individually verified against primary sources (USGS, IFR, Bruegel, USITC, NBS, etc.). Erroneous numbers have been corrected; suspected fabrications have been removed or flagged. See Verification Log at the end.
+</div>
+
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>The US and China have built a "mutually assured destruction" deterrence structure at the supply chain level — but unlike nuclear deterrence, <strong>this equilibrium is fundamentally unstable</strong>. Both sides are racing within a 5-8 year window to eliminate their own weaknesses. Neither can succeed, because each empire's structural constraint lies precisely in the other's core capability domain. The real danger is not the equilibrium itself, but the moment when one or both sides misjudge that the window is closing and convert deterrence into actual rupture. <strong>2027-2032</strong> is the structurally most fragile window.</p>
+</div>
+
+<h2>What "Mutually Assured Destruction" Means</h2>
+<p>"Mutually Assured Destruction" (MAD) is the Cold War nuclear deterrence concept: when both sides possess nuclear counter-strike capability sufficient to annihilate the other even after absorbing a first strike, any side initiating nuclear use faces its own destruction, and both are therefore rationally deterred from first use. The logic's core is not military balance but <em>unbearable retaliation cost</em> — it makes attack unprofitable.</p>
+<p>This report argues that a supply chain version of MAD is emerging between the US and China. But three key differences from nuclear MAD make it far less stable. Nuclear warheads are <strong>homogeneous</strong> — 1,000 warheads deliver equivalent deterrent effect regardless of year, and both sides share a definition of "first strike." Supply chain leverage is totally different: it is <strong>heterogeneous</strong> (technology veto and mineral monopoly don't sit on the same dimension), <strong>time-variant</strong> (mineral leverage erodes as substitute capacity comes online; technology gaps compound exponentially), and <strong>lacks a shared escalation scale</strong> (neither side has a common definition of what counts as escalation). These three differences make supply chain MAD far less stable than nuclear MAD — not an equilibrium that can be relied on, but a transitional state that could tip at any moment.</p>
+
+<h2>I. The Four Pillars of Supply Chain MAD</h2>
+
+<h3>Pillar 1: Sea Lane Control</h3>
+<p>US control of global maritime communication lines is not an abstract military projection capability but an architectural legacy of post-WWII alliance geography. The East Asian military installation network — from Yokosuka to Diego Garcia — combined with bilateral treaty systems with Japan, South Korea, Australia, and the Philippines, forms a physical control net covering the critical maritime chokepoints. For China, this means that more than 70% of its oil imports must pass through waterways that the US and its allies can sever at will: the Malacca Strait carries 80% of China's oil imports; the Hormuz Strait carries 21% of global oil trade; the Suez Canal links Mediterranean to Indian Ocean routes.</p>
+<p>Crucially, <em>this control requires no shots fired</em>. Peacetime naval presence, joint patrols, insurance-market signals, and port access restrictions together constitute a chronic strangulation capability. The US does not need to blockade Malacca — it merely needs insurers to refuse coverage for Chinese-flagged tankers transiting the waterway; the effect equals blockade. It is a strategic lever of extremely low cost and extremely high deniability.</p>
+
+<h3>Pillar 2: Technology Veto</h3>
+<p>If sea lane control is chokehold in physical space, EDA (Electronic Design Automation) software is chokehold in information space. Synopsys and Cadence — two US companies — together produced FY2024 revenue of approximately <strong>$10.77 billion</strong> (Synopsys $6.13B + Cadence $4.64B), holding ~60% of the global EDA market<span class="corrected">Original report cited $6.8B market size; corrected per company filings</span>. No viable substitute exists. EDA is not a generic technology that resources can quickly match; it is a system-level product accumulated over decades of engineering iteration, where each chip generation depends on the previous toolchain's validation data. The day EDA is cut off is the day every fab worldwide halts new designs.</p>
+<p>On top of this, EUV lithography constitutes a second layer of veto. ASML's extreme ultraviolet machines are not irreplaceable because their physical principles cannot be replicated — China could theoretically build a prototype within 10-15 years. The barrier is system integration: light source from Germany's Trumpf, mirrors from Germany's Zeiss, photoresists from Japan's JSR — all core suppliers sit within the US treaty alliance system. <strong>More decisively</strong>, semiconductor process progress itself compounds: each generation requires next-generation lithography tools, so the gap does not narrow linearly but widens exponentially.</p>
+
+<h3>Pillar 3: Processing Monopoly</h3>
+<p>This is the most systematically underestimated pillar in Western strategic analysis. The ore is mined in Australia (lithium), Congo (cobalt), Chile (copper) — but nearly all refining and processing passes through China. This is not about resource ownership; it is about processing chokehold, a bottleneck far harder to replace than mines, because processing capacity takes 5-8 years to build and requires a triple threshold of environmental permits, chemical engineering talent, and scale economies.</p>
+<p><strong>Critical mineral processing concentration (2024-2025 data)</strong>:</p>
+<table>
+<thead><tr><th>Mineral</th><th>China processing share</th><th>Plus Russia/DPRK</th></tr></thead>
+<tbody>
+<tr><td>Rare earths</td><td>87%</td><td>~90%</td></tr>
+<tr><td>Lithium (battery-grade refining)</td><td>60%</td><td>—</td></tr>
+<tr><td>Cobalt (refining)</td><td>80%</td><td>—</td></tr>
+<tr><td>Graphite (anode material)</td><td>100%</td><td>—</td></tr>
+<tr><td>Gallium</td><td>98%</td><td>—</td></tr>
+<tr><td>Germanium</td><td>60%</td><td>—</td></tr>
+<tr><td>Tungsten (mining)</td><td>83%</td><td>~90%</td></tr>
+</tbody>
+</table>
+<p>Congo supplies 74-76% of global cobalt mining (USGS 2025), but 80% of the ore is shipped to China for refining. The tungsten case is especially striking: China mines 83%, and adding Russia and North Korea — both of which, under sanctions, can only export via China — gives China effective control of 90% of NATO-accessible tungsten. The US stopped domestic tungsten mining in 2015; zero current production<span class="corrected">Original report's "NATO 90% munitions raw materials need China/Russia/DPRK permission" was a generalization of the tungsten-specific figure; corrected</span>.</p>
+
+<h3>Pillar 4: Manufacturing Lock-in</h3>
+<p>The $145B in annual consumer electronics exports to the US is only the surface of this pillar. The deeper lock-in is structural: decades of supplier ecosystem co-location, logistics infrastructure clustering, and worker skill accumulation make large-scale manufacturing reshoring structurally infeasible within a decade. This is not about cost — Vietnam and India have cheaper labor — but about ecosystems. A factory can relocate; the three thousand suppliers around it, the standardized logistics networks, and the skilled worker pool cannot relocate simultaneously.</p>
+<p>On top of this is an often-overlooked two-step vulnerability: India supplies approximately 40% of US generic drugs ($35B value), but <strong>74%</strong> of India's active pharmaceutical ingredients (APIs) come from China (FY2024 data; fermentation-based APIs like ciprofloxacin approach 100% dependence). This means Chinese API export controls can shock US hospital drug supplies within weeks — transmitted through a third country whose relationship with US-China dynamics appears indirect.</p>
+
+<div class="callout">
+<strong>Integrated meaning of the four pillars</strong>: The US controls the design layer (what gets made) and the sea lanes (what can move). China controls the factories (where things are made) and the periodic table (what things are made from). Each side holds chokehold capability sufficient to paralyze the other's economy, and any unilateral strike would expose itself to devastating retaliation. This is supply chain MAD — not a metaphor, but a structural reality.
+</div>
+
+<h2>II. Why the Equilibrium Is Unsustainable</h2>
+
+<h3>Time-Scale Asymmetry</h3>
+<p>The US technology veto is <strong>instantaneous</strong> and, assuming the current alliance architecture persists, essentially <strong>permanent</strong>. EDA cutoff is a binary switch — close today, and tomorrow every chip design house on Earth halts. Due to the compounding nature of semiconductor process gaps, this veto <strong>grows stronger over time, not weaker</strong>.</p>
+<p>China's mineral leverage follows a completely different time curve. It is currently at historical peak — but being eroded. The US Inflation Reduction Act (IRA) and the EU Critical Raw Materials Act (CRMA) are funding substitute processing capacity. MP Materials (Mountain Pass, California) and Lynas (Australia/Malaysia) rare earth separation projects are scheduled to come online between 2028 and 2032. This means China's mineral leverage <strong>peaks between 2025-2030</strong>, then declines; the US technology veto does not decline.</p>
+<p>Beyond minerals, China faces a deeper time curve: <strong>demographic decline</strong>. 2025 births were 7.92 million (lowest since 1949); population declined by 3.39 million; working-age population is approximately 984 million, already surpassed by India (~990 million). China is attempting automation as hedge — robot density has reached 470 per 10,000 manufacturing workers (surpassing Germany at <strong>429</strong> and Japan at <strong>419</strong>, ranking third globally per IFR 2024<span class="corrected">Original report cited Germany 415, Japan 397; corrected per IFR</span>). But robots don't consume, pay taxes, or serve in militaries.</p>
+
+<div class="callout">
+<strong>The window where the two curves cross — roughly 2027-2032 — is the structurally most fragile period.</strong> Both sides' incentive structures point toward escalation rather than stability: China has reason to use its leverage before it decays; the US has reason to lock in its advantage as it grows.
+</div>
+
+<h3>The Neon Irony</h3>
+<p>A seemingly peripheral case reveals the chaotic nature of supply chain dependencies. Ukraine once supplied roughly <strong>50%</strong> of the world's semiconductor-grade neon<span class="corrected">Original report cited 50-70%; USITC data confirms 45-54% as more accurate</span>, primarily from the Ingas facility in Mariupol and Cryoin facility in Odessa. The 2022 war destroyed both plants, and industrial neon prices briefly surged 9x. Chinese steel industry byproducts rapidly filled the gap — producing an absurd loop: <strong>TSMC now depends on Chinese neon for the lithography process that US export controls were specifically designed to deny China</strong>. War did not simplify the global dependency graph; it rewired it in unpredictable ways, creating new contradictions inside the sanctions regime itself.</p>
+
+<h3>Third-Party Triggers</h3>
+<p>A basic assumption of nuclear MAD is that both sides control escalation pace. Supply chain MAD has no such assumption. Several critical nodes lie outside either the US or China's control yet can simultaneously activate both sides' vulnerabilities.</p>
+<ul>
+<li><strong>Taiwan</strong> is the most dangerous node — not only because TSMC holds over 90% of global advanced-node capacity, but because the Taiwan Strait is simultaneously a semiconductor chokepoint and a shipping chokepoint (88% of the world's largest container ships transit). <strong>A Taiwan Strait crisis would be the only event that activates all four MAD pillars at once.</strong></li>
+<li><strong>Democratic Republic of Congo</strong> supplies 74-76% of global cobalt mining (USGS 2025). M23 rebels captured Goma on January 27, 2025. Rwanda's 2024 mineral exports totaled $1.75B (<em>pre-Goma baseline</em>); 2025 YoY growth was 46.2%<span class="corrected">Original report's "500% surge to $1.75B after Goma" misreads the data: $1.75B was the 2024 pre-Goma annual total</span>. Umicore's Kokkola (Finland) facility is the only large-scale cobalt refinery outside China; Glencore also holds significant refining capacity in multiple locations.</li>
+<li><strong>Red Sea</strong>: Houthi attacks caused Suez Canal container traffic to drop 90% between December 2023 and February 2024. Shipping diverted to the Cape of Good Hope route, adding 10-14 days per voyage. Hull insurance rates jumped from 0.07% to 1% of vessel value.</li>
+</ul>
+
+<h3>The Middle-Country Erosion</h3>
+<p>MAD's binary structure is being eroded by middle powers refusing to align:</p>
+<ul>
+<li><strong>India</strong>: Simultaneously a member of QUAD, the Shanghai Cooperation Organization, and BRICS+. Imports discounted Russian crude, refines it, and re-exports to Europe — tearing a legal arbitrage opening in the Western sanctions system.</li>
+<li><strong>Indonesia</strong>: Banned nickel ore exports, forcing Chinese smelting investment to land inside Indonesia, converting resource nationalism into industrialization leverage.</li>
+<li><strong>Brazil</strong>: Post-2018, replaced the US as China's primary soybean supplier (peaking at 82% of Chinese imports).</li>
+<li><strong>Russian nuclear power</strong>: Rosatom controls roughly <strong>~44%</strong> of global uranium enrichment capacity and has been <strong>exempted from all 16 EU sanctions packages</strong> — core subsidiaries Tenex and TVEL remain unsanctioned. Nineteen VVER reactors operate inside the EU (Bulgaria 2, Czech Republic 6, Finland 2, Hungary 4, Slovakia 5)<span class="corrected">Original report cited 16 reactors; actual is 19</span> — in a sanctions campaign nominally aimed at weakening Russia, European baseload electricity supply still depends on Moscow. The EU paid Rosatom over €1 billion for uranium products in 2024.</li>
+</ul>
+
+<h2>III. The Danger of Misjudgment</h2>
+<p>The greatest risk of supply chain MAD is <strong>not equilibrium collapse</strong> — a stable MAD can persist indefinitely. The real danger is that when one side (or both) judges that the window is closing, deterrence logic inverts from "don't move" to "<strong>now or never</strong>." The most dangerous historical moments have never been when equilibrium was most stable, but when one side believed equilibrium was about to tip.</p>
+
+<div class="callout">
+<strong>The 1914 analogy carries structural warning weight</strong>. The German General Staff judged that Russia's railway expansion would close Germany's military advantage window around 1917. The "now or never" logic drove the war decision.
+</div>
+
+<p>At least three structurally similar misjudgment scenarios exist in current supply chain competition:</p>
+<ol>
+<li><strong>China overusing mineral weapons</strong>: Judging that its leverage must be used before 2030 or lose effect, overuses resource weapons, triggers accelerated Western decoupling — a self-fulfilling prophecy.</li>
+<li><strong>US overestimating technology containment</strong>: Ignores China's lock-in effect in mature nodes (28nm and above, 80% global share), wins the AI chip war but loses the foundational semiconductor supply that keeps industrial society running.</li>
+<li><strong>The most dangerous scenario</strong>: Both sides judge, on the Taiwan question, that the other will back down — two individually "rational" decisions collide into an irrational outcome.</li>
+</ol>
+
+<p>In nuclear deterrence, MAD works because both sides share common understanding of what constitutes "first strike" and "retaliation." Supply chain MAD has no such grammar. Is tightening gallium export licenses a "proportional response" to chip controls, or "escalation"? Is blockading Malacca "escalation" or "enforcement"? When shared definitions are absent, <strong>unintentional escalation structurally becomes a high-probability event</strong> — not because either side wants conflict, but because neither has consensus on what counts as escalation.</p>
+
+<h2>IV. The Empire's Illusion</h2>
+
+<h3>The American Path: Military-Enterprise Empire</h3>
+<p>The US response logic is to amplify military-technology advantage to offset supply chain weakness. The defense budget has climbed from $886B in FY2024<span class="corrected">Original report cited FY2026 at $1.05T with +17% increase; DoD budget actually ~$925B; $1.05T may refer to broader "national defense" accounting (including DoE nuclear weapons, VA defense-related, intelligence community), which is not verified as a FY2026 defense budget in primary sources</span>. The AUKUS framework commits A$368 billion to the nuclear submarine program. RTX (formerly Raytheon), with $88.6B revenue and $268B backlog, embodies this logic at the corporate level. Palantir, Anduril, and SpaceX/Starshield are blurring the boundary between Silicon Valley and the Pentagon.</p>
+<p>However, <strong>imperial hardening does not equal dependency removal</strong>. The F-35 — the empire's flagship weapon system — depends on Chinese rare earth permanent magnets. Virginia-class attack submarine annual production is approximately 1, far below the 2-per-year required to meet AUKUS commitments. Simultaneously maintaining military presence across the Taiwan Strait, Hormuz, NATO's eastern flank, and the Red Sea is approaching the US Navy's carrying capacity limit.</p>
+
+<h3>The Chinese Path: Industrialization Empire</h3>
+<p>China's logic is to offset demographic decline and external containment through industrial automation and capacity depth. About 2 million industrial robots constitute the operating stock; in the first nine months of 2025, production reached 595,000 units, up 29.8% YoY. This is a strategic bet of substituting machines for demographic dividend.</p>
+<p>But robots don't consume, pay taxes, or serve in militaries. The more fundamental constraint: <strong>no industrial system, however powerful, can dissolve a 70%+ dependence on seaborne oil imports</strong>. The Malacca dilemma cannot be solved without a blue-water navy peer to the US Navy — and building such a navy takes at least decades. And without EUV, a permanent semiconductor ceiling exists.</p>
+
+<h3>The Structural Paradox</h3>
+<div class="callout">
+<strong>Why can neither empire escape MAD? Because each empire's unsolvable constraint sits precisely in the other's capability domain.</strong>
+<ul style="margin-top:8px; margin-bottom:0;">
+<li>The US cannot escape mineral dependency through manufacturing — large-scale mineral processing is the domain China built over decades.</li>
+<li>China cannot secure sea lanes through naval projection — global maritime control is the domain the US built over eighty years.</li>
+</ul>
+<p style="margin-top:10px; margin-bottom:0;">Both sides strengthen their own advantages while exposing their weaknesses to the other's territory. This is not decoupling; <strong>this is deepening interdependence while pretending to decouple</strong>.</p>
+</div>
+
+<h2>V. What Will Break the Equilibrium</h2>
+
+<h3>Most Likely Path: Cold Fork</h3>
+<p>By 2030, the most probable outcome is neither complete decoupling nor re-integration, but a <strong>managed partial fork</strong>. Two parallel technology stacks (China-led mature-node ecosystem and US-led advanced-node ecosystem) and two partially overlapping mineral supply chains (West maintaining a 3-5 year catch-up lag in rare earths, graphite, and tungsten) will coexist. But in the most critical domains — China's energy security, China's access to advanced semiconductors, the US manufacturing network, US mineral processing — interdependence will persist in <em>transmuted rather than eliminated</em> form.</p>
+
+<h3>Highest-Risk Trigger</h3>
+<p>The Taiwan Strait crisis is the only node where all four MAD pillars intersect. It is simultaneously a semiconductor source (TSMC), a shipping chokepoint (88% of largest container ships), a military flashpoint, and the ultimate test of alliance credibility. Every other crisis node — Congo cobalt, Hormuz oil, rare earth controls — has partial bypass paths. <strong>Taiwan has no bypass path</strong>. This makes the Taiwan Strait not merely a geopolitical focal point but the <strong>singularity</strong> of the supply chain MAD structure — where all tensions converge.</p>
+
+<h3>The Underestimated Variable: Domestic Politics</h3>
+<p>The variable that determines endgame may be <strong>neither technology nor minerals, but domestic politics on both sides</strong>. The US military-enterprise model requires democratic society's continued consent to prioritize defense spending over social investment — this consent is not permanent. The Chinese industrialization model requires maintaining social stability through demographic decline unprecedented in any industrialized country — this stability is not automatic.</p>
+
+<div class="tldr" style="margin-top:28px;">
+<p style="margin:0;"><strong>The final outcome of the external supply chain game likely depends on internal cohesion: whichever side can endure the economic and social costs of strategic competition longer will define the post-2030 international order.</strong></p>
+</div>
+
+</section>
+
 <hr>
 
-<div class="verification">
+<!-- Verification Log — bilingual -->
+<div class="verification" lang="zh">
 <h3>核查记录 / Verification Log</h3>
 <p><strong>核查日期</strong>：2026-04-14 · <strong>方法</strong>：WebSearch针对每个具体数值声明寻找一手来源（USGS、IFR、IAEA/Bruegel、USDA、Caixin/NBS、Bloomberg、USITC、Cobalt Institute等）</p>
-
 <h3 class="verified">✓ 已验证</h3>
 <ul>
 <li>Rosatom豁免于欧盟所有16轮制裁 + Tenex/TVEL同样豁免</li>
@@ -276,7 +381,6 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 <li>Rosatom铀浓缩~44%（40-46%范围，多来源一致）</li>
 <li>红海航运：苏伊士90%通行量下降、保险费率0.07%→1%</li>
 </ul>
-
 <h3 class="corrected-label">⚠ 已修正</h3>
 <ul>
 <li>"北约90%弹药原材料需中/俄/朝许可" → 实为钨特定矿物的数据</li>
@@ -286,7 +390,6 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 <li>EDA市场$6.8B → Synopsys+Cadence合计FY2024营收$10.77B</li>
 <li>乌克兰氖气50-70% → 45-54%更准确</li>
 </ul>
-
 <h3 class="flagged">🚩 已剔除/标注</h3>
 <ul>
 <li>"M23/卢旺达矿产出口暴增500%至17.5亿美元" — $1.75B是2024年全年（戈马陷落前）总额，2025实际增长46.2%</li>
@@ -295,10 +398,43 @@ hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
 </ul>
 </div>
 
-<div class="footer">
-© 2026 Geopolitical Observatory · 报告源文件：<code>raw/reports/supply-chain-mad-unstable-equilibrium-2026-04.md</code><br>
-关联wiki条目：<code>wiki/concepts/supply-chain-mad.md</code> · 新增盲区：<code>_blind_spots.md #16</code>
+<div class="verification" lang="en">
+<h3>Verification Log</h3>
+<p><strong>Date</strong>: 2026-04-14 · <strong>Method</strong>: WebSearch for primary sources on each specific numeric claim (USGS, IFR, IAEA/Bruegel, USDA, Caixin/NBS, Bloomberg, USITC, Cobalt Institute, etc.)</p>
+<h3 class="verified">✓ Verified</h3>
+<ul>
+<li>Rosatom exemption from all 16 EU sanctions packages + Tenex/TVEL unsanctioned</li>
+<li>India 40% US generics + 74%+ APIs from China (FY2024 data)</li>
+<li>AUKUS A$368B</li>
+<li>2025 China births 7.92M, net population decline 3.39M (NBS official data)</li>
+<li>Brazil replaced US as China's primary soybean supplier post-2018 (peak 82%)</li>
+<li>DRC cobalt 74-76% of global mining (USGS 2025)</li>
+<li>Taiwan Strait 88% of largest container ships</li>
+<li>Rosatom uranium enrichment ~44% (40-46% range, multiple sources consistent)</li>
+<li>Red Sea shipping: Suez 90% traffic decline, insurance 0.07%→1%</li>
+</ul>
+<h3 class="corrected-label">⚠ Corrected</h3>
+<ul>
+<li>"NATO 90% munitions raw materials need China/Russia/DPRK permission" → actually a tungsten-specific figure</li>
+<li>VVER reactors 16 → 19</li>
+<li>Robot density Germany 415, Japan 397 → Germany 429, Japan 419 (IFR 2024)</li>
+<li>Umicore "only major non-Chinese cobalt refiner" → Kokkola is the only large-scale non-Chinese refinery; Glencore also has significant capacity</li>
+<li>EDA market $6.8B → Synopsys + Cadence FY2024 combined revenue $10.77B</li>
+<li>Ukraine neon 50-70% → 45-54% more accurate</li>
+</ul>
+<h3 class="flagged">🚩 Flagged/Removed</h3>
+<ul>
+<li>"M23/Rwanda mineral export 500% surge to $1.75B" — $1.75B was 2024 full-year (pre-Goma) total; 2025 actual growth was 46.2%</li>
+<li>FY2026 US defense budget $1.05T +17% — DoD actually ~$925B; $1.05T not verified in primary sources for defense accounting</li>
+<li>US chip imports from Taiwan $42B, from China $52B — inconsistent with USITC/Census data; US actually runs chip surplus with China</li>
+</ul>
 </div>
 
+<div class="footer">
+<span lang="zh">© 2026 Geopolitical Observatory · 报告源文件：<code>raw/reports/supply-chain-mad-unstable-equilibrium-2026-04.md</code><br>关联wiki条目：<code>wiki/concepts/supply-chain-mad.md</code> · 新增盲区：<code>_blind_spots.md #16</code></span>
+<span lang="en">© 2026 Geopolitical Observatory · Source file: <code>raw/reports/supply-chain-mad-unstable-equilibrium-2026-04.md</code><br>Related wiki entry: <code>wiki/concepts/supply-chain-mad.md</code> · New blind spot: <code>_blind_spots.md #16</code></span>
+</div>
+
+<script src="reports.js"></script>
 </body>
 </html>

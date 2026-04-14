@@ -1,152 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Germany Supply Chain Vulnerability Assessment (2026)</title>
+<title>德国供应链脆弱性评估 / Germany Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #e63946; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<section lang="zh">
+
+<h1>德国供应链脆弱性评估（2026）</h1>
 <h1>Germany Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 100/100 — NET VULNERABLE</h2>
+<div class="score-line">风险评分：<strong>100/100</strong> — 净脆弱 / NET VULNERABLE</div>
+
+<h2>执行摘要</h2>
+<p>德国在所有主要经济体中录得最高的脆弱性评分，这是北溪管道基础设施遭灾难性破坏、乌克兰战争持续扰乱俄罗斯能源流动、以及对中国关键矿物和汽车零部件深度依赖的直接后果。建立在廉价俄罗斯天然气和中国市场准入基础上的德国工业模式自2022年以来已被结构性打破，2026年霍尔木兹封锁为已经紧绷的能源替代路线进一步加压。德国在精密制造和光学上的出口杠杆虽全球重要但过于狭窄，不足以抵消其进口脆弱性的广度。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>挪威</td><td>天然气（管道）</td><td>$28.0B</td><td>关键 — 现为主要气源</td></tr>
+<tr><td>俄罗斯</td><td>北溪1号[已摧毁]</td><td>$0.0B</td><td>关键 — 基础设施丧失</td></tr>
+<tr><td>俄罗斯</td><td>北溪2号[已摧毁]</td><td>$0.0B</td><td>关键 — 基础设施丧失</td></tr>
+<tr><td>中国</td><td>汽车工业稀土</td><td>$1.8B</td><td>关键 — EV电机依赖</td></tr>
+<tr><td>中国</td><td>半导体用镓</td><td>$0.3B</td><td>关键 — 无替代供应商</td></tr>
+<tr><td>中国</td><td>成熟制程半导体（汽车）</td><td>$8.5B</td><td>高</td></tr>
+<tr><td>美国</td><td>页岩原油</td><td>$18.0B</td><td>高</td></tr>
+<tr><td>美国</td><td>液化天然气</td><td>$25.0B</td><td>高</td></tr>
+<tr><td>中国</td><td>电动汽车与太阳能板</td><td>$42.0B</td><td>高</td></tr>
+<tr><td>美国</td><td>国防装备</td><td>$20.0B</td><td>高</td></tr>
+<tr><td>中国</td><td>电池级锂化学品</td><td>$3.0B</td><td>高</td></tr>
+<tr><td>俄罗斯</td><td>亚马尔-欧洲天然气[已停运]</td><td>$0.0B</td><td>高 — 失去产能</td></tr>
+<tr><td>俄罗斯</td><td>友谊石油管道（减量）</td><td>$5.0B</td><td>中等</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>台湾</td><td>蔡司精密光学</td><td>$2.8B</td><td>关键 — EUV光刻唯一供应商</td></tr>
+<tr><td>中国</td><td>机床与精密设备</td><td>$24.0B</td><td>高 — 工业自动化</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>德国改道后的供应链跨越<strong>苏伊士运河</strong>（亚欧集装箱运输）、<strong>曼德海峡</strong>（红海能源改道）、<strong>马六甲海峡</strong>（中国和亚洲货物）、<strong>台湾海峡</strong>（台积电半导体供应）。此外，三条管道路线已被摧毁或停运：<strong>北溪1号</strong>（2022年9月摧毁）、<strong>北溪2号</strong>（摧毁，从未运营）、<strong>亚马尔-欧洲</strong>（自2022年停运）。德国的后俄罗斯能源架构依赖挪威管道天然气和美国LNG——两者都暴露于不同的中断矢量（北海基础设施破坏、大西洋航运中断）。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>能源架构脆弱</strong>：用挪威管道和美国LNG替代俄罗斯天然气形成新的单点故障；北溪先例后挪威管道破坏风险升高</li>
+<li><strong>霍尔木兹封锁次生效应</strong>：尽管德国不直接从海湾进口，但霍尔木兹中断引发的全球LNG价格飙升使德国能源成本上升20-40%</li>
+<li><strong>汽车业对华依赖</strong>：德国车企（大众、宝马、奔驰）依赖中国稀土做EV电机、中国电池、中国消费市场——三重依赖</li>
+<li><strong>镓扼制点</strong>：中国对镓的出口管制直接威胁德国半导体和LED产业；无规模化非中国来源</li>
+<li><strong>再武装供应链</strong>：德联邦国防军现代化依赖美国国防进口（200亿美元），形成与欧洲战略自主话语相矛盾的国防工业依赖</li>
+<li><strong>北溪基础设施永久丧失</strong>：两条被摧毁的管道代表200亿美元以上的基础设施，在本轮地缘周期内无法重建</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>德国是一个主要工业经济体的生产网络主权在实时被摧毁时发生何事的最戏剧性案例。2022年前的德国模式是中游定位的产缘政治杰作：廉价俄罗斯能源投入、中国市场输出、介于两者之间的世界级精密制造。这种三边生产架构最大化德国工业竞争力，但在两个方向上形成生存性依赖。</p>
+<p>北溪的摧毁和俄罗斯天然气供应的切断打破了这一架构的投入侧。德国疯狂转向美国LNG和挪威管道天然气是用一种依赖替换另一种，同时将能源成本提高2-3倍。输出侧承受同等压力：中国EV竞争在中国市场摧毁德国车企地位，同时使德国在自身EV转型中依赖中国电池材料和零部件。<em>德国正在从"平衡的中游控制者"转变为"依赖的下游加工者"——产缘政治框架中最糟糕的轨迹</em>。</p>
+<p>德国的揭示偏好与其声明意图严重背离。柏林谈论从中国"去风险"和"欧洲战略自主"，但其国防采购（美国）、能源供应（美国与挪威）、关键矿产（中国）、EV零部件（中国）都显示依赖加深而非多元化。话语与采购现实之间的差距，在任何主要经济体中都属罕见。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>气源挪威之外的多元化</strong>：建设更多LNG进口能力（威廉港、布伦斯比特尔），与卡塔尔、阿尔及利亚、莫桑比克追求长期合同，避免单一挪威依赖</li>
+<li><strong>建立欧洲稀土加工</strong>：主导欧盟稀土分离和磁铁制造联盟；接受对中国供应3-5年的成本溢价</li>
+<li><strong>建立镓/锗战略储备</strong>：当前依赖是完全的；在发展回收能力的同时至少储备18个月供应</li>
+<li><strong>加速国内国防工业</strong>：通过与法国联合研发（FCAS、MGCS）和扩大莱茵金属/KNDS产能降低美国国防依赖</li>
+<li><strong>接受能源成本现实</strong>：廉价俄罗斯天然气时代永久结束；围绕更高能源成本基线重构德国工业政策，而非期待价格正常化</li>
+</ul>
+
+</section>
+
+<section lang="en">
+
+<h1>Germany Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>德国供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>100/100</strong> — NET VULNERABLE</div>
+
 <h2>Executive Summary</h2>
 <p>Germany registers the highest vulnerability score of any major economy, a direct consequence of the catastrophic destruction of Nord Stream infrastructure, the ongoing Ukraine war's disruption of Russian energy flows, and deep dependency on Chinese critical minerals and automotive components. The German industrial model — built on cheap Russian gas and Chinese market access — has been structurally broken since 2022, and the 2026 Hormuz blockade adds further stress to already-strained energy substitution routes. Germany's export leverage in precision manufacturing and optics, while globally significant, is too narrow to offset the breadth of its import vulnerabilities.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>Norway</td>
-<td>Natural Gas (Pipeline)</td>
-<td>$28.0B</td>
-<td>Critical — now primary gas supply</td>
-</tr>
-<tr>
-<td>Russia</td>
-<td>Nord Stream 1 [DESTROYED]</td>
-<td>$0.0B</td>
-<td>Critical — infrastructure loss</td>
-</tr>
-<tr>
-<td>Russia</td>
-<td>Nord Stream 2 [DESTROYED]</td>
-<td>$0.0B</td>
-<td>Critical — infrastructure loss</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Rare Earths for Automotive</td>
-<td>$1.8B</td>
-<td>Critical — EV motor dependency</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Gallium for Semiconductors</td>
-<td>$0.3B</td>
-<td>Critical — no alternative supplier</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Legacy Semiconductors (Automotive)</td>
-<td>$8.5B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Crude Oil (Shale)</td>
-<td>$18.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>LNG</td>
-<td>$25.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>China</td>
-<td>EVs and Solar Panels</td>
-<td>$42.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Defense Equipment</td>
-<td>$20.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Battery-grade Lithium Chemicals</td>
-<td>$3.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Russia</td>
-<td>Yamal-Europe Gas [HALTED]</td>
-<td>$0.0B</td>
-<td>High — lost capacity</td>
-</tr>
-<tr>
-<td>Russia</td>
-<td>Druzhba Oil Pipeline (reduced)</td>
-<td>$5.0B</td>
-<td>Medium</td>
-</tr>
+<tr><td>Norway</td><td>Natural Gas (Pipeline)</td><td>$28.0B</td><td>Critical — now primary gas supply</td></tr>
+<tr><td>Russia</td><td>Nord Stream 1 [DESTROYED]</td><td>$0.0B</td><td>Critical — infrastructure loss</td></tr>
+<tr><td>Russia</td><td>Nord Stream 2 [DESTROYED]</td><td>$0.0B</td><td>Critical — infrastructure loss</td></tr>
+<tr><td>China</td><td>Rare Earths for Automotive</td><td>$1.8B</td><td>Critical — EV motor dependency</td></tr>
+<tr><td>China</td><td>Gallium for Semiconductors</td><td>$0.3B</td><td>Critical — no alternative supplier</td></tr>
+<tr><td>China</td><td>Legacy Semiconductors (Automotive)</td><td>$8.5B</td><td>High</td></tr>
+<tr><td>United States</td><td>Crude Oil (Shale)</td><td>$18.0B</td><td>High</td></tr>
+<tr><td>United States</td><td>LNG</td><td>$25.0B</td><td>High</td></tr>
+<tr><td>China</td><td>EVs and Solar Panels</td><td>$42.0B</td><td>High</td></tr>
+<tr><td>United States</td><td>Defense Equipment</td><td>$20.0B</td><td>High</td></tr>
+<tr><td>China</td><td>Battery-grade Lithium Chemicals</td><td>$3.0B</td><td>High</td></tr>
+<tr><td>Russia</td><td>Yamal-Europe Gas [HALTED]</td><td>$0.0B</td><td>High — lost capacity</td></tr>
+<tr><td>Russia</td><td>Druzhba Oil Pipeline (reduced)</td><td>$5.0B</td><td>Medium</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>Taiwan</td>
-<td>ZEISS Precision Optics</td>
-<td>$2.8B</td>
-<td>Critical — EUV lithography sole supplier</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Machine Tools and Precision Equipment</td>
-<td>$24.0B</td>
-<td>High — industrial automation</td>
-</tr>
+<tr><td>Taiwan</td><td>ZEISS Precision Optics</td><td>$2.8B</td><td>Critical — EUV lithography sole supplier</td></tr>
+<tr><td>China</td><td>Machine Tools and Precision Equipment</td><td>$24.0B</td><td>High — industrial automation</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>Germany's rerouted supply chains transit <strong>Suez Canal</strong> (Asia-Europe container shipping), <strong>Bab el-Mandeb</strong> (Red Sea energy rerouting), <strong>Strait of Malacca</strong> (Chinese and Asian goods), and <strong>Taiwan Strait</strong> (semiconductor supply via TSMC). Additionally, three pipeline routes have been destroyed or halted: <strong>Nord Stream 1</strong> (destroyed September 2022), <strong>Nord Stream 2</strong> (destroyed, never operated), and <strong>Yamal-Europe</strong> (halted since 2022). Germany's post-Russia energy architecture depends on Norwegian pipeline gas and US LNG — both vulnerable to different disruption vectors (North Sea infrastructure sabotage, Atlantic shipping disruption).</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Energy architecture fragility</strong>: Replacement of Russian gas with Norwegian pipeline and US LNG creates new single points of failure; Norwegian pipeline sabotage risk elevated post-Nord Stream precedent</li>
@@ -156,10 +156,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Rearmament supply chain</strong>: Bundeswehr modernization depends on US defense imports ($20B), creating a defense-industrial dependency contradicting European strategic autonomy rhetoric</li>
 <li><strong>Nord Stream infrastructure permanently lost</strong>: Two destroyed pipelines represent $20B+ in infrastructure that cannot be rebuilt within this geopolitical cycle</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
 <p>Germany is the most dramatic illustration of what happens when a major industrial economy's production network sovereignty is destroyed in real time. The pre-2022 German model was a chanyuan masterpiece of midstream positioning: cheap Russian energy inputs, Chinese market outputs, and world-class precision manufacturing in between. This trilateral production architecture maximized German industrial competitiveness but created existential dependencies in both directions.</p>
-<p>The destruction of Nord Stream and the severing of Russian gas supply broke the input side of this architecture. Germany's frantic pivot to US LNG and Norwegian pipeline gas replaced one dependency with another, while raising energy costs 2-3x. The output side faces equal stress: Chinese EV competition is destroying German automakers' market position in China while simultaneously making Germany dependent on Chinese battery materials and components for its own EV transition. Germany is transitioning from a "balanced midstream controller" to a "dependent downstream processor" — the worst trajectory in the chanyuan framework.</p>
+<p>The destruction of Nord Stream and the severing of Russian gas supply broke the input side of this architecture. Germany's frantic pivot to US LNG and Norwegian pipeline gas replaced one dependency with another, while raising energy costs 2-3x. The output side faces equal stress: Chinese EV competition is destroying German automakers' market position in China while simultaneously making Germany dependent on Chinese battery materials and components for its own EV transition. <em>Germany is transitioning from a "balanced midstream controller" to a "dependent downstream processor" — the worst trajectory in the chanyuan framework.</em></p>
 <p>Germany's revealed preference diverges sharply from its stated intention. Berlin talks of "de-risking" from China and "European strategic autonomy," but its defense procurement (American), energy supply (American and Norwegian), critical minerals (Chinese), and EV components (Chinese) all indicate deepening dependency rather than diversification. The gap between rhetoric and procurement reality is among the widest in any major economy.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Diversify gas beyond Norway</strong>: Build additional LNG import capacity (Wilhelmshaven, Brunsbüttel) and pursue long-term contracts with Qatar, Algeria, and Mozambique to avoid Norwegian single-point dependency</li>
@@ -168,5 +170,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Accelerate domestic defense industry</strong>: Reduce US defense dependency by co-developing with France (FCAS, MGCS) and scaling Rheinmetall/KNDS production</li>
 <li><strong>Accept energy cost reality</strong>: The cheap-Russian-gas era is permanently over; restructure German industrial policy around higher energy cost baseline rather than hoping for price normalization</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

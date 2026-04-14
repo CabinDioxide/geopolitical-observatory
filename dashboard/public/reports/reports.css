@@ -1,0 +1,78 @@
+/* Shared bilingual report styling + toggle UI */
+
+/* Language toggle button (top right, fixed) */
+.lang-toggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.lang-toggle button {
+  background: transparent;
+  border: none;
+  padding: 5px 14px;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #64748b;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0.3px;
+  transition: all 0.15s;
+}
+.lang-toggle button:hover { color: #1e293b; }
+.lang-toggle button.active {
+  background: #2a9d8f;
+  color: #fff;
+}
+
+/* Dark variant for pages with dark header */
+.lang-toggle.on-dark {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.lang-toggle.on-dark button { color: #94a3b8; }
+.lang-toggle.on-dark button:hover { color: #f8fafc; }
+.lang-toggle.on-dark button.active { background: #2a9d8f; color: #fff; }
+
+/* Language visibility rules — using HTML native lang attribute */
+body[data-lang="zh"] [lang="en"] { display: none !important; }
+body[data-lang="en"] [lang="zh"] { display: none !important; }
+
+/* For inline bilingual spans, hide the inactive one */
+body[data-lang="zh"] span[lang="en"],
+body[data-lang="zh"] div[lang="en"],
+body[data-lang="zh"] p[lang="en"],
+body[data-lang="zh"] section[lang="en"],
+body[data-lang="zh"] article[lang="en"],
+body[data-lang="zh"] h1[lang="en"],
+body[data-lang="zh"] h2[lang="en"],
+body[data-lang="zh"] h3[lang="en"],
+body[data-lang="zh"] h4[lang="en"],
+body[data-lang="zh"] li[lang="en"],
+body[data-lang="zh"] td[lang="en"],
+body[data-lang="zh"] th[lang="en"],
+body[data-lang="zh"] caption[lang="en"] { display: none !important; }
+
+body[data-lang="en"] span[lang="zh"],
+body[data-lang="en"] div[lang="zh"],
+body[data-lang="en"] p[lang="zh"],
+body[data-lang="en"] section[lang="zh"],
+body[data-lang="en"] article[lang="zh"],
+body[data-lang="en"] h1[lang="zh"],
+body[data-lang="en"] h2[lang="zh"],
+body[data-lang="en"] h3[lang="zh"],
+body[data-lang="en"] h4[lang="zh"],
+body[data-lang="en"] li[lang="zh"],
+body[data-lang="en"] td[lang="zh"],
+body[data-lang="en"] th[lang="zh"],
+body[data-lang="en"] caption[lang="zh"] { display: none !important; }

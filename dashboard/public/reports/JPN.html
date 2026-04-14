@@ -1,146 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Japan Supply Chain Vulnerability Assessment (2026)</title>
+<title>日本供应链脆弱性评估 / Japan Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #e63946; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<section lang="zh">
+
+<h1>日本供应链脆弱性评估（2026）</h1>
 <h1>Japan Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 85/100 — NET VULNERABLE</h2>
+<div class="score-line">风险评分：<strong>85/100</strong> — 净脆弱 / NET VULNERABLE</div>
+
+<h2>执行摘要</h2>
+<p>日本是世界上供应链最脆弱的主要经济体之一，将近乎完全的能源进口依赖与对华关键矿物依赖结合在一起。其位置独特地岌岌可危，因为三条供应链生命线——波斯湾能源、中国稀土、台湾半导体——在2026年都经过同时承受地缘政治压力的咽喉要道。日本在半导体设备和材料上的出口杠杆确实存在但范围狭窄，不足以抵消其进口暴露的广度。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>沙特阿拉伯</td><td>原油</td><td>$30.0B</td><td>关键</td></tr>
+<tr><td>卡塔尔</td><td>液化天然气</td><td>$18.0B</td><td>关键</td></tr>
+<tr><td>中国</td><td>精炼稀土元素</td><td>$2.5B</td><td>关键</td></tr>
+<tr><td>美国</td><td>国防系统（F-35、宙斯盾）</td><td>$12.0B</td><td>关键</td></tr>
+<tr><td>中国</td><td>石墨负极材料</td><td>$4.0B</td><td>关键</td></tr>
+<tr><td>澳大利亚</td><td>液化天然气</td><td>$22.0B</td><td>高</td></tr>
+<tr><td>印度尼西亚</td><td>精炼镍</td><td>$3.5B</td><td>高</td></tr>
+<tr><td>美国</td><td>玉米、小麦、大豆</td><td>$8.5B</td><td>高</td></tr>
+<tr><td>中国</td><td>锂电池材料与电芯</td><td>$8.0B</td><td>高</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>台湾</td><td>光刻胶与硅晶圆</td><td>$8.5B</td><td>关键 — 台积电无JSR/信越无法生产</td></tr>
+<tr><td>韩国</td><td>氟化氢、光刻胶</td><td>$3.2B</td><td>高 — 半导体投入垄断</td></tr>
+<tr><td>美国</td><td>半导体设备</td><td>$5.8B</td><td>高 — 东京电子、SCREEN</td></tr>
+<tr><td>中国</td><td>半导体设备（受限）</td><td>$7.8B</td><td>高 — 在出口管制压力下</td></tr>
+<tr><td>中国</td><td>机床与机器人</td><td>$18.0B</td><td>高 — 工业自动化</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>日本的供应线在<strong>霍尔木兹海峡</strong>（沙特原油300亿美元、卡塔尔LNG 180亿美元——现已封锁）、<strong>马六甲海峡</strong>（中东能源和东南亚资源的主要路线）、<strong>台湾海峡</strong>（与台积电的半导体晶圆和芯片贸易）处关键性暴露。2026年霍尔木兹封锁是日本的直接危机：约480亿美元的能源进口每年经由霍尔木兹。日本的200+天战略石油储备提供缓冲，但LNG无法以同等规模储存，在持续封锁60-90天内形成尖锐的天然气脆弱性。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>霍尔木兹封锁</strong>：480亿美元沙特原油和卡塔尔LNG直接中断；日本SPR提供石油缓冲但LNG储存仅限约3周消费量</li>
+<li><strong>中国稀土武器化</strong>：2010年禁运先例证明使用稀土杠杆的意愿；日本的回收和澳大利亚采购努力仍不足以作为替代</li>
+<li><strong>台海情景</strong>：日本双重暴露——既是台积电的光刻胶/硅片关键供应商，又是台湾芯片的客户；任何冲突同时中断两个方向</li>
+<li><strong>石墨依赖</strong>：中国控制日本90%以上的电池级石墨供应；短期内无可规模化替代</li>
+<li><strong>国防依赖</strong>：F-35和宙斯盾系统将日本军事能力绑定于美国供应链，限制战略自主</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>日本在产缘政治框架中占据独特位置：它是一个狭窄但决定性领域（半导体材料与设备）的关键中游控制者，而在能源、矿产和食品上根本处于下游。这种不对称解释了日本的战略行为——东京将其半导体材料垄断（光刻胶、硅晶圆、氟化氢）作为其生产网络主权的主要工具，同时在其他领域接受深度依赖作为与美国结盟的代价。</p>
+<p>2019年日韩半导体材料争端揭示了东京武器化其中游位置的意愿。但这种杠杆是部门特定的，无法抵消日本的结构性能源脆弱性。日本进口90%以上的一次能源，与美国或俄罗斯不同，没有可以退守的国内化石燃料禀赋。2026年霍尔木兹封锁暴露了这一根本性弱点：如果发电厂无法发电，日本的半导体杠杆毫无意义。</p>
+<p>日本的揭示偏好——大规模投资LNG多元化（澳大利亚、美国）、核电重启、氢能基础设施——反映对"能源是日本主权约束条件"这一认识的清醒把握。"经济安全保障"（経済安全保障）立法的声明意图与揭示偏好一致，这在产缘政治框架中是相对罕见的政策-行动连贯案例。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>加速核电重启</strong>：到2028年再投入10+座反应堆，将LNG依赖从发电量的35%降至25%以下</li>
+<li><strong>多元化LNG采购</strong>：增加美国、澳大利亚、加拿大LNG合同同时降低卡塔尔依赖；将LNG储存容量从3周扩至6周</li>
+<li><strong>深化稀土回收</strong>：规模化城市矿山和磁铁回收计划；到2030年目标30%国内稀土采购</li>
+<li><strong>储备石墨和电池材料</strong>：鉴于完全的中国依赖，建立电池级石墨12个月战略储备</li>
+<li><strong>加强台湾半导体保险</strong>：与台积电共同投资日本晶圆厂（熊本二期/三期），开发国内光刻胶替代以降低双边依赖</li>
+</ul>
+
+</section>
+
+<section lang="en">
+
+<h1>Japan Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>日本供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>85/100</strong> — NET VULNERABLE</div>
+
 <h2>Executive Summary</h2>
 <p>Japan is among the most supply-chain-vulnerable major economies in the world, combining near-total energy import dependence with critical mineral dependencies on China. Its position is uniquely precarious because three of its supply chain lifelines — Persian Gulf energy, Chinese rare earths, and Taiwanese semiconductors — each transit chokepoints that are simultaneously under geopolitical stress in 2026. Japan's export leverage in semiconductor equipment and materials is real but narrow, insufficient to offset the breadth of its import exposures.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>Saudi Arabia</td>
-<td>Crude Oil</td>
-<td>$30.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>Qatar</td>
-<td>LNG</td>
-<td>$18.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Processed Rare Earth Elements</td>
-<td>$2.5B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Defense Systems (F-35, Aegis)</td>
-<td>$12.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Graphite Anode Material</td>
-<td>$4.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>Australia</td>
-<td>LNG</td>
-<td>$22.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Indonesia</td>
-<td>Processed Nickel</td>
-<td>$3.5B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Corn, Wheat, Soybeans</td>
-<td>$8.5B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Li-ion Battery Materials and Cells</td>
-<td>$8.0B</td>
-<td>High</td>
-</tr>
+<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$30.0B</td><td>Critical</td></tr>
+<tr><td>Qatar</td><td>LNG</td><td>$18.0B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Processed Rare Earth Elements</td><td>$2.5B</td><td>Critical</td></tr>
+<tr><td>United States</td><td>Defense Systems (F-35, Aegis)</td><td>$12.0B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Graphite Anode Material</td><td>$4.0B</td><td>Critical</td></tr>
+<tr><td>Australia</td><td>LNG</td><td>$22.0B</td><td>High</td></tr>
+<tr><td>Indonesia</td><td>Processed Nickel</td><td>$3.5B</td><td>High</td></tr>
+<tr><td>United States</td><td>Corn, Wheat, Soybeans</td><td>$8.5B</td><td>High</td></tr>
+<tr><td>China</td><td>Li-ion Battery Materials and Cells</td><td>$8.0B</td><td>High</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>Taiwan</td>
-<td>Photoresists and Silicon Wafers</td>
-<td>$8.5B</td>
-<td>Critical — TSMC cannot produce without JSR/Shin-Etsu</td>
-</tr>
-<tr>
-<td>South Korea</td>
-<td>Hydrogen Fluoride, Photoresists</td>
-<td>$3.2B</td>
-<td>High — semiconductor input monopoly</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Semiconductor Equipment</td>
-<td>$5.8B</td>
-<td>High — Tokyo Electron, Screen</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Semiconductor Equipment (restricted)</td>
-<td>$7.8B</td>
-<td>High — under export control pressure</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Machine Tools and Robots</td>
-<td>$18.0B</td>
-<td>High — industrial automation</td>
-</tr>
+<tr><td>Taiwan</td><td>Photoresists and Silicon Wafers</td><td>$8.5B</td><td>Critical — TSMC cannot produce without JSR/Shin-Etsu</td></tr>
+<tr><td>South Korea</td><td>Hydrogen Fluoride, Photoresists</td><td>$3.2B</td><td>High — semiconductor input monopoly</td></tr>
+<tr><td>United States</td><td>Semiconductor Equipment</td><td>$5.8B</td><td>High — Tokyo Electron, Screen</td></tr>
+<tr><td>China</td><td>Semiconductor Equipment (restricted)</td><td>$7.8B</td><td>High — under export control pressure</td></tr>
+<tr><td>China</td><td>Machine Tools and Robots</td><td>$18.0B</td><td>High — industrial automation</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>Japan's supply lines are critically exposed at <strong>Strait of Hormuz</strong> (Saudi crude $30B, Qatari LNG $18B — now blockaded), <strong>Strait of Malacca</strong> (primary routing for Middle East energy and Southeast Asian resources), and <strong>Taiwan Strait</strong> (semiconductor wafer and chip trade with TSMC). The 2026 Hormuz blockade is a direct crisis for Japan: approximately $48B in energy imports transit Hormuz annually. Japan's 200+ day strategic petroleum reserve provides a buffer, but LNG cannot be stockpiled at equivalent scale, creating an acute natural gas vulnerability within 60-90 days of sustained blockade.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Hormuz blockade</strong>: $48B in Saudi crude and Qatari LNG directly disrupted; Japan's SPR provides oil buffer but LNG storage is limited to ~3 weeks of consumption</li>
@@ -149,10 +152,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Graphite dependency</strong>: China controls 90%+ of Japan's battery-grade graphite supply; no near-term alternative at scale</li>
 <li><strong>Defense dependency</strong>: F-35 and Aegis systems tie Japanese military capability to US supply chains, limiting strategic autonomy</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
 <p>Japan occupies a distinctive position in the chanyuan framework: it is a critical midstream controller in one narrow but decisive sector (semiconductor materials and equipment) while remaining fundamentally downstream in energy, minerals, and food. This asymmetry explains Japan's strategic behavior — Tokyo leverages its semiconductor material monopolies (photoresists, silicon wafers, hydrogen fluoride) as the primary instrument of its production network sovereignty, while accepting deep dependency in other domains as the price of alliance with the United States.</p>
 <p>The 2019 Japan-Korea semiconductor materials dispute revealed Tokyo's willingness to weaponize its midstream position. But this leverage is sector-specific and cannot offset Japan's structural energy vulnerability. Japan imports 90%+ of its primary energy, and unlike the US or Russia, it has no domestic fossil fuel endowment to fall back on. The Hormuz blockade of 2026 exposes this foundational weakness: Japan's semiconductor leverage means nothing if its power plants cannot generate electricity.</p>
 <p>Japan's revealed preference — massive investment in LNG diversification (Australia, US), nuclear restart, and hydrogen infrastructure — reflects a clear-eyed understanding that energy is the binding constraint on Japanese sovereignty. The stated intention of "economic security" (keizai anzen hosho) legislation aligns with the revealed preference, a relatively rare case of policy-action coherence in the chanyuan framework.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Accelerate nuclear restart</strong>: Bring 10+ additional reactors online by 2028 to reduce LNG dependency from 35% to below 25% of electricity generation</li>
@@ -161,5 +166,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Stockpile graphite and battery materials</strong>: Establish 12-month strategic reserve for battery-grade graphite given total Chinese dependency</li>
 <li><strong>Strengthen Taiwan semiconductor insurance</strong>: Co-invest with TSMC in Japanese fabs (Kumamoto Phase 2/3) and develop domestic photoresist alternatives to reduce bilateral dependency</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

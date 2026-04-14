@@ -1,105 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Russia Supply Chain Vulnerability Assessment (2026)</title>
+<title>俄罗斯供应链脆弱性评估 / Russia Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #f97316; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
+.note { font-size: 13px; color: #666; font-style: italic; margin: 8px 0; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<section lang="zh">
+
+<h1>俄罗斯供应链脆弱性评估（2026）</h1>
 <h1>Russia Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 29/100 — BALANCED</h2>
+<div class="score-line">风险评分：<strong>29/100</strong> — 平衡 / BALANCED</div>
+
+<h2>执行摘要</h2>
+<p>俄罗斯的脆弱性评分反映了一个不寻常的结构位置：能源和国防系统的巨大出口杠杆，与乌克兰战争造成的灾难性基础设施损失和市场准入限制并存。北溪管道的摧毁和对欧天然气过境的停止永久消除了俄罗斯最有价值的欧洲能源杠杆，同时西方制裁切断了先进技术进口的准入。俄罗斯转向中国和印度作为替代能源客户保留了收入流，但价格降低、对北京的战略依赖增加。在评估国家数据集中，俄罗斯几乎不从中进口任何东西，使其在原材料意义上结构上自足但技术上孤立。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>—</td><td>评估国家中无关键或高进口依赖</td></tr>
+</tbody>
+</table>
+<p class="note">注：俄罗斯的实际进口脆弱性（半导体芯片、精密机械、飞机零件）经由规避制裁的灰色市场（土耳其、阿联酋、哈萨克斯坦、中国）流动，不出现在官方贸易流数据中。这些影子供应链结构上脆弱，受二级制裁执法约束。</p>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>德国</td><td>北溪1号[已摧毁]</td><td>$0.0B</td><td>关键 — 永久丧失</td></tr>
+<tr><td>德国</td><td>北溪2号[已摧毁]</td><td>$0.0B</td><td>关键 — 永久丧失</td></tr>
+<tr><td>奥地利</td><td>乌克兰天然气过境[2025年1月到期]</td><td>$0.0B</td><td>关键 — 合同终止</td></tr>
+<tr><td>印度</td><td>国防装备（S-400、Su-30MKI）</td><td>$7.0B</td><td>高 — 平台依赖</td></tr>
+<tr><td>土耳其</td><td>土耳其溪天然气管道</td><td>$12.0B</td><td>高 — 活跃杠杆</td></tr>
+<tr><td>德国</td><td>亚马尔-欧洲天然气[已停运]</td><td>$0.0B</td><td>高 — 主动停运</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>俄罗斯的主要出口路线海上咽喉暴露极小。对中国的管道出口（西伯利亚力量）和对土耳其（土耳其溪）绕过所有主要海上咽喉。对印度和中国的俄罗斯原油出口经过<strong>马六甲海峡</strong>（部分海运中国货物），但主要使用直接太平洋（科兹米诺终端）和印度洋路线。俄罗斯最重要的"咽喉"<em>不是海上而是基础设施性的</em>：被摧毁的北溪管道代表对欧约110 bcm/年的永久产能损失，停运的亚马尔-欧洲管道消除另33 bcm/年。这些不是传统意义的咽喉，而是在本轮地缘政治周期内无法重建的被摧毁或被否认的基础设施。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>永久丧失欧洲天然气市场</strong>：北溪摧毁（从曾经约400亿美元/年降至0）、亚马尔-欧洲停运、乌克兰过境到期共同消除了俄罗斯的欧洲天然气杠杆——对华西伯利亚力量（100亿美元）和对土耳其溪（120亿美元）无法替代失去的欧洲收入</li>
+<li><strong>霍尔木兹封锁的利与弊</strong>：更高的全球油价利好俄罗斯原油收入，但俄罗斯与伊朗的伙伴关系使外交站位复杂化；随着全球价格上涨，俄罗斯对印中的原油折价收窄</li>
+<li><strong>技术制裁</strong>：西方出口管制否认俄罗斯获得先进半导体、精密机械和飞机零部件；中国替代是部分且质量较低</li>
+<li><strong>国防工业压力</strong>：乌克兰战争消耗军事生产能力；对印度（70亿美元）的国防出口承诺面临交付延迟和质量问题</li>
+<li><strong>影子经济脆弱性</strong>：经中亚和土耳其规避制裁的供应链受二级制裁执法和突然中断约束</li>
+<li><strong>对华依赖加深</strong>：在技术、消费品和金融基础设施上转向中国形成新的依赖，逆转了2022年前的杠杆关系</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>俄罗斯代表现代史上最戏剧性的生产网络主权被摧毁的案例。2022年前俄罗斯占据令人羡慕的上游位置：通过多元化管道网络（北溪1/2、亚马尔-欧洲、乌克兰过境、土耳其溪、蓝流）控制欧洲主要能源供应，同时维持与发展中世界的国防出口关系。这是真正的生产网络力量——不是石油国家的"资源诅咒"，而是对地球上最先进工业经济体的结构性杠杆。</p>
+<p>乌克兰战争及西方随后的反应以前所未有的速度摧毁了这一位置。北溪的物理摧毁（2022年9月）永久消除了俄罗斯能源杠杆的基础设施。欧洲通过LNG替代、核电重启和可再生能源加速的需求摧毁确保了即使管道重建，市场已结构性转移。俄罗斯的揭示偏好——在确定制裁的情况下仍入侵乌克兰——证明莫斯科<em>将领土和安全目标置于生产网络主权之上</em>。这是一个国家为经典地缘政治目标自愿放弃其最有价值产缘政治资产的罕见案例。</p>
+<p>俄罗斯转向中国形成了<em>结构性依赖反转</em>。2022年前，欧洲依赖俄罗斯天然气；现在，俄罗斯依赖中国购买折价原油、中国技术进口替代西方来源、中国金融基础设施绕过SWIFT制裁。西伯利亚力量管道（100亿美元/年）给予中国对俄罗斯的杠杆而非反向——北京可以从一个没有替代市场的供应商谈判价格折扣。在产缘政治术语中，俄罗斯已从"欧洲上游能源控制者"沦为"对华折价资源供应商"——在生产网络层级中的灾难性下降。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>最大化土耳其溪杠杆</strong>：土耳其仍是俄罗斯在西方轨道中最有价值的剩余能源客户；扩大土耳其溪容量并发展土耳其天然气枢纽，经中介获取剩余欧洲需求</li>
+<li><strong>多元化亚洲能源客户</strong>：扩大对印尼、越南、孟加拉国的原油出口以降低对中印双头垄断买方的依赖；仅在有价格保证的条件下开发西伯利亚力量2号管道</li>
+<li><strong>建设国内半导体产能</strong>：当前对中国和灰色市场芯片的依赖在战略上不可持续；即使在28nm+成熟节点投资军事和工业应用的国内制造能力</li>
+<li><strong>稳定国防出口关系</strong>：尽管乌克兰战争生产压力，维持与印度、阿尔及利亚和埃及的国防伙伴关系；这些是俄罗斯剩余的非能源生产网络资产</li>
+<li><strong>开发北极航运路线</strong>：北方海航道提供绕过所有咽喉的耐制裁出口走廊至亚洲；投资沿途的破冰船队和港口基础设施</li>
+</ul>
+
+</section>
+
+<section lang="en">
+
+<h1>Russia Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>俄罗斯供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>29/100</strong> — BALANCED</div>
+
 <h2>Executive Summary</h2>
 <p>Russia's vulnerability score reflects an unusual structural position: massive export leverage in energy and defense systems combined with catastrophic infrastructure losses and market access restrictions from the Ukraine war. The destruction of Nord Stream pipelines and halting of European gas transit have permanently eliminated Russia's most valuable European energy leverage, while Western sanctions have severed access to advanced technology imports. Russia's pivot to China and India as replacement energy customers has preserved revenue flows but at reduced prices and increased strategic dependency on Beijing. Russia imports almost nothing from the assessed countries' dataset, making it structurally self-sufficient in crude terms but technologically isolated.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>No critical or high import dependencies from assessed countries</td>
-</tr>
+<tr><td>—</td><td>—</td><td>—</td><td>No critical or high import dependencies from assessed countries</td></tr>
 </tbody>
 </table>
-<p>Note: Russia's actual import vulnerabilities (semiconductor chips, precision machinery, aircraft parts) flow through sanctions-circumventing gray markets (Turkey, UAE, Kazakhstan, China) and do not appear in official trade flow data. These shadow supply chains are structurally fragile and subject to secondary sanctions enforcement.</p>
+<p class="note">Note: Russia's actual import vulnerabilities (semiconductor chips, precision machinery, aircraft parts) flow through sanctions-circumventing gray markets (Turkey, UAE, Kazakhstan, China) and do not appear in official trade flow data. These shadow supply chains are structurally fragile and subject to secondary sanctions enforcement.</p>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>Germany</td>
-<td>Nord Stream 1 [DESTROYED]</td>
-<td>$0.0B</td>
-<td>Critical — permanently lost</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>Nord Stream 2 [DESTROYED]</td>
-<td>$0.0B</td>
-<td>Critical — permanently lost</td>
-</tr>
-<tr>
-<td>Austria</td>
-<td>Ukraine Gas Transit [expired Jan 2025]</td>
-<td>$0.0B</td>
-<td>Critical — contract terminated</td>
-</tr>
-<tr>
-<td>India</td>
-<td>Defense Equipment (S-400, Su-30MKI)</td>
-<td>$7.0B</td>
-<td>High — platform dependency</td>
-</tr>
-<tr>
-<td>Turkey</td>
-<td>TurkStream Gas Pipeline</td>
-<td>$12.0B</td>
-<td>High — active leverage</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>Yamal-Europe Gas [HALTED]</td>
-<td>$0.0B</td>
-<td>High — voluntarily halted</td>
-</tr>
+<tr><td>Germany</td><td>Nord Stream 1 [DESTROYED]</td><td>$0.0B</td><td>Critical — permanently lost</td></tr>
+<tr><td>Germany</td><td>Nord Stream 2 [DESTROYED]</td><td>$0.0B</td><td>Critical — permanently lost</td></tr>
+<tr><td>Austria</td><td>Ukraine Gas Transit [expired Jan 2025]</td><td>$0.0B</td><td>Critical — contract terminated</td></tr>
+<tr><td>India</td><td>Defense Equipment (S-400, Su-30MKI)</td><td>$7.0B</td><td>High — platform dependency</td></tr>
+<tr><td>Turkey</td><td>TurkStream Gas Pipeline</td><td>$12.0B</td><td>High — active leverage</td></tr>
+<tr><td>Germany</td><td>Yamal-Europe Gas [HALTED]</td><td>$0.0B</td><td>High — voluntarily halted</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
-<p>Russia's primary export routes have minimal maritime chokepoint exposure. Pipeline exports to China (Power of Siberia) and Turkey (TurkStream) bypass all major maritime chokepoints. Russian crude oil exports to India and China transit the <strong>Strait of Malacca</strong> (for some seaborne China-bound cargo) but primarily use direct Pacific (Kozmino terminal) and Indian Ocean routing. Russia's most significant "chokepoints" are not maritime but infrastructural: the destroyed Nord Stream pipelines represent permanent capacity loss of approximately 110 bcm/yr to Europe, and the halted Yamal-Europe pipeline eliminates another 33 bcm/yr. These are not chokepoints in the traditional sense but destroyed or denied infrastructure that cannot be rebuilt within this geopolitical cycle.</p>
+<p>Russia's primary export routes have minimal maritime chokepoint exposure. Pipeline exports to China (Power of Siberia) and Turkey (TurkStream) bypass all major maritime chokepoints. Russian crude oil exports to India and China transit the <strong>Strait of Malacca</strong> (for some seaborne China-bound cargo) but primarily use direct Pacific (Kozmino terminal) and Indian Ocean routing. Russia's most significant "chokepoints" <em>are not maritime but infrastructural</em>: the destroyed Nord Stream pipelines represent permanent capacity loss of approximately 110 bcm/yr to Europe, and the halted Yamal-Europe pipeline eliminates another 33 bcm/yr. These are not chokepoints in the traditional sense but destroyed or denied infrastructure that cannot be rebuilt within this geopolitical cycle.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Permanent loss of European gas market</strong>: Nord Stream destruction ($0B from former ~$40B/yr), Yamal-Europe halt, and Ukraine transit expiry collectively eliminate Russia's European gas leverage — Power of Siberia to China ($10B) and TurkStream to Turkey ($12B) cannot substitute for lost European revenue</li>
@@ -109,10 +143,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Shadow economy fragility</strong>: Sanctions-circumventing supply chains through Central Asia and Turkey are subject to secondary sanctions enforcement and sudden disruption</li>
 <li><strong>Chinese dependency deepening</strong>: Pivot to China for technology, consumer goods, and financial infrastructure creates new dependency that reverses the pre-2022 leverage relationship</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
 <p>Russia represents the most dramatic case of production network sovereignty destruction in modern history. Before 2022, Russia occupied an enviable upstream position: controlling Europe's primary energy supply through a diversified pipeline network (Nord Stream 1/2, Yamal-Europe, Ukraine transit, TurkStream, Blue Stream) while maintaining defense export relationships across the developing world. This was genuine production network power — not the "resource curse" of a petrostate but structural leverage over the most advanced industrial economies on earth.</p>
-<p>The Ukraine war and subsequent Western response destroyed this position with unprecedented speed. Nord Stream's physical destruction (September 2022) permanently eliminated the infrastructure of Russian energy leverage. European demand destruction through LNG substitution, nuclear restart, and renewables acceleration ensures that even if pipelines were rebuilt, the market has structurally shifted. Russia's revealed preference — invading Ukraine despite the certainty of sanctions — demonstrates that Moscow valued territorial and security objectives above production network sovereignty. This is a rare case where a state voluntarily surrendered its most valuable chanyuan asset for classical geopolitical objectives.</p>
-<p>Russia's pivot to China creates a structural dependency reversal. Before 2022, Europe depended on Russian gas; now Russia depends on Chinese purchases of discounted crude, Chinese technology imports to replace Western sources, and Chinese financial infrastructure to bypass SWIFT sanctions. The Power of Siberia pipeline ($10B/yr) gives China leverage over Russia rather than the reverse — Beijing can negotiate price discounts from a supplier with no alternative market. In chanyuan terms, Russia has moved from "upstream energy controller of Europe" to "discounted resource supplier to China" — a catastrophic descent in the production network hierarchy.</p>
+<p>The Ukraine war and subsequent Western response destroyed this position with unprecedented speed. Nord Stream's physical destruction (September 2022) permanently eliminated the infrastructure of Russian energy leverage. European demand destruction through LNG substitution, nuclear restart, and renewables acceleration ensures that even if pipelines were rebuilt, the market has structurally shifted. Russia's revealed preference — invading Ukraine despite the certainty of sanctions — demonstrates that <em>Moscow valued territorial and security objectives above production network sovereignty</em>. This is a rare case where a state voluntarily surrendered its most valuable chanyuan asset for classical geopolitical objectives.</p>
+<p>Russia's pivot to China creates a <em>structural dependency reversal</em>. Before 2022, Europe depended on Russian gas; now Russia depends on Chinese purchases of discounted crude, Chinese technology imports to replace Western sources, and Chinese financial infrastructure to bypass SWIFT sanctions. The Power of Siberia pipeline ($10B/yr) gives China leverage over Russia rather than the reverse — Beijing can negotiate price discounts from a supplier with no alternative market. In chanyuan terms, Russia has moved from "upstream energy controller of Europe" to "discounted resource supplier to China" — a catastrophic descent in the production network hierarchy.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Maximize TurkStream leverage</strong>: Turkey remains Russia's most valuable remaining energy customer in the Western orbit; expand TurkStream capacity and develop Turkish gas hub to access residual European demand via intermediary</li>
@@ -121,5 +157,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Stabilize defense export relationships</strong>: Maintain India, Algeria, and Egypt defense partnerships despite Ukraine war production strain; these relationships are Russia's remaining non-energy production network assets</li>
 <li><strong>Develop Arctic shipping route</strong>: Northern Sea Route offers sanctions-resistant export corridor to Asia that bypasses all chokepoints; invest in icebreaker fleet and port infrastructure along route</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

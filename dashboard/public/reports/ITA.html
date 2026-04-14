@@ -1,86 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Italy Supply Chain Vulnerability Assessment (2026)</title>
+<title>意大利供应链脆弱性评估 / Italy Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<section lang="zh">
+
+<h1>意大利供应链脆弱性评估（2026）</h1>
 <h1>Italy Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 45/100 — BALANCED</h2>
+<div class="score-line">风险评分：<strong>45/100</strong> — 平衡 / BALANCED</div>
+
+<h2>执行摘要</h2>
+<p>意大利处于一个平衡但脆弱的位置，严重依赖经地中海管道进口的天然气，并暴露于中国制成品的竞争。与德国不同，意大利在2022年前就成功将气源从俄罗斯转向阿尔及利亚和阿塞拜疆管道供应，在能源安全上提供了结构性优势。然而意大利在战略供应链中缺乏显著的出口杠杆，在任何全球生产网络中都没有关键上游位置，使其主要成为一个对上游供应中断脆弱的下游消费者。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>中国</td><td>机械零部件与电子</td><td>$15.0B</td><td>高 — 工业投入依赖</td></tr>
+<tr><td>阿尔及利亚</td><td>TransMed天然气管道</td><td>$12.0B</td><td>高 — 主要气源</td></tr>
+<tr><td>阿塞拜疆</td><td>TANAP-TAP天然气管道</td><td>$8.0B</td><td>高 — 南方天然气走廊</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>—</td><td>未识别关键或高杠杆出口</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>意大利供应链跨越<strong>苏伊士运河</strong>（经地中海的亚洲货物）、<strong>曼德海峡</strong>（红海路线）、<strong>马六甲海峡</strong>（东南亚制造）。意大利受益于其地中海中部位置，为北非和中东能源源提供相对较短的供应线。<strong>TransMed管道</strong>（经突尼斯从阿尔及利亚到意大利）和<strong>TAP管道</strong>（经土耳其和希腊从阿塞拜疆）是意大利的主要能源生命线——两条都绕过霍尔木兹和主要海上咽喉。然而两条管道都经过不稳定地区：TransMed穿越突尼斯（政治不稳定风险），TAP穿越土耳其（地缘政治转向风险）。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>阿尔及利亚天然气依赖</strong>：TransMed管道（120亿美元）是意大利主要气源；阿尔及利亚政治稳定性和天然气产能都是中期风险</li>
+<li><strong>土耳其过境风险</strong>：TAP管道穿越土耳其，其在北约和俄罗斯之间的地缘政治站位形成对意大利天然气供应的潜在杠杆</li>
+<li><strong>中国制造业竞争</strong>：150亿美元中国机械和电子进口既反映依赖也反映对意大利中端制造业的竞争压力</li>
+<li><strong>霍尔木兹封锁LNG效应</strong>：意大利LNG进口（现货市场）因全球市场中断面临价格上涨；亚得里亚海LNG终端利用率上升</li>
+<li><strong>欧洲能源市场一体化</strong>：意大利相对德国的天然气供应优势取决于维持独立定价；欧盟范围天然气采购机制可能社会化意大利的优势</li>
+<li><strong>无出口杠杆</strong>：意大利在任何关键或高脆弱出口位置上都缺位，使其没有反制供应链工具</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>意大利是产缘政治框架中"下游消费者"最清晰的欧洲案例——一个将进口投入加工成成品（时尚、机械、食品）但在任何全球生产网络中都不控制关键上游扼制点的经济体。意大利著名的制造业区（普拉托纺织、艾米利亚-罗马涅机械、伦巴第奢侈品）在进口材料上增加高价值，但不创造来自控制不可替代投入的那种结构性杠杆。</p>
+<p>能源多元化故事是意大利最重要的结构性成就。当德国灾难性地依赖俄罗斯天然气时，意大利能源公司（尤其是ENI）已经与阿尔及利亚建立了TransMed管道关系并支持来自阿塞拜疆的TAP管道。这种对能源多元化的揭示偏好——由ENI的地中海战略驱动而非政府远见——比德国声明意图中的"通过廉价俄罗斯天然气实现能源安全"要更有价值。意大利的天然气位置证明了一项关键产缘政治洞察：<em>供应路线多元化，即使成本更高，也比对单一廉价源的依赖产生更真实的主权</em>。</p>
+<p>然而，意大利缺乏任何战略出口杠杆意味着它无法打进攻性供应链政治。当中国限制镓或稀土时，意大利没有反制工具。当美国征收关税时，意大利无法威胁关键供应中断。这种纯粹防御性姿态在和平时期可持续，但在供应链武器化日益常态化的地缘政治环境中产生尖锐的脆弱性。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>扩大阿尔及利亚天然气关系</strong>：谈判提高TransMed管道容量和长期供应合同；深化ENI对阿尔及利亚天然气开发的投资</li>
+<li><strong>建设地中海LNG枢纽</strong>：利用亚得里亚海和第勒尼安海终端发展意大利为南欧LNG再分配枢纽，以在管道气之外多元化</li>
+<li><strong>开发关键技术细分市场</strong>：意大利至少需要一个战略上游位置——半导体封装、专业材料或国防组件——以获得供应链杠杆</li>
+<li><strong>强化东地中海能源合作</strong>：与以色列、塞浦路斯、埃及深化EastMed管道讨论作为额外天然气多元化路线</li>
+<li><strong>投资国内制造业韧性</strong>：通过针对性自动化和质量差异化（而非关税保护）保护中端机械业不受中国竞争冲击</li>
+</ul>
+
+</section>
+
+<section lang="en">
+
+<h1>Italy Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>意大利供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>45/100</strong> — BALANCED</div>
+
 <h2>Executive Summary</h2>
 <p>Italy sits in a balanced but fragile position, heavily dependent on imported natural gas via Mediterranean pipelines and exposed to Chinese manufactured goods competition. Unlike Germany, Italy successfully diversified away from Russian gas toward Algerian and Azerbaijani pipeline supply before 2022, providing a structural advantage in energy security. However, Italy lacks significant export leverage in strategic supply chains and has no critical upstream position in any global production network, making it primarily a downstream consumer vulnerable to upstream supply disruptions.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>China</td>
-<td>Machinery Components and Electronics</td>
-<td>$15.0B</td>
-<td>High — industrial input dependency</td>
-</tr>
-<tr>
-<td>Algeria</td>
-<td>TransMed Gas Pipeline</td>
-<td>$12.0B</td>
-<td>High — primary gas supply</td>
-</tr>
-<tr>
-<td>Azerbaijan</td>
-<td>TANAP-TAP Gas Pipeline</td>
-<td>$8.0B</td>
-<td>High — Southern Gas Corridor</td>
-</tr>
+<tr><td>China</td><td>Machinery Components and Electronics</td><td>$15.0B</td><td>High — industrial input dependency</td></tr>
+<tr><td>Algeria</td><td>TransMed Gas Pipeline</td><td>$12.0B</td><td>High — primary gas supply</td></tr>
+<tr><td>Azerbaijan</td><td>TANAP-TAP Gas Pipeline</td><td>$8.0B</td><td>High — Southern Gas Corridor</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>No critical or high leverage exports identified</td>
-</tr>
+<tr><td>—</td><td>—</td><td>—</td><td>No critical or high leverage exports identified</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>Italy's supply chains transit <strong>Suez Canal</strong> (Asian goods via Mediterranean), <strong>Bab el-Mandeb</strong> (Red Sea routing), and <strong>Strait of Malacca</strong> (Southeast Asian manufacturing). Italy benefits from its central Mediterranean position, which provides relatively short supply lines to North African and Middle Eastern energy sources. The <strong>TransMed Pipeline</strong> (Algeria to Italy via Tunisia) and <strong>TAP Pipeline</strong> (Azerbaijan via Turkey and Greece) represent Italy's primary energy lifelines — both bypass Hormuz and the major maritime chokepoints. However, both pipelines transit unstable regions: TransMed crosses Tunisia (political instability risk), and TAP crosses Turkey (geopolitical pivot risk).</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Algerian gas dependency</strong>: TransMed pipeline ($12B) is Italy's primary gas supply; Algerian political stability and gas production capacity are both medium-term risks</li>
@@ -90,10 +134,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>European energy market integration</strong>: Italy's gas supply advantages relative to Germany depend on maintaining separate pricing; EU-wide gas purchasing mechanisms could socialize Italian advantages</li>
 <li><strong>No export leverage</strong>: Italy lacks any critical or high-vulnerability export position, leaving it without retaliatory supply chain tools</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
 <p>Italy is the clearest European example of a "downstream consumer" in the chanyuan framework — an economy that processes imported inputs into finished goods (fashion, machinery, food products) but controls no critical upstream chokepoint in any global production network. Italy's famous manufacturing districts (textiles in Prato, machinery in Emilia-Romagna, luxury goods in Lombardy) add high value to imported materials but do not create the kind of structural leverage that comes from controlling irreplaceable inputs.</p>
-<p>The energy diversification story is Italy's most significant structural achievement. While Germany was catastrophically dependent on Russian gas, Italian energy companies (ENI in particular) had already built the TransMed pipeline relationship with Algeria and supported the TAP pipeline from Azerbaijan. This revealed preference for energy diversification — driven by ENI's Mediterranean strategy rather than government foresight — has proven far more valuable than Germany's stated intention of energy security through cheap Russian gas. Italy's gas position demonstrates a key chanyuan insight: diversification of supply routes, even at higher cost, creates more genuine sovereignty than dependency on a single cheap source.</p>
+<p>The energy diversification story is Italy's most significant structural achievement. While Germany was catastrophically dependent on Russian gas, Italian energy companies (ENI in particular) had already built the TransMed pipeline relationship with Algeria and supported the TAP pipeline from Azerbaijan. This revealed preference for energy diversification — driven by ENI's Mediterranean strategy rather than government foresight — has proven far more valuable than Germany's stated intention of energy security through cheap Russian gas. Italy's gas position demonstrates a key chanyuan insight: <em>diversification of supply routes, even at higher cost, creates more genuine sovereignty than dependency on a single cheap source</em>.</p>
 <p>However, Italy's lack of any strategic export leverage means it cannot play offensive supply chain politics. When China restricts gallium or rare earths, Italy has no retaliatory tool. When the US imposes tariffs, Italy cannot threaten critical supply disruption. This purely defensive posture is sustainable in peacetime but creates acute vulnerability in a geopolitical environment where supply chain weaponization is becoming normalized.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Expand Algerian gas relationship</strong>: Negotiate increased TransMed pipeline capacity and long-term supply contracts; deepen ENI investment in Algerian gas development</li>
@@ -102,5 +148,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Strengthen East Mediterranean energy cooperation</strong>: Deepen EastMed pipeline discussions with Israel, Cyprus, Egypt as additional gas diversification route</li>
 <li><strong>Invest in domestic manufacturing resilience</strong>: Protect mid-tier machinery sector from Chinese competition through targeted automation and quality differentiation, not tariff protection</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

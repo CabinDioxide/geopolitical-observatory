@@ -1,104 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>India Supply Chain Vulnerability Assessment (2026)</title>
+<title>印度供应链脆弱性评估 / India Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<section lang="zh">
+
+<h1>印度供应链脆弱性评估（2026）</h1>
 <h1>India Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 67/100 — NET VULNERABLE</h2>
+<div class="score-line">风险评分：<strong>67/100</strong> — 净脆弱 / NET VULNERABLE</div>
+
+<h2>执行摘要</h2>
+<p>印度的脆弱性画像反映了一个正处于快速工业发展中、尚未建立起足以隔绝外部冲击的生产网络深度的经济体。对中国药物API和太阳能制造投入的关键依赖，加上对经霍尔木兹原油的高能源进口暴露，构成了印度增长中的IT服务和仿制药出口无法抵消的结构性脆弱性。印度在俄罗斯与西方之间的战略对冲提供了价格优势（折价俄罗斯原油），但使供应链韧性规划复杂化。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>中国</td><td>药物活性成分（API）</td><td>$6.5B</td><td>关键 — 印度API进口的68%</td></tr>
+<tr><td>中国</td><td>太阳能硅片与电池</td><td>$8.0B</td><td>关键 — 能源转型瓶颈</td></tr>
+<tr><td>沙特阿拉伯</td><td>原油</td><td>$35.0B</td><td>高 — 海湾主要能源</td></tr>
+<tr><td>澳大利亚</td><td>冶金煤与动力煤</td><td>$20.0B</td><td>高 — 钢铁与电力部门</td></tr>
+<tr><td>俄罗斯</td><td>国防装备（S-400、Su-30MKI）</td><td>$7.0B</td><td>高 — 军事平台依赖</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>美国</td><td>仿制药与IT服务</td><td>$35.0B</td><td>高 — 医疗体系依赖</td></tr>
+<tr><td>肯尼亚</td><td>仿制药</td><td>$9.0B</td><td>高 — 发展中世界医疗供应</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>印度供应线跨越四大咽喉要道：<strong>霍尔木兹海峡</strong>（沙特原油350亿美元——现已封锁）、<strong>曼德海峡</strong>（红海能源和货物路线）、<strong>马六甲海峡</strong>（东南亚和中国货物）、<strong>苏伊士运河</strong>（欧洲贸易流）。2026年霍尔木兹封锁直接威胁350亿美元沙特原油进口，但印度的折价俄罗斯原油（460亿美元经非霍尔木兹路线）提供部分缓冲。印度西海岸港口（孟买、JNPT、坎德拉）对影响阿拉伯海运输走廊的霍尔木兹和曼德海峡中断特别暴露。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>霍尔木兹封锁能源影响</strong>：350亿美元沙特原油直接受威胁；俄罗斯原油提供缓冲但无法短期完全替代海湾供应；印度SPR仅覆盖约10天</li>
+<li><strong>中国药物API依赖</strong>：印度是"发展中世界的药房"，但68%的药物API从中国进口——中国API供应中断将在全球仿制药市场级联</li>
+<li><strong>太阳能转型被中国卡住</strong>：印度雄心勃勃的太阳能目标依赖80亿美元中国太阳能硅片和电池；国内制造（PLI计划）距规模化还有3-5年</li>
+<li><strong>俄罗斯国防平台依赖</strong>：S-400、Su-30MKI、T-90平台需要俄罗斯备件和弹药；乌克兰战争转移俄罗斯生产能力，西方制裁使采购复杂化</li>
+<li><strong>煤炭转型两难</strong>：200亿美元澳大利亚煤炭进口同时为钢铁生产和发电供能；转型需要同时替代两个关键部门</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>印度在产缘政治框架中占据"崛起中的组装者"位置——一个拥有巨大劳动力潜力和日益增长的制造抱负，但缺乏赋予生产网络主权的上游控制或中游加工能力的经济体。印度最重要的生产网络位置是仿制药，它控制全球约20%的按量计仿制药供应。但这一位置在结构上是空洞的：印度药物"主权"被68%的中国API依赖削弱。<em>印度组装最终剂型但不控制活性成分供应链</em>。</p>
+<p>太阳能故事重复这一模式。印度设定雄心勃勃的太阳能部署目标，并通过生产挂钩激励（PLI）计划吸引制造投资，但供应链仍被中国主导。印度太阳能组件组装依赖中国硅片和电池——没有上游控制的组装，这是产缘政治框架识别为发展中经济体陷阱的典型"组装谬误"。</p>
+<p>印度在战略对冲上的揭示偏好——购买折价俄罗斯原油同时维持与美国的安全伙伴关系——展示了一种对生产网络导航的务实方法。新德里正确地识别出能源供应多元化（任何来源、不论地缘政治站位）比与单一阵营的意识形态对齐提供更真实的主权。然而，这种对冲策略有极限：印度无法同时依赖俄罗斯国防平台、中国API和沙特原油而不接受对三个供应商地缘政治计算的脆弱性。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>建设国内药物API产能</strong>：这是印度最紧迫的单一供应链优先事项；API制造的PLI计划应扩大3-5倍，加速时间表并建立专门化工产业园区</li>
+<li><strong>加速太阳能制造一体化</strong>：从组件组装超越至硅片和电池生产；与非中国制造商（First Solar、Meyer Burger）的合资提供技术转移替代</li>
+<li><strong>扩大战略石油储备</strong>：目前10天覆盖危险地不足；通过洞库建设和商业储存协议在3年内目标45天SPR</li>
+<li><strong>多元化国防采购</strong>：通过扩大阵风订单、国内Tejas生产和美国国防合作降低俄罗斯平台依赖；优先选择具备国内维护能力的平台</li>
+<li><strong>发展关键矿产加工</strong>：印度有锂（查谟克什米尔）、稀土（奥里萨）和钍的矿藏；加工能力开发将降低中国中游依赖</li>
+</ul>
+
+</section>
+
+<section lang="en">
+
+<h1>India Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>印度供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>67/100</strong> — NET VULNERABLE</div>
+
 <h2>Executive Summary</h2>
 <p>India's vulnerability profile reflects an economy in the midst of rapid industrial development that has not yet built the production network depth to insulate itself from external shocks. Critical dependencies on Chinese pharmaceutical APIs and solar manufacturing inputs, combined with high energy import exposure to Hormuz-transiting crude oil, create structural vulnerabilities that India's growing IT services and generic pharmaceutical exports cannot offset. India's strategic hedging between Russia and the West provides pricing advantages (discounted Russian crude) but complicates supply chain resilience planning.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>China</td>
-<td>Active Pharmaceutical Ingredients (API)</td>
-<td>$6.5B</td>
-<td>Critical — 68% of Indian API imports</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Solar Wafers and Cells</td>
-<td>$8.0B</td>
-<td>Critical — energy transition bottleneck</td>
-</tr>
-<tr>
-<td>Saudi Arabia</td>
-<td>Crude Oil</td>
-<td>$35.0B</td>
-<td>High — primary Gulf energy</td>
-</tr>
-<tr>
-<td>Australia</td>
-<td>Metallurgical and Thermal Coal</td>
-<td>$20.0B</td>
-<td>High — steel and power sector</td>
-</tr>
-<tr>
-<td>Russia</td>
-<td>Defense Equipment (S-400, Su-30MKI)</td>
-<td>$7.0B</td>
-<td>High — military platform dependency</td>
-</tr>
+<tr><td>China</td><td>Active Pharmaceutical Ingredients (API)</td><td>$6.5B</td><td>Critical — 68% of Indian API imports</td></tr>
+<tr><td>China</td><td>Solar Wafers and Cells</td><td>$8.0B</td><td>Critical — energy transition bottleneck</td></tr>
+<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$35.0B</td><td>High — primary Gulf energy</td></tr>
+<tr><td>Australia</td><td>Metallurgical and Thermal Coal</td><td>$20.0B</td><td>High — steel and power sector</td></tr>
+<tr><td>Russia</td><td>Defense Equipment (S-400, Su-30MKI)</td><td>$7.0B</td><td>High — military platform dependency</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>United States</td>
-<td>Generic Pharmaceuticals and IT Services</td>
-<td>$35.0B</td>
-<td>High — health system dependency</td>
-</tr>
-<tr>
-<td>Kenya</td>
-<td>Generic Pharmaceuticals</td>
-<td>$9.0B</td>
-<td>High — developing world health supply</td>
-</tr>
+<tr><td>United States</td><td>Generic Pharmaceuticals and IT Services</td><td>$35.0B</td><td>High — health system dependency</td></tr>
+<tr><td>Kenya</td><td>Generic Pharmaceuticals</td><td>$9.0B</td><td>High — developing world health supply</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>India's supply lines transit four major chokepoints: <strong>Strait of Hormuz</strong> (Saudi crude $35B — now blockaded), <strong>Bab el-Mandeb</strong> (Red Sea energy and goods routing), <strong>Strait of Malacca</strong> (Southeast Asian and Chinese goods), and <strong>Suez Canal</strong> (European trade flows). The 2026 Hormuz blockade directly threatens $35B in Saudi crude imports, though India's discounted Russian crude ($46B via non-Hormuz routes) provides a partial buffer. India's western coast ports (Mumbai, JNPT, Kandla) are particularly exposed to Hormuz and Bab el-Mandeb disruptions that affect the Arabian Sea shipping corridor.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Hormuz blockade energy impact</strong>: $35B in Saudi crude directly threatened; Russian crude provides buffer but cannot fully substitute for Gulf supply at short notice; Indian SPR covers only ~10 days</li>
@@ -107,10 +138,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Russian defense platform dependency</strong>: S-400, Su-30MKI, T-90 platforms require Russian spare parts and ammunition; Ukraine war diverts Russian production capacity and Western sanctions complicate procurement</li>
 <li><strong>Coal transition dilemma</strong>: $20B in Australian coal imports power both steel production and electricity generation; transitioning away requires replacing two critical sectors simultaneously</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
-<p>India occupies the position of a "rising assembler" in the chanyuan framework — an economy with enormous labor force potential and growing manufacturing ambitions but lacking the upstream control or midstream processing capabilities that confer production network sovereignty. India's most significant production network position is in generic pharmaceuticals, where it controls approximately 20% of global generic drug supply by volume. But this position is structurally hollow: India's pharmaceutical "sovereignty" is undermined by 68% dependency on Chinese APIs. India assembles the final dosage form but does not control the active ingredient supply chain.</p>
+<p>India occupies the position of a "rising assembler" in the chanyuan framework — an economy with enormous labor force potential and growing manufacturing ambitions but lacking the upstream control or midstream processing capabilities that confer production network sovereignty. India's most significant production network position is in generic pharmaceuticals, where it controls approximately 20% of global generic drug supply by volume. But this position is structurally hollow: India's pharmaceutical "sovereignty" is undermined by 68% dependency on Chinese APIs. <em>India assembles the final dosage form but does not control the active ingredient supply chain.</em></p>
 <p>The solar energy story repeats this pattern. India has set ambitious solar deployment targets and attracted manufacturing investment through the Production-Linked Incentive (PLI) scheme, but the supply chain remains Chinese-dominated. Indian solar module assembly depends on Chinese wafers and cells — assembly without upstream control, the textbook "assembly fallacy" that the chanyuan framework identifies as a trap for developing economies.</p>
 <p>India's revealed preference in strategic hedging — purchasing discounted Russian crude while maintaining the US security partnership — demonstrates a pragmatic approach to production network navigation. Delhi correctly identifies that energy supply diversification (any source, regardless of geopolitical alignment) provides more genuine sovereignty than ideological alignment with a single bloc. However, this hedging strategy has limits: India cannot simultaneously depend on Russian defense platforms, Chinese APIs, and Saudi crude without accepting vulnerability to all three suppliers' geopolitical calculations.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Build domestic pharmaceutical API capacity</strong>: This is India's single most urgent supply chain priority; PLI scheme for API manufacturing should be expanded 3-5x with accelerated timelines and dedicated chemical industry parks</li>
@@ -119,5 +152,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Diversify defense procurement</strong>: Reduce Russian platform dependency through expanded Rafale orders, domestic Tejas production, and US defense cooperation; prioritize platforms with domestic maintenance capability</li>
 <li><strong>Develop critical mineral processing</strong>: India has deposits of lithium (Jammu &amp; Kashmir), rare earths (Odisha), and thorium; processing capacity development would reduce Chinese midstream dependency</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

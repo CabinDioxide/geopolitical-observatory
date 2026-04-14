@@ -1,212 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>China Supply Chain Vulnerability Assessment (2026)</title>
+<title>中国供应链脆弱性评估 / China Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #e63946; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<!-- ============ Chinese version ============ -->
+<section lang="zh">
+
+<h1>中国供应链脆弱性评估（2026）</h1>
 <h1>China Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 83/100 — NET VULNERABLE</h2>
+<div class="score-line">风险评分：<strong>83/100</strong> — 净脆弱 / NET VULNERABLE</div>
+
+<h2>执行摘要</h2>
+<p>中国占据一个悖论式的位置：既是全球最大的制造业经济体，又是结构性脆弱性最高的国家之一。北京在稀土、电池材料、成熟制程半导体等上游扼制节点占据决定性地位，但其能源进口、先进芯片、铁矿石和粮食的依赖使其对海上封锁和技术断供高度暴露。2026年霍尔木兹封锁与深化的中美技术管制同时放大了这两个维度的脆弱性。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>台湾</td><td>先进半导体芯片</td><td>$52.0B</td><td>关键</td></tr>
+<tr><td>美国</td><td>AI加速器芯片（受限）</td><td>$5.0B</td><td>关键</td></tr>
+<tr><td>澳大利亚</td><td>铁矿石</td><td>$82.0B</td><td>关键</td></tr>
+<tr><td>刚果（金）</td><td>钴（原矿与精炼）</td><td>$5.5B</td><td>关键</td></tr>
+<tr><td>缅甸</td><td>重稀土矿石（镝、铽）</td><td>$0.8B</td><td>关键</td></tr>
+<tr><td>巴西</td><td>大豆</td><td>$36.0B</td><td>关键</td></tr>
+<tr><td>韩国</td><td>DRAM和NAND存储</td><td>$28.0B</td><td>高</td></tr>
+<tr><td>沙特阿拉伯</td><td>原油</td><td>$65.0B</td><td>高</td></tr>
+<tr><td>日本</td><td>半导体设备（受限）</td><td>$7.8B</td><td>高</td></tr>
+<tr><td>卡塔尔</td><td>液化天然气</td><td>$16.0B</td><td>高</td></tr>
+<tr><td>智利</td><td>铜</td><td>$22.0B</td><td>高</td></tr>
+<tr><td>印度尼西亚</td><td>镍</td><td>$18.0B</td><td>高</td></tr>
+<tr><td>德国</td><td>机床</td><td>$24.0B</td><td>高</td></tr>
+<tr><td>澳大利亚</td><td>锂辉石</td><td>$8.0B</td><td>高</td></tr>
+<tr><td>巴西</td><td>铁矿石</td><td>$30.0B</td><td>高</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>美国</td><td>稀土永磁体（NdFeB）</td><td>$3.0B</td><td>关键 — 垄断供应</td></tr>
+<tr><td>日本</td><td>精炼稀土</td><td>$2.5B</td><td>关键 — 近乎完全依赖</td></tr>
+<tr><td>韩国</td><td>电池正/负极材料</td><td>$15.0B</td><td>关键 — 电池供应链</td></tr>
+<tr><td>韩国</td><td>氢氧化锂/碳酸锂</td><td>$6.0B</td><td>关键 — 精炼垄断</td></tr>
+<tr><td>美国</td><td>镓与锗</td><td>$0.5B</td><td>关键 — 国防/半导体</td></tr>
+<tr><td>印度</td><td>药物API</td><td>$6.5B</td><td>关键 — 医疗体系依赖</td></tr>
+<tr><td>美国</td><td>石墨负极材料</td><td>$3.0B</td><td>关键 — EV电池垄断</td></tr>
+<tr><td>印度</td><td>太阳能硅片与电池</td><td>$8.0B</td><td>关键 — 能源转型</td></tr>
+<tr><td>美国</td><td>消费电子</td><td>$145.0B</td><td>高 — 规模依赖</td></tr>
+<tr><td>德国</td><td>电动汽车与太阳能板</td><td>$42.0B</td><td>高 — 市场主导</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>中国的供应线跨越七大咽喉要道：<strong>霍尔木兹海峡</strong>（海湾原油 — 现已封锁）、<strong>曼德海峡</strong>（红海能源通道）、<strong>苏伊士运河</strong>（欧洲及中东流向）、<strong>马六甲海峡</strong>（承载中国70%以上石油进口）、<strong>台湾海峡</strong>（半导体与区域航运）、<strong>好望角</strong>（替代路线）、<strong>土耳其海峡</strong>（黑海大宗商品）。2026年霍尔木兹封锁直接威胁约650亿美元沙特原油和160亿美元卡塔尔LNG。马六甲仍是北京最根本的海上脆弱性——即所谓"马六甲困境"，这一困境正是驱动北京投资俄罗斯和缅甸管道的核心动因。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>霍尔木兹封锁</strong>：沙特原油（650亿美元）与卡塔尔LNG（160亿美元）直接中断；伊朗原油通过陆路/灰色市场渠道持续流入但规模收缩</li>
+<li><strong>美国技术管制</strong>：AI加速器芯片限制持续收紧；ASML对中国DUV设备的服务处于审查中；华为的国产替代仍落后2-3代</li>
+<li><strong>台海冲突情景</strong>：来自台积电的520亿美元先进芯片代表一项不可替代的依赖；任何台海危机将同时切断供应并触发全面西方制裁</li>
+<li><strong>粮食安全</strong>：对巴西（360亿美元）和美国（150亿美元）的大豆依赖形成可在贸易冲突中被武器化的杠杆</li>
+<li><strong>矿产加工反制</strong>：西方IRA/CRMA立法目标是在5-8年内打破中国在锂、钴、稀土的精炼垄断</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>中国是"组装谬误"的反向典型——通常被视为单纯的组装国，但过去十年系统性地向上游扩展至关键材料加工和元器件制造。在稀土、锂精炼、钴处理、石墨、镓、锗等领域，中国控制全球中游精炼的60-90%。这不是下游组装者的位置，而是上游物质扼制点控制者的位置。北京的揭示偏好——在非洲和拉丁美洲激进投资矿物加工产能、对镓锗实施出口管制——证明中国战略家理解并主动利用生产网络主权。</p>
+<p>然而，中国在两个决定性领域仍处于结构下游：先进半导体和能源。半导体差距是<em>质的</em>——中芯国际最先进节点仍落后台积电约两代，缺少EUV光刻将使这一差距无法通过渐进改进弥合。能源差距是<em>量的</em>——中国70%以上的原油进口依赖海运，任何管道组合（西伯利亚力量、缅甸走廊）都无法替代穿越霍尔木兹和马六甲的海上流量。</p>
+<p>因此，中国大战略的结构性张力存在于其上游矿产杠杆（鼓励果断行动）与下游芯片/能源脆弱性（鼓励审慎）之间。2026年霍尔木兹危机直接测试这一平衡：中国既从廉价伊朗原油中获益，又承受无可替代的沙特和卡塔尔流量中断。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>加速马六甲绕行</strong>：扩大缅甸（皎漂）和巴基斯坦（瓜达尔）管道容量，将海运石油依赖降至60%以下</li>
+<li><strong>建设战略石油储备</strong>：目标120+天进口覆盖（目前约80天），以应对霍尔木兹与潜在台海情景同时发生</li>
+<li><strong>多元化半导体供应</strong>：投资三星在华工厂与国内RISC-V生态作为对台积电依赖的部分对冲</li>
+<li><strong>保障重稀土供应</strong>：缅甸边境不稳定威胁镝/铽供应；不顾环境成本开发江西/广东的离子型黏土矿床</li>
+<li><strong>预置粮食储备</strong>：通过巴西长期合同扩大大豆压榨产能，降低对美贸易杠杆的脆弱性</li>
+</ul>
+
+</section>
+
+<!-- ============ English version ============ -->
+<section lang="en">
+
+<h1>China Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>中国供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>83/100</strong> — NET VULNERABLE</div>
+
 <h2>Executive Summary</h2>
 <p>China occupies a paradoxical position as both the world's largest manufacturing economy and one of its most structurally vulnerable. While Beijing controls decisive upstream chokepoints in rare earths, battery materials, and legacy semiconductors, its dependence on imported energy, advanced chips, iron ore, and food renders it acutely exposed to maritime interdiction and technology denial. The 2026 Hormuz blockade and deepening US-China tech controls have amplified both dimensions simultaneously.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>Taiwan</td>
-<td>Advanced Semiconductor Chips</td>
-<td>$52.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>AI Accelerator Chips (restricted)</td>
-<td>$5.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>Australia</td>
-<td>Iron Ore</td>
-<td>$82.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>DR Congo</td>
-<td>Cobalt (Raw and Refined)</td>
-<td>$5.5B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>Myanmar</td>
-<td>Heavy Rare Earth Ores (Dy, Tb)</td>
-<td>$0.8B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>Brazil</td>
-<td>Soybeans</td>
-<td>$36.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>South Korea</td>
-<td>DRAM and NAND Memory</td>
-<td>$28.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Saudi Arabia</td>
-<td>Crude Oil</td>
-<td>$65.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Japan</td>
-<td>Semiconductor Equipment (restricted)</td>
-<td>$7.8B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Qatar</td>
-<td>LNG</td>
-<td>$16.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Chile</td>
-<td>Copper</td>
-<td>$22.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Indonesia</td>
-<td>Nickel</td>
-<td>$18.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>Machine Tools</td>
-<td>$24.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Australia</td>
-<td>Lithium Spodumene</td>
-<td>$8.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Brazil</td>
-<td>Iron Ore</td>
-<td>$30.0B</td>
-<td>High</td>
-</tr>
+<tr><td>Taiwan</td><td>Advanced Semiconductor Chips</td><td>$52.0B</td><td>Critical</td></tr>
+<tr><td>United States</td><td>AI Accelerator Chips (restricted)</td><td>$5.0B</td><td>Critical</td></tr>
+<tr><td>Australia</td><td>Iron Ore</td><td>$82.0B</td><td>Critical</td></tr>
+<tr><td>DR Congo</td><td>Cobalt (Raw and Refined)</td><td>$5.5B</td><td>Critical</td></tr>
+<tr><td>Myanmar</td><td>Heavy Rare Earth Ores (Dy, Tb)</td><td>$0.8B</td><td>Critical</td></tr>
+<tr><td>Brazil</td><td>Soybeans</td><td>$36.0B</td><td>Critical</td></tr>
+<tr><td>South Korea</td><td>DRAM and NAND Memory</td><td>$28.0B</td><td>High</td></tr>
+<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$65.0B</td><td>High</td></tr>
+<tr><td>Japan</td><td>Semiconductor Equipment (restricted)</td><td>$7.8B</td><td>High</td></tr>
+<tr><td>Qatar</td><td>LNG</td><td>$16.0B</td><td>High</td></tr>
+<tr><td>Chile</td><td>Copper</td><td>$22.0B</td><td>High</td></tr>
+<tr><td>Indonesia</td><td>Nickel</td><td>$18.0B</td><td>High</td></tr>
+<tr><td>Germany</td><td>Machine Tools</td><td>$24.0B</td><td>High</td></tr>
+<tr><td>Australia</td><td>Lithium Spodumene</td><td>$8.0B</td><td>High</td></tr>
+<tr><td>Brazil</td><td>Iron Ore</td><td>$30.0B</td><td>High</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>United States</td>
-<td>Rare Earth Magnets (NdFeB)</td>
-<td>$3.0B</td>
-<td>Critical — monopoly supplier</td>
-</tr>
-<tr>
-<td>Japan</td>
-<td>Processed Rare Earths</td>
-<td>$2.5B</td>
-<td>Critical — near-total dependency</td>
-</tr>
-<tr>
-<td>South Korea</td>
-<td>Battery Cathode/Anode Materials</td>
-<td>$15.0B</td>
-<td>Critical — battery supply chain</td>
-</tr>
-<tr>
-<td>South Korea</td>
-<td>Lithium Hydroxide/Carbonate</td>
-<td>$6.0B</td>
-<td>Critical — refining monopoly</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Gallium and Germanium</td>
-<td>$0.5B</td>
-<td>Critical — defense/semiconductor</td>
-</tr>
-<tr>
-<td>India</td>
-<td>Pharma APIs</td>
-<td>$6.5B</td>
-<td>Critical — health system dependency</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Graphite Anode Material</td>
-<td>$3.0B</td>
-<td>Critical — EV battery monopoly</td>
-</tr>
-<tr>
-<td>India</td>
-<td>Solar Wafers and Cells</td>
-<td>$8.0B</td>
-<td>Critical — energy transition</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Consumer Electronics</td>
-<td>$145.0B</td>
-<td>High — scale dependency</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>EVs and Solar Panels</td>
-<td>$42.0B</td>
-<td>High — market dominance</td>
-</tr>
+<tr><td>United States</td><td>Rare Earth Magnets (NdFeB)</td><td>$3.0B</td><td>Critical — monopoly supplier</td></tr>
+<tr><td>Japan</td><td>Processed Rare Earths</td><td>$2.5B</td><td>Critical — near-total dependency</td></tr>
+<tr><td>South Korea</td><td>Battery Cathode/Anode Materials</td><td>$15.0B</td><td>Critical — battery supply chain</td></tr>
+<tr><td>South Korea</td><td>Lithium Hydroxide/Carbonate</td><td>$6.0B</td><td>Critical — refining monopoly</td></tr>
+<tr><td>United States</td><td>Gallium and Germanium</td><td>$0.5B</td><td>Critical — defense/semiconductor</td></tr>
+<tr><td>India</td><td>Pharma APIs</td><td>$6.5B</td><td>Critical — health system dependency</td></tr>
+<tr><td>United States</td><td>Graphite Anode Material</td><td>$3.0B</td><td>Critical — EV battery monopoly</td></tr>
+<tr><td>India</td><td>Solar Wafers and Cells</td><td>$8.0B</td><td>Critical — energy transition</td></tr>
+<tr><td>United States</td><td>Consumer Electronics</td><td>$145.0B</td><td>High — scale dependency</td></tr>
+<tr><td>Germany</td><td>EVs and Solar Panels</td><td>$42.0B</td><td>High — market dominance</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>China's supply lines transit seven major chokepoints: <strong>Strait of Hormuz</strong> (Gulf crude — now blockaded), <strong>Bab el-Mandeb</strong> (Red Sea energy transit), <strong>Suez Canal</strong> (Europe-bound and Middle East flows), <strong>Strait of Malacca</strong> (70%+ of China's oil imports), <strong>Taiwan Strait</strong> (semiconductor and regional shipping), <strong>Cape of Good Hope</strong> (alternative routing), and <strong>Turkish Straits</strong> (Black Sea commodities). The 2026 Hormuz blockade directly threatens approximately $65B of Saudi crude and $16B in Qatari LNG. Malacca remains Beijing's foundational maritime vulnerability — the so-called "Malacca Dilemma" that has driven pipeline construction to Russia and Myanmar.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Hormuz blockade</strong>: Saudi crude supply ($65B) and Qatari LNG ($16B) directly disrupted; Iran oil continues via overland/gray-market routes but at reduced volume</li>
@@ -215,10 +176,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Food security</strong>: Soybean dependence on Brazil ($36B) and US ($15B) creates leverage that could be weaponized in trade conflicts</li>
 <li><strong>Mineral processing backlash</strong>: Western IRA/CRMA legislation aims to break Chinese refining monopoly in lithium, cobalt, and rare earths within 5-8 years</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
 <p>China is the preeminent case of the "assembly fallacy" in reverse — widely perceived as a mere assembler, it has systematically moved upstream into critical material processing and component manufacturing over the past decade. In rare earths, lithium refining, cobalt processing, graphite, gallium, and germanium, China controls 60-90% of global midstream refining. This is not the position of a downstream assembler but of an upstream controller of material chokepoints. Beijing's revealed preference — aggressive investment in mineral processing capacity across Africa and Latin America, export controls on gallium/germanium — confirms that Chinese strategists understand and exploit production network sovereignty.</p>
 <p>However, China remains structurally downstream in two decisive domains: advanced semiconductors and energy. The semiconductor gap is qualitative — SMIC's best nodes remain roughly two generations behind TSMC, and without access to EUV lithography, this gap cannot close through incremental improvement. The energy gap is quantitative — China imports over 70% of its crude oil, and no combination of pipelines (Power of Siberia, Myanmar corridor) can substitute for seaborne flows that transit Hormuz and Malacca.</p>
 <p>The structural tension in Chinese grand strategy is therefore between its upstream leverage in materials (which counsels assertiveness) and its downstream vulnerability in chips and energy (which counsels caution). The 2026 Hormuz crisis tests this balance directly: China benefits from cheaper Iranian crude but suffers from disrupted Saudi and Qatari flows that no pipeline can replace at scale.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Accelerate Malacca bypass</strong>: Expand pipeline capacity through Myanmar (Kyaukphyu) and Pakistan (Gwadar) to reduce seaborne oil dependency below 60%</li>
@@ -227,5 +190,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Secure heavy rare earth supply</strong>: Myanmar's border instability threatens dysprosium and terbium supply — develop domestic ionic clay deposits in Jiangxi/Guangdong despite environmental costs</li>
 <li><strong>Pre-position food reserves</strong>: Expand soybean crushing capacity using Brazilian long-term contracts to reduce vulnerability to US trade leverage</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

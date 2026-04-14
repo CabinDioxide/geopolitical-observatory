@@ -1,104 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taiwan Supply Chain Vulnerability Assessment (2026)</title>
+<title>台湾供应链脆弱性评估 / Taiwan Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #e63946; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<!-- ============ Chinese version ============ -->
+<section lang="zh">
+
+<h1>台湾供应链脆弱性评估（2026）</h1>
 <h1>Taiwan Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 70/100 — NET VULNERABLE</h2>
+<div class="score-line">风险评分：<strong>70/100</strong> — 净脆弱 / NET VULNERABLE</div>
+
+<h2>执行摘要</h2>
+<p>台湾占据全球半导体供应链中最具决定性的节点——台积电制造全球90%以上的先进逻辑芯片。这种极端集中赋予台湾巨大的出口杠杆，但同时使其成为世界上最危险的单点故障。台湾的脆弱性<em>不源于经济弱势，而源于地缘政治暴露</em>：其半导体主导地位完全依赖于持续获得上游投入（荷兰光刻、美国EDA、日本材料、德国光学）和经由被争议的台湾海峡的不间断海上运输。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>荷兰</td><td>EUV光刻系统（ASML）</td><td>$9.5B</td><td>关键 — 全球唯一供应商</td></tr>
+<tr><td>美国</td><td>EDA软件与芯片设计IP</td><td>$6.8B</td><td>关键 — Synopsys、Cadence垄断</td></tr>
+<tr><td>日本</td><td>光刻胶与硅晶圆</td><td>$8.5B</td><td>关键 — JSR、信越、SUMCO</td></tr>
+<tr><td>德国</td><td>蔡司精密光学</td><td>$2.8B</td><td>关键 — EUV透镜垄断</td></tr>
+<tr><td>美国</td><td>国防装备（F-16、海马斯）</td><td>$8.0B</td><td>关键 — 生存性安全</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>中国</td><td>先进半导体芯片</td><td>$52.0B</td><td>关键 — 不可替代供应</td></tr>
+<tr><td>美国</td><td>先进逻辑芯片</td><td>$42.0B</td><td>关键 — AI产业基石</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>台湾的供应链跨越四大咽喉要道：<strong>台湾海峡</strong>（最关键——所有芯片出口和大部分进口经此水道）、<strong>马六甲海峡</strong>（来自欧洲和中东的上游材料路线）、<strong>苏伊士运河</strong>（荷兰和德国设备运输）、<strong>曼德海峡</strong>（红海路线）。台湾海峡本身是决定性咽喉：它既是台积电向中美出口940亿美元芯片的路线，也是任何中国军事行动到达的矢量。与其他咽喉不同，台湾海峡的战略意义不仅在于船只经过，而在于台湾本身就坐落其中。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>台海军事情景</strong>：任何中国封锁或入侵尝试将同时停止940亿美元全球芯片出口，并切断台湾对全部五个关键进口依赖的准入；这是世界上最具系统性后果的供应链情景</li>
+<li><strong>设备供应链集中</strong>：台积电需要同时获得荷兰（ASML）、美国（EDA）、日本（光刻胶/硅片）、德国（蔡司光学）的投入——任何单一来源中断将停止先进制程生产</li>
+<li><strong>美中技术脱钩交火</strong>：台湾必须在最大客户（中国，520亿美元）和安全保障者（美国，国防+EDA）之间斡旋；任何被迫的脱钩都会降低台湾的杠杆</li>
+<li><strong>霍尔木兹封锁次生效应</strong>：台湾直接能源暴露极小，但全球供应链中断提高来自欧洲关键设备的运输成本和交付时间</li>
+<li><strong>台积电地理集中</strong>：85%以上的先进制程制造集中在新竹/台南200公里范围内；单一自然灾害或军事打击可同时瘫痪多座晶圆厂</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>台湾是产缘政治框架所称"扼制点主权"（chokepoint sovereignty）的最极端案例——一个小型经济体通过在单一不可替代功能上的集中，使自己对整个全球生产网络变得不可或缺。台积电的制造能力是当代全球经济中最强大的扼制点，甚至在系统重要性上超过ASML的光刻垄断——因为台积电将多个上游投入整合为一个没有其他实体能以同等质量和规模生产的成品。</p>
+<p>然而，台湾的扼制点主权悖论性地既是其最大优势也是其生存性脆弱性。"硅盾"理论认为台湾的半导体不可或缺性威慑中国入侵，因为中断的经济成本不可接受。但这一理论有一个产缘政治框架揭示的结构性缺陷：<em>台湾的制造垄断依赖于持续从四个不同国家（荷兰、美国、日本、德国）获得投入，其中任何一个都可以通过限制出口独立地瘫痪台积电</em>。台湾是芯片供应的上游控制者，但却是芯片生产投入的下游依赖者——一种独特脆弱的主权形式，仅在所有投入供应商同时配合的条件下才有效。</p>
+<p>台湾的揭示偏好——将台积电晶圆厂分散到亚利桑那、日本、德国，同时在本土保留最先进节点——表明台北理解地理集中的杠杆与脆弱。将N2及以下制程独家留在台湾而将较老节点分散海外的决策是经过计算的策略：维持硅盾的威慑价值，同时降低完全集中的系统性风险。这是成熟的生产网络治国术，但它依赖一个日益不确定的稳定假设（不发生台海危机）。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>维持先进节点本土独占</strong>：将N2和N2以下工艺节点独家留在台湾以维持硅盾威慑；将N3及更老节点分散到海外晶圆厂</li>
+<li><strong>多元化设备供应商关系</strong>：与多家光刻胶供应商建立更深关系（日本和新兴韩国替代）；投资EDA替代方案（开源EDA、国产工具）作为对美国政策变化的对冲</li>
+<li><strong>建设设备和材料库存</strong>：在岛内维持12+个月的ASML零件、光刻胶和硅晶圆库存，作为供应中断的缓冲</li>
+<li><strong>强化不对称防御</strong>：投资反舰导弹、水雷战和分布式防空，而非容易被首波打击消除的大型平台</li>
+<li><strong>加速能源韧性</strong>：建设LNG进口能力和可再生能源部署以降低危机情景下的能源供应脆弱性；目前能源进口依赖是与经济供应链风险分离的军事脆弱性</li>
+</ul>
+
+</section>
+
+<!-- ============ English version ============ -->
+<section lang="en">
+
+<h1>Taiwan Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>台湾供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>70/100</strong> — NET VULNERABLE</div>
+
 <h2>Executive Summary</h2>
 <p>Taiwan occupies the most consequential node in the global semiconductor supply chain, manufacturing over 90% of the world's leading-edge logic chips through TSMC. This extreme concentration gives Taiwan enormous export leverage — but simultaneously makes it the world's most dangerous single point of failure. Taiwan's vulnerability derives not from economic weakness but from geopolitical exposure: its semiconductor dominance depends entirely on continued access to upstream inputs (Dutch lithography, American EDA, Japanese materials, German optics) and uninterrupted maritime shipping through the contested Taiwan Strait.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>Netherlands</td>
-<td>EUV Lithography Systems (ASML)</td>
-<td>$9.5B</td>
-<td>Critical — sole global supplier</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>EDA Software and Chip Design IP</td>
-<td>$6.8B</td>
-<td>Critical — Synopsys, Cadence monopoly</td>
-</tr>
-<tr>
-<td>Japan</td>
-<td>Photoresists and Silicon Wafers</td>
-<td>$8.5B</td>
-<td>Critical — JSR, Shin-Etsu, SUMCO</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>ZEISS Precision Optics</td>
-<td>$2.8B</td>
-<td>Critical — EUV lens monopoly</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Defense Equipment (F-16, HIMARS)</td>
-<td>$8.0B</td>
-<td>Critical — existential security</td>
-</tr>
+<tr><td>Netherlands</td><td>EUV Lithography Systems (ASML)</td><td>$9.5B</td><td>Critical — sole global supplier</td></tr>
+<tr><td>United States</td><td>EDA Software and Chip Design IP</td><td>$6.8B</td><td>Critical — Synopsys, Cadence monopoly</td></tr>
+<tr><td>Japan</td><td>Photoresists and Silicon Wafers</td><td>$8.5B</td><td>Critical — JSR, Shin-Etsu, SUMCO</td></tr>
+<tr><td>Germany</td><td>ZEISS Precision Optics</td><td>$2.8B</td><td>Critical — EUV lens monopoly</td></tr>
+<tr><td>United States</td><td>Defense Equipment (F-16, HIMARS)</td><td>$8.0B</td><td>Critical — existential security</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>China</td>
-<td>Advanced Semiconductor Chips</td>
-<td>$52.0B</td>
-<td>Critical — irreplaceable supply</td>
-</tr>
-<tr>
-<td>United States</td>
-<td>Leading-Edge Logic Chips</td>
-<td>$42.0B</td>
-<td>Critical — AI industry foundation</td>
-</tr>
+<tr><td>China</td><td>Advanced Semiconductor Chips</td><td>$52.0B</td><td>Critical — irreplaceable supply</td></tr>
+<tr><td>United States</td><td>Leading-Edge Logic Chips</td><td>$42.0B</td><td>Critical — AI industry foundation</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>Taiwan's supply chains transit four chokepoints: <strong>Taiwan Strait</strong> (the most consequential — all chip exports and most imports transit this waterway), <strong>Strait of Malacca</strong> (upstream material routing from Europe and Middle East), <strong>Suez Canal</strong> (Dutch and German equipment shipping), and <strong>Bab el-Mandeb</strong> (Red Sea routing). The Taiwan Strait itself is the defining chokepoint: it is simultaneously the route for TSMC's $94B in chip exports to China and the US, and the vector through which any Chinese military action would arrive. Unlike other chokepoints, the Taiwan Strait's strategic significance is not merely that ships pass through it but that Taiwan itself sits within it.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>Taiwan Strait military scenario</strong>: Any Chinese blockade or invasion attempt would simultaneously halt $94B in global chip exports AND sever Taiwan's access to all five critical import dependencies; this is the single most consequential supply chain scenario in the world</li>
@@ -107,10 +140,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Hormuz blockade secondary effects</strong>: Taiwan has minimal direct energy exposure, but global supply chain disruption raises shipping costs and delivery times for critical equipment from Europe</li>
 <li><strong>TSMC geographic concentration</strong>: 85%+ of leading-edge fabrication occurs within 200km of each other in Hsinchu/Tainan; a single natural disaster or military strike could disable multiple fabs simultaneously</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
-<p>Taiwan is the most extreme example of what the chanyuan framework calls "chokepoint sovereignty" — a small economy that has made itself indispensable to the entire global production network through concentration in a single irreplaceable function. TSMC's manufacturing capability is the most powerful chokepoint in the contemporary global economy, exceeding even ASML's lithography monopoly in systemic importance because TSMC integrates multiple upstream inputs into a finished product that no other entity can produce at equivalent quality and scale.</p>
-<p>However, Taiwan's chokepoint sovereignty is paradoxically both its greatest strength and its existential vulnerability. The "silicon shield" thesis holds that Taiwan's semiconductor indispensability deters Chinese invasion because the economic cost of disruption would be unacceptable. But this thesis has a structural flaw that the chanyuan framework reveals: Taiwan's manufacturing monopoly depends on continuous access to inputs from four different countries (Netherlands, US, Japan, Germany), each of which could independently disable TSMC by restricting exports. Taiwan is an upstream controller of chip supply but a downstream dependent of chip production inputs — a uniquely vulnerable form of sovereignty that works only as long as all input suppliers cooperate simultaneously.</p>
+<p>Taiwan is the most extreme example of what the chanyuan framework calls <em>"chokepoint sovereignty"</em> — a small economy that has made itself indispensable to the entire global production network through concentration in a single irreplaceable function. TSMC's manufacturing capability is the most powerful chokepoint in the contemporary global economy, exceeding even ASML's lithography monopoly in systemic importance because TSMC integrates multiple upstream inputs into a finished product that no other entity can produce at equivalent quality and scale.</p>
+<p>However, Taiwan's chokepoint sovereignty is paradoxically both its greatest strength and its existential vulnerability. The "silicon shield" thesis holds that Taiwan's semiconductor indispensability deters Chinese invasion because the economic cost of disruption would be unacceptable. But this thesis has a structural flaw that the chanyuan framework reveals: <em>Taiwan's manufacturing monopoly depends on continuous access to inputs from four different countries (Netherlands, US, Japan, Germany), each of which could independently disable TSMC by restricting exports</em>. Taiwan is an upstream controller of chip supply but a downstream dependent of chip production inputs — a uniquely vulnerable form of sovereignty that works only as long as all input suppliers cooperate simultaneously.</p>
 <p>Taiwan's revealed preference — diversifying TSMC fab locations to Arizona, Japan, and Germany while maintaining the most advanced nodes domestically — indicates that Taipei understands both the leverage and the vulnerability of geographic concentration. The decision to keep N2 and below exclusively in Taiwan while distributing older nodes abroad is a calculated strategy: maintain the silicon shield's deterrent value while reducing the systemic risk of total concentration. This is sophisticated production network statecraft, but it depends on a stability assumption (no Taiwan Strait crisis) that is increasingly uncertain.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Maintain leading-edge domestic exclusivity</strong>: Keep N2 and sub-N2 process nodes exclusively in Taiwan to preserve silicon shield deterrent; distribute N3 and older nodes to overseas fabs</li>
@@ -119,5 +154,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Strengthen asymmetric defense</strong>: Invest in anti-ship missiles, mine warfare, and distributed air defense rather than large platforms that are vulnerable to first-strike elimination</li>
 <li><strong>Accelerate energy resilience</strong>: Build LNG import capacity and renewable energy deployment to reduce vulnerability to energy supply disruption in a crisis scenario; current energy import dependency is a military vulnerability separate from economic supply chain risk</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>

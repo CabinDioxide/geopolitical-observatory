@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>分析报告 · Geopolitical Observatory</title>
+<title>分析报告 · Reports · Geopolitical Observatory</title>
+<link rel="stylesheet" href="reports.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -28,159 +29,53 @@ body {
   flex-wrap: wrap;
   gap: 14px;
 }
-.header h1 {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.header h1 .sep { color: #475569; font-weight: 300; }
-.header h1 .en { font-size: 18px; color: #cbd5e1; font-weight: 500; }
-.header .subtitle {
-  color: #94a3b8;
-  font-size: 13px;
-  margin-top: 4px;
-}
+.header h1 { font-size: 22px; font-weight: 600; letter-spacing: 0.5px; }
+.header .subtitle { color: #94a3b8; font-size: 13px; margin-top: 4px; }
 .header a.back-map {
-  color: #2a9d8f;
-  text-decoration: none;
-  font-size: 13px;
-  padding: 8px 16px;
-  border: 1px solid #2a9d8f;
-  border-radius: 5px;
-  transition: all 0.15s;
+  color: #2a9d8f; text-decoration: none; font-size: 13px;
+  padding: 8px 16px; border: 1px solid #2a9d8f; border-radius: 5px; transition: all 0.15s;
 }
 .header a.back-map:hover { background: #2a9d8f; color: #0f172a; }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 32px; }
 
-.category {
-  margin-bottom: 40px;
-}
+.category { margin-bottom: 40px; }
 .category-header {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e2e8f0;
-  flex-wrap: wrap;
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0; flex-wrap: wrap;
 }
-.category-header h2 {
-  font-size: 19px;
-  color: #0f172a;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-}
-.category-header h2 .sep {
-  color: #cbd5e1;
-  font-weight: 300;
-  font-size: 17px;
-}
-.category-header h2 .en {
-  font-size: 16px;
-  color: #334155;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-}
-.category-header .count {
-  color: #94a3b8;
-  font-size: 13px;
-  margin-left: auto;
-}
-.category-desc {
-  color: #64748b;
-  font-size: 14px;
-  margin-bottom: 14px;
-  line-height: 1.55;
-}
+.category-header h2 { font-size: 19px; color: #0f172a; font-weight: 600; }
+.category-header .count { color: #94a3b8; font-size: 13px; margin-left: auto; }
+.category-desc { color: #64748b; font-size: 14px; margin-bottom: 14px; line-height: 1.55; }
 
 .report-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 14px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px;
 }
-
 .report-card {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 18px 20px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.15s;
-  display: flex;
-  flex-direction: column;
-  min-height: 130px;
-  position: relative;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;
+  padding: 18px 20px; text-decoration: none; color: inherit;
+  transition: all 0.15s; display: flex; flex-direction: column;
+  min-height: 150px; position: relative;
 }
 .report-card:hover {
-  border-color: #2a9d8f;
-  box-shadow: 0 4px 12px rgba(42, 157, 143, 0.12);
+  border-color: #2a9d8f; box-shadow: 0 4px 12px rgba(42, 157, 143, 0.12);
   transform: translateY(-2px);
 }
-.report-card .flag {
-  font-size: 22px;
-  line-height: 1;
-  margin-bottom: 8px;
-}
+.report-card .flag { font-size: 22px; line-height: 1; margin-bottom: 8px; }
 .report-card h3 {
-  font-size: 15.5px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 3px;
-  line-height: 1.35;
-}
-.report-card .en-title {
-  font-size: 13px;
-  color: #475569;
-  font-weight: 500;
-  margin-bottom: 10px;
-  line-height: 1.35;
-  letter-spacing: 0.1px;
+  font-size: 15.5px; font-weight: 600; color: #0f172a;
+  margin-bottom: 8px; line-height: 1.35;
 }
 .report-card .desc {
-  font-size: 13px;
-  color: #475569;
-  line-height: 1.55;
-  margin-top: auto;
-}
-.report-card h3.country-title {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-}
-.report-card h3.country-title .sep { color: #cbd5e1; font-weight: 300; }
-.report-card h3.country-title .en {
-  font-size: 13.5px;
-  color: #475569;
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  font-size: 13px; color: #475569; line-height: 1.55; margin-top: auto;
 }
 .report-card .meta-row {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;
 }
 .tag {
-  font-size: 10px;
-  padding: 2px 7px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 600;
+  font-size: 10px; padding: 2px 7px; border-radius: 3px;
+  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
 }
 .tag.framework { background: #fef3c7; color: #92400e; }
 .tag.country { background: #dbeafe; color: #1e40af; }
@@ -190,159 +85,203 @@ body {
 .tag.risk-mid { background: #fed7aa; color: #9a3412; }
 .tag.risk-low { background: #d1fae5; color: #065f46; }
 
-.upcoming-card {
-  border-style: dashed;
-  opacity: 0.65;
-  cursor: default;
-}
-.upcoming-card:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: #cbd5e1;
-}
+.upcoming-card { border-style: dashed; opacity: 0.65; cursor: default; }
+.upcoming-card:hover { transform: none; box-shadow: none; border-color: #cbd5e1; }
 
 .footer {
-  text-align: center;
-  padding: 30px;
-  color: #94a3b8;
-  font-size: 12px;
-  border-top: 1px solid #e2e8f0;
-  margin-top: 40px;
+  text-align: center; padding: 30px; color: #94a3b8; font-size: 12px;
+  border-top: 1px solid #e2e8f0; margin-top: 40px;
 }
 </style>
 </head>
-<body>
+<body data-lang="zh">
+
+<!-- Language Toggle -->
+<div class="lang-toggle on-dark">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
 
 <div class="header">
   <div class="header-inner">
     <div>
-      <h1>📊 <span>分析报告</span><span class="sep">·</span><span class="en">Reports</span></h1>
-      <div class="subtitle">Geopolitical Observatory — 结构性分析 · 国家脆弱性 · 产业链深挖 / Frameworks · Country Vulnerability · Supply Chain Deep Dives</div>
+      <h1 lang="zh">📊 分析报告</h1>
+      <h1 lang="en">📊 Reports</h1>
+      <div class="subtitle" lang="zh">Geopolitical Observatory — 结构性分析 · 国家脆弱性 · 产业链深挖</div>
+      <div class="subtitle" lang="en">Geopolitical Observatory — Structural Analyses · Country Vulnerability · Supply Chain Deep Dives</div>
     </div>
-    <a class="back-map" href="/">← 返回地图 / Back to Map</a>
+    <a class="back-map" href="/" lang="zh">← 返回地图</a>
+    <a class="back-map" href="/" lang="en">← Back to Map</a>
   </div>
 </div>
 
 <div class="container">
 
-  <!-- 系统框架 -->
+  <!-- 系统框架 / System Frameworks -->
   <div class="category">
     <div class="category-header">
-      <h2>🎯 <span>系统框架</span><span class="sep">·</span><span class="en">System Frameworks</span></h2>
-      <span class="count">1 / 3</span>
+      <h2 lang="zh">🎯 系统框架</h2>
+      <h2 lang="en">🎯 System Frameworks</h2>
+      <span class="count" lang="zh">1 / 3</span>
+      <span class="count" lang="en">1 / 3</span>
     </div>
-    <div class="category-desc">框架性、跨国家的结构分析。解释"为什么会这样"而非"发生了什么"。<br><span style="color:#94a3b8">Cross-country structural analysis — explaining <em>why</em> rather than <em>what</em>.</span></div>
+    <div class="category-desc" lang="zh">框架性、跨国家的结构分析。解释"为什么会这样"而非"发生了什么"。</div>
+    <div class="category-desc" lang="en">Cross-country structural analysis — explaining <em>why</em> rather than <em>what</em>.</div>
     <div class="report-grid">
       <a class="report-card" href="supply-chain-mad.html">
         <div class="flag">⚖️</div>
-        <h3>供应链确保相互摧毁——不稳定的均衡</h3>
-        <div class="en-title">Supply Chain MAD: The Unstable Equilibrium</div>
-        <div class="desc">中美在供应链层面构建的"确保相互摧毁"结构为何不稳定。四根支柱、2027-2032年窗口、1914年误判类比、冷分叉终局。<br><span style="color:#94a3b8">Why the US-China supply chain MAD is structurally unstable. Four pillars, 2027-2032 window, 1914 misjudgment analogy, cold fork endgame.</span></div>
+        <h3 lang="zh">供应链确保相互摧毁——不稳定的均衡</h3>
+        <h3 lang="en">Supply Chain MAD: The Unstable Equilibrium</h3>
+        <div class="desc" lang="zh">中美在供应链层面构建的"确保相互摧毁"结构为何不稳定。四根支柱、2027-2032年窗口、1914年误判类比、冷分叉终局。</div>
+        <div class="desc" lang="en">Why the US-China supply chain MAD is structurally unstable. Four pillars, 2027-2032 window, 1914 misjudgment analogy, cold fork endgame.</div>
         <div class="meta-row">
-          <span class="tag framework">框架 / Framework</span>
-          <span class="tag risk-high">高风险窗口 / High-Risk Window</span>
+          <span class="tag framework" lang="zh">框架</span>
+          <span class="tag framework" lang="en">Framework</span>
+          <span class="tag risk-high" lang="zh">高风险窗口</span>
+          <span class="tag risk-high" lang="en">High-Risk Window</span>
         </div>
       </a>
       <div class="report-card upcoming-card">
         <div class="flag">🧭</div>
-        <h3>产缘政治框架总览</h3>
-        <div class="en-title">Chanyuan Politics: A Framework Overview</div>
-        <div class="desc">产缘政治作为后工业革命时代新主权形态的系统性阐述。领土控制 vs 产业链控制的双重逻辑。<br><span style="color:#94a3b8">Chanyuan politics as a new sovereignty form in the post-industrial-revolution era. Territorial vs. supply chain control as dual logic.</span></div>
-        <div class="meta-row"><span class="tag upcoming">计划中 / Planned</span></div>
+        <h3 lang="zh">产缘政治框架总览</h3>
+        <h3 lang="en">Chanyuan Politics: A Framework Overview</h3>
+        <div class="desc" lang="zh">产缘政治作为后工业革命时代新主权形态的系统性阐述。领土控制 vs 产业链控制的双重逻辑。</div>
+        <div class="desc" lang="en">Chanyuan politics as a new sovereignty form in the post-industrial-revolution era. Territorial vs. supply chain control as dual logic.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">计划中</span>
+          <span class="tag upcoming" lang="en">Planned</span>
+        </div>
       </div>
       <div class="report-card upcoming-card">
         <div class="flag">⛓️</div>
-        <h3>非故意chokepoint图谱</h3>
-        <div class="en-title">Unintentional Chokepoints Atlas</div>
-        <div class="desc">氦气、化肥、核燃料——没有人weaponize但能系统性瘫痪的依赖链。五条件筛选法。<br><span style="color:#94a3b8">Helium, fertilizer, nuclear fuel — dependencies nobody weaponizes yet can systemically paralyze. Five-condition filter.</span></div>
-        <div class="meta-row"><span class="tag upcoming">计划中 / Planned</span></div>
+        <h3 lang="zh">非故意chokepoint图谱</h3>
+        <h3 lang="en">Unintentional Chokepoints Atlas</h3>
+        <div class="desc" lang="zh">氦气、化肥、核燃料——没有人weaponize但能系统性瘫痪的依赖链。五条件筛选法。</div>
+        <div class="desc" lang="en">Helium, fertilizer, nuclear fuel — dependencies nobody weaponizes yet can systemically paralyze. Five-condition filter.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">计划中</span>
+          <span class="tag upcoming" lang="en">Planned</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- 产业链深挖 -->
+  <!-- 产业链深挖 / Supply Chain Deep Dives -->
   <div class="category">
     <div class="category-header">
-      <h2>🏭 <span>产业链深挖</span><span class="sep">·</span><span class="en">Supply Chain Deep Dives</span></h2>
-      <span class="count">即将上线 / Coming soon</span>
+      <h2 lang="zh">🏭 产业链深挖</h2>
+      <h2 lang="en">🏭 Supply Chain Deep Dives</h2>
+      <span class="count" lang="zh">即将上线</span>
+      <span class="count" lang="en">Coming soon</span>
     </div>
-    <div class="category-desc">单一产业链的端到端追溯。从原料到终端，识别每个节点的脆弱性。<br><span style="color:#94a3b8">End-to-end tracing of single supply chains from raw materials to end-use — vulnerability mapping per node.</span></div>
+    <div class="category-desc" lang="zh">单一产业链的端到端追溯。从原料到终端，识别每个节点的脆弱性。</div>
+    <div class="category-desc" lang="en">End-to-end tracing of single supply chains from raw materials to end-use — vulnerability mapping per node.</div>
     <div class="report-grid">
       <div class="report-card upcoming-card">
         <div class="flag">💾</div>
-        <h3>半导体供应链全链追溯</h3>
-        <div class="en-title">Semiconductor Supply Chain Trace</div>
-        <div class="desc">EDA→晶圆→光刻→刻蚀→CVD→封测→出货。氦气、氖气、光刻胶、CMP浆料、高纯石英的地理集中度。<br><span style="color:#94a3b8">EDA → wafer → lithography → etching → CVD → packaging. Geographic concentration of helium, neon, photoresists, CMP slurry, high-purity quartz.</span></div>
-        <div class="meta-row"><span class="tag upcoming">进行中 / In Progress</span></div>
+        <h3 lang="zh">半导体供应链全链追溯</h3>
+        <h3 lang="en">Semiconductor Supply Chain Trace</h3>
+        <div class="desc" lang="zh">EDA→晶圆→光刻→刻蚀→CVD→封测→出货。氦气、氖气、光刻胶、CMP浆料、高纯石英的地理集中度。</div>
+        <div class="desc" lang="en">EDA → wafer → lithography → etching → CVD → packaging. Geographic concentration of helium, neon, photoresists, CMP slurry, high-purity quartz.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">进行中</span>
+          <span class="tag upcoming" lang="en">In Progress</span>
+        </div>
       </div>
       <div class="report-card upcoming-card">
         <div class="flag">🤖</div>
-        <h3>AI数据中心与电力基建</h3>
-        <div class="en-title">AI Data Centers & Power Infrastructure</div>
-        <div class="desc">算力-电力-冷却-网络的地缘政治。GPU（HBM/台积电）→燃气轮机短缺→变压器供应链→电网承载力。<br><span style="color:#94a3b8">Geopolitics of compute-power-cooling-network. GPU (HBM/TSMC) → gas turbine shortage → transformer supply chain → grid capacity.</span></div>
-        <div class="meta-row"><span class="tag upcoming">进行中 / In Progress</span></div>
+        <h3 lang="zh">AI数据中心与电力基建</h3>
+        <h3 lang="en">AI Data Centers & Power Infrastructure</h3>
+        <div class="desc" lang="zh">算力-电力-冷却-网络的地缘政治。GPU（HBM/台积电）→燃气轮机短缺→变压器供应链→电网承载力。</div>
+        <div class="desc" lang="en">Geopolitics of compute-power-cooling-network. GPU (HBM/TSMC) → gas turbine shortage → transformer supply chain → grid capacity.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">进行中</span>
+          <span class="tag upcoming" lang="en">In Progress</span>
+        </div>
       </div>
       <div class="report-card upcoming-card">
         <div class="flag">☢️</div>
-        <h3>核燃料循环的地缘政治</h3>
-        <div class="en-title">Nuclear Fuel Cycle Geopolitics</div>
-        <div class="desc">Rosatom、VVER反应堆、哈萨克铀矿——为什么欧盟制裁俄罗斯却从未制裁Rosatom。盲区#16的深挖。<br><span style="color:#94a3b8">Rosatom, VVER reactors, Kazakh uranium — why the EU sanctions Russia but never Rosatom. Deep dive into Blind Spot #16.</span></div>
-        <div class="meta-row"><span class="tag upcoming">计划中 / Planned</span></div>
+        <h3 lang="zh">核燃料循环的地缘政治</h3>
+        <h3 lang="en">Nuclear Fuel Cycle Geopolitics</h3>
+        <div class="desc" lang="zh">Rosatom、VVER反应堆、哈萨克铀矿——为什么欧盟制裁俄罗斯却从未制裁Rosatom。盲区#16的深挖。</div>
+        <div class="desc" lang="en">Rosatom, VVER reactors, Kazakh uranium — why the EU sanctions Russia but never Rosatom. Deep dive into Blind Spot #16.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">计划中</span>
+          <span class="tag upcoming" lang="en">Planned</span>
+        </div>
       </div>
       <div class="report-card upcoming-card">
         <div class="flag">🔋</div>
-        <h3>关键矿产武器化序列</h3>
-        <div class="en-title">Critical Mineral Weaponization Sequence</div>
-        <div class="desc">2010稀土→2023镓锗→2023石墨→2024锑→2025钨。北京的矿产武器库如何按需逐步释放。<br><span style="color:#94a3b8">2010 REE → 2023 Ga/Ge → 2023 graphite → 2024 antimony → 2025 tungsten. Beijing's mineral arsenal released on demand.</span></div>
-        <div class="meta-row"><span class="tag upcoming">计划中 / Planned</span></div>
+        <h3 lang="zh">关键矿产武器化序列</h3>
+        <h3 lang="en">Critical Mineral Weaponization Sequence</h3>
+        <div class="desc" lang="zh">2010稀土→2023镓锗→2023石墨→2024锑→2025钨。北京的矿产武器库如何按需逐步释放。</div>
+        <div class="desc" lang="en">2010 REE → 2023 Ga/Ge → 2023 graphite → 2024 antimony → 2025 tungsten. Beijing's mineral arsenal released on demand.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">计划中</span>
+          <span class="tag upcoming" lang="en">Planned</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- 国家脆弱性 -->
+  <!-- 国家脆弱性 / Country Vulnerability -->
   <div class="category">
     <div class="category-header">
-      <h2>🌐 <span>国家脆弱性报告</span><span class="sep">·</span><span class="en">Country Vulnerability</span></h2>
-      <span class="count">12 国家 / countries</span>
+      <h2 lang="zh">🌐 国家脆弱性报告</h2>
+      <h2 lang="en">🌐 Country Vulnerability</h2>
+      <span class="count" lang="zh">12 国家</span>
+      <span class="count" lang="en">12 countries</span>
     </div>
-    <div class="category-desc">基于dashboard贸易流数据的国家级供应链脆弱性评估。每份报告含进口依赖、出口杠杆、chokepoint暴露、结构性评估和建议。<br><span style="color:#94a3b8">National-level supply chain vulnerability assessments based on trade flow data — import dependencies, export leverage, chokepoint exposure, structural assessment, recommendations.</span></div>
+    <div class="category-desc" lang="zh">基于dashboard贸易流数据的国家级供应链脆弱性评估。每份报告含进口依赖、出口杠杆、chokepoint暴露、结构性评估和建议。</div>
+    <div class="category-desc" lang="en">National-level supply chain vulnerability assessments based on trade flow data — import dependencies, export leverage, chokepoint exposure, structural assessment, recommendations.</div>
     <div class="report-grid">
-      <a class="report-card" href="CHN.html"><div class="flag">🇨🇳</div><h3 class="country-title"><span>中国</span><span class="sep">·</span><span class="en">China</span></h3><div class="desc">三重绞杀：能源海运依赖 + 高端芯片锁死 + 人口衰退。矿物加工垄断作为非对称杠杆。<br><span style="color:#94a3b8">Triple strangulation: energy import + chip denial + demographic decline. Mineral processing monopoly as asymmetric leverage.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-high">高脆弱 / High</span></div></a>
-      <a class="report-card" href="USA.html"><div class="flag">🇺🇸</div><h3 class="country-title"><span>美国</span><span class="sep">·</span><span class="en">United States</span></h3><div class="desc">矿物加工空心化 + 制造生态迁移周期。F-35稀土依赖与CHIPS Act回流的时间赛跑。<br><span style="color:#94a3b8">Hollowed mineral processing + manufacturing ecosystem migration. F-35 rare earth dependency vs. CHIPS Act reshoring race.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-mid">中高 / Mid-High</span></div></a>
-      <a class="report-card" href="JPN.html"><div class="flag">🇯🇵</div><h3 class="country-title"><span>日本</span><span class="sep">·</span><span class="en">Japan</span></h3><div class="desc">能源海运100%依赖 + 霍尔木兹敞口。半导体上游材料供应商地位作为缓冲。<br><span style="color:#94a3b8">100% seaborne energy + Hormuz exposure. Upstream semiconductor materials supplier position as buffer.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-high">高脆弱 / High</span></div></a>
-      <a class="report-card" href="DEU.html"><div class="flag">🇩🇪</div><h3 class="country-title"><span>德国</span><span class="sep">·</span><span class="en">Germany</span></h3><div class="desc">Nord Stream摧毁后的能源结构重构 + 对华制造业出口依赖。机床出口的双向锁定。<br><span style="color:#94a3b8">Post-Nord Stream energy reconstruction + manufacturing export to China. Machine tool export as two-way lock-in.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-high">高脆弱 / High</span></div></a>
-      <a class="report-card" href="GBR.html"><div class="flag">🇬🇧</div><h3 class="country-title"><span>英国</span><span class="sep">·</span><span class="en">United Kingdom</span></h3><div class="desc">后脱欧金融中心 + 独立核威慑 + 北海油气衰减。美国特殊关系作为结构性依赖。<br><span style="color:#94a3b8">Post-Brexit financial hub + independent nuclear deterrent + North Sea decline. US special relationship as structural dependency.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-mid">中等 / Mid</span></div></a>
-      <a class="report-card" href="FRA.html"><div class="flag">🇫🇷</div><h3 class="country-title"><span>法国</span><span class="sep">·</span><span class="en">France</span></h3><div class="desc">核能自主 + 非洲铀供应 + Rafale出口。VVER无依赖（全自研EPR）作为独特位置。<br><span style="color:#94a3b8">Nuclear autonomy + African uranium + Rafale exports. Zero VVER dependency (indigenous EPR) as unique position.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-mid">中等 / Mid</span></div></a>
-      <a class="report-card" href="ITA.html"><div class="flag">🇮🇹</div><h3 class="country-title"><span>意大利</span><span class="sep">·</span><span class="en">Italy</span></h3><div class="desc">地中海能源枢纽 + 制造业中游依赖 + 公共债务约束。人口收缩的次优样本。<br><span style="color:#94a3b8">Mediterranean energy hub + mid-stream manufacturing + fiscal constraint. Demographic decline subordinate sample.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-mid">中等 / Mid</span></div></a>
-      <a class="report-card" href="CAN.html"><div class="flag">🇨🇦</div><h3 class="country-title"><span>加拿大</span><span class="sep">·</span><span class="en">Canada</span></h3><div class="desc">北美一体化 + 关键矿产储量 + 能源出口。人口年轻化作为北美体系的缓冲。<br><span style="color:#94a3b8">North American integration + critical mineral reserves + energy exports. Younger demographics as continental buffer.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-low">低脆弱 / Low</span></div></a>
-      <a class="report-card" href="KOR.html"><div class="flag">🇰🇷</div><h3 class="country-title"><span>韩国</span><span class="sep">·</span><span class="en">South Korea</span></h3><div class="desc">64.7%氦气依赖卡塔尔 + 半导体出口模式 + 中美夹缝。HBM地位作为双向筹码。<br><span style="color:#94a3b8">64.7% helium from Qatar + semiconductor export model + US-China squeeze. HBM position as bargaining chip.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-high">高脆弱 / High</span></div></a>
-      <a class="report-card" href="IND.html"><div class="flag">🇮🇳</div><h3 class="country-title"><span>印度</span><span class="sep">·</span><span class="en">India</span></h3><div class="desc">俄罗斯原油转口 + 多联盟成员 + API对华74%依赖。不站队战略的结构性收益与风险。<br><span style="color:#94a3b8">Russian crude arbitrage + multi-alliance membership + 74% API dependency on China. Non-alignment strategy's structural yield and risk.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-mid">中等 / Mid</span></div></a>
-      <a class="report-card" href="TWN.html"><div class="flag">🇹🇼</div><h3 class="country-title"><span>台湾</span><span class="sep">·</span><span class="en">Taiwan</span></h3><div class="desc">四根MAD支柱交叉奇点：TSMC、航运咽喉、军事闪点、联盟信誉。硅盾的结构性含义。<br><span style="color:#94a3b8">Singularity where all four MAD pillars intersect: TSMC, shipping chokepoint, military flashpoint, alliance credibility. Silicon shield's structural meaning.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-high">极高 / Extreme</span></div></a>
-      <a class="report-card" href="RUS.html"><div class="flag">🇷🇺</div><h3 class="country-title"><span>俄罗斯</span><span class="sep">·</span><span class="en">Russia</span></h3><div class="desc">Rosatom豁免 + 矿产加工 + 能源转售亚洲。制裁下的供应链重构与核燃料杠杆。<br><span style="color:#94a3b8">Rosatom sanctions exemption + mineral processing + energy rerouting to Asia. Supply chain reconstitution under sanctions + nuclear fuel leverage.</span></div><div class="meta-row"><span class="tag country">国家 / Country</span><span class="tag risk-mid">中等 / Mid</span></div></a>
+      <a class="report-card" href="CHN.html"><div class="flag">🇨🇳</div><h3 lang="zh">中国</h3><h3 lang="en">China</h3><div class="desc" lang="zh">三重绞杀：能源海运依赖 + 高端芯片锁死 + 人口衰退。矿物加工垄断作为非对称杠杆。</div><div class="desc" lang="en">Triple strangulation: energy import + chip denial + demographic decline. Mineral processing monopoly as asymmetric leverage.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-high" lang="zh">高脆弱</span><span class="tag risk-high" lang="en">High</span></div></a>
+      <a class="report-card" href="USA.html"><div class="flag">🇺🇸</div><h3 lang="zh">美国</h3><h3 lang="en">United States</h3><div class="desc" lang="zh">矿物加工空心化 + 制造生态迁移周期。F-35稀土依赖与CHIPS Act回流的时间赛跑。</div><div class="desc" lang="en">Hollowed mineral processing + manufacturing ecosystem migration. F-35 rare earth dependency vs. CHIPS Act reshoring race.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-mid" lang="zh">中高</span><span class="tag risk-mid" lang="en">Mid-High</span></div></a>
+      <a class="report-card" href="JPN.html"><div class="flag">🇯🇵</div><h3 lang="zh">日本</h3><h3 lang="en">Japan</h3><div class="desc" lang="zh">能源海运100%依赖 + 霍尔木兹敞口。半导体上游材料供应商地位作为缓冲。</div><div class="desc" lang="en">100% seaborne energy + Hormuz exposure. Upstream semiconductor materials supplier position as buffer.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-high" lang="zh">高脆弱</span><span class="tag risk-high" lang="en">High</span></div></a>
+      <a class="report-card" href="DEU.html"><div class="flag">🇩🇪</div><h3 lang="zh">德国</h3><h3 lang="en">Germany</h3><div class="desc" lang="zh">Nord Stream摧毁后的能源结构重构 + 对华制造业出口依赖。机床出口的双向锁定。</div><div class="desc" lang="en">Post-Nord Stream energy reconstruction + manufacturing export to China. Machine tool export as two-way lock-in.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-high" lang="zh">高脆弱</span><span class="tag risk-high" lang="en">High</span></div></a>
+      <a class="report-card" href="GBR.html"><div class="flag">🇬🇧</div><h3 lang="zh">英国</h3><h3 lang="en">United Kingdom</h3><div class="desc" lang="zh">后脱欧金融中心 + 独立核威慑 + 北海油气衰减。美国特殊关系作为结构性依赖。</div><div class="desc" lang="en">Post-Brexit financial hub + independent nuclear deterrent + North Sea decline. US special relationship as structural dependency.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-mid" lang="zh">中等</span><span class="tag risk-mid" lang="en">Mid</span></div></a>
+      <a class="report-card" href="FRA.html"><div class="flag">🇫🇷</div><h3 lang="zh">法国</h3><h3 lang="en">France</h3><div class="desc" lang="zh">核能自主 + 非洲铀供应 + Rafale出口。VVER无依赖（全自研EPR）作为独特位置。</div><div class="desc" lang="en">Nuclear autonomy + African uranium + Rafale exports. Zero VVER dependency (indigenous EPR) as unique position.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-mid" lang="zh">中等</span><span class="tag risk-mid" lang="en">Mid</span></div></a>
+      <a class="report-card" href="ITA.html"><div class="flag">🇮🇹</div><h3 lang="zh">意大利</h3><h3 lang="en">Italy</h3><div class="desc" lang="zh">地中海能源枢纽 + 制造业中游依赖 + 公共债务约束。人口收缩的次优样本。</div><div class="desc" lang="en">Mediterranean energy hub + mid-stream manufacturing + fiscal constraint. Demographic decline subordinate sample.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-mid" lang="zh">中等</span><span class="tag risk-mid" lang="en">Mid</span></div></a>
+      <a class="report-card" href="CAN.html"><div class="flag">🇨🇦</div><h3 lang="zh">加拿大</h3><h3 lang="en">Canada</h3><div class="desc" lang="zh">北美一体化 + 关键矿产储量 + 能源出口。人口年轻化作为北美体系的缓冲。</div><div class="desc" lang="en">North American integration + critical mineral reserves + energy exports. Younger demographics as continental buffer.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-low" lang="zh">低脆弱</span><span class="tag risk-low" lang="en">Low</span></div></a>
+      <a class="report-card" href="KOR.html"><div class="flag">🇰🇷</div><h3 lang="zh">韩国</h3><h3 lang="en">South Korea</h3><div class="desc" lang="zh">64.7%氦气依赖卡塔尔 + 半导体出口模式 + 中美夹缝。HBM地位作为双向筹码。</div><div class="desc" lang="en">64.7% helium from Qatar + semiconductor export model + US-China squeeze. HBM position as bargaining chip.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-high" lang="zh">高脆弱</span><span class="tag risk-high" lang="en">High</span></div></a>
+      <a class="report-card" href="IND.html"><div class="flag">🇮🇳</div><h3 lang="zh">印度</h3><h3 lang="en">India</h3><div class="desc" lang="zh">俄罗斯原油转口 + 多联盟成员 + API对华74%依赖。不站队战略的结构性收益与风险。</div><div class="desc" lang="en">Russian crude arbitrage + multi-alliance membership + 74% API dependency on China. Non-alignment strategy's structural yield and risk.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-mid" lang="zh">中等</span><span class="tag risk-mid" lang="en">Mid</span></div></a>
+      <a class="report-card" href="TWN.html"><div class="flag">🇹🇼</div><h3 lang="zh">台湾</h3><h3 lang="en">Taiwan</h3><div class="desc" lang="zh">四根MAD支柱交叉奇点：TSMC、航运咽喉、军事闪点、联盟信誉。硅盾的结构性含义。</div><div class="desc" lang="en">Singularity where all four MAD pillars intersect: TSMC, shipping chokepoint, military flashpoint, alliance credibility. Silicon shield's structural meaning.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-high" lang="zh">极高</span><span class="tag risk-high" lang="en">Extreme</span></div></a>
+      <a class="report-card" href="RUS.html"><div class="flag">🇷🇺</div><h3 lang="zh">俄罗斯</h3><h3 lang="en">Russia</h3><div class="desc" lang="zh">Rosatom豁免 + 矿产加工 + 能源转售亚洲。制裁下的供应链重构与核燃料杠杆。</div><div class="desc" lang="en">Rosatom sanctions exemption + mineral processing + energy rerouting to Asia. Supply chain reconstitution under sanctions + nuclear fuel leverage.</div><div class="meta-row"><span class="tag country" lang="zh">国家</span><span class="tag country" lang="en">Country</span><span class="tag risk-mid" lang="zh">中等</span><span class="tag risk-mid" lang="en">Mid</span></div></a>
     </div>
   </div>
 
-  <!-- 情景分析 -->
+  <!-- 情景分析 / Scenario Analyses -->
   <div class="category">
     <div class="category-header">
-      <h2>🎲 <span>情景分析</span><span class="sep">·</span><span class="en">Scenario Analyses</span></h2>
-      <span class="count">即将上线 / Coming soon</span>
+      <h2 lang="zh">🎲 情景分析</h2>
+      <h2 lang="en">🎲 Scenario Analyses</h2>
+      <span class="count" lang="zh">即将上线</span>
+      <span class="count" lang="en">Coming soon</span>
     </div>
-    <div class="category-desc">条件变量明确、伪证条件可追踪的情景推演。每个情景标注触发事件、传导路径、时间线和落空条件。<br><span style="color:#94a3b8">Scenarios with explicit condition variables and falsification criteria — triggers, transmission paths, timelines, failure conditions.</span></div>
+    <div class="category-desc" lang="zh">条件变量明确、伪证条件可追踪的情景推演。每个情景标注触发事件、传导路径、时间线和落空条件。</div>
+    <div class="category-desc" lang="en">Scenarios with explicit condition variables and falsification criteria — triggers, transmission paths, timelines, failure conditions.</div>
     <div class="report-grid">
       <div class="report-card upcoming-card">
         <div class="flag">🌊</div>
-        <h3>台海危机情景</h3>
-        <div class="en-title">Taiwan Strait Crisis Scenarios</div>
-        <div class="desc">围岛演习 vs 封锁 vs 登陆三种情景的供应链传导机制。2027年窗口的触发概率评估。<br><span style="color:#94a3b8">Encirclement drills vs. blockade vs. invasion — supply chain transmission per scenario. 2027 trigger probability assessment.</span></div>
-        <div class="meta-row"><span class="tag upcoming">计划中 / Planned</span></div>
+        <h3 lang="zh">台海危机情景</h3>
+        <h3 lang="en">Taiwan Strait Crisis Scenarios</h3>
+        <div class="desc" lang="zh">围岛演习 vs 封锁 vs 登陆三种情景的供应链传导机制。2027年窗口的触发概率评估。</div>
+        <div class="desc" lang="en">Encirclement drills vs. blockade vs. invasion — supply chain transmission per scenario. 2027 trigger probability assessment.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">计划中</span>
+          <span class="tag upcoming" lang="en">Planned</span>
+        </div>
       </div>
       <div class="report-card upcoming-card">
         <div class="flag">⛽</div>
-        <h3>霍尔木兹长期封锁</h3>
-        <div class="en-title">Prolonged Hormuz Blockade</div>
-        <div class="desc">如果封锁持续6个月+：能源、化肥、氦气三重冲击的级联。东亚vs欧洲的不对称受损。<br><span style="color:#94a3b8">If blockade lasts 6+ months: triple cascade of energy, fertilizer, and helium shocks. East Asia vs. Europe asymmetric damage.</span></div>
-        <div class="meta-row"><span class="tag upcoming">计划中 / Planned</span></div>
+        <h3 lang="zh">霍尔木兹长期封锁</h3>
+        <h3 lang="en">Prolonged Hormuz Blockade</h3>
+        <div class="desc" lang="zh">如果封锁持续6个月+：能源、化肥、氦气三重冲击的级联。东亚vs欧洲的不对称受损。</div>
+        <div class="desc" lang="en">If blockade lasts 6+ months: triple cascade of energy, fertilizer, and helium shocks. East Asia vs. Europe asymmetric damage.</div>
+        <div class="meta-row">
+          <span class="tag upcoming" lang="zh">计划中</span>
+          <span class="tag upcoming" lang="en">Planned</span>
+        </div>
       </div>
     </div>
   </div>
@@ -350,10 +289,16 @@ body {
 </div>
 
 <div class="footer">
-  Geopolitical Observatory · 数据来源：USGS · IFR · USITC · ACLED · UCDP · NBS · Bruegel · IAEA<br>
-  所有具体数值声明均经过一手来源核查 · 修正记录见各报告末尾<br>
-  <span style="color:#cbd5e1">All numeric claims verified against primary sources · Corrections logged at the end of each report</span>
+  <div lang="zh">
+    Geopolitical Observatory · 数据来源：USGS · IFR · USITC · ACLED · UCDP · NBS · Bruegel · IAEA<br>
+    所有具体数值声明均经过一手来源核查 · 修正记录见各报告末尾
+  </div>
+  <div lang="en">
+    Geopolitical Observatory · Sources: USGS · IFR · USITC · ACLED · UCDP · NBS · Bruegel · IAEA<br>
+    All numeric claims verified against primary sources · Corrections logged at the end of each report
+  </div>
 </div>
 
+<script src="reports.js"></script>
 </body>
 </html>

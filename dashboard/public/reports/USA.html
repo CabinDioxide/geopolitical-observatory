@@ -1,212 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>United States Supply Chain Vulnerability Assessment (2026)</title>
+<title>美国供应链脆弱性评估 / United States Supply Chain Vulnerability Assessment (2026)</title>
+<link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fafafa; color: #1a1a1a; line-height: 1.6; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
+h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
 h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
 th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
 td { padding: 6px 10px; border-bottom: 1px solid #eee; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 20px; }
+ul { padding-left: 22px; margin-bottom: 14px; }
 li { margin: 6px 0; }
 strong { color: #e63946; }
-a.back { display: inline-block; margin-bottom: 20px; color: #2a9d8f; text-decoration: none; font-size: 14px; }
-a.back:hover { text-decoration: underline; }
-.score { font-size: 48px; font-weight: 800; margin: 10px 0; }
-.score.high { color: #e63946; }
-.score.mid { color: #f97316; }
-.score.low { color: #4ade80; }
+em { color: #2a9d8f; font-style: normal; font-weight: 500; }
+.back-links { margin-bottom: 20px; font-size: 14px; }
+.back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
+.back-links a:hover { text-decoration: underline; }
+.score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
+.score-line strong { font-size: 28px; color: #e63946; font-weight: 800; }
 </style>
 </head>
-<body>
-<a class="back" href="/">← Back to Dashboard</a>
+<body data-lang="zh">
+
+<div class="lang-toggle">
+  <button data-lang="zh">中文</button>
+  <button data-lang="en">EN</button>
+</div>
+
+<div class="back-links">
+  <a href="/reports/" lang="zh">← 返回报告页</a>
+  <a href="/reports/" lang="en">← Back to Reports</a>
+  <a href="/" lang="zh">← 返回地图</a>
+  <a href="/" lang="en">← Back to Map</a>
+</div>
+
+<!-- ============ Chinese version ============ -->
+<section lang="zh">
+
+<h1>美国供应链脆弱性评估（2026）</h1>
 <h1>United States Supply Chain Vulnerability Assessment (2026)</h1>
-<h2>Risk Score: 83/100 — NET VULNERABLE</h2>
+<div class="score-line">风险评分：<strong>83/100</strong> — 净脆弱 / NET VULNERABLE</div>
+
+<h2>执行摘要</h2>
+<p>美国在国防系统、EDA软件、能源大宗商品和农产品上拥有无可匹敌的出口杠杆，但仍然关键性地依赖东亚半导体制造和中国控制的关键矿物加工链。2026年美国力量的悖论在于：华盛顿制定技术封锁的规则，却仍然无法制造其自身AI产业所需的先进芯片。能源独立已基本实现，但矿产和芯片依赖构成了尖锐的结构性脆弱性。</p>
+
+<h2>进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>台湾</td><td>先进逻辑芯片</td><td>$42.0B</td><td>关键</td></tr>
+<tr><td>韩国</td><td>AI用高带宽存储（HBM）</td><td>$12.0B</td><td>关键</td></tr>
+<tr><td>中国</td><td>稀土永磁体（NdFeB）</td><td>$3.0B</td><td>关键</td></tr>
+<tr><td>中国</td><td>精炼钴化学品</td><td>$2.0B</td><td>关键</td></tr>
+<tr><td>中国</td><td>多晶硅与太阳能硅片</td><td>$5.0B</td><td>关键</td></tr>
+<tr><td>中国</td><td>石墨负极材料</td><td>$3.0B</td><td>关键</td></tr>
+<tr><td>中国</td><td>镓与锗</td><td>$0.5B</td><td>关键</td></tr>
+<tr><td>中国</td><td>消费电子</td><td>$145.0B</td><td>高</td></tr>
+<tr><td>中国</td><td>成熟制程芯片与封装</td><td>$18.0B</td><td>高</td></tr>
+<tr><td>中国</td><td>太阳能组件</td><td>$18.0B</td><td>高</td></tr>
+<tr><td>日本</td><td>半导体设备</td><td>$5.8B</td><td>高</td></tr>
+<tr><td>印度</td><td>仿制药与IT服务</td><td>$35.0B</td><td>高</td></tr>
+<tr><td>智利</td><td>铜</td><td>$6.5B</td><td>高</td></tr>
+<tr><td>英国</td><td>医药</td><td>$12.0B</td><td>高</td></tr>
+<tr><td>加拿大</td><td>原油（油砂）</td><td>$80.0B</td><td>高</td></tr>
+</tbody>
+</table>
+
+<h2>出口杠杆</h2>
+<table>
+<thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
+<tbody>
+<tr><td>台湾</td><td>EDA软件与芯片设计IP</td><td>$6.8B</td><td>关键 — 无替代品</td></tr>
+<tr><td>中国</td><td>AI加速器芯片（受限）</td><td>$5.0B</td><td>关键 — 以拒售为政策工具</td></tr>
+<tr><td>沙特阿拉伯</td><td>国防装备（F-15、萨德）</td><td>$15.0B</td><td>关键 — 安全依赖</td></tr>
+<tr><td>台湾</td><td>国防装备（F-16、海马斯）</td><td>$8.0B</td><td>关键 — 对接收方生存相关</td></tr>
+<tr><td>日本</td><td>国防系统（F-35、宙斯盾）</td><td>$12.0B</td><td>关键 — 联盟架构</td></tr>
+<tr><td>加拿大</td><td>汽车与零部件（整合链）</td><td>$45.0B</td><td>关键 — 大陆一体化</td></tr>
+<tr><td>德国</td><td>页岩原油</td><td>$18.0B</td><td>高 — 对俄替代</td></tr>
+<tr><td>德国</td><td>液化天然气</td><td>$25.0B</td><td>高 — 能源安全锚</td></tr>
+<tr><td>德国</td><td>国防装备（F-35、爱国者）</td><td>$20.0B</td><td>高 — 再武装依赖</td></tr>
+<tr><td>韩国</td><td>国防系统（F-35、萨德）</td><td>$8.5B</td><td>高 — 联盟绑定</td></tr>
+</tbody>
+</table>
+
+<h2>咽喉要道暴露</h2>
+<p>美国供应链跨越三大关键咽喉要道：<strong>台湾海峡</strong>（来自台积电的先进芯片进口）、<strong>苏伊士运河</strong>（中东和亚洲货物）、<strong>曼德海峡</strong>（红海路线）。2026年霍尔木兹封锁对美国能源供应的直接影响有限（北美能源独立已基本实现），但台湾海峡暴露对AI行业是生存性的。单一台积电中断将停止支撑美国技术优势的前沿GPU和AI加速器生产。</p>
+
+<h2>主要风险（2026年背景）</h2>
+<ul>
+<li><strong>台积电单点故障</strong>：来自台湾的420亿美元先进逻辑芯片——亚利桑那台积电工厂在2027-2028年才能达到规模；任何台海危机将立即切断美国AI芯片供应</li>
+<li><strong>中国关键矿产反制</strong>：北京的镓/锗出口管制（2023年实施，2025年收紧）直接针对美国半导体和国防供应链；石墨和稀土管制威胁电动车转型</li>
+<li><strong>霍尔木兹封锁次生效应</strong>：虽然美国能源被隔绝，但盟国能源中断（日本、韩国、欧洲）迫使美国动用战略储备并投入海军力量</li>
+<li><strong>消费电子依赖</strong>：1450亿美元的中国消费电子进口代表一个十年内无法回流的规模</li>
+<li><strong>药物API暴露</strong>：印度仿制药供应（350亿美元）本身依赖中国API——一条两步脆弱链</li>
+</ul>
+
+<h2>结构性评估（产缘政治框架）</h2>
+<p>美国在生产网络中位于两个顶端领域——软件/IP（EDA、芯片设计、AI模型）和国防系统——但在硬件制造上占据一个令人震惊的下游位置。这是产缘政治框架所称的"设计-制造断裂"的典型表达：美国设计最先进的芯片但无法制造它们。美国产业政策（CHIPS法案、IRA）的揭示偏好证实了华盛顿对这一结构性弱点的迟到认知，但520亿美元的补贴无法替代东亚用30余年建立的制造生态优势。</p>
+<p>在关键矿产上，美国几乎完全处于下游。中国在稀土、锂、钴、石墨、镓、锗的精炼垄断意味着即使在盟国开采的矿物（澳洲锂、刚果钴）也要经中国加工才能到达美国工厂。IRA的关键矿产条款试图改道这些流动，但建立平行精炼产能至少需要5-8年。</p>
+<p>美国的位置最好理解为<em>"顶端有杠杆，中段有脆弱"</em>。华盛顿可以拒绝中国进入EDA软件和AI芯片（上游控制），但无法在没有中国和台湾配合的情况下获取其自身技术领导地位的物理基底（中游依赖）。这一结构性矛盾是2026年美国经济治国的核心张力。</p>
+
+<h2>建议</h2>
+<ul>
+<li><strong>加速国内芯片制造</strong>：加速台积电亚利桑那、三星泰勒、英特尔俄亥俄项目，到2028年将对台湾的先进芯片供应依赖降至50%以下</li>
+<li><strong>建立关键矿产精炼</strong>：在美国、加拿大、澳大利亚优先建设锂、石墨和稀土加工设施——接受更高成本作为安全溢价</li>
+<li><strong>储备镓与锗</strong>：当前储备危险性低；建立24个月战略缓冲以应对中国出口管制</li>
+<li><strong>多元化药物API</strong>：激励印度建立独立于中国前体的国内API产能；在美国/欧盟建立基本药物API生产</li>
+<li><strong>维持联盟能源保险</strong>：霍尔木兹封锁需要与日本、韩国协调战略储备管理；预置LNG承诺应对盟国供应中断</li>
+</ul>
+
+</section>
+
+<!-- ============ English version ============ -->
+<section lang="en">
+
+<h1>United States Supply Chain Vulnerability Assessment (2026)</h1>
+<h1>美国供应链脆弱性评估</h1>
+<div class="score-line">Risk Score: <strong>83/100</strong> — NET VULNERABLE</div>
+
 <h2>Executive Summary</h2>
 <p>The United States possesses unmatched export leverage in defense systems, EDA software, energy commodities, and agricultural goods, yet remains critically dependent on East Asian semiconductor manufacturing and Chinese-controlled critical mineral processing chains. The paradox of American power in 2026 is that Washington dictates the rules of technology denial while remaining unable to fabricate the advanced chips its own AI industry requires. Energy independence has been largely achieved, but mineral and chip dependencies create acute structural vulnerabilities.</p>
+
 <h2>Import Dependencies (Critical/High)</h2>
 <table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Vulnerability</th>
-</tr>
-</thead>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
-<tr>
-<td>Taiwan</td>
-<td>Leading-Edge Logic Chips</td>
-<td>$42.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>South Korea</td>
-<td>High Bandwidth Memory (HBM) for AI</td>
-<td>$12.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Rare Earth Magnets (NdFeB)</td>
-<td>$3.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Refined Cobalt Chemicals</td>
-<td>$2.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Polysilicon and Solar Wafers</td>
-<td>$5.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Graphite Anode Material</td>
-<td>$3.0B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Gallium and Germanium</td>
-<td>$0.5B</td>
-<td>Critical</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Consumer Electronics</td>
-<td>$145.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Legacy Chips and Packaging</td>
-<td>$18.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>China</td>
-<td>Solar Panels</td>
-<td>$18.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Japan</td>
-<td>Semiconductor Equipment</td>
-<td>$5.8B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>India</td>
-<td>Generic Pharma and IT Services</td>
-<td>$35.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Chile</td>
-<td>Copper</td>
-<td>$6.5B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>UK</td>
-<td>Pharmaceuticals</td>
-<td>$12.0B</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Canada</td>
-<td>Crude Oil (Oil Sands)</td>
-<td>$80.0B</td>
-<td>High</td>
-</tr>
+<tr><td>Taiwan</td><td>Leading-Edge Logic Chips</td><td>$42.0B</td><td>Critical</td></tr>
+<tr><td>South Korea</td><td>High Bandwidth Memory (HBM) for AI</td><td>$12.0B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Rare Earth Magnets (NdFeB)</td><td>$3.0B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Refined Cobalt Chemicals</td><td>$2.0B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Polysilicon and Solar Wafers</td><td>$5.0B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Graphite Anode Material</td><td>$3.0B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Gallium and Germanium</td><td>$0.5B</td><td>Critical</td></tr>
+<tr><td>China</td><td>Consumer Electronics</td><td>$145.0B</td><td>High</td></tr>
+<tr><td>China</td><td>Legacy Chips and Packaging</td><td>$18.0B</td><td>High</td></tr>
+<tr><td>China</td><td>Solar Panels</td><td>$18.0B</td><td>High</td></tr>
+<tr><td>Japan</td><td>Semiconductor Equipment</td><td>$5.8B</td><td>High</td></tr>
+<tr><td>India</td><td>Generic Pharma and IT Services</td><td>$35.0B</td><td>High</td></tr>
+<tr><td>Chile</td><td>Copper</td><td>$6.5B</td><td>High</td></tr>
+<tr><td>UK</td><td>Pharmaceuticals</td><td>$12.0B</td><td>High</td></tr>
+<tr><td>Canada</td><td>Crude Oil (Oil Sands)</td><td>$80.0B</td><td>High</td></tr>
 </tbody>
 </table>
+
 <h2>Export Leverage</h2>
 <table>
-<thead>
-<tr>
-<th>Destination</th>
-<th>Commodity</th>
-<th>Value</th>
-<th>Leverage Type</th>
-</tr>
-</thead>
+<thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr>
-<td>Taiwan</td>
-<td>EDA Software and Chip Design IP</td>
-<td>$6.8B</td>
-<td>Critical — no alternative exists</td>
-</tr>
-<tr>
-<td>China</td>
-<td>AI Accelerator Chips (restricted)</td>
-<td>$5.0B</td>
-<td>Critical — denial as policy tool</td>
-</tr>
-<tr>
-<td>Saudi Arabia</td>
-<td>Defense Equipment (F-15, THAAD)</td>
-<td>$15.0B</td>
-<td>Critical — security dependency</td>
-</tr>
-<tr>
-<td>Taiwan</td>
-<td>Defense Equipment (F-16, HIMARS)</td>
-<td>$8.0B</td>
-<td>Critical — existential for recipient</td>
-</tr>
-<tr>
-<td>Japan</td>
-<td>Defense Systems (F-35, Aegis)</td>
-<td>$12.0B</td>
-<td>Critical — alliance architecture</td>
-</tr>
-<tr>
-<td>Canada</td>
-<td>Autos and Parts (integrated chain)</td>
-<td>$45.0B</td>
-<td>Critical — continental integration</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>Crude Oil (Shale)</td>
-<td>$18.0B</td>
-<td>High — post-Russia substitution</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>LNG</td>
-<td>$25.0B</td>
-<td>High — energy security anchor</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>Defense Equipment (F-35, Patriot)</td>
-<td>$20.0B</td>
-<td>High — rearmament dependency</td>
-</tr>
-<tr>
-<td>South Korea</td>
-<td>Defense Systems (F-35, THAAD)</td>
-<td>$8.5B</td>
-<td>High — alliance binding</td>
-</tr>
+<tr><td>Taiwan</td><td>EDA Software and Chip Design IP</td><td>$6.8B</td><td>Critical — no alternative exists</td></tr>
+<tr><td>China</td><td>AI Accelerator Chips (restricted)</td><td>$5.0B</td><td>Critical — denial as policy tool</td></tr>
+<tr><td>Saudi Arabia</td><td>Defense Equipment (F-15, THAAD)</td><td>$15.0B</td><td>Critical — security dependency</td></tr>
+<tr><td>Taiwan</td><td>Defense Equipment (F-16, HIMARS)</td><td>$8.0B</td><td>Critical — existential for recipient</td></tr>
+<tr><td>Japan</td><td>Defense Systems (F-35, Aegis)</td><td>$12.0B</td><td>Critical — alliance architecture</td></tr>
+<tr><td>Canada</td><td>Autos and Parts (integrated chain)</td><td>$45.0B</td><td>Critical — continental integration</td></tr>
+<tr><td>Germany</td><td>Crude Oil (Shale)</td><td>$18.0B</td><td>High — post-Russia substitution</td></tr>
+<tr><td>Germany</td><td>LNG</td><td>$25.0B</td><td>High — energy security anchor</td></tr>
+<tr><td>Germany</td><td>Defense Equipment (F-35, Patriot)</td><td>$20.0B</td><td>High — rearmament dependency</td></tr>
+<tr><td>South Korea</td><td>Defense Systems (F-35, THAAD)</td><td>$8.5B</td><td>High — alliance binding</td></tr>
 </tbody>
 </table>
+
 <h2>Chokepoint Exposure</h2>
 <p>US supply chains transit three critical chokepoints: <strong>Taiwan Strait</strong> (advanced chip imports from TSMC), <strong>Suez Canal</strong> (Middle Eastern and Asian goods), and <strong>Bab el-Mandeb</strong> (Red Sea routing). The 2026 Hormuz blockade has limited direct impact on US energy supply (North American energy independence largely achieved), but Taiwan Strait exposure is existential for the AI sector. A single TSMC disruption would halt production of leading-edge GPUs and AI accelerators that underpin US technological superiority.</p>
+
 <h2>Key Risks (2026 Context)</h2>
 <ul>
 <li><strong>TSMC single-point failure</strong>: $42B in leading-edge logic chips from Taiwan — Arizona TSMC fabs not at scale until 2027-2028; any Taiwan Strait crisis halts US AI chip supply</li>
@@ -215,10 +176,12 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Consumer electronics dependency</strong>: $145B Chinese consumer electronics imports represent scale that cannot be reshored within a decade</li>
 <li><strong>Pharmaceutical API exposure</strong>: India's generics supply ($35B) itself depends on Chinese APIs — a two-step vulnerability chain</li>
 </ul>
+
 <h2>Structural Assessment (Chanyuan Politics Framework)</h2>
 <p>The United States sits at the apex of the production network in two domains — software/IP (EDA, chip design, AI models) and defense systems — while occupying a strikingly downstream position in hardware manufacturing. This is the quintessential expression of what the chanyuan framework identifies as the "design-fabrication gap": America designs the most advanced chips but cannot make them. The revealed preference of US industrial policy (CHIPS Act, IRA) confirms Washington's belated recognition of this structural weakness, but $52B in subsidies cannot substitute for the 30+ years of manufacturing ecosystem development that gives East Asia its advantage.</p>
 <p>In critical minerals, the US is almost entirely downstream. Chinese refining monopolies in rare earths, lithium, cobalt, graphite, gallium, and germanium mean that even minerals mined in allied countries (Australian lithium, Congolese cobalt) flow through Chinese processing before reaching American factories. The IRA's critical mineral provisions attempt to reroute these flows, but building parallel refining capacity requires 5-8 years minimum.</p>
-<p>The US position is best understood as "leverage at the top, vulnerability in the middle." Washington can deny China access to EDA software and AI chips (upstream control), but it cannot source the physical substrates of its own technological leadership without Chinese and Taiwanese cooperation (midstream dependency). This structural contradiction is the central tension of US economic statecraft in 2026.</p>
+<p>The US position is best understood as <em>"leverage at the top, vulnerability in the middle."</em> Washington can deny China access to EDA software and AI chips (upstream control), but it cannot source the physical substrates of its own technological leadership without Chinese and Taiwanese cooperation (midstream dependency). This structural contradiction is the central tension of US economic statecraft in 2026.</p>
+
 <h2>Recommendations</h2>
 <ul>
 <li><strong>Accelerate domestic chip fabrication</strong>: Fast-track TSMC Arizona, Samsung Taylor, and Intel Ohio to reduce Taiwan dependency below 50% of leading-edge supply by 2028</li>
@@ -227,5 +190,9 @@ a.back:hover { text-decoration: underline; }
 <li><strong>Diversify pharmaceutical APIs</strong>: Incentivize India to build domestic API capacity independent of Chinese precursors; establish US/EU API production for essential medicines</li>
 <li><strong>Maintain alliance energy insurance</strong>: Hormuz blockade requires coordinated SPR management with Japan and Korea; pre-position LNG commitments for allied supply disruption</li>
 </ul>
+
+</section>
+
+<script src="reports.js"></script>
 </body>
 </html>
