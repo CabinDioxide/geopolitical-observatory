@@ -1,0 +1,25 @@
+# Private knowledge base and research materials — NEVER commit
+CLAUDE.md
+wiki/
+raw/
+conversations/
+daily/
+
+# Tool/editor state
+.claude/
+.obsidian/
+.DS_Store
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+*.key
+credentials.json

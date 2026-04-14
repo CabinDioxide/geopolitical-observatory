@@ -25,6 +25,26 @@ body {
 }
 #control-panel h2 { font-size: 15px; font-weight: 600; color: #f0f0f0; margin-bottom: 2px; }
 #control-panel .meta { font-size: 11px; color: #888; margin-bottom: 10px; }
+#reports-entry {
+  display: block;
+  background: linear-gradient(135deg, rgba(42,157,143,0.15) 0%, rgba(42,157,143,0.08) 100%);
+  border: 1px solid #2a9d8f;
+  border-radius: 6px;
+  color: #2a9d8f;
+  text-align: center;
+  padding: 9px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: all 0.15s;
+  letter-spacing: 0.3px;
+}
+#reports-entry:hover {
+  background: rgba(42,157,143,0.25);
+  color: #3fd4c2;
+  border-color: #3fd4c2;
+}
 .section { margin-bottom: 10px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.06); }
 .section h3 { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 6px; }
 

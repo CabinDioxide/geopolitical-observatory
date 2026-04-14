@@ -35,6 +35,13 @@ def index():
 def static_files(path):
     """Serve static files from public/ first, then try data/."""
     public_path = PUBLIC_DIR / path
+
+    # Directory request: serve index.html from it
+    if public_path.is_dir():
+        index_path = public_path / "index.html"
+        if index_path.exists():
+            return send_from_directory(public_path, "index.html")
+
     if public_path.exists():
         return send_from_directory(PUBLIC_DIR, path)
 
