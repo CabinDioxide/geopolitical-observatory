@@ -53,7 +53,7 @@ China's supply lines transit seven major chokepoints: **Strait of Hormuz** (Gulf
 - **Food security**: Soybean dependence on Brazil ($36B) and US ($15B) creates leverage that could be weaponized in trade conflicts
 - **Mineral processing backlash**: Western IRA/CRMA legislation aims to break Chinese refining monopoly in lithium, cobalt, and rare earths within 5-8 years
 
-## Structural Assessment (Chanyuan Politics Framework)
+## Structural Assessment (Supply Chain Geopolitics Framework)
 
 China is the preeminent case of the "assembly fallacy" in reverse — widely perceived as a mere assembler, it has systematically moved upstream into critical material processing and component manufacturing over the past decade. In rare earths, lithium refining, cobalt processing, graphite, gallium, and germanium, China controls 60-90% of global midstream refining. This is not the position of a downstream assembler but of an upstream controller of material chokepoints. Beijing's revealed preference — aggressive investment in mineral processing capacity across Africa and Latin America, export controls on gallium/germanium — confirms that Chinese strategists understand and exploit production network sovereignty.
 

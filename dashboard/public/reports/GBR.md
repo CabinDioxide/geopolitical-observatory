@@ -32,9 +32,9 @@ UK supply chains transit **Suez Canal** (Asia-Europe container shipping), **Bab 
 - **Post-Brexit trade friction**: Regulatory divergence from EU increases costs and complexity for supply chain routing through continental Europe
 - **Telecom dependency on China**: Despite the Huawei ban, legacy infrastructure and consumer electronics dependency on Chinese manufacturing persists at $22B
 
-## Structural Assessment (Chanyuan Politics Framework)
+## Structural Assessment (Supply Chain Geopolitics Framework)
 
-The UK exemplifies a post-industrial economy that has traded manufacturing sovereignty for financial and services dominance. In chanyuan terms, the UK is neither an upstream controller nor a downstream assembler — it operates largely outside the physical production network, leveraging IP, financial services, and pharmaceutical R&D as its primary instruments of economic influence. This positioning insulates the UK from some supply chain shocks (it has less to lose in manufacturing disruption) but also means it has limited leverage in the physical goods chains that determine material power.
+The UK exemplifies a post-industrial economy that has traded manufacturing sovereignty for financial and services dominance. In supply chain geopolitics terms, the UK is neither an upstream controller nor a downstream assembler — it operates largely outside the physical production network, leveraging IP, financial services, and pharmaceutical R&D as its primary instruments of economic influence. This positioning insulates the UK from some supply chain shocks (it has less to lose in manufacturing disruption) but also means it has limited leverage in the physical goods chains that determine material power.
 
 The UK's pharmaceutical export leverage ($12B to the US) is its most significant production network asset, but it sits in a peculiar position: British drugs depend on Indian generics manufacturing, which in turn depends on Chinese API supply. The UK is thus an upstream IP holder but a midstream-dependent manufacturer — its leverage over the US is only as secure as the India-China API supply chain beneath it.
 

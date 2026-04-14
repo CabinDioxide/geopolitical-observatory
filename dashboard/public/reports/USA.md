@@ -53,9 +53,9 @@ US supply chains transit three critical chokepoints: **Taiwan Strait** (advanced
 - **Consumer electronics dependency**: $145B Chinese consumer electronics imports represent scale that cannot be reshored within a decade
 - **Pharmaceutical API exposure**: India's generics supply ($35B) itself depends on Chinese APIs — a two-step vulnerability chain
 
-## Structural Assessment (Chanyuan Politics Framework)
+## Structural Assessment (Supply Chain Geopolitics Framework)
 
-The United States sits at the apex of the production network in two domains — software/IP (EDA, chip design, AI models) and defense systems — while occupying a strikingly downstream position in hardware manufacturing. This is the quintessential expression of what the chanyuan framework identifies as the "design-fabrication gap": America designs the most advanced chips but cannot make them. The revealed preference of US industrial policy (CHIPS Act, IRA) confirms Washington's belated recognition of this structural weakness, but $52B in subsidies cannot substitute for the 30+ years of manufacturing ecosystem development that gives East Asia its advantage.
+The United States sits at the apex of the production network in two domains — software/IP (EDA, chip design, AI models) and defense systems — while occupying a strikingly downstream position in hardware manufacturing. This is the quintessential expression of what the supply chain geopolitics framework identifies as the "design-fabrication gap": America designs the most advanced chips but cannot make them. The revealed preference of US industrial policy (CHIPS Act, IRA) confirms Washington's belated recognition of this structural weakness, but $52B in subsidies cannot substitute for the 30+ years of manufacturing ecosystem development that gives East Asia its advantage.
 
 In critical minerals, the US is almost entirely downstream. Chinese refining monopolies in rare earths, lithium, cobalt, graphite, gallium, and germanium mean that even minerals mined in allied countries (Australian lithium, Congolese cobalt) flow through Chinese processing before reaching American factories. The IRA's critical mineral provisions attempt to reroute these flows, but building parallel refining capacity requires 5-8 years minimum.
 
