@@ -6,23 +6,31 @@
 <title>印度供应链脆弱性评估 / India Supply Chain Vulnerability Assessment (2026)</title>
 <link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
-h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
-h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
-th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
-td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px; }
+h1 { font-size: 26px; border-bottom: 2px solid #f97316; padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 14px; }
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 32px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 20px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #f97316; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 7px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 22px; margin-bottom: 14px; }
-li { margin: 6px 0; }
-strong { color: #e63946; }
-em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 .back-links { margin-bottom: 20px; font-size: 14px; }
 .back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
 .back-links a:hover { text-decoration: underline; }
 .score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
 .score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 20px 0 28px; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 13px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #fef3e2; border-left: 3px solid #d97706; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+.chain-trace { background: #f5f0ff; border: 1px solid #c4b5fd; border-radius: 6px; padding: 14px 16px; margin: 16px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; line-height: 1.6; white-space: pre-line; }
 </style>
 </head>
 <body data-lang="zh">
@@ -45,54 +53,203 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>India Supply Chain Vulnerability Assessment (2026)</h1>
 <div class="score-line">风险评分：<strong>67/100</strong> — 净脆弱 / NET VULNERABLE</div>
 
-<h2>执行摘要</h2>
-<p>印度的脆弱性画像反映了一个正处于快速工业发展中、尚未建立起足以隔绝外部冲击的生产网络深度的经济体。对中国药物API和太阳能制造投入的关键依赖，加上对经霍尔木兹原油的高能源进口暴露，构成了印度增长中的IT服务和仿制药出口无法抵消的结构性脆弱性。印度在俄罗斯与西方之间的战略对冲提供了价格优势（折价俄罗斯原油），但使供应链韧性规划复杂化。</p>
+<div class="tldr">
+<h3>核心论点</h3>
+<p>印度是<strong>"崛起中的组装者"——一个结构空洞的规模大国</strong>。劳动力规模（~9.9亿，已超越中国）和制造业抱负巨大，但产业基础严重空洞：74%药物API依赖中国、太阳能电池98%依赖中国、石油35%经霍尔木兹、国防核心平台依赖俄罗斯。印度最大的公共成就（"发展中世界的药房"——供应美国40%仿制药）是一个<em>结构性虚假的主权</em>——药物的最终剂型在印度制造但活性成分来自中国。这是"组装谬误"的教科书案例。印度的战略对冲策略（同时加入QUAD、上合组织、金砖+，进口折价俄油再精炼出口欧洲）在<em>多极博弈</em>中确实生效，带来短期利益——但长期仍受制于不控制关键投入这一结构事实。印度最具长期意义的机会是<strong>人口优势+英语世界准入+美国"去中国化"需求</strong>的组合，但能否抓住取决于能否在10年内把PLI计划从"进口替代游戏"转变为真正的产业升级。</p>
+</div>
 
-<h2>进口依赖（关键/高）</h2>
+<h2>一、结构性画像：规模与空洞的矛盾</h2>
+
 <table>
-<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<thead><tr><th>维度</th><th>印度位置</th><th>结构含义</th></tr></thead>
 <tbody>
-<tr><td>中国</td><td>药物活性成分（API）</td><td>$6.5B</td><td>关键 — 印度API进口的68%</td></tr>
-<tr><td>中国</td><td>太阳能硅片与电池</td><td>$8.0B</td><td>关键 — 能源转型瓶颈</td></tr>
-<tr><td>沙特阿拉伯</td><td>原油</td><td>$35.0B</td><td>高 — 海湾主要能源</td></tr>
-<tr><td>澳大利亚</td><td>冶金煤与动力煤</td><td>$20.0B</td><td>高 — 钢铁与电力部门</td></tr>
-<tr><td>俄罗斯</td><td>国防装备（S-400、Su-30MKI）</td><td>$7.0B</td><td>高 — 军事平台依赖</td></tr>
+<tr><td>人口（劳动年龄）</td><td>~9.9亿，已超越中国</td><td>规模优势</td></tr>
+<tr><td>仿制药</td><td>全球20%量供应 + 40%美国</td><td>空洞——74% API来自中国</td></tr>
+<tr><td>IT服务</td><td>全球外包中心</td><td>真正的英语+教育+成本优势</td></tr>
+<tr><td>太阳能组件组装</td><td>快速增长（PLI计划）</td><td>98%硅片/电池进口自中国</td></tr>
+<tr><td>国防平台</td><td>S-400、Su-30MKI、T-90</td><td>70%俄罗斯依赖</td></tr>
+<tr><td>能源</td><td>85%石油进口</td><td>对霍尔木兹+俄油双通道依赖</td></tr>
+<tr><td>钢铁</td><td>全球第二产钢国</td><td>$20B澳洲煤依赖</td></tr>
 </tbody>
 </table>
 
-<h2>出口杠杆</h2>
+<div class="insight">
+<strong>"崛起中的组装者"陷阱</strong>：印度的工业增长模式在过去15年一直是<em>组装而非制造</em>——苹果iPhone组装、小米代工、太阳能组装、制药组装。组装模式依赖两个条件：(a) 上游投入（芯片、API、光伏电池）能够持续进口；(b) 下游市场（主要是美国+欧洲）开放。任何一条件动摇，组装优势都悬空。这与2000年代中国的早期模式类似，但有关键差别：当时的中国快速从组装向上游攀升；印度到目前为止<em>上游攀升速度远慢于组装扩张速度</em>——PLI计划正在测试能否改变这一轨迹。
+</div>
+
+<h2>二、进口依赖（关键/高）</h2>
+<table>
+<thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
+<tbody>
+<tr><td>中国</td><td>药物活性成分（API）</td><td>$6.5B</td><td>关键 — 印度API进口的74%</td></tr>
+<tr><td>中国</td><td>太阳能硅片与电池</td><td>$8.0B</td><td>关键 — 能源转型瓶颈</td></tr>
+<tr><td>沙特阿拉伯</td><td>原油</td><td>$35.0B</td><td>高 — 经霍尔木兹</td></tr>
+<tr><td>澳大利亚</td><td>冶金煤+动力煤</td><td>$20.0B</td><td>高 — 钢铁+电力</td></tr>
+<tr><td>俄罗斯</td><td>国防装备（S-400、Su-30MKI）</td><td>$7.0B</td><td>高 — 军事平台依赖</td></tr>
+<tr><td>俄罗斯</td><td>折价原油</td><td>$13.0B+</td><td>高 — 非霍尔木兹路线</td></tr>
+</tbody>
+</table>
+
+<h2>三、出口杠杆</h2>
 <table>
 <thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
 <tbody>
-<tr><td>美国</td><td>仿制药与IT服务</td><td>$35.0B</td><td>高 — 医疗体系依赖</td></tr>
+<tr><td>美国</td><td>仿制药 + IT服务</td><td>$35.0B</td><td>高 — 医疗体系依赖（含药物+IT）</td></tr>
 <tr><td>肯尼亚</td><td>仿制药</td><td>$9.0B</td><td>高 — 发展中世界医疗供应</td></tr>
 </tbody>
 </table>
 
-<h2>咽喉要道暴露</h2>
-<p>印度供应线跨越四大咽喉要道：<strong>霍尔木兹海峡</strong>（沙特原油350亿美元——现已封锁）、<strong>曼德海峡</strong>（红海能源和货物路线）、<strong>马六甲海峡</strong>（东南亚和中国货物）、<strong>苏伊士运河</strong>（欧洲贸易流）。2026年霍尔木兹封锁直接威胁350亿美元沙特原油进口，但印度的折价俄罗斯原油（460亿美元经非霍尔木兹路线）提供部分缓冲。印度西海岸港口（孟买、JNPT、坎德拉）对影响阿拉伯海运输走廊的霍尔木兹和曼德海峡中断特别暴露。</p>
+<h2>四、结构性传导链</h2>
 
-<h2>主要风险（2026年背景）</h2>
+<h3>传导链1：药物的三边空心化——印度-中国-美国</h3>
+<div class="chain-trace">印度"发展中世界的药房"基础设施：
+  全球仿制药量20% + 美国40%
+  ↓
+但印度74% API（活性成分）来自中国
+  发酵类API（环丙沙星等抗生素）~100%中国
+  ↓
+中国对印API管制 → 印度仿制药产能受限
+  ↓
+美国医院系统基础药物短缺（经过印度传导）
+  ↓
+关键含义：
+  [a] 即使美国与中国完全脱钩贸易，美国医药仍通过印度暴露于中国
+  [b] 即使印度扩大"发展中世界药房"角色，它依然无法声称"药物主权"
+  [c] 三边脆弱不是双边脱钩政策能解决的</div>
+<p>这条三边链是<a href="USA.html">美国报告</a>传导链3的关键节点。印度的位置<em>看似</em>是"帮助美国降低对中国依赖"（仿制药进口从中国转向印度），但实际上<strong>把双边依赖隐藏为三边依赖</strong>。</p>
+
+<h3>传导链2：霍尔木兹 + 俄罗斯原油的双源对冲</h3>
+<div class="chain-trace">霍尔木兹封锁
+  ↓
+印度$35B沙特原油直接切断
+  ↓
+印度SPR仅约10天（主要经济体中最低）
+  ↓
+但印度拥有重要缓冲：
+  - 俄罗斯折价原油$13B+（经黑海/太平洋非霍尔木兹路线）
+  - 印度炼油厂精炼俄油后部分出口欧洲（法律规避：一旦精炼即"印度产品"）
+  ↓
+这使印度在霍尔木兹危机中比其他亚洲能源消费国（日韩）位置更好
+  ↓
+但仍面临：沙特原油无法被完全俄罗斯替代（全球市场紧张+运输瓶颈）
+  ↓
+结果：印度不会像日韩那样遭受工业停摆，但能源成本明显上升</div>
+
+<h3>传导链3：太阳能的PLI困境</h3>
+<div class="chain-trace">印度雄心勃勃的太阳能目标（2030年500GW）
+  ↓
+依赖中国硅片（80%+）+ 电池（95%+）
+  ↓
+印度PLI计划（~200亿美元）目标在国内建立组件+电池+硅片制造
+  ↓
+2026年进展：
+  - 组件组装：快速增长（Adani、Reliance、Waaree等）
+  - 电池：起步阶段（Adani 5GW等项目2025-2026上线）
+  - 硅片：几乎为零
+  - 多晶硅：极少
+  ↓
+关键问题：中国的规模成本优势仍然巨大（甚至加上关税）
+  ↓
+如果PLI不成功：印度继续组装但不控制上游——能源转型战略上仍受制于中国
+  ↓
+如果PLI成功但时间延迟：中国已在新技术（钙钛矿、HJT）领先 → 印度再次追赶</div>
+
+<h2>五、时间变量</h2>
+
+<table>
+<thead><tr><th>维度</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>劳动年龄人口</td><td>~9.9亿（超越中国）</td><td>~10.2亿</td><td>~10.5亿（2040前持续增长）</td></tr>
+<tr><td>GDP增长率</td><td>~6-7%</td><td>~6%</td><td>~5-6%</td></tr>
+<tr><td>API国产化率</td><td>~26%</td><td>~40%（如PLI成功）</td><td>~55-60%</td></tr>
+<tr><td>太阳能电池国产化率</td><td>~5%</td><td>~30%</td><td>~50-60%</td></tr>
+<tr><td>制造业GDP占比</td><td>~17%</td><td>~19%（Make in India目标25%）</td><td>~20-22%</td></tr>
+<tr><td>国防采购俄罗斯依赖</td><td>~70%</td><td>~55%（Rafale + 国产）</td><td>~40%</td></tr>
+<tr><td>SPR覆盖天数</td><td>~10天</td><td>~25天</td><td>~45天</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>印度的时间双刃剑</strong>：人口和GDP增长提供时间（到2040年前印度是全球人口增量的主要来源），但几乎所有供应链关键维度的"替代速度"落后于需求增长速度。比如：太阳能国产化到30%需要3年，但同期印度太阳能装机容量会翻倍——<em>国产化的绝对数量在增长，但占比可能不会提高</em>。这是"跑步机问题"——要原地保持位置就需要加速前进。
+</div>
+
+<h2>六、情景分析</h2>
+
+<h3>情景A：霍尔木兹持续封锁6+个月</h3>
 <ul>
-<li><strong>霍尔木兹封锁能源影响</strong>：350亿美元沙特原油直接受威胁；俄罗斯原油提供缓冲但无法短期完全替代海湾供应；印度SPR仅覆盖约10天</li>
-<li><strong>中国药物API依赖</strong>：印度是"发展中世界的药房"，但68%的药物API从中国进口——中国API供应中断将在全球仿制药市场级联</li>
-<li><strong>太阳能转型被中国卡住</strong>：印度雄心勃勃的太阳能目标依赖80亿美元中国太阳能硅片和电池；国内制造（PLI计划）距规模化还有3-5年</li>
-<li><strong>俄罗斯国防平台依赖</strong>：S-400、Su-30MKI、T-90平台需要俄罗斯备件和弹药；乌克兰战争转移俄罗斯生产能力，西方制裁使采购复杂化</li>
-<li><strong>煤炭转型两难</strong>：200亿美元澳大利亚煤炭进口同时为钢铁生产和发电供能；转型需要同时替代两个关键部门</li>
+<li><strong>触发条件</strong>：已发生</li>
+<li><strong>传导</strong>：沙特原油断供 → 俄罗斯原油补充部分缺口（已经运转）→ 成本上升 → 通胀压力（印度CPI敏感）→ 政治压力但可管理</li>
+<li><strong>落空条件</strong>：霍尔木兹3月内重开 / 美伊协议</li>
+<li><strong>结构性影响</strong>：俄印能源联系加深 → 与美国对印战略（对俄制裁执行）产生摩擦</li>
 </ul>
 
-<h2>结构性评估（产缘政治框架）</h2>
-<p>印度在产缘政治框架中占据"崛起中的组装者"位置——一个拥有巨大劳动力潜力和日益增长的制造抱负，但缺乏赋予生产网络主权的上游控制或中游加工能力的经济体。印度最重要的生产网络位置是仿制药，它控制全球约20%的按量计仿制药供应。但这一位置在结构上是空洞的：印度药物"主权"被68%的中国API依赖削弱。<em>印度组装最终剂型但不控制活性成分供应链</em>。</p>
-<p>太阳能故事重复这一模式。印度设定雄心勃勃的太阳能部署目标，并通过生产挂钩激励（PLI）计划吸引制造投资，但供应链仍被中国主导。印度太阳能组件组装依赖中国硅片和电池——没有上游控制的组装，这是产缘政治框架识别为发展中经济体陷阱的典型"组装谬误"。</p>
-<p>印度在战略对冲上的揭示偏好——购买折价俄罗斯原油同时维持与美国的安全伙伴关系——展示了一种对生产网络导航的务实方法。新德里正确地识别出能源供应多元化（任何来源、不论地缘政治站位）比与单一阵营的意识形态对齐提供更真实的主权。然而，这种对冲策略有极限：印度无法同时依赖俄罗斯国防平台、中国API和沙特原油而不接受对三个供应商地缘政治计算的脆弱性。</p>
-
-<h2>建议</h2>
+<h3>情景B：中国对印API管制（2026-2028）</h3>
 <ul>
-<li><strong>建设国内药物API产能</strong>：这是印度最紧迫的单一供应链优先事项；API制造的PLI计划应扩大3-5倍，加速时间表并建立专门化工产业园区</li>
-<li><strong>加速太阳能制造一体化</strong>：从组件组装超越至硅片和电池生产；与非中国制造商（First Solar、Meyer Burger）的合资提供技术转移替代</li>
-<li><strong>扩大战略石油储备</strong>：目前10天覆盖危险地不足；通过洞库建设和商业储存协议在3年内目标45天SPR</li>
-<li><strong>多元化国防采购</strong>：通过扩大阵风订单、国内Tejas生产和美国国防合作降低俄罗斯平台依赖；优先选择具备国内维护能力的平台</li>
-<li><strong>发展关键矿产加工</strong>：印度有锂（查谟克什米尔）、稀土（奥里萨）和钍的矿藏；加工能力开发将降低中国中游依赖</li>
+<li><strong>触发条件</strong>：中印边境冲突升级、印度加入美国技术联盟、印度参与对华芯片管制</li>
+<li><strong>传导</strong>：API断供 → 印度仿制药产能下降 → 对美药物出口减少 → <em>美国医院药物短缺</em>（两步传导）+ 印度国内基础药物供应紧张 → 社会政治压力</li>
+<li><strong>落空条件</strong>：(i) PLI加速至规模化；(ii) 中国避免使用以保留杠杆</li>
+<li><strong>结构性影响</strong>：这是中国对印<em>最有效</em>的供应链武器——比稀土影响更直接、更快速</li>
+</ul>
+
+<h3>情景C：台海危机（2027-2032）</h3>
+<ul>
+<li><strong>触发条件</strong>：见CHN情景B</li>
+<li><strong>印度方向传导</strong>：(i) 全球能源价格飙升；(ii) 仿制药出口中断（中国API断供）；(iii) 印度可以选择中立——理论上是主要受益者（吸收中国失去的供应链重定位）</li>
+<li><strong>落空条件</strong>：见CHN报告</li>
+<li><strong>结构性影响</strong>：这是印度长期战略的<em>关键情景</em>——如果印度能在台海后成为"替代中国"的组装中心，其经济规模会跃升</li>
+</ul>
+
+<h2>七、结构性评估</h2>
+
+<h3>"崛起中的组装者"——产缘政治框架的过渡形态</h3>
+<p>印度是产缘政治框架中最有趣的<em>过渡案例</em>——它在从"纯下游"（经典发展中国家）向"中游组装者"移动，但尚未成为真正的中游控制者（像德国、日本、韩国）。这一过渡的关键问题不是"GDP能增长多少"，而是<strong>能否在组装基础上建立上游能力</strong>。中国在1990-2010年间成功完成了这一跃升（从组装到材料加工到部分上游控制）；印度能否重演？</p>
+<p>几个结构性因素使印度的跃升更难：</p>
+<ul>
+<li><em>劳动力优势但教育碎片化</em>——印度大规模劳动力中受过良好工程训练的比例仍远低于中国同等发展阶段</li>
+<li><em>基础设施瓶颈</em>——电力、港口、铁路仍滞后，影响工业规模扩张速度</li>
+<li><em>土地征用困难</em>——土地法框架使大规模工厂建设比中国慢</li>
+<li><em>联邦结构</em>——省级政策差异使全国统一产业政策难以执行</li>
+</ul>
+
+<h3>非站队作为战略——结构性可行性</h3>
+<p>印度的"多极对冲"策略（同时在QUAD、上合组织、金砖+中保持成员身份，同时进口俄油销往欧洲）在2026年运作良好。但这种策略的<em>结构可行性</em>取决于：</p>
+<ul>
+<li>美中冲突不升级到迫使选择站队的程度</li>
+<li>印度经济体量增长到让各方都需要印度合作</li>
+<li>印度不在任何具体危机中被要求做出公开表态</li>
+</ul>
+<p>台海危机或霍尔木兹长期封锁都可能<em>强制打破</em>印度的多极平衡——德里将被迫选择站队，且任何选择都有代价。</p>
+
+<h3>与主题报告的交叉链接</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">供应链MAD</a></strong>：印度是MAD中的"中间国家侵蚀者"——通过俄油转口、对华API依赖等，印度以实际行动说明二元脱钩叙事在结构上不可行</li>
+<li><strong><a href="semiconductor-supply-chain.html">半导体六层迷宫</a></strong>：印度在半导体上处于极早期（Vedanta/Tata-PSMC合资等）。10年内难以成为重要玩家</li>
+<li><strong><a href="ai-power-infrastructure.html">AI物理约束</a></strong>：印度AI电力基础设施正在被Reliance、Adani等私企建设，配合美国云服务商——可能成为亚洲次要AI基建中心</li>
+</ul>
+
+<h2>八、建议（按时间分层）</h2>
+
+<h3>2026-2028 紧急</h3>
+<ul>
+<li>API国产化是印度最紧迫的单一供应链优先事项——PLI计划规模扩大3-5倍，加速时间表和专门化工业园建设</li>
+<li>太阳能电池+硅片制造一体化（从组装向上游）——与非中国厂商（First Solar、Meyer Burger）合资提供技术替代路径</li>
+<li>SPR扩建至45天（目前10天极危险）——洞穴建设+商业储存协议</li>
+<li>降低国防对俄依赖——扩大阵风订单、国产Tejas、美国国防合作；优先支持国内维护能力平台</li>
+</ul>
+
+<h3>2028-2032 结构建设</h3>
+<ul>
+<li>关键矿产加工——印度有锂（查谟克什米尔）、稀土（奥里萨）、钍储量，加工能力投资将降低中国中游依赖</li>
+<li>半导体——接受10-15年长期赌注，继续PSMC/Vedanta等项目扩展</li>
+<li>铁路+港口基础设施加速——工业扩张的物流基础</li>
+<li>"Make in India 2.0"——从组装导向转向上游制造激励</li>
+</ul>
+
+<h3>2032+ 长期战略</h3>
+<ul>
+<li>利用人口窗口（2040年前持续增长）——同时建立老龄化前的产业能力</li>
+<li>扩展在印太地区的经济影响——东非、中东、东南亚——作为"第三个极"</li>
+<li>英语+法律+民主体制的软实力——不是替代中国制造，是建立<em>替代中国的价值主张</em></li>
 </ul>
 
 </section>
@@ -103,54 +260,203 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>印度供应链脆弱性评估</h1>
 <div class="score-line">Risk Score: <strong>67/100</strong> — NET VULNERABLE</div>
 
-<h2>Executive Summary</h2>
-<p>India's vulnerability profile reflects an economy in the midst of rapid industrial development that has not yet built the production network depth to insulate itself from external shocks. Critical dependencies on Chinese pharmaceutical APIs and solar manufacturing inputs, combined with high energy import exposure to Hormuz-transiting crude oil, create structural vulnerabilities that India's growing IT services and generic pharmaceutical exports cannot offset. India's strategic hedging between Russia and the West provides pricing advantages (discounted Russian crude) but complicates supply chain resilience planning.</p>
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>India is the <strong>"rising assembler" — a structurally hollow scale power</strong>. Workforce size (~990M, surpassing China) and manufacturing ambition are enormous, but industrial foundation is severely hollow: 74% pharmaceutical APIs depend on China, 98% solar cells depend on China, 35% oil transits Hormuz, core defense platforms depend on Russia. India's biggest public achievement ("pharmacy of the developing world" — supplying 40% of US generics) is a <em>structurally illusory sovereignty</em> — drugs final dosage form manufactured in India but active ingredients from China. This is the textbook "assembly fallacy." India's strategic hedging (simultaneously in QUAD, SCO, BRICS+; importing discounted Russian oil, refining and re-exporting to Europe) works well in <em>multipolar games</em>, delivering short-term benefits — but remains long-term constrained by the structural fact of not controlling key inputs. India's most strategically significant opportunity is the combination of <strong>population advantage + English-world access + US "de-China" demand</strong>, but whether to seize it depends on whether PLI programs can, within 10 years, transform from "import substitution game" to genuine industrial upgrade.</p>
+</div>
 
-<h2>Import Dependencies (Critical/High)</h2>
+<h2>I. Structural Profile: The Scale-Hollow Contradiction</h2>
+
 <table>
-<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
+<thead><tr><th>Dimension</th><th>India position</th><th>Structural meaning</th></tr></thead>
 <tbody>
-<tr><td>China</td><td>Active Pharmaceutical Ingredients (API)</td><td>$6.5B</td><td>Critical — 68% of Indian API imports</td></tr>
-<tr><td>China</td><td>Solar Wafers and Cells</td><td>$8.0B</td><td>Critical — energy transition bottleneck</td></tr>
-<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$35.0B</td><td>High — primary Gulf energy</td></tr>
-<tr><td>Australia</td><td>Metallurgical and Thermal Coal</td><td>$20.0B</td><td>High — steel and power sector</td></tr>
-<tr><td>Russia</td><td>Defense Equipment (S-400, Su-30MKI)</td><td>$7.0B</td><td>High — military platform dependency</td></tr>
+<tr><td>Population (working-age)</td><td>~990M, surpassed China</td><td>Scale advantage</td></tr>
+<tr><td>Generic pharmaceuticals</td><td>20% global volume + 40% US</td><td>Hollow — 74% API from China</td></tr>
+<tr><td>IT services</td><td>Global outsourcing hub</td><td>Genuine English + education + cost advantage</td></tr>
+<tr><td>Solar module assembly</td><td>Fast growth (PLI)</td><td>98% wafer/cell imports from China</td></tr>
+<tr><td>Defense platforms</td><td>S-400, Su-30MKI, T-90</td><td>70% Russian dependency</td></tr>
+<tr><td>Energy</td><td>85% oil imports</td><td>Hormuz + Russian oil dual-channel</td></tr>
+<tr><td>Steel</td><td>World's #2 steel producer</td><td>$20B Australian coal dependency</td></tr>
 </tbody>
 </table>
 
-<h2>Export Leverage</h2>
+<div class="insight">
+<strong>The "rising assembler" trap</strong>: India's industrial growth model for the past 15 years has been <em>assembly, not manufacturing</em> — Apple iPhone assembly, Xiaomi OEM, solar assembly, pharmaceutical assembly. Assembly depends on two conditions: (a) upstream inputs (chips, APIs, photovoltaic cells) sustainably imported; (b) downstream markets (primarily US + Europe) open. Any condition wavering suspends the assembly advantage. This parallels China's early 2000s model, but with a key difference: China rapidly climbed from assembly to materials processing to partial upstream control in 1990-2010; India so far <em>has climbed upstream slower than it has expanded assembly</em> — the PLI scheme is testing whether this trajectory can change.
+</div>
+
+<h2>II. Import Dependencies (Critical/High)</h2>
+<table>
+<thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
+<tbody>
+<tr><td>China</td><td>Active Pharmaceutical Ingredients (API)</td><td>$6.5B</td><td>Critical — 74% of Indian API imports</td></tr>
+<tr><td>China</td><td>Solar Wafers and Cells</td><td>$8.0B</td><td>Critical — energy transition bottleneck</td></tr>
+<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$35.0B</td><td>High — via Hormuz</td></tr>
+<tr><td>Australia</td><td>Metallurgical + Thermal Coal</td><td>$20.0B</td><td>High — steel + power</td></tr>
+<tr><td>Russia</td><td>Defense Equipment (S-400, Su-30MKI)</td><td>$7.0B</td><td>High — military platform dependency</td></tr>
+<tr><td>Russia</td><td>Discounted Crude</td><td>$13.0B+</td><td>High — non-Hormuz routing</td></tr>
+</tbody>
+</table>
+
+<h2>III. Export Leverage</h2>
 <table>
 <thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
-<tr><td>United States</td><td>Generic Pharmaceuticals and IT Services</td><td>$35.0B</td><td>High — health system dependency</td></tr>
+<tr><td>United States</td><td>Generic Pharmaceuticals + IT Services</td><td>$35.0B</td><td>High — healthcare dependency (drugs + IT)</td></tr>
 <tr><td>Kenya</td><td>Generic Pharmaceuticals</td><td>$9.0B</td><td>High — developing world health supply</td></tr>
 </tbody>
 </table>
 
-<h2>Chokepoint Exposure</h2>
-<p>India's supply lines transit four major chokepoints: <strong>Strait of Hormuz</strong> (Saudi crude $35B — now blockaded), <strong>Bab el-Mandeb</strong> (Red Sea energy and goods routing), <strong>Strait of Malacca</strong> (Southeast Asian and Chinese goods), and <strong>Suez Canal</strong> (European trade flows). The 2026 Hormuz blockade directly threatens $35B in Saudi crude imports, though India's discounted Russian crude ($46B via non-Hormuz routes) provides a partial buffer. India's western coast ports (Mumbai, JNPT, Kandla) are particularly exposed to Hormuz and Bab el-Mandeb disruptions that affect the Arabian Sea shipping corridor.</p>
+<h2>IV. Structural Transmission Chains</h2>
 
-<h2>Key Risks (2026 Context)</h2>
+<h3>Chain 1: Pharmaceutical's Triangular Hollowness — India-China-US</h3>
+<div class="chain-trace">India's "pharmacy of the developing world" infrastructure:
+  20% global generic volume + 40% US
+  ↓
+But 74% of India's APIs (active ingredients) from China
+  Fermentation APIs (antibiotics like ciprofloxacin) ~100% China
+  ↓
+China tightens API exports to India → Indian generic capacity limited
+  ↓
+US hospital system essential drug shortage (via India transmission)
+  ↓
+Key implications:
+  [a] Even if US fully decouples from China in trade, US pharma still exposed through India
+  [b] Even if India expands "pharmacy of developing world" role, cannot claim "drug sovereignty"
+  [c] Triangular vulnerability not solvable by bilateral decoupling policy</div>
+<p>This triangular chain is the key node of <a href="USA.html">US report</a>'s Chain 3. India's position <em>appears</em> to be "helping US reduce China dependency" (generics imports shifting from China to India), but actually <strong>hides bilateral dependency as triangular dependency</strong>.</p>
+
+<h3>Chain 2: Hormuz + Russian Oil Dual-Source Hedge</h3>
+<div class="chain-trace">Hormuz blockade
+  ↓
+India's $35B Saudi crude directly cut
+  ↓
+India SPR only ~10 days (lowest among major economies)
+  ↓
+But India has important buffer:
+  - Russian discounted crude $13B+ (via Black Sea/Pacific non-Hormuz)
+  - Indian refineries refining Russian oil and partly re-exporting to Europe (legal arbitrage: once refined, "Indian product")
+  ↓
+This places India in better position than other Asian energy consumers (JP, KR) in Hormuz crisis
+  ↓
+But still faces: Saudi crude cannot be fully replaced by Russian (global market tight + transport bottleneck)
+  ↓
+Result: India won't suffer industrial shutdown like JP/KR, but energy costs rise notably</div>
+
+<h3>Chain 3: Solar's PLI Dilemma</h3>
+<div class="chain-trace">India's ambitious solar targets (500 GW by 2030)
+  ↓
+Dependent on Chinese wafers (80%+) + cells (95%+)
+  ↓
+India PLI scheme (~$20B) targets building domestic module + cell + wafer manufacturing
+  ↓
+2026 progress:
+  - Module assembly: fast growth (Adani, Reliance, Waaree, etc.)
+  - Cells: early stage (Adani 5GW and other projects online 2025-2026)
+  - Wafers: near zero
+  - Polysilicon: minimal
+  ↓
+Key question: China's scale cost advantage still enormous (even with tariffs)
+  ↓
+If PLI fails: India continues assembly but doesn't control upstream — energy transition strategically still China-dependent
+  ↓
+If PLI succeeds but delayed: China already leads in new tech (perovskite, HJT) → India catches up again</div>
+
+<h2>V. Time-Variant</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>Working-age population</td><td>~990M (surpassed China)</td><td>~1.02B</td><td>~1.05B (growing through 2040)</td></tr>
+<tr><td>GDP growth rate</td><td>~6-7%</td><td>~6%</td><td>~5-6%</td></tr>
+<tr><td>API domestic share</td><td>~26%</td><td>~40% (if PLI succeeds)</td><td>~55-60%</td></tr>
+<tr><td>Solar cell domestic share</td><td>~5%</td><td>~30%</td><td>~50-60%</td></tr>
+<tr><td>Manufacturing % of GDP</td><td>~17%</td><td>~19% (Make in India target 25%)</td><td>~20-22%</td></tr>
+<tr><td>Defense procurement Russia dependency</td><td>~70%</td><td>~55% (Rafale + domestic)</td><td>~40%</td></tr>
+<tr><td>SPR cover days</td><td>~10 days</td><td>~25 days</td><td>~45 days</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>India's time double-edged sword</strong>: population and GDP growth provide time (through 2040 India is the main source of global population increase), but the "substitution speed" of nearly all supply chain key dimensions lags demand growth speed. E.g., solar localization to 30% takes 3 years, but in the same period India's solar capacity doubles — <em>absolute domestic production grows, but share may not rise</em>. This is the "treadmill problem" — to stay in place requires running faster.
+</div>
+
+<h2>VI. Scenarios</h2>
+
+<h3>Scenario A: Sustained Hormuz Blockade 6+ Months</h3>
 <ul>
-<li><strong>Hormuz blockade energy impact</strong>: $35B in Saudi crude directly threatened; Russian crude provides buffer but cannot fully substitute for Gulf supply at short notice; Indian SPR covers only ~10 days</li>
-<li><strong>Chinese API dependency for pharma</strong>: India is the "pharmacy of the developing world" but 68% of pharmaceutical APIs are imported from China — a disruption in Chinese API supply would cascade through global generic drug markets</li>
-<li><strong>Solar energy transition blocked by China</strong>: India's ambitious solar targets depend on $8B in Chinese solar wafers and cells; domestic manufacturing (PLI scheme) remains 3-5 years from scale</li>
-<li><strong>Russian defense platform dependency</strong>: S-400, Su-30MKI, T-90 platforms require Russian spare parts and ammunition; Ukraine war diverts Russian production capacity and Western sanctions complicate procurement</li>
-<li><strong>Coal transition dilemma</strong>: $20B in Australian coal imports power both steel production and electricity generation; transitioning away requires replacing two critical sectors simultaneously</li>
+<li><strong>Trigger</strong>: Already occurred</li>
+<li><strong>Transmission</strong>: Saudi crude cut off → Russian crude partial backfill (already operating) → costs rise → inflation pressure (India CPI sensitive) → political pressure but manageable</li>
+<li><strong>Falsification conditions</strong>: Hormuz reopens within 3 months / US-Iran agreement</li>
+<li><strong>Structural consequences</strong>: Russia-India energy ties deepen → friction with US India strategy (anti-Russia sanctions enforcement)</li>
 </ul>
 
-<h2>Structural Assessment (Supply Chain Geopolitics Framework)</h2>
-<p>India occupies the position of a "rising assembler" in the supply chain geopolitics framework — an economy with enormous labor force potential and growing manufacturing ambitions but lacking the upstream control or midstream processing capabilities that confer production network sovereignty. India's most significant production network position is in generic pharmaceuticals, where it controls approximately 20% of global generic drug supply by volume. But this position is structurally hollow: India's pharmaceutical "sovereignty" is undermined by 68% dependency on Chinese APIs. <em>India assembles the final dosage form but does not control the active ingredient supply chain.</em></p>
-<p>The solar energy story repeats this pattern. India has set ambitious solar deployment targets and attracted manufacturing investment through the Production-Linked Incentive (PLI) scheme, but the supply chain remains Chinese-dominated. Indian solar module assembly depends on Chinese wafers and cells — assembly without upstream control, the textbook "assembly fallacy" that the supply chain geopolitics framework identifies as a trap for developing economies.</p>
-<p>India's revealed preference in strategic hedging — purchasing discounted Russian crude while maintaining the US security partnership — demonstrates a pragmatic approach to production network navigation. Delhi correctly identifies that energy supply diversification (any source, regardless of geopolitical alignment) provides more genuine sovereignty than ideological alignment with a single bloc. However, this hedging strategy has limits: India cannot simultaneously depend on Russian defense platforms, Chinese APIs, and Saudi crude without accepting vulnerability to all three suppliers' geopolitical calculations.</p>
-
-<h2>Recommendations</h2>
+<h3>Scenario B: Chinese API Controls Against India (2026-2028)</h3>
 <ul>
-<li><strong>Build domestic pharmaceutical API capacity</strong>: This is India's single most urgent supply chain priority; PLI scheme for API manufacturing should be expanded 3-5x with accelerated timelines and dedicated chemical industry parks</li>
-<li><strong>Accelerate solar manufacturing integration</strong>: Move beyond module assembly to wafer and cell production; joint ventures with non-Chinese manufacturers (First Solar, Meyer Burger) provide technology transfer alternatives</li>
-<li><strong>Expand strategic petroleum reserves</strong>: Current 10-day cover is dangerously inadequate; target 45-day SPR within 3 years through cavern construction and commercial storage agreements</li>
-<li><strong>Diversify defense procurement</strong>: Reduce Russian platform dependency through expanded Rafale orders, domestic Tejas production, and US defense cooperation; prioritize platforms with domestic maintenance capability</li>
-<li><strong>Develop critical mineral processing</strong>: India has deposits of lithium (Jammu &amp; Kashmir), rare earths (Odisha), and thorium; processing capacity development would reduce Chinese midstream dependency</li>
+<li><strong>Trigger</strong>: China-India border conflict escalates, India joins US tech alliance, India participates in China chip controls</li>
+<li><strong>Transmission</strong>: API cutoff → Indian generic capacity drops → US pharma exports decrease → <em>US hospital drug shortage</em> (two-step transmission) + India domestic essential drug supply tight → social political pressure</li>
+<li><strong>Falsification conditions</strong>: (i) PLI accelerates to scale; (ii) China avoids use to preserve leverage</li>
+<li><strong>Structural consequences</strong>: This is China's <em>most effective</em> supply chain weapon against India — more direct and faster than rare earth impact</li>
+</ul>
+
+<h3>Scenario C: Taiwan Strait Crisis (2027-2032)</h3>
+<ul>
+<li><strong>Trigger</strong>: See CHN Scenario B</li>
+<li><strong>India-side transmission</strong>: (i) Global energy prices surge; (ii) Generic drug exports disrupted (China API cutoff); (iii) India can choose neutrality — theoretically a main beneficiary (absorbing supply chain relocation from China)</li>
+<li><strong>Falsification conditions</strong>: See CHN report</li>
+<li><strong>Structural consequences</strong>: This is India's <em>key long-term strategic scenario</em> — if India can become the "substitute China" assembly hub post-Taiwan, its economic scale would jump</li>
+</ul>
+
+<h2>VII. Structural Assessment</h2>
+
+<h3>"Rising Assembler" — A Transition Form in the SCG Framework</h3>
+<p>India is the most interesting <em>transition case</em> in the supply chain geopolitics framework — moving from "pure downstream" (classic developing country) to "midstream assembler," but not yet becoming a genuine midstream controller (like Germany, Japan, Korea). The key question for this transition is not "how much GDP can grow," but <strong>whether upstream capability can be built on the assembly foundation</strong>. China successfully completed this leap in 1990-2010 (from assembly to materials processing to partial upstream control); can India replicate?</p>
+<p>Several structural factors make India's leap harder:</p>
+<ul>
+<li><em>Workforce advantage but fragmented education</em> — the well-engineering-trained share of India's massive workforce still far below China's equivalent development stage</li>
+<li><em>Infrastructure bottlenecks</em> — power, ports, rail still lagging, affecting industrial scale expansion speed</li>
+<li><em>Land acquisition difficulty</em> — land law framework makes large-scale factory construction slower than in China</li>
+<li><em>Federal structure</em> — state-level policy differences make nationwide uniform industrial policy hard to implement</li>
+</ul>
+
+<h3>Non-alignment as Strategy — Structural Viability</h3>
+<p>India's "multipolar hedging" strategy (maintaining membership in QUAD, SCO, BRICS+ simultaneously, importing Russian oil and selling to Europe) functions well in 2026. But the <em>structural viability</em> of this strategy depends on:</p>
+<ul>
+<li>US-China conflict not escalating to forced side-choosing</li>
+<li>India's economic scale growing to make all sides need Indian cooperation</li>
+<li>India not being demanded public position in any specific crisis</li>
+</ul>
+<p>A Taiwan Strait crisis or prolonged Hormuz blockade could <em>forcibly shatter</em> India's multipolar balance — Delhi would be forced to choose, and any choice has costs.</p>
+
+<h3>Cross-Links with Thematic Reports</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">Supply Chain MAD</a></strong>: India is a MAD "middle-country eroder" — through Russian oil re-export, China API dependency, etc., India illustrates with actions that binary decoupling narrative is structurally impossible</li>
+<li><strong><a href="semiconductor-supply-chain.html">Semiconductor Six-Layer Labyrinth</a></strong>: India very early in semiconductors (Vedanta/Tata-PSMC JV). Unlikely major player within 10 years</li>
+<li><strong><a href="ai-power-infrastructure.html">AI Physical Constraints</a></strong>: India AI power infrastructure being built by Reliance, Adani and other private firms in partnership with US cloud providers — may become Asia's secondary AI infrastructure hub</li>
+</ul>
+
+<h2>VIII. Recommendations (By Time Horizon)</h2>
+
+<h3>2026-2028 Emergency</h3>
+<ul>
+<li>API localization is India's single most urgent supply chain priority — PLI scheme scale 3-5x, accelerated timelines, dedicated chemical industry parks</li>
+<li>Solar cell + wafer manufacturing integration (from assembly upstream) — JVs with non-Chinese manufacturers (First Solar, Meyer Burger) for technology alternatives</li>
+<li>SPR expansion to 45 days (current 10 days extremely dangerous) — cavern construction + commercial storage agreements</li>
+<li>Reduce defense Russia dependency — expanded Rafale orders, domestic Tejas, US defense cooperation; priority to platforms with domestic maintenance capability</li>
+</ul>
+
+<h3>2028-2032 Structural Build</h3>
+<ul>
+<li>Critical mineral processing — India has lithium (Jammu & Kashmir), rare earths (Odisha), thorium reserves; processing capacity investment reduces China midstream dependency</li>
+<li>Semiconductor — accept 10-15 year long bet, continue PSMC/Vedanta project expansion</li>
+<li>Railway + port infrastructure acceleration — logistics foundation for industrial expansion</li>
+<li>"Make in India 2.0" — shift from assembly-oriented to upstream manufacturing incentives</li>
+</ul>
+
+<h3>2032+ Long-Term Strategy</h3>
+<ul>
+<li>Leverage the population window (growing through 2040) — simultaneously build industrial capability before aging hits</li>
+<li>Expand economic influence in Indo-Pacific — East Africa, Middle East, Southeast Asia — as "third pole"</li>
+<li>English + legal + democratic soft power — not to replace Chinese manufacturing, but to establish <em>an alternative value proposition to China</em></li>
 </ul>
 
 </section>

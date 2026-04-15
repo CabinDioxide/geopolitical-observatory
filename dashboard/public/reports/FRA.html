@@ -6,23 +6,31 @@
 <title>法国供应链脆弱性评估 / France Supply Chain Vulnerability Assessment (2026)</title>
 <link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
-h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
-h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
-th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
-td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px; }
+h1 { font-size: 26px; border-bottom: 2px solid #f97316; padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 14px; }
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 32px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 20px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #f97316; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 7px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 22px; margin-bottom: 14px; }
-li { margin: 6px 0; }
-strong { color: #e63946; }
-em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 .back-links { margin-bottom: 20px; font-size: 14px; }
 .back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
 .back-links a:hover { text-decoration: underline; }
 .score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
 .score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 20px 0 28px; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 13px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #fef3e2; border-left: 3px solid #d97706; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+.chain-trace { background: #f5f0ff; border: 1px solid #c4b5fd; border-radius: 6px; padding: 14px 16px; margin: 16px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; line-height: 1.6; white-space: pre-line; }
 </style>
 </head>
 <body data-lang="zh">
@@ -45,10 +53,26 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>France Supply Chain Vulnerability Assessment (2026)</h1>
 <div class="score-line">风险评分：<strong>42/100</strong> — 平衡 / BALANCED</div>
 
-<h2>执行摘要</h2>
-<p>法国因其核电主导的电网、本土国防工业和相对多元的能源采购，在主要欧洲经济体中拥有结构性优势位置。然而，航空航天和国防项目对中国稀土的依赖、对中国消费电子日益增长的依赖、以及有限的国内关键矿产加工能力造成了法国工业基础难以消化的脆弱性。法国的核电优势——70%以上电力来自国内反应堆——提供了德国和意大利所缺乏的能源韧性缓冲。</p>
+<div class="tldr">
+<h3>核心论点</h3>
+<p>法国是<strong>"有选择的上游控制者"</strong>——在两个专业领域（核技术和国防/航空航天）拥有真正的上游主权，同时在广泛的消费和工业品上接受下游依赖。这是戴高乐式战略文化的<em>有意选择</em>——历史上优先核能+国防主权胜过消费品自给。核电（70%+电力来自国内反应堆）提供了2026年霍尔木兹危机中德国和日本都缺乏的<em>结构性能源保险</em>。但法国"欧洲战略自主"话语与现实之间的差距：所有阵风战机、梭鱼潜艇、阿斯特导弹的稀土磁铁依赖中国——这是戴高乐主义无法解决的结构空洞。尼日尔政变（2023）叠加萨赫勒撤军（2024）削弱了法国对西非关键矿产供应链的影响力，加速从非洲铀转向哈萨克铀+加拿大铀的过渡。这一转型速度将决定法国核能模式能否在2030年代维持其战略优势。</p>
+</div>
 
-<h2>进口依赖（关键/高）</h2>
+<h2>一、结构性画像：有选择的上游</h2>
+
+<table>
+<thead><tr><th>维度</th><th>法国位置</th><th>结构含义</th></tr></thead>
+<tbody>
+<tr><td>核技术</td><td>全球三大（与美、俄）；EPR、国产燃料循环</td><td>真正上游主权</td></tr>
+<tr><td>国防/航空航天</td><td>阵风战机、A400M、梭鱼潜艇、M51导弹</td><td>战略部门全价值链掌控</td></tr>
+<tr><td>消费电子</td><td>$18B中国进口</td><td>完全下游</td></tr>
+<tr><td>稀土磁铁</td><td>$2B中国依赖（国防用）</td><td>空洞 — 欧洲战略自主话语的反例</td></tr>
+<tr><td>汽车</td><td>标致/雷诺在EV竞争中挣扎</td><td>下游转型中</td></tr>
+<tr><td>奢侈品</td><td>LVMH、开云等全球主导</td><td>软实力 + 现金流</td></tr>
+</tbody>
+</table>
+
+<h2>二、进口依赖（关键/高）</h2>
 <table>
 <thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
 <tbody>
@@ -57,7 +81,7 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>出口杠杆</h2>
+<h2>三、出口杠杆</h2>
 <table>
 <thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
 <tbody>
@@ -65,30 +89,131 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>咽喉要道暴露</h2>
-<p>法国的供应线跨越<strong>苏伊士运河</strong>（亚欧集装箱流）、<strong>曼德海峡</strong>（亚洲货物红海路线）、<strong>马六甲海峡</strong>（东南亚供应链）。法国受益于地中海港口准入（马赛-福斯），为中东和北非提供更短的路线，减少部分供应线的马六甲暴露。核燃料供应链（来自尼日尔、哈萨克斯坦、加拿大的铀）主要陆运或经大西洋路线，基本绕过主要海上咽喉。2026年霍尔木兹封锁对法国能源直接影响有限，但推高LNG现货价格，影响残余的天然气需求。</p>
+<h2>四、结构性传导链</h2>
 
-<h2>主要风险（2026年背景）</h2>
+<h3>传导链1：核电的能源绝缘效应</h3>
+<div class="chain-trace">法国70%+电力来自56座核电站
+  ↓
+2022年俄乌战争 → 欧洲能源危机
+  ↓
+德国工业电价飙升2-3x，法国电价上涨但远低于邻国
+  ↓
+法国在欧洲能源危机中成为净电力输出国（向德国等出口）
+  ↓
+2026年霍尔木兹封锁 → 天然气价格全欧洲飙升
+  ↓
+法国再次相对受损较小（核电占电力主导）
+  ↓
+这一结构性优势是戴高乐时代能源政策的<em>50年复利回报</em></div>
+
+<h3>传导链2：尼日尔铀链断裂</h3>
+<div class="chain-trace">法国核燃料历史上约30-40%依赖尼日尔铀
+  ↓
+2023年7月尼日尔政变 → 新政府终止Orano采矿许可
+  ↓
+法国被迫加速多元化：
+  - 哈萨克斯坦（Kazatomprom，但部分经俄罗斯中转）
+  - 加拿大（Cameco、Athabasca流域）
+  - 澳大利亚
+  - 纳米比亚
+  ↓
+过渡期脆弱性：~2-3年内燃料储备+新合同上线之前
+  ↓
+法国维持约2年铀储备 → 短期缓冲但不解决长期结构
+  ↓
+随萨赫勒撤军（2024）法国对西非影响力进一步下降</div>
+
+<h3>传导链3：国防稀土的"欧洲战略自主"悖论</h3>
+<div class="chain-trace">法国话语："欧洲战略自主"——独立于美国技术霸权
+  ↓
+但国防核心产品稀土磁铁90%+依赖中国：
+  - 阵风战机发动机
+  - 梭鱼潜艇
+  - 阿斯特防空导弹
+  - 太空卫星系统
+  ↓
+Orano（铀）和Framatome（核）的专业能力<em>可以</em>延伸至稀土加工（化学相似性）
+  ↓
+但法国（及欧盟）尚未做出10亿欧元级投资建设欧洲稀土分离产能
+  ↓
+2028-2032年EU CRMA可能上线部分——但落后于需求</div>
+
+<h2>五、时间变量</h2>
+
+<table>
+<thead><tr><th>维度</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>核电发电占比</td><td>~70%</td><td>~70%（EPR2新堆增量）</td><td>~70%+</td></tr>
+<tr><td>铀进口结构</td><td>尼日尔减少，哈/加增加</td><td>多元化完成</td><td>长期稳定</td></tr>
+<tr><td>欧洲稀土分离产能</td><td>接近零</td><td>小规模试点</td><td>~20-30%欧洲需求</td></tr>
+<tr><td>核能出口（EPR、SMR）</td><td>印度、英国等</td><td>规模扩展</td><td>全球新兴市场</td></tr>
+<tr><td>国防支出GDP占比</td><td>~2%</td><td>~2.5%</td><td>~3%</td></tr>
+</tbody>
+</table>
+
+<h2>六、情景分析</h2>
+
+<h3>情景A：中国稀土对法管制升级（2026-2028）</h3>
 <ul>
-<li><strong>国防用中国稀土依赖</strong>：阵风战机发动机、卫星系统、精确弹药需要中国NdFeB磁铁和钐钴合金；无规模化欧洲来源</li>
-<li><strong>核燃料供应集中</strong>：尼日尔政变（2023）扰乱传统铀采购；法国正转向哈萨克斯坦和加拿大供应，但过渡仍在进行</li>
-<li><strong>霍尔木兹间接效应</strong>：法国天然气进口（美国LNG、阿尔及利亚管道）虽然直接的海湾依赖极小，但仍因全球市场中断遭受价格上涨</li>
-<li><strong>消费电子依赖</strong>：180亿美元中国电子进口反映欧盟产业政策未解决的结构性制造缺口</li>
-<li><strong>非洲安全环境</strong>：从萨赫勒撤出削弱法国对西非关键矿产供应路线（几内亚铝土矿、尼日尔铀）的影响力</li>
+<li><strong>触发条件</strong>：法国深化与美国芯片管制联盟；或台海站队问题</li>
+<li><strong>传导</strong>：阵风生产延迟 → 对印度等出口延迟 → Dassault收入下降 → 国防产业投入不足</li>
+<li><strong>落空条件</strong>：EU CRMA加速；非洲稀土开发成功（几内亚等）</li>
+<li><strong>结构性影响</strong>：迫使法国优先投入欧洲稀土加工——可能重振Orano/Framatome以外的法国化工产业</li>
 </ul>
 
-<h2>结构性评估（产缘政治框架）</h2>
-<p>法国在产缘政治框架中占据不寻常位置：在两个专业领域（核技术和国防/航空航天系统）维持真正的上游控制，同时在广泛的消费和工业品上接受下游依赖。这是一项<em>有意的战略选择</em>——法国历史上在核能和国防制造上优先主权而非消费品自给自足，这一优先级的等级反映了戴高乐式的战略文化。</p>
-<p>核电优势是法国最独特的生产网络资产。德国和日本努力替代化石燃料能源的同时，法国70%以上的电力来自国内反应堆，提供对霍尔木兹封锁和俄罗斯天然气切断的结构性绝缘。这不仅是一项能源政策——它是一项塑造法国整体工业成本结构和脆弱性画像的生产网络主权决策。</p>
-<p>然而，法国国防主权——其自我形象的基石——因中国稀土依赖而受损。每一架阵风战机、每一艘梭鱼潜艇、每一枚阿斯特导弹都需要法国无法国产的稀土磁铁。欧洲战略自主的声明意图与继续中国矿产采购的揭示偏好相撞。法国加入欧盟关键原材料法案的努力，但尚未以工业规模投资国内稀土分离产能——话语与资本配置之间的差距，在产缘政治框架中会被识别为<em>信誉赤字</em>。</p>
-
-<h2>建议</h2>
+<h3>情景B：哈萨克铀供应中断（2026-2030）</h3>
 <ul>
-<li><strong>建立欧洲稀土分离产能</strong>：与德国主导联盟在法国或斯堪的纳维亚进行稀土加工；利用Orano的核材料专业知识进行矿物加工</li>
-<li><strong>确保铀供应多元化</strong>：加速从尼日尔到哈萨克斯坦和加拿大铀的转换；发展战略铀储备（目前2+年供应——保持并扩大）</li>
-<li><strong>利用核电优势制定产业政策</strong>：用低碳电力成本优势吸引能源密集型制造（铝冶炼、数据中心、绿色氢）到法国</li>
-<li><strong>深化印太国防关系</strong>：扩大对印度、阿联酋、印尼的阵风销售和海军合作，在中国轨道外建立替代供应链关系</li>
-<li><strong>投资法国海外领土关键矿产勘探</strong>：新喀里多尼亚镍、法属圭亚那金矿、留尼汪稀土前景，如果开发将提供主权矿产准入</li>
+<li><strong>触发条件</strong>：哈萨克斯坦内部动乱 / 俄罗斯阻碍铀运输</li>
+<li><strong>传导</strong>：短期2年储备缓冲 → 之后必须靠加拿大+澳大利亚补充 → 铀价格上涨 → 法国核电经济性下降</li>
+<li><strong>落空条件</strong>：Cameco产能扩张；纳米比亚铀矿开发</li>
+<li><strong>结构性影响</strong>：核电优势动摇——法国战略最大资产受挑战</li>
+</ul>
+
+<h3>情景C：台海危机（2027-2032）</h3>
+<ul>
+<li><strong>触发条件</strong>：见CHN情景B</li>
+<li><strong>法国方向传导</strong>：(i) 全球芯片危机中法国汽车/国防都受损；(ii) 欧盟被迫明确对华立场，法国作为欧盟主要玩家压力极大；(iii) 阵风等国防出口订单激增</li>
+<li><strong>落空条件</strong>：见CHN报告</li>
+<li><strong>结构性影响</strong>：法国作为"欧洲战略自主"主要倡导者，面临真正的测试</li>
+</ul>
+
+<h2>七、结构性评估</h2>
+
+<h3>核能——50年产业政策的复利回报</h3>
+<p>法国在1970年代石油危机后坚持核能战略（Messmer计划，1974年），过去50年持续投资。2026年这一决策的结构性回报极为明显：法国成为<em>欧洲能源危机的相对赢家</em>。德国在2011年决定逐步退出核电，2022年后必须以高成本重建能源架构。法国展示了产缘政治的一个关键原则：<strong>战略性产业政策的价值在长期才能显现</strong>——决策者需要50年视野而非5年选举周期。</p>
+
+<h3>戴高乐主义的极限——为什么"欧洲战略自主"话语空洞</h3>
+<p>戴高乐主义的核心是"在关键战略领域独立于美国和苏联/俄罗斯"。核能 + 核武器 + 国防制造体现了这一原则。但在<em>产缘政治时代</em>，戴高乐主义的范围需要扩展——稀土、半导体、电池、AI芯片都成为"战略"领域。法国在这些新战略领域不是独立的，而是深度依赖中国或美国。话语与行动的差距是法国（以及欧盟整体）的<em>信誉赤字</em>。关闭这一差距需要法国（及欧盟）做出产业政策投入规模数量级的增加——目前未见。</p>
+
+<h3>与主题报告的交叉链接</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">供应链MAD</a></strong>：法国是MAD中的"选择性上游"玩家——在核能和国防上有杠杆，但在其他领域是下游</li>
+<li><strong><a href="semiconductor-supply-chain.html">半导体六层迷宫</a></strong>：法国STMicroelectronics等在功率和汽车半导体有地位，但非前沿。Soitec是SOI晶圆关键供应商（小众但战略性）</li>
+<li><strong><a href="ai-power-infrastructure.html">AI物理约束</a></strong>：法国低成本低碳电力<em>本来</em>是AI数据中心的天然选址——但监管和基础设施速度限制了这一优势的利用</li>
+</ul>
+
+<h2>八、建议（按时间分层）</h2>
+
+<h3>2026-2028 紧急</h3>
+<ul>
+<li>加速从尼日尔过渡到哈+加+澳铀供应；战略储备维持2年以上</li>
+<li>EU稀土分离联盟领导权——利用Orano/Framatome的化工能力扩展</li>
+<li>阵风战机稀土储备扩大（国防战略库存）</li>
+</ul>
+
+<h3>2028-2032 结构建设</h3>
+<ul>
+<li>核电低碳电力作为工业政策武器——吸引能源密集型制造（铝冶炼、数据中心、绿氢）到法国</li>
+<li>深化印太国防伙伴关系（印度、阿联酋、印尼）——阵风出口和海军合作</li>
+<li>法国海外领地关键矿产勘探（新喀里多尼亚镍、法属圭亚那、留尼汪）</li>
+<li>EPR2新堆建设——核电优势延续至2080年代</li>
+</ul>
+
+<h3>2032+ 长期战略</h3>
+<ul>
+<li>核聚变商业化投资（ITER在法国，有先发优势）</li>
+<li>欧洲战略自主的<em>实质化</em>——不是话语，是产业投入</li>
+<li>非洲政策重设——萨赫勒撤军后重新定位法非关系</li>
 </ul>
 
 </section>
@@ -99,10 +224,26 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>法国供应链脆弱性评估</h1>
 <div class="score-line">Risk Score: <strong>42/100</strong> — BALANCED</div>
 
-<h2>Executive Summary</h2>
-<p>France enjoys a structurally favorable position among major European economies due to its nuclear-powered electricity grid, domestic defense industry, and relatively diversified energy sourcing. However, dependencies on Chinese rare earths for aerospace and defense programs, growing reliance on Chinese consumer electronics, and limited domestic critical mineral processing capacity create vulnerabilities that France's industrial base cannot easily absorb. France's nuclear advantage — 70%+ of electricity from domestic reactors — provides an energy resilience buffer that Germany and Italy lack.</p>
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>France is <strong>"the selective upstream controller"</strong> — possessing genuine upstream sovereignty in two specialized domains (nuclear technology and defense/aerospace) while accepting downstream dependency across broad consumer and industrial goods. This is a Gaullist strategic culture's <em>deliberate choice</em> — historically prioritizing nuclear + defense sovereignty over consumer goods self-sufficiency. Nuclear (70%+ of electricity from domestic reactors) provides a <em>structural energy insurance</em> that Germany and Japan lacked in the 2026 Hormuz crisis. But the gap between France's "European strategic autonomy" rhetoric and reality: all Rafale fighters, Barracuda submarines, Aster missiles depend on Chinese rare earth magnets — a structural hollow Gaullism cannot resolve. Niger coup (2023) compounded with Sahel withdrawal (2024) weakened French influence over West African critical mineral chains, accelerating transition from African uranium to Kazakh + Canadian uranium. The speed of this transition will determine whether France's nuclear model can maintain its strategic advantage through the 2030s.</p>
+</div>
 
-<h2>Import Dependencies (Critical/High)</h2>
+<h2>I. Structural Profile: Selective Upstream</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>France position</th><th>Structural meaning</th></tr></thead>
+<tbody>
+<tr><td>Nuclear technology</td><td>Global top 3 (with US, Russia); EPR, indigenous fuel cycle</td><td>Genuine upstream sovereignty</td></tr>
+<tr><td>Defense/aerospace</td><td>Rafale fighter, A400M, Barracuda sub, M51 missile</td><td>Strategic sector full value chain</td></tr>
+<tr><td>Consumer electronics</td><td>$18B Chinese imports</td><td>Complete downstream</td></tr>
+<tr><td>Rare earth magnets</td><td>$2B China dependency (defense)</td><td>Hollow — contradiction to European strategic autonomy rhetoric</td></tr>
+<tr><td>Automotive</td><td>Peugeot/Renault struggling in EV competition</td><td>Downstream transition</td></tr>
+<tr><td>Luxury goods</td><td>LVMH, Kering globally dominant</td><td>Soft power + cash flow</td></tr>
+</tbody>
+</table>
+
+<h2>II. Import Dependencies (Critical/High)</h2>
 <table>
 <thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
@@ -111,7 +252,7 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>Export Leverage</h2>
+<h2>III. Export Leverage</h2>
 <table>
 <thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
@@ -119,30 +260,131 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>Chokepoint Exposure</h2>
-<p>France's supply lines transit <strong>Suez Canal</strong> (Asia-Europe container flows), <strong>Bab el-Mandeb</strong> (Red Sea routing for Asian goods), and <strong>Strait of Malacca</strong> (Southeast Asian supply chains). France benefits from Mediterranean port access (Marseille-Fos) that provides shorter routing from Middle East and North Africa, reducing Malacca exposure for some supply lines. Nuclear fuel supply chains (uranium from Niger, Kazakhstan, Canada) travel primarily overland or via Atlantic routing, largely bypassing major maritime chokepoints. The 2026 Hormuz blockade has limited direct impact on French energy but drives up LNG spot prices affecting residual gas demand.</p>
+<h2>IV. Structural Transmission Chains</h2>
 
-<h2>Key Risks (2026 Context)</h2>
+<h3>Chain 1: Nuclear's Energy Insulation Effect</h3>
+<div class="chain-trace">France's 70%+ electricity from 56 nuclear reactors
+  ↓
+2022 Russia-Ukraine war → European energy crisis
+  ↓
+German industrial electricity 2-3x surge, France's rising but far below neighbors
+  ↓
+France becomes net power exporter in European energy crisis (to Germany etc.)
+  ↓
+2026 Hormuz blockade → gas prices surge across Europe
+  ↓
+France again relatively less damaged (nuclear dominant in electricity)
+  ↓
+This structural advantage is the <em>50-year compounding return</em> of Gaullist-era energy policy</div>
+
+<h3>Chain 2: Niger Uranium Chain Break</h3>
+<div class="chain-trace">French nuclear fuel historically ~30-40% from Niger uranium
+  ↓
+July 2023 Niger coup → new government terminates Orano mining permits
+  ↓
+France forced to accelerate diversification:
+  - Kazakhstan (Kazatomprom, but some transits Russia)
+  - Canada (Cameco, Athabasca Basin)
+  - Australia
+  - Namibia
+  ↓
+Transition fragility: ~2-3 years before fuel reserves + new contracts online
+  ↓
+France maintains ~2 years uranium reserves → short-term buffer but doesn't solve long-term structure
+  ↓
+With Sahel withdrawal (2024), French West African influence further declined</div>
+
+<h3>Chain 3: Defense Rare Earth — "European Strategic Autonomy" Paradox</h3>
+<div class="chain-trace">French rhetoric: "European strategic autonomy" — independent of US technology hegemony
+  ↓
+But defense core products' rare earth magnets 90%+ China-dependent:
+  - Rafale fighter engines
+  - Barracuda submarines
+  - Aster air defense missiles
+  - Space satellite systems
+  ↓
+Orano (uranium) and Framatome (nuclear) specialty capabilities <em>could</em> extend to rare earth processing (chemical similarity)
+  ↓
+But France (and EU) haven't made €10B-scale investment to build European REE separation capacity
+  ↓
+2028-2032 EU CRMA may partially online — but lags demand</div>
+
+<h2>V. Time-Variant</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>Nuclear electricity share</td><td>~70%</td><td>~70% (EPR2 new builds incremental)</td><td>~70%+</td></tr>
+<tr><td>Uranium import structure</td><td>Niger declining, Kaz/Can rising</td><td>Diversification complete</td><td>Long-term stable</td></tr>
+<tr><td>European REE separation capacity</td><td>Near zero</td><td>Small pilot scale</td><td>~20-30% European demand</td></tr>
+<tr><td>Nuclear exports (EPR, SMR)</td><td>India, UK etc.</td><td>Scale expansion</td><td>Global emerging markets</td></tr>
+<tr><td>Defense % of GDP</td><td>~2%</td><td>~2.5%</td><td>~3%</td></tr>
+</tbody>
+</table>
+
+<h2>VI. Scenarios</h2>
+
+<h3>Scenario A: Chinese Rare Earth Controls Against France Escalate (2026-2028)</h3>
 <ul>
-<li><strong>Chinese rare earth dependency for defense</strong>: Rafale engines, satellite systems, and precision munitions require Chinese-sourced NdFeB magnets and samarium-cobalt alloys; no European source exists at scale</li>
-<li><strong>Nuclear fuel supply concentration</strong>: Niger coup (2023) disrupted traditional uranium sourcing; France pivoting to Kazakhstan and Canadian supply but transition is ongoing</li>
-<li><strong>Hormuz indirect effects</strong>: France's gas imports (LNG from US, pipeline from Algeria) see price increases from global market disruption even though direct Gulf dependency is minimal</li>
-<li><strong>Consumer electronics dependency</strong>: $18B in Chinese electronics imports reflects structural manufacturing gap that EU industrial policy has not addressed</li>
-<li><strong>African security environment</strong>: Withdrawal from Sahel reduces France's influence over critical mineral supply routes in West Africa (bauxite from Guinea, uranium from Niger)</li>
+<li><strong>Trigger</strong>: France deepens US chip control alliance; or Taiwan Strait alignment question</li>
+<li><strong>Transmission</strong>: Rafale production delays → export delays to India etc. → Dassault revenue drops → defense industry underinvestment</li>
+<li><strong>Falsification conditions</strong>: EU CRMA accelerates; Africa rare earth development succeeds (Guinea etc.)</li>
+<li><strong>Structural consequences</strong>: Forces France to prioritize European REE processing investment — could revive French chemical industry beyond Orano/Framatome</li>
 </ul>
 
-<h2>Structural Assessment (Supply Chain Geopolitics Framework)</h2>
-<p>France occupies an unusual position in the supply chain geopolitics framework: it maintains genuine upstream control in two specialized domains (nuclear technology and defense/aerospace systems) while accepting downstream dependency in broad consumer and industrial goods. <em>This is a deliberate strategic choice</em> — France has historically prioritized sovereignty in nuclear energy and defense manufacturing over consumer goods self-sufficiency, a hierarchy of priorities that reflects Gaullist strategic culture.</p>
-<p>The nuclear advantage is France's most distinctive production network asset. While Germany and Japan scramble to replace fossil fuel energy sources, France generates 70%+ of its electricity from domestic reactors, providing structural insulation from both the Hormuz blockade and Russian gas cutoff. This is not merely an energy policy — it is a production network sovereignty decision that shapes France's entire industrial cost structure and vulnerability profile.</p>
-<p>However, France's defense sovereignty — the cornerstone of its self-image — is compromised by Chinese rare earth dependency. Every Rafale fighter, every Barracuda submarine, every Aster missile requires rare earth magnets that France cannot source domestically. The stated intention of European strategic autonomy collides with the revealed preference of continued Chinese mineral procurement. France has joined EU Critical Raw Materials Act efforts but has not yet invested in domestic rare earth separation capacity at industrial scale, a gap between rhetoric and capital allocation that the supply chain geopolitics framework would identify as a <em>credibility deficit</em>.</p>
-
-<h2>Recommendations</h2>
+<h3>Scenario B: Kazakh Uranium Supply Disruption (2026-2030)</h3>
 <ul>
-<li><strong>Build European rare earth separation capacity</strong>: Lead consortium with Germany for rare earth processing in France or Scandinavia; leverage Orano's nuclear materials expertise for mineral processing</li>
-<li><strong>Secure uranium supply diversification</strong>: Accelerate transition from Niger to Kazakhstan and Canadian uranium; develop strategic uranium reserve (currently 2+ years of supply — maintain and expand)</li>
-<li><strong>Leverage nuclear advantage for industrial policy</strong>: Use low-carbon electricity cost advantage to attract energy-intensive manufacturing (aluminum smelting, data centers, green hydrogen) to France</li>
-<li><strong>Deepen Indo-Pacific defense relationships</strong>: Expand Rafale sales and naval cooperation with India, UAE, and Indonesia to build alternative supply chain relationships outside Chinese orbit</li>
-<li><strong>Invest in critical mineral exploration in French overseas territories</strong>: New Caledonia nickel, French Guiana gold, and Reunion rare earth prospects offer sovereign mineral access if developed</li>
+<li><strong>Trigger</strong>: Kazakhstan internal unrest / Russia blocking uranium transport</li>
+<li><strong>Transmission</strong>: 2-year reserve buffer → then rely on Canada + Australia backfill → uranium price rises → French nuclear economics decline</li>
+<li><strong>Falsification conditions</strong>: Cameco capacity expansion; Namibian uranium mine development</li>
+<li><strong>Structural consequences</strong>: Nuclear advantage shaken — France's biggest strategic asset challenged</li>
+</ul>
+
+<h3>Scenario C: Taiwan Strait Crisis (2027-2032)</h3>
+<ul>
+<li><strong>Trigger</strong>: See CHN Scenario B</li>
+<li><strong>France-side transmission</strong>: (i) Global chip crisis hits French auto/defense; (ii) EU forced to clarify China position, France as main EU player under enormous pressure; (iii) Rafale and other defense exports surge</li>
+<li><strong>Falsification conditions</strong>: See CHN report</li>
+<li><strong>Structural consequences</strong>: France as the main advocate of "European strategic autonomy" faces its real test</li>
+</ul>
+
+<h2>VII. Structural Assessment</h2>
+
+<h3>Nuclear — The Compounding Return of 50-Year Industrial Policy</h3>
+<p>France stuck with nuclear strategy after the 1970s oil crisis (Messmer Plan, 1974), consistently investing for 50 years. In 2026 the structural return is extremely clear: France becomes the <em>relative winner of the European energy crisis</em>. Germany decided to phase out nuclear in 2011; post-2022 must rebuild energy architecture at high cost. France demonstrates a key principle of supply chain geopolitics: <strong>the value of strategic industrial policy only appears in the long term</strong> — policymakers need 50-year horizons rather than 5-year electoral cycles.</p>
+
+<h3>The Limit of Gaullism — Why "European Strategic Autonomy" Rhetoric Is Hollow</h3>
+<p>The core of Gaullism is "independence from the US and Soviet Union/Russia in key strategic domains." Nuclear + nuclear weapons + defense manufacturing embody this principle. But in the <em>supply chain geopolitics era</em>, Gaullism's scope needs to expand — rare earths, semiconductors, batteries, AI chips all become "strategic" domains. France is not independent in these new strategic domains but deeply dependent on China or US. The rhetoric-action gap is France's (and EU's overall) <em>credibility deficit</em>. Closing this gap requires France (and EU) to make order-of-magnitude increases in industrial policy investment — not yet visible.</p>
+
+<h3>Cross-Links with Thematic Reports</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">Supply Chain MAD</a></strong>: France is a "selective upstream" player in MAD — leverage in nuclear and defense, but downstream in other domains</li>
+<li><strong><a href="semiconductor-supply-chain.html">Semiconductor Six-Layer Labyrinth</a></strong>: France's STMicroelectronics has position in power and automotive semiconductors but not frontier. Soitec is key SOI wafer supplier (niche but strategic)</li>
+<li><strong><a href="ai-power-infrastructure.html">AI Physical Constraints</a></strong>: France's low-cost low-carbon electricity <em>should be</em> natural AI data center siting — but regulatory and infrastructure speed limit utilization of this advantage</li>
+</ul>
+
+<h2>VIII. Recommendations (By Time Horizon)</h2>
+
+<h3>2026-2028 Emergency</h3>
+<ul>
+<li>Accelerate transition from Niger to Kazakh + Canadian + Australian uranium; strategic reserves maintained 2+ years</li>
+<li>EU REE separation alliance leadership — leverage Orano/Framatome chemical capability extension</li>
+<li>Rafale rare earth stockpile expansion (defense strategic inventory)</li>
+</ul>
+
+<h3>2028-2032 Structural Build</h3>
+<ul>
+<li>Nuclear low-carbon electricity as industrial policy weapon — attract energy-intensive manufacturing (aluminum smelting, data centers, green hydrogen) to France</li>
+<li>Deepen Indo-Pacific defense partnerships (India, UAE, Indonesia) — Rafale exports and naval cooperation</li>
+<li>French overseas territories critical mineral exploration (New Caledonia nickel, French Guiana, Reunion)</li>
+<li>EPR2 new reactor construction — nuclear advantage extended to 2080s</li>
+</ul>
+
+<h3>2032+ Long-Term Strategy</h3>
+<ul>
+<li>Fusion commercialization investment (ITER in France, first-mover advantage)</li>
+<li><em>Substantive</em> European strategic autonomy — not rhetoric but industrial investment</li>
+<li>Africa policy reset — reposition France-Africa relations after Sahel withdrawal</li>
 </ul>
 
 </section>

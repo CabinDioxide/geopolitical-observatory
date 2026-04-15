@@ -6,23 +6,31 @@
 <title>英国供应链脆弱性评估 / United Kingdom Supply Chain Vulnerability Assessment (2026)</title>
 <link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
-h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
-h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
-th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
-td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px; }
+h1 { font-size: 26px; border-bottom: 2px solid #f97316; padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 14px; }
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 32px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 20px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #f97316; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 7px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 22px; margin-bottom: 14px; }
-li { margin: 6px 0; }
-strong { color: #e63946; }
-em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 .back-links { margin-bottom: 20px; font-size: 14px; }
 .back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
 .back-links a:hover { text-decoration: underline; }
 .score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
 .score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 20px 0 28px; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 13px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #fef3e2; border-left: 3px solid #d97706; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+.chain-trace { background: #f5f0ff; border: 1px solid #c4b5fd; border-radius: 6px; padding: 14px 16px; margin: 16px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; line-height: 1.6; white-space: pre-line; }
 </style>
 </head>
 <body data-lang="zh">
@@ -45,20 +53,37 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>United Kingdom Supply Chain Vulnerability Assessment (2026)</h1>
 <div class="score-line">风险评分：<strong>47/100</strong> — 平衡 / BALANCED</div>
 
-<h2>执行摘要</h2>
-<p>英国在全球供应链中占据相对平衡的位置，得益于北海能源近邻、强大的医药出口板块和脱欧后的多元化努力。然而，国防和电动车项目对中国稀土磁体的关键依赖、挪威能源供应集中、以及有限的国内制造能力共同构成了实质性脆弱。英国的结构性位置是一个以金融服务和医药IP为支点、对实体制造依赖他国的中等规模经济体。</p>
+<div class="tldr">
+<h3>核心论点</h3>
+<p>英国是<strong>"后工业经济体在产缘政治时代的案例"</strong>——用制造业主权换取了金融服务和知识产权主导，结果在每一个物理供应链环节都<em>缺位</em>，但在每一个非物理资产（金融、药物IP、法律服务、AI模型）上仍强势。这一权衡在全球化高峰期有意义（英国作为"IP+金融"节点很成功），但在供应链武器化时代暴露了结构性缺陷：<strong>物理短缺无法用金融服务弥补</strong>。英国国防工业核心（Tempest战机、Astute潜艇、精确制导弹药）依赖中国稀土磁铁；其制药出口（对美$12B）结构上依赖印度-中国API三步链；后脱欧时代对挪威能源的集中依赖创造了新的单点故障。AUKUS是英国"物理再整合"的唯一大动作——用潜艇+AI+量子技术合作重新进入物理供应链——但成果需要10-20年才能显现。2026-2035年英国仍处于<em>"高效服务经济体 + 物理空洞"</em>的不稳定平衡中。</p>
+</div>
 
-<h2>进口依赖（关键/高）</h2>
+<h2>一、结构性画像：金融-IP帝国与物理空洞</h2>
+
+<table>
+<thead><tr><th>维度</th><th>英国位置</th><th>结构含义</th></tr></thead>
+<tbody>
+<tr><td>金融服务</td><td>伦敦仍是全球第二大金融中心</td><td>软实力但物理脱钩</td></tr>
+<tr><td>药物研发与IP</td><td>AstraZeneca、GSK</td><td>IP上游但生产中下游依赖</td></tr>
+<tr><td>AI研究</td><td>DeepMind（现Google）、ARM（软银控股）</td><td>关键技术但外资持有</td></tr>
+<tr><td>国防制造</td><td>BAE Systems、Rolls-Royce</td><td>中游但依赖美国技术栈</td></tr>
+<tr><td>制造业GDP占比</td><td>~9%（主要经济体中最低之一）</td><td>去工业化深度</td></tr>
+<tr><td>能源</td><td>北海油气衰减中</td><td>进口依赖加深</td></tr>
+<tr><td>国内消费</td><td>高度进口依赖（消费电子、汽车）</td><td>纯下游</td></tr>
+</tbody>
+</table>
+
+<h2>二、进口依赖（关键/高）</h2>
 <table>
 <thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
 <tbody>
-<tr><td>中国</td><td>国防与EV用稀土磁体</td><td>$1.5B</td><td>关键 — 无国内替代</td></tr>
-<tr><td>挪威</td><td>北海原油与天然气</td><td>$18.0B</td><td>高 — 主要能源</td></tr>
+<tr><td>中国</td><td>国防与EV用稀土磁铁</td><td>$1.5B</td><td>关键 — 无国内替代</td></tr>
+<tr><td>挪威</td><td>北海原油与天然气</td><td>$18.0B</td><td>高 — 后脱欧主要能源</td></tr>
 <tr><td>中国</td><td>消费电子与电信</td><td>$22.0B</td><td>高 — 规模依赖</td></tr>
 </tbody>
 </table>
 
-<h2>出口杠杆</h2>
+<h2>三、出口杠杆</h2>
 <table>
 <thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
 <tbody>
@@ -66,30 +91,145 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>咽喉要道暴露</h2>
-<p>英国供应链跨越<strong>苏伊士运河</strong>（亚欧集装箱运输）、<strong>曼德海峡</strong>（红海路线）、<strong>马六甲海峡</strong>（东南亚货物）。与德国、日本不同，英国能源上没有霍尔木兹的直接暴露——北海和挪威管道供应完全绕过波斯湾。但是，2026年霍尔木兹封锁引发的全球LNG现货价格上涨影响英国批发能源成本。英吉利海峡和北海管道基础设施构成一个局部脆弱点，面临海底破坏风险——这一风险在北溪先例后已升高。</p>
+<h2>四、结构性传导链</h2>
 
-<h2>主要风险（2026年背景）</h2>
+<h3>传导链1：医药三步链——英国-印度-中国</h3>
+<div class="chain-trace">AstraZeneca、GSK等在英国持有药物IP和最终制剂生产
+  ↓
+但仿制药生产多经由印度子公司/合同制造商
+  ↓
+印度仿制药74% API依赖中国
+  ↓
+→ 英国-印度-中国三步链
+  ↓
+如果中国对印API管制：
+  - 印度仿制药产能下降
+  - 英国品牌药企对美$12B出口受影响
+  - 英国自身医药供应也通过印度中转
+  ↓
+英国的"IP主权"不等于"供应主权"——每一步都有物理依赖</div>
+
+<h3>传导链2：后脱欧挪威单点依赖</h3>
+<div class="chain-trace">脱欧后英国与欧盟能源市场一体化削弱
+  ↓
+北海油气产量年衰减5-8%（1990年代峰值后长期下行）
+  ↓
+俄乌战争后英国深度依赖挪威管道天然气
+  ↓
+挪威现已是英国第一天然气来源（~40%）
+  ↓
+如果挪威基础设施被破坏（北溪先例后风险升高）：
+  - 英国没有LNG替代产能（比欧洲大陆少）
+  - 工业电价已全欧洲最高，进一步飙升
+  ↓
+"替换依赖"的典型陷阱——从俄罗斯换成挪威只是新的单点</div>
+
+<h3>传导链3：国防的"AUKUS救生绳"</h3>
+<div class="chain-trace">英国独立国防工业在过去20年规模收缩
+  ↓
+Tempest战机计划（接替台风）依赖日本（GCAP联合项目）
+  ↓
+Astute级+Dreadnought级核潜艇依赖美国核推进技术
+  ↓
+2021年AUKUS签署 → 英美澳核潜艇+先进技术三边合作
+  ↓
+英国在AUKUS中角色：
+  - 潜艇设计经验（Astute）分享
+  - 反舰导弹、高超音速协作
+  - AI+量子+海底电缆合作
+  ↓
+对英国的意义：重新进入"物理供应链"的路径——从服务业向国防制造重平衡</div>
+
+<h2>五、时间变量</h2>
+
+<table>
+<thead><tr><th>维度</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>北海油气产量</td><td>衰减中</td><td>继续衰减</td><td>进一步衰减</td></tr>
+<tr><td>AUKUS潜艇交付</td><td>规划</td><td>首艘试航</td><td>量产</td></tr>
+<tr><td>稀土加工（Cornish等）</td><td>规划</td><td>小规模</td><td>部分运营</td></tr>
+<tr><td>制造业GDP占比</td><td>~9%</td><td>可能略升（防务驱动）</td><td>~10%</td></tr>
+<tr><td>伦敦金融中心地位</td><td>仍全球第二</td><td>纽约差距扩大</td><td>新加坡/香港追赶</td></tr>
+<tr><td>AI研究地位</td><td>全球前3</td><td>保持</td><td>保持</td></tr>
+</tbody>
+</table>
+
+<h2>六、情景分析</h2>
+
+<h3>情景A：中国稀土管制扩大（2026-2028）</h3>
 <ul>
-<li><strong>中国稀土依赖</strong>：英国国防项目（Tempest战机、潜艇磁铁、精确制导弹药）依赖中国NdFeB磁铁，短期内无替代</li>
-<li><strong>挪威能源集中</strong>：脱欧后英国严重依赖挪威管道天然气；北海国内产量每年衰减5-8%</li>
-<li><strong>霍尔木兹间接效应</strong>：尽管无直接海湾能源进口，但全球LNG价格飙升传导至英国批发能源市场</li>
-<li><strong>脱欧后贸易摩擦</strong>：与欧盟的监管分歧增加经由欧洲大陆的供应链路线成本和复杂性</li>
-<li><strong>电信对华依赖</strong>：尽管华为被禁，遗留基础设施和消费电子对中国制造的依赖仍达220亿美元</li>
+<li><strong>触发条件</strong>：英国进一步加入美国技术管制联盟</li>
+<li><strong>传导</strong>：Tempest战机、Astute潜艇磁铁供应受限 → 国防项目延迟 → AUKUS承诺受影响</li>
+<li><strong>落空条件</strong>：加速Cornish Lithium等英国矿产项目</li>
+<li><strong>结构性影响</strong>：英国国防现代化延迟——影响与美澳的可信度</li>
 </ul>
 
-<h2>结构性评估（产缘政治框架）</h2>
-<p>英国是一个以制造业主权换取金融和服务业主导地位的后工业经济体的缩影。在产缘政治术语中，英国既不是上游控制者也不是下游组装者——它在实体生产网络之外运作，将IP、金融服务和药物研发作为经济影响力的主要工具。这一定位将英国与部分供应链冲击隔离（制造中断中失去的较少），但也意味着在决定物质力量的实体商品链中杠杆有限。</p>
-<p>英国的医药出口杠杆（向美国120亿美元）是其最重要的生产网络资产，但它处于特殊位置：英国药物依赖印度仿制药制造，而后者又依赖中国API供应。因此英国是上游IP持有者，但却是中游依赖的制造者——其对美杠杆的牢靠程度仅取决于其下层的印中API供应链。</p>
-<p>英国政策的揭示偏好——AUKUS协议、综合评估的印太倾斜、激进排除华为——显示伦敦认识到对中国杠杆的脆弱性，并试图与美国主导的供应链重构对齐。但声明意图（技术主权、供应链韧性）与物质现实（稀土、电子、电信基础设施上持续的中国依赖）之间的差距仍然巨大。</p>
-
-<h2>建议</h2>
+<h3>情景B：挪威管道事件（2026-2030）</h3>
 <ul>
-<li><strong>建立稀土加工能力</strong>：加入美澳加稀土联盟；尽管开采成本较高，仍投资康沃尔锂和稀土项目</li>
-<li><strong>延长北海生产</strong>：通过强化采收最大化剩余北海储量；延迟边际油田退役以维持能源多样性</li>
-<li><strong>建立医药API韧性</strong>：激励国内或盟国基本药物API制造，降低中印英依赖链</li>
-<li><strong>多元化能源进口</strong>：与美国和卡塔尔签订额外LNG进口合同；扩建米尔福德港和格雷恩岛终端产能</li>
-<li><strong>利用AUKUS促工业整合</strong>：通过AUKUS潜艇与技术合作建立国防关键供应链的国内制造能力</li>
+<li><strong>触发条件</strong>：北海基础设施破坏事件</li>
+<li><strong>传导</strong>：能源40%瞬时消失 → 工业电价三倍 → 制造业外迁加速</li>
+<li><strong>落空条件</strong>：挪威+英国海上巡逻加强；LNG接收能力扩建</li>
+<li><strong>结构性影响</strong>：暴露"替换依赖"的脆弱性</li>
+</ul>
+
+<h3>情景C：台海危机</h3>
+<ul>
+<li><strong>触发条件</strong>：见CHN情景B</li>
+<li><strong>英国方向传导</strong>：(i) 金融市场震荡（伦敦作为全球金融中心暴露）；(ii) AstraZeneca等制药公司中国产业链受影响；(iii) 英国海军被要求介入（AUKUS承诺）</li>
+<li><strong>落空条件</strong>：见CHN报告</li>
+<li><strong>结构性影响</strong>：AUKUS承诺测试——英国能否派遣实质性海军力量到印太</li>
+</ul>
+
+<h2>七、结构性评估</h2>
+
+<h3>"IP主权"的极限——为什么物理依赖重新重要</h3>
+<p>英国的经济模式基于一个<em>后工业假设</em>：在全球化高峰期，IP、金融、法律、教育等"无形资产"的价值可以超过制造能力。这一假设在1990-2010年运作良好——伦敦金融城繁荣、英国大学保持全球顶级、AstraZeneca/GSK的药物IP产生巨额授权费。但产缘政治时代暴露了此模式的<em>结构性缺陷</em>：</p>
+<ul>
+<li><strong>物理短缺无法用金融服务弥补</strong>：当中国限制镓出口，英国半导体产业不能用"伦敦金融城的市值"换回镓</li>
+<li><strong>IP依赖下游实现</strong>：AstraZeneca的专利不能自己生产药物——需要印度/中国/其他制造基础设施把分子变成药片</li>
+<li><strong>服务出口依赖市场稳定</strong>：AI研究、法律服务、咨询的出口需要全球化市场——这一基础正在侵蚀</li>
+</ul>
+
+<h3>AUKUS作为"物理再整合"的赌注</h3>
+<p>AUKUS不仅是防务协议——它是英国<em>尝试重建物理产业主权</em>的最大单一努力。核心含义：</p>
+<ul>
+<li>潜艇建造（Barrow-in-Furness BAE船厂）——重振英国国防制造</li>
+<li>Rolls-Royce核推进技术——维持工业核能力</li>
+<li>高超音速、AI、量子——把英国AI研究优势转化为物理应用</li>
+<li>与日本GCAP战机项目——欧洲防务合作之外的印太支点</li>
+</ul>
+<p>AUKUS的成功与否将在很大程度上决定英国在2030年代的经济结构——是继续"服务+IP"模式，还是重建部分物理制造主权。这是战后英国最大的产业政策赌注。</p>
+
+<h3>与主题报告的交叉链接</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">供应链MAD</a></strong>：英国是MAD框架中的"次级玩家"——有特定领域影响（金融制裁、AI研究、核潜艇）但在主要物理供应链中不是关键节点</li>
+<li><strong><a href="semiconductor-supply-chain.html">半导体六层迷宫</a></strong>：英国在ARM（芯片设计IP）上有历史优势但已被软银收购；在实际制造上接近缺位</li>
+<li><strong><a href="ai-power-infrastructure.html">AI物理约束</a></strong>：英国AI研究优势（DeepMind等）但数据中心基础设施增长受北海能源和电网瓶颈限制</li>
+</ul>
+
+<h2>八、建议（按时间分层）</h2>
+
+<h3>2026-2028 紧急</h3>
+<ul>
+<li>稀土加工能力建设——加入美澳加联盟，利用Cornish锂和稀土项目（即使开采成本更高）</li>
+<li>北海产能延长——最大化剩余储量，延迟边际油田退役以维持能源多样性</li>
+<li>医药API韧性建设——激励本土或盟国API制造，降低中-印-英依赖链</li>
+<li>能源进口多元化——扩大对美国和卡塔尔LNG合同；Milford Haven和Isle of Grain终端产能扩建</li>
+</ul>
+
+<h3>2028-2032 结构建设</h3>
+<ul>
+<li>AUKUS深化——利用协议建立国防关键供应链的国内制造能力</li>
+<li>ARM重新本土化尝试（虽然困难，但政策上值得）——半导体设计主权</li>
+<li>与GCAP日本合作发展6代战机——欧洲防务合作补充</li>
+<li>核电建设加速——Hinkley Point C + Sizewell C上线，降低天然气依赖</li>
+</ul>
+
+<h3>2032+ 长期重构</h3>
+<ul>
+<li>定位"前沿技术+金融中心"联合体——不追求全面物理制造但保持关键领域</li>
+<li>脱欧后与欧盟的能源、药物监管协调——务实恢复部分一体化</li>
+<li>AI规模化应用推动经济生产率——对冲人口老龄化</li>
 </ul>
 
 </section>
@@ -100,20 +240,37 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>英国供应链脆弱性评估</h1>
 <div class="score-line">Risk Score: <strong>47/100</strong> — BALANCED</div>
 
-<h2>Executive Summary</h2>
-<p>The United Kingdom occupies a relatively balanced position in global supply chains, benefiting from North Sea energy proximity, a strong pharmaceutical export sector, and post-Brexit diversification efforts. However, critical dependencies on Chinese rare earth magnets for defense and EV programs, Norwegian energy supply concentration, and limited domestic manufacturing capacity create meaningful vulnerabilities. The UK's structural position is that of a mid-tier economy leveraging financial services and pharmaceutical IP while remaining dependent on physical goods manufactured elsewhere.</p>
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>The UK is <strong>"the post-industrial economy case in the supply chain geopolitics era"</strong> — having traded manufacturing sovereignty for financial services and intellectual property dominance, it is now <em>absent</em> at nearly every physical supply chain node but remains strong in non-physical assets (finance, pharmaceutical IP, legal services, AI models). This tradeoff made sense at the peak of globalization (the UK as an "IP+finance" node was very successful), but supply chain weaponization has exposed the structural flaw: <strong>physical shortages cannot be compensated by financial services</strong>. UK defense industry core (Tempest fighter, Astute submarines, precision-guided munitions) depends on Chinese rare earth magnets; pharmaceutical exports (to US $12B) structurally depend on the India-China API three-step chain; post-Brexit concentrated dependence on Norwegian energy creates a new single point of failure. AUKUS is the UK's only large "physical re-integration" move — using submarines + AI + quantum technology cooperation to re-enter physical supply chains — but results will take 10-20 years to materialize. 2026-2035 sees the UK still in an <em>"efficient service economy + physical hollow"</em> unstable equilibrium.</p>
+</div>
 
-<h2>Import Dependencies (Critical/High)</h2>
+<h2>I. Structural Profile: Finance-IP Empire and Physical Hollow</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>UK position</th><th>Structural meaning</th></tr></thead>
+<tbody>
+<tr><td>Financial services</td><td>London still the world's 2nd-largest financial center</td><td>Soft power but physically decoupled</td></tr>
+<tr><td>Pharmaceutical R&D and IP</td><td>AstraZeneca, GSK</td><td>IP upstream but production mid-downstream dependent</td></tr>
+<tr><td>AI research</td><td>DeepMind (now Google), ARM (SoftBank-held)</td><td>Key technology but foreign-held</td></tr>
+<tr><td>Defense manufacturing</td><td>BAE Systems, Rolls-Royce</td><td>Midstream but dependent on US tech stack</td></tr>
+<tr><td>Manufacturing % of GDP</td><td>~9% (lowest among major economies)</td><td>Depth of deindustrialization</td></tr>
+<tr><td>Energy</td><td>North Sea oil/gas declining</td><td>Import dependency deepening</td></tr>
+<tr><td>Domestic consumption</td><td>Highly import-dependent (consumer electronics, cars)</td><td>Pure downstream</td></tr>
+</tbody>
+</table>
+
+<h2>II. Import Dependencies (Critical/High)</h2>
 <table>
 <thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
 <tr><td>China</td><td>Rare Earth Magnets for Defense and EVs</td><td>$1.5B</td><td>Critical — no domestic alternative</td></tr>
-<tr><td>Norway</td><td>North Sea Crude and Natural Gas</td><td>$18.0B</td><td>High — primary energy source</td></tr>
+<tr><td>Norway</td><td>North Sea Crude and Natural Gas</td><td>$18.0B</td><td>High — post-Brexit primary energy</td></tr>
 <tr><td>China</td><td>Consumer Electronics and Telecom</td><td>$22.0B</td><td>High — scale dependency</td></tr>
 </tbody>
 </table>
 
-<h2>Export Leverage</h2>
+<h2>III. Export Leverage</h2>
 <table>
 <thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
@@ -121,30 +278,145 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>Chokepoint Exposure</h2>
-<p>UK supply chains transit <strong>Suez Canal</strong> (Asia-Europe container shipping), <strong>Bab el-Mandeb</strong> (Red Sea routing), and <strong>Strait of Malacca</strong> (Southeast Asian goods). Unlike Germany and Japan, the UK has no direct Hormuz exposure for energy — North Sea and Norwegian pipeline supply bypasses the Persian Gulf entirely. However, global LNG spot price increases caused by the 2026 Hormuz blockade affect UK wholesale energy costs. The English Channel and North Sea pipeline infrastructure represent a localized vulnerability to subsea sabotage, a risk elevated since the Nord Stream precedent.</p>
+<h2>IV. Structural Transmission Chains</h2>
 
-<h2>Key Risks (2026 Context)</h2>
+<h3>Chain 1: Pharmaceutical Three-Step Chain — UK-India-China</h3>
+<div class="chain-trace">AstraZeneca, GSK etc. hold drug IP and final formulation production in UK
+  ↓
+But generic drug production largely through Indian subsidiaries/contract manufacturers
+  ↓
+Indian generics 74% API-dependent on China
+  ↓
+→ UK-India-China three-step chain
+  ↓
+If China tightens API to India:
+  - Indian generic capacity drops
+  - UK branded pharma exports to US ($12B) affected
+  - UK's own pharmaceutical supply also transits India
+  ↓
+UK's "IP sovereignty" ≠ "supply sovereignty" — every step has physical dependency</div>
+
+<h3>Chain 2: Post-Brexit Norwegian Single-Point Dependence</h3>
+<div class="chain-trace">Post-Brexit, UK integration with EU energy market weakens
+  ↓
+North Sea oil/gas output declining 5-8% annually (long-term decline post-1990s peak)
+  ↓
+Post-Russia-Ukraine war, UK deeply dependent on Norwegian pipeline gas
+  ↓
+Norway now UK's #1 gas source (~40%)
+  ↓
+If Norwegian infrastructure damaged (risk elevated post-Nord Stream):
+  - UK lacks LNG backup capacity (less than continental Europe)
+  - Industrial electricity already Europe's highest, further spike
+  ↓
+Classic trap of "replace dependence" — changing from Russia to Norway is just a new single point</div>
+
+<h3>Chain 3: Defense's "AUKUS Lifeline"</h3>
+<div class="chain-trace">UK independent defense industry shrunk in the past 20 years
+  ↓
+Tempest fighter (Typhoon successor) depends on Japan (GCAP joint project)
+  ↓
+Astute + Dreadnought nuclear submarines depend on US nuclear propulsion technology
+  ↓
+2021 AUKUS signed → US-UK-Australia nuclear submarine + advanced technology trilateral
+  ↓
+UK role in AUKUS:
+  - Submarine design experience (Astute) shared
+  - Anti-ship missiles, hypersonics cooperation
+  - AI + quantum + submarine cable cooperation
+  ↓
+Meaning for UK: path back to "physical supply chain" — rebalancing from services toward defense manufacturing</div>
+
+<h2>V. Time-Variant</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>North Sea oil/gas output</td><td>Declining</td><td>Continues declining</td><td>Further decline</td></tr>
+<tr><td>AUKUS submarine delivery</td><td>Planning</td><td>First sea trials</td><td>Production</td></tr>
+<tr><td>Rare earth processing (Cornish etc.)</td><td>Planning</td><td>Small scale</td><td>Partial operation</td></tr>
+<tr><td>Manufacturing % of GDP</td><td>~9%</td><td>Possibly slight rise (defense-driven)</td><td>~10%</td></tr>
+<tr><td>London financial center position</td><td>Still global #2</td><td>Gap with NYC widens</td><td>Singapore/HK catching up</td></tr>
+<tr><td>AI research position</td><td>Global top 3</td><td>Maintained</td><td>Maintained</td></tr>
+</tbody>
+</table>
+
+<h2>VI. Scenarios</h2>
+
+<h3>Scenario A: Expanded Chinese Rare Earth Controls (2026-2028)</h3>
 <ul>
-<li><strong>Chinese rare earth dependency</strong>: The UK's defense programs (Tempest fighter, submarine magnets, precision-guided munitions) depend on Chinese NdFeB magnets with no near-term alternative</li>
-<li><strong>Norwegian energy concentration</strong>: Post-Brexit, the UK relies heavily on Norwegian pipeline gas; North Sea domestic production declining 5-8% annually</li>
-<li><strong>Hormuz indirect effects</strong>: Global LNG price spikes flow through to UK wholesale energy markets despite no direct Gulf energy imports</li>
-<li><strong>Post-Brexit trade friction</strong>: Regulatory divergence from EU increases costs and complexity for supply chain routing through continental Europe</li>
-<li><strong>Telecom dependency on China</strong>: Despite the Huawei ban, legacy infrastructure and consumer electronics dependency on Chinese manufacturing persists at $22B</li>
+<li><strong>Trigger</strong>: UK further joins US tech control alliance</li>
+<li><strong>Transmission</strong>: Tempest, Astute magnet supply limited → defense project delays → AUKUS commitments affected</li>
+<li><strong>Falsification conditions</strong>: Accelerate Cornish Lithium and other UK mineral projects</li>
+<li><strong>Structural consequences</strong>: UK defense modernization delayed — affects credibility with US and Australia</li>
 </ul>
 
-<h2>Structural Assessment (Supply Chain Geopolitics Framework)</h2>
-<p>The UK exemplifies a post-industrial economy that has traded manufacturing sovereignty for financial and services dominance. In supply chain geopolitics terms, the UK is neither an upstream controller nor a downstream assembler — it operates largely outside the physical production network, leveraging IP, financial services, and pharmaceutical R&D as its primary instruments of economic influence. This positioning insulates the UK from some supply chain shocks (it has less to lose in manufacturing disruption) but also means it has limited leverage in the physical goods chains that determine material power.</p>
-<p>The UK's pharmaceutical export leverage ($12B to the US) is its most significant production network asset, but it sits in a peculiar position: British drugs depend on Indian generics manufacturing, which in turn depends on Chinese API supply. The UK is thus an upstream IP holder but a midstream-dependent manufacturer — its leverage over the US is only as secure as the India-China API supply chain beneath it.</p>
-<p>The revealed preference of UK policy — the AUKUS pact, the Integrated Review's Indo-Pacific tilt, aggressive Huawei exclusion — suggests London recognizes its vulnerability to Chinese leverage and is attempting to align with US-led supply chain restructuring. But the gap between stated intention (tech sovereignty, supply chain resilience) and material reality (persistent Chinese dependency in rare earths, electronics, and telecom infrastructure) remains substantial.</p>
-
-<h2>Recommendations</h2>
+<h3>Scenario B: Norwegian Pipeline Incident (2026-2030)</h3>
 <ul>
-<li><strong>Establish rare earth processing capability</strong>: Join US-Australia-Canada rare earth consortium; invest in Cornish lithium and rare earth mining projects despite higher extraction costs</li>
-<li><strong>Extend North Sea production</strong>: Maximize remaining North Sea reserves through enhanced recovery; delay decommissioning of marginal fields to maintain energy diversity</li>
-<li><strong>Build pharmaceutical API resilience</strong>: Incentivize domestic or allied-nation API manufacturing for essential medicines to reduce the China-India-UK dependency chain</li>
-<li><strong>Diversify energy imports</strong>: Secure additional LNG import contracts with US and Qatar; expand Milford Haven and Isle of Grain terminal capacity</li>
-<li><strong>Leverage AUKUS for industrial integration</strong>: Use AUKUS submarine and technology partnership to build domestic manufacturing capability in defense-critical supply chains</li>
+<li><strong>Trigger</strong>: North Sea infrastructure sabotage event</li>
+<li><strong>Transmission</strong>: 40% of energy instantly gone → industrial electricity 3x → manufacturing migration accelerates</li>
+<li><strong>Falsification conditions</strong>: Norway + UK enhance naval patrols; LNG reception capacity expansion</li>
+<li><strong>Structural consequences</strong>: Exposes the fragility of "replace dependence"</li>
+</ul>
+
+<h3>Scenario C: Taiwan Strait Crisis</h3>
+<ul>
+<li><strong>Trigger</strong>: See CHN Scenario B</li>
+<li><strong>UK-side transmission</strong>: (i) financial market shock (London as global financial center exposure); (ii) AstraZeneca and other pharma China supply chains affected; (iii) UK navy required to intervene (AUKUS commitment)</li>
+<li><strong>Falsification conditions</strong>: See CHN report</li>
+<li><strong>Structural consequences</strong>: Tests AUKUS commitment — whether UK can send substantive naval force to Indo-Pacific</li>
+</ul>
+
+<h2>VII. Structural Assessment</h2>
+
+<h3>The Limit of "IP Sovereignty" — Why Physical Dependence Becomes Important Again</h3>
+<p>The UK economic model is based on a <em>post-industrial assumption</em>: at the peak of globalization, the value of IP, finance, law, education and other "intangible assets" can exceed manufacturing capability. This assumption worked well in 1990-2010 — London financial city boomed, UK universities stayed top-ranked globally, AstraZeneca/GSK drug IP generated massive licensing fees. But the supply chain geopolitics era exposes the <em>structural flaw</em> of this model:</p>
+<ul>
+<li><strong>Physical shortages cannot be compensated by financial services</strong>: when China restricts gallium exports, UK semiconductor industry cannot trade "London City market cap" for gallium</li>
+<li><strong>IP depends on downstream realization</strong>: AstraZeneca patents cannot make drugs themselves — they need India/China/other manufacturing infrastructure to turn molecules into pills</li>
+<li><strong>Service exports depend on market stability</strong>: AI research, legal services, consulting exports require globalized markets — this foundation is eroding</li>
+</ul>
+
+<h3>AUKUS as "Physical Re-integration" Bet</h3>
+<p>AUKUS is not just a defense agreement — it is the UK's <em>biggest single effort to rebuild physical industrial sovereignty</em>. Core meanings:</p>
+<ul>
+<li>Submarine construction (Barrow-in-Furness BAE shipyard) — revitalizing UK defense manufacturing</li>
+<li>Rolls-Royce nuclear propulsion technology — maintaining industrial nuclear capability</li>
+<li>Hypersonics, AI, quantum — converting UK AI research advantages to physical applications</li>
+<li>Cooperation with Japan on GCAP fighter project — Indo-Pacific pivot beyond European defense cooperation</li>
+</ul>
+<p>AUKUS success will largely determine UK's economic structure in the 2030s — whether to continue the "services + IP" model or rebuild partial physical manufacturing sovereignty. This is post-war UK's biggest industrial policy bet.</p>
+
+<h3>Cross-Links with Thematic Reports</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">Supply Chain MAD</a></strong>: UK is a "secondary player" in MAD framework — has influence in specific domains (financial sanctions, AI research, nuclear submarines) but not a key node in major physical supply chains</li>
+<li><strong><a href="semiconductor-supply-chain.html">Semiconductor Six-Layer Labyrinth</a></strong>: UK had historical advantage in ARM (chip design IP) but acquired by SoftBank; in actual manufacturing, near absent</li>
+<li><strong><a href="ai-power-infrastructure.html">AI Physical Constraints</a></strong>: UK AI research advantage (DeepMind etc.) but data center infrastructure growth limited by North Sea energy and grid bottlenecks</li>
+</ul>
+
+<h2>VIII. Recommendations (By Time Horizon)</h2>
+
+<h3>2026-2028 Emergency</h3>
+<ul>
+<li>Rare earth processing capability building — join US-Australia-Canada consortium, leverage Cornish Lithium and rare earth projects (even with higher extraction costs)</li>
+<li>Extend North Sea production — maximize remaining reserves, delay marginal field decommissioning to maintain energy diversity</li>
+<li>Pharmaceutical API resilience — incentivize domestic or allied API manufacturing, reduce UK-India-China dependency chain</li>
+<li>Energy import diversification — expand US and Qatar LNG contracts; Milford Haven and Isle of Grain terminal capacity expansion</li>
+</ul>
+
+<h3>2028-2032 Structural Build</h3>
+<ul>
+<li>AUKUS deepening — leverage agreement to build domestic manufacturing capability in defense-critical supply chains</li>
+<li>ARM re-domestication attempt (though difficult, policy-worth) — semiconductor design sovereignty</li>
+<li>Cooperate with Japan on GCAP 6th-gen fighter — complement to European defense cooperation</li>
+<li>Nuclear construction acceleration — Hinkley Point C + Sizewell C online, reduce gas dependency</li>
+</ul>
+
+<h3>2032+ Long-Term Restructuring</h3>
+<ul>
+<li>Position as "frontier tech + financial center" combined — not pursue full physical manufacturing but maintain key domains</li>
+<li>Post-Brexit energy and pharmaceutical regulatory coordination with EU — pragmatic partial re-integration</li>
+<li>AI scale application driving economic productivity — hedge against population aging</li>
 </ul>
 
 </section>
