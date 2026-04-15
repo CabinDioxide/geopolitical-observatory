@@ -6,23 +6,31 @@
 <title>俄罗斯供应链脆弱性评估 / Russia Supply Chain Vulnerability Assessment (2026)</title>
 <link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
-h1 { font-size: 24px; border-bottom: 2px solid #f97316; padding-bottom: 8px; margin-bottom: 6px; }
-h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
-h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
-th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
-td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px; }
+h1 { font-size: 26px; border-bottom: 2px solid #f97316; padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 14px; }
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 32px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 20px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #f97316; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 7px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 22px; margin-bottom: 14px; }
-li { margin: 6px 0; }
-strong { color: #e63946; }
-em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 .back-links { margin-bottom: 20px; font-size: 14px; }
 .back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
 .back-links a:hover { text-decoration: underline; }
 .score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
 .score-line strong { font-size: 28px; color: #f97316; font-weight: 800; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 20px 0 28px; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 13px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #fef3e2; border-left: 3px solid #d97706; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+.chain-trace { background: #f5f0ff; border: 1px solid #c4b5fd; border-radius: 6px; padding: 14px 16px; margin: 16px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; line-height: 1.6; white-space: pre-line; }
 .note { font-size: 13px; color: #666; font-style: italic; margin: 8px 0; }
 </style>
 </head>
@@ -44,58 +52,192 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 
 <h1>俄罗斯供应链脆弱性评估（2026）</h1>
 <h1>Russia Supply Chain Vulnerability Assessment (2026)</h1>
-<div class="score-line">风险评分：<strong>29/100</strong> — 平衡 / BALANCED</div>
+<div class="score-line">风险评分：<strong>55/100</strong> — 平衡（恶化中）/ BALANCED (DETERIORATING)</div>
 
-<h2>执行摘要</h2>
-<p>俄罗斯的脆弱性评分反映了一个不寻常的结构位置：能源和国防系统的巨大出口杠杆，与乌克兰战争造成的灾难性基础设施损失和市场准入限制并存。北溪管道的摧毁和对欧天然气过境的停止永久消除了俄罗斯最有价值的欧洲能源杠杆，同时西方制裁切断了先进技术进口的准入。俄罗斯转向中国和印度作为替代能源客户保留了收入流，但价格降低、对北京的战略依赖增加。在评估国家数据集中，俄罗斯几乎不从中进口任何东西，使其在原材料意义上结构上自足但技术上孤立。</p>
+<div class="tldr">
+<h3>核心论点</h3>
+<p>俄罗斯是<strong>"自愿放弃生产网络主权换取领土目标"的独特案例</strong>——2022年前，俄罗斯拥有当代史上最有价值的产缘政治资产之一：通过多元化管道网络（北溪1/2、亚马尔-欧洲、乌克兰过境、土耳其溪、蓝溪）对欧洲能源供应的上游控制+对发展中世界的国防出口关系。这是真正的生产网络权力——不是石油国家的"资源诅咒"，而是对地球上最先进工业经济体的结构杠杆。俄罗斯的揭示偏好（<em>明知会被制裁仍入侵乌克兰</em>）证明莫斯科<strong>把领土和安全目标置于生产网络主权之上</strong>——这在现代史上极为罕见。结果是令人震惊的结构性依赖反转：2022年前欧洲依赖俄罗斯天然气，2026年俄罗斯依赖中国购买折价原油、中国技术替代西方、中国金融基础设施绕过SWIFT。西伯利亚力量管道给北京对俄杠杆而非相反。俄罗斯已从"欧洲上游能源控制者"下降为"对华折价资源供应商"——产缘政治层级的灾难性跌落。唯一保留的上游杠杆是<strong>Rosatom</strong>——这是盲区#16的核心议题。</p>
+</div>
 
-<h2>进口依赖（关键/高）</h2>
+<h2>一、结构性画像：从帝国到附庸</h2>
+
+<table>
+<thead><tr><th>维度</th><th>2021前</th><th>2026</th></tr></thead>
+<tbody>
+<tr><td>对欧洲能源杠杆</td><td>40%欧盟天然气、30%石油</td><td>近乎归零</td></tr>
+<tr><td>天然气出口基础设施</td><td>6条管道，~200 bcm/年对欧</td><td>仅土耳其溪（~16 bcm）运营</td></tr>
+<tr><td>石油市场</td><td>欧洲高价买方+亚洲</td><td>印中折价（-$15-20/桶）</td></tr>
+<tr><td>铀浓缩杠杆</td><td>~44%全球份额</td><td>维持 — <strong>欧盟16轮制裁全部豁免</strong></td></tr>
+<tr><td>技术进口</td><td>西方先进技术准入</td><td>中国替代 + 灰色市场</td></tr>
+<tr><td>金融系统</td><td>SWIFT集成</td><td>部分脱离，转向人民币/SPFS</td></tr>
+<tr><td>国防出口</td><td>印度、阿尔及利亚、埃及</td><td>乌克兰战争消耗交付延迟</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+俄罗斯是产缘政治分析中的<strong>反向案例</strong>——一个<em>主动摧毁自己最有价值的生产网络资产</em>的国家。这一行为揭示：国家的揭示偏好可能<em>不</em>是生产网络主权最大化，而是领土/安全/政权延续。产缘政治框架可以解释大多数行为者，但对"放弃生产网络主权换取其他目标"的行为者（如2022年的俄罗斯），需要补充地缘政治和政权动力学分析。
+</div>
+
+<h2>二、进口依赖</h2>
 <table>
 <thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
 <tbody>
 <tr><td>—</td><td>—</td><td>—</td><td>评估国家中无关键或高进口依赖</td></tr>
 </tbody>
 </table>
-<p class="note">注：俄罗斯的实际进口脆弱性（半导体芯片、精密机械、飞机零件）经由规避制裁的灰色市场（土耳其、阿联酋、哈萨克斯坦、中国）流动，不出现在官方贸易流数据中。这些影子供应链结构上脆弱，受二级制裁执法约束。</p>
+<p class="note">注：俄罗斯的实际进口脆弱性（半导体芯片、精密机械、飞机零件、消费电子）经由规避制裁的灰色市场（土耳其、阿联酋、哈萨克斯坦、中国）流动，不出现在官方贸易流数据中。这些影子供应链结构上脆弱：一旦西方加强二级制裁（对中转国/公司的次生处罚），供应可能瞬间中断。2024年Tu-204客机飞行时间显著下降、汽车产量不及战前50%都是这一约束的体现。</p>
 
-<h2>出口杠杆</h2>
+<h2>三、出口杠杆</h2>
 <table>
 <thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
 <tbody>
 <tr><td>德国</td><td>北溪1号[已摧毁]</td><td>$0.0B</td><td>关键 — 永久丧失</td></tr>
 <tr><td>德国</td><td>北溪2号[已摧毁]</td><td>$0.0B</td><td>关键 — 永久丧失</td></tr>
-<tr><td>奥地利</td><td>乌克兰天然气过境[2025年1月到期]</td><td>$0.0B</td><td>关键 — 合同终止</td></tr>
+<tr><td>奥地利</td><td>乌克兰过境[2025.1到期]</td><td>$0.0B</td><td>关键 — 合同终止</td></tr>
 <tr><td>印度</td><td>国防装备（S-400、Su-30MKI）</td><td>$7.0B</td><td>高 — 平台依赖</td></tr>
-<tr><td>土耳其</td><td>土耳其溪天然气管道</td><td>$12.0B</td><td>高 — 活跃杠杆</td></tr>
-<tr><td>德国</td><td>亚马尔-欧洲天然气[已停运]</td><td>$0.0B</td><td>高 — 主动停运</td></tr>
+<tr><td>土耳其</td><td>土耳其溪天然气</td><td>$12.0B</td><td>高 — 活跃杠杆</td></tr>
+<tr><td>德国</td><td>亚马尔-欧洲[已停运]</td><td>$0.0B</td><td>高 — 主动停运</td></tr>
+<tr><td>欧盟</td><td>Rosatom铀浓缩（未列管制）</td><td>~$1.5B</td><td>关键 — 唯一未被制裁的战略出口</td></tr>
 </tbody>
 </table>
 
-<h2>咽喉要道暴露</h2>
-<p>俄罗斯的主要出口路线海上咽喉暴露极小。对中国的管道出口（西伯利亚力量）和对土耳其（土耳其溪）绕过所有主要海上咽喉。对印度和中国的俄罗斯原油出口经过<strong>马六甲海峡</strong>（部分海运中国货物），但主要使用直接太平洋（科兹米诺终端）和印度洋路线。俄罗斯最重要的"咽喉"<em>不是海上而是基础设施性的</em>：被摧毁的北溪管道代表对欧约110 bcm/年的永久产能损失，停运的亚马尔-欧洲管道消除另33 bcm/年。这些不是传统意义的咽喉，而是在本轮地缘政治周期内无法重建的被摧毁或被否认的基础设施。</p>
+<h2>四、结构性传导链</h2>
 
-<h2>主要风险（2026年背景）</h2>
+<h3>传导链1：北溪摧毁的永久连锁（对俄方向）</h3>
+<div class="chain-trace">2022.9 北溪管道被摧毁（至今责任归属未公开定论）
+  ↓
+俄罗斯对欧天然气出口基础设施永久损失
+  ↓
+欧洲需求结构性转向LNG + 核电重启 + 可再生
+  ↓
+即使制裁解除，欧洲也不会回到依赖俄气的状态
+  ↓
+俄罗斯被迫：
+  - 对华折价销售（西伯利亚力量$10B/年 vs 原欧洲$40B+/年）
+  - 对印度打折（去年平均$15-20/桶折价）
+  - 建立影子油轮船队绕过制裁
+  ↓
+年收入仍有但结构性下降 + 买方议价权上升</div>
+
+<h3>传导链2：Rosatom的豁免悖论</h3>
+<p>欧盟制裁俄罗斯的16轮方案全部豁免Rosatom，这是<a href="supply-chain-mad.html">供应链MAD</a>报告和盲区#16中详细分析的结构：</p>
+<div class="chain-trace">欧盟正式立场：削弱俄罗斯
+  ↓
+但19座VVER反应堆在欧盟（保加利亚、捷克、芬兰、匈牙利、斯洛伐克）依赖Rosatom燃料
+  ↓
+Westinghouse的VVER燃料替代品仅捷克部分开始使用，其他国家替代需5-10年
+  ↓
++ Rosatom控制全球~44%铀浓缩产能（Tenex、TVEL子公司同样未被制裁）
+  ↓
++ 2024年欧盟付Rosatom超过10亿欧元
+  ↓
+结果：西方"制裁俄罗斯"的叙事<em>在核领域几乎不成立</em>——欧洲基荷电力仍依赖莫斯科
+  ↓
+这一豁免持续时间：VVER替代燃料全面部署前（~2030+）</div>
+<p>对俄罗斯意味着：<em>Rosatom是最后的"不可武器化"战略资产</em>——不是因为它强大到可以反击西方，而是因为西方过度依赖它以至于不敢制裁。这一杠杆将随VVER替代进展而衰减，但在接下来5-8年仍有效。</p>
+
+<h3>传导链3：对华依赖反转</h3>
+<div class="chain-trace">2022后俄罗斯转向中国
+  ↓
+能源：中国成为第一原油买家+LNG买家
+  ↓
+但中国只接受折价原油（-$15-20/桶），俄罗斯议价空间小
+  ↓
+技术：中国替代西方半导体（但2-3代落后）、汽车零件、消费电子
+  ↓
+中国出口到俄罗斯增长~3x，俄罗斯到中国增长较慢
+  ↓
+金融：俄罗斯央行储备结构60%+转向人民币+黄金
+  ↓
++ 俄罗斯商业结算通过中国银行绕过SWIFT
+  ↓
+结构性结果：过去"欧洲依赖俄气"的不对称 → 现在"俄罗斯依赖中国市场+金融"的反向不对称
+  ↓
+北京对俄议价权持续上升（替代买家有限，俄罗斯没有撤退选项）</div>
+
+<h2>五、时间变量</h2>
+
+<table>
+<thead><tr><th>维度</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>对欧能源出口</td><td>接近零</td><td>保持接近零</td><td>永久接近零</td></tr>
+<tr><td>对华原油出口</td><td>~150万桶/日</td><td>~180万桶/日（西伯利亚力量2可能上线）</td><td>~200万桶/日</td></tr>
+<tr><td>Rosatom豁免持续</td><td>全面豁免</td><td>部分欧盟国家替代（捷克领先）</td><td>大部分替代完成</td></tr>
+<tr><td>影子油轮船队规模</td><td>~600艘</td><td>~500艘（制裁加强）</td><td>~400艘</td></tr>
+<tr><td>国防出口（实际交付）</td><td>大幅下降（乌克兰战争消耗）</td><td>逐步恢复</td><td>部分市场流失给韩国/中国</td></tr>
+<tr><td>劳动年龄人口</td><td>~8000万</td><td>~7700万</td><td>~7300万</td></tr>
+<tr><td>人民币占储备比例</td><td>~30%</td><td>~40%</td><td>继续上升</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>俄罗斯的时间轨迹特殊性</strong>：几乎所有战略资产都在下降（对欧杠杆、国防出口、经济规模），<em>除了</em> Rosatom（仍维持）和对亚洲能源出口（缓慢扩大）。关键问题：俄罗斯能否用这一窗口（2026-2030）重建生产网络位置，还是会演变为"对华原材料附庸"？目前的轨迹倾向于后者——这一过程在历史上极难逆转。
+</div>
+
+<h2>六、情景分析</h2>
+
+<h3>情景A：乌克兰和平谈判与部分制裁解除（2026-2027）</h3>
 <ul>
-<li><strong>永久丧失欧洲天然气市场</strong>：北溪摧毁（从曾经约400亿美元/年降至0）、亚马尔-欧洲停运、乌克兰过境到期共同消除了俄罗斯的欧洲天然气杠杆——对华西伯利亚力量（100亿美元）和对土耳其溪（120亿美元）无法替代失去的欧洲收入</li>
-<li><strong>霍尔木兹封锁的利与弊</strong>：更高的全球油价利好俄罗斯原油收入，但俄罗斯与伊朗的伙伴关系使外交站位复杂化；随着全球价格上涨，俄罗斯对印中的原油折价收窄</li>
-<li><strong>技术制裁</strong>：西方出口管制否认俄罗斯获得先进半导体、精密机械和飞机零部件；中国替代是部分且质量较低</li>
-<li><strong>国防工业压力</strong>：乌克兰战争消耗军事生产能力；对印度（70亿美元）的国防出口承诺面临交付延迟和质量问题</li>
-<li><strong>影子经济脆弱性</strong>：经中亚和土耳其规避制裁的供应链受二级制裁执法和突然中断约束</li>
-<li><strong>对华依赖加深</strong>：在技术、消费品和金融基础设施上转向中国形成新的依赖，逆转了2022年前的杠杆关系</li>
+<li><strong>触发条件</strong>：前线僵局深化 + 美国重新评估援乌投入 + 欧洲制裁疲劳</li>
+<li><strong>传导</strong>：部分制裁解除但北溪不可恢复 → 对欧出口仅象征性恢复 → 俄罗斯主要受益是金融解冻（约3000亿美元冻结资产的释放可能性低，但SWIFT部分重连可能）</li>
+<li><strong>落空条件</strong>：(i) 战争继续或升级；(ii) 美国维持最强硬制裁立场</li>
+<li><strong>结构性影响</strong>：<em>无法恢复2022年前的产缘政治位置</em>——基础设施已毁，市场已转向。任何"恢复"都是边际的</li>
 </ul>
 
-<h2>结构性评估（产缘政治框架）</h2>
-<p>俄罗斯代表现代史上最戏剧性的生产网络主权被摧毁的案例。2022年前俄罗斯占据令人羡慕的上游位置：通过多元化管道网络（北溪1/2、亚马尔-欧洲、乌克兰过境、土耳其溪、蓝流）控制欧洲主要能源供应，同时维持与发展中世界的国防出口关系。这是真正的生产网络力量——不是石油国家的"资源诅咒"，而是对地球上最先进工业经济体的结构性杠杆。</p>
-<p>乌克兰战争及西方随后的反应以前所未有的速度摧毁了这一位置。北溪的物理摧毁（2022年9月）永久消除了俄罗斯能源杠杆的基础设施。欧洲通过LNG替代、核电重启和可再生能源加速的需求摧毁确保了即使管道重建，市场已结构性转移。俄罗斯的揭示偏好——在确定制裁的情况下仍入侵乌克兰——证明莫斯科<em>将领土和安全目标置于生产网络主权之上</em>。这是一个国家为经典地缘政治目标自愿放弃其最有价值产缘政治资产的罕见案例。</p>
-<p>俄罗斯转向中国形成了<em>结构性依赖反转</em>。2022年前，欧洲依赖俄罗斯天然气；现在，俄罗斯依赖中国购买折价原油、中国技术进口替代西方来源、中国金融基础设施绕过SWIFT制裁。西伯利亚力量管道（100亿美元/年）给予中国对俄罗斯的杠杆而非反向——北京可以从一个没有替代市场的供应商谈判价格折扣。在产缘政治术语中，俄罗斯已从"欧洲上游能源控制者"沦为"对华折价资源供应商"——在生产网络层级中的灾难性下降。</p>
-
-<h2>建议</h2>
+<h3>情景B：Rosatom最终被欧盟制裁（2028-2032）</h3>
 <ul>
-<li><strong>最大化土耳其溪杠杆</strong>：土耳其仍是俄罗斯在西方轨道中最有价值的剩余能源客户；扩大土耳其溪容量并发展土耳其天然气枢纽，经中介获取剩余欧洲需求</li>
-<li><strong>多元化亚洲能源客户</strong>：扩大对印尼、越南、孟加拉国的原油出口以降低对中印双头垄断买方的依赖；仅在有价格保证的条件下开发西伯利亚力量2号管道</li>
-<li><strong>建设国内半导体产能</strong>：当前对中国和灰色市场芯片的依赖在战略上不可持续；即使在28nm+成熟节点投资军事和工业应用的国内制造能力</li>
-<li><strong>稳定国防出口关系</strong>：尽管乌克兰战争生产压力，维持与印度、阿尔及利亚和埃及的国防伙伴关系；这些是俄罗斯剩余的非能源生产网络资产</li>
-<li><strong>开发北极航运路线</strong>：北方海航道提供绕过所有咽喉的耐制裁出口走廊至亚洲；投资沿途的破冰船队和港口基础设施</li>
+<li><strong>触发条件</strong>：西屋VVER替代燃料规模化 + 匈牙利/斯洛伐克政治转向 + 欧盟安全需求升级</li>
+<li><strong>传导</strong>：俄罗斯失去最后的上游杠杆 → 核燃料销售收入萎缩 → Rosatom专注土耳其、埃及、孟加拉等新兴市场建堆</li>
+<li><strong>落空条件</strong>：(i) Westinghouse替代进展慢；(ii) 欧盟核需求上升使制裁代价过高</li>
+<li><strong>结构性影响</strong>：俄罗斯对欧最后的结构性杠杆丧失，完全沦为"附庸能源出口国"</li>
+</ul>
+
+<h3>情景C：台海危机对俄罗斯的含义（2027-2032）</h3>
+<ul>
+<li><strong>触发条件</strong>：见CHN情景B</li>
+<li><strong>俄罗斯方向传导</strong>：(i) 全球油价飙升 → 俄罗斯短期收入大增；(ii) 中国对俄需求减弱（被封锁、生产收缩）→ 对华出口萎缩；(iii) 西方可能升级对俄制裁（把俄视为中国阵营）</li>
+<li><strong>落空条件</strong>：见CHN报告</li>
+<li><strong>结构性影响</strong>：短期收入提高但长期战略定位进一步恶化（被锁定在中国阵营）</li>
+</ul>
+
+<h2>七、结构性评估</h2>
+
+<h3>自愿产缘政治自杀</h3>
+<p>俄罗斯的案例<em>不符合</em>纯粹经济理性模型。2022年前，产缘政治框架会预测俄罗斯最大化其对欧能源杠杆——这是全球最有价值的产缘政治资产之一。但普京政权的揭示偏好完全相反：<strong>牺牲这一资产换取领土目标</strong>。这要么是政权稳定的不同计算（担心民主化潮流威胁个人权力），要么是对北约东扩的安全恐惧过大，要么是政治决策与经济理性完全脱钩。无论哪种解释，结果都是<em>产缘政治框架之外的决策</em>主宰了一个原本产缘政治上极其强大的国家。这是对"结构决定论"的重要修正——<strong>政权的政治生存逻辑可以推翻生产网络主权最大化逻辑</strong>。</p>
+
+<h3>Rosatom的异常——最后的战略堡垒</h3>
+<p>在俄罗斯的整体下行轨迹中，Rosatom是例外。原因不是Rosatom本身多么强大（其核技术与西屋同级但规模化更好），而是<em>西方长期核投资不足</em>造成的欧洲核燃料供应空心化。这使Rosatom成为"大到不能被制裁"的战略资产——其价值来自<em>对手的脆弱性</em>，不是自身的强大。</p>
+<p>对俄罗斯的战略启示：Rosatom是俄罗斯手中<strong>可以谈判的最后筹码</strong>。任何制裁解除谈判中，Rosatom的核燃料承诺（维持对欧洲反应堆供应）都是俄罗斯的主要议价工具。莫斯科的聪明做法是<em>不要炫耀这一杠杆</em>——使其继续隐藏于欧盟的"制裁盲区"中，而非引起公众和政治注意。</p>
+
+<h3>与主题报告的交叉链接</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">供应链MAD</a></strong>：俄罗斯是"中间国家侵蚀"的核心案例——Rosatom豁免展示了正式制裁叙事与生产网络现实的分离</li>
+<li><strong><a href="ai-power-infrastructure.html">AI物理约束</a></strong>：中国对俄罗斯能源（特别是天然气）的需求增长部分源于AI数据中心电力需求——"东数西算"工程的西部数据中心离俄罗斯边境近</li>
+<li><strong>盲区#16</strong>：Rosatom是新增盲区的核心主题</li>
+</ul>
+
+<h2>八、建议（从俄罗斯视角）</h2>
+
+<h3>2026-2028 止损</h3>
+<ul>
+<li>最大化土耳其溪 + 保加利亚-塞尔维亚-匈牙利走廊作为"曲线进入欧洲"通道</li>
+<li>多元化亚洲能源客户（印尼、越南、孟加拉）以降低对中印双买方依赖</li>
+<li>对Rosatom战略：<em>保持低调</em>，不要用其作为公开杠杆——让欧盟继续豁免</li>
+<li>维持印度、阿尔及利亚、埃及国防出口关系（战后恢复产能后）</li>
+</ul>
+
+<h3>2028-2032 结构重建（如果可能）</h3>
+<ul>
+<li>投资本土半导体产能——即使在28nm+成熟节点，也能打破对中国的完全依赖</li>
+<li>北方海航线（Arctic NSR）开发——作为绕过所有海上咽喉的出口通道</li>
+<li>稀土和关键矿物——俄罗斯有储量但缺开采/加工投资，2022后失去西方投资</li>
+</ul>
+
+<h3>2032+ 战略重定位</h3>
+<ul>
+<li>接受"能源超级大国"时代终结——过渡到"亚洲能源供应商 + 核技术出口商 + 北极基建"混合模型</li>
+<li>长期赌注：人口政策（当前人口下降 + 乌克兰战争伤亡）</li>
+<li>与中国关系管理——从"反西方同盟"转向"互利交易"，避免完全附庸化</li>
 </ul>
 
 </section>
@@ -104,21 +246,42 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 
 <h1>Russia Supply Chain Vulnerability Assessment (2026)</h1>
 <h1>俄罗斯供应链脆弱性评估</h1>
-<div class="score-line">Risk Score: <strong>29/100</strong> — BALANCED</div>
+<div class="score-line">Risk Score: <strong>55/100</strong> — BALANCED (DETERIORATING)</div>
 
-<h2>Executive Summary</h2>
-<p>Russia's vulnerability score reflects an unusual structural position: massive export leverage in energy and defense systems combined with catastrophic infrastructure losses and market access restrictions from the Ukraine war. The destruction of Nord Stream pipelines and halting of European gas transit have permanently eliminated Russia's most valuable European energy leverage, while Western sanctions have severed access to advanced technology imports. Russia's pivot to China and India as replacement energy customers has preserved revenue flows but at reduced prices and increased strategic dependency on Beijing. Russia imports almost nothing from the assessed countries' dataset, making it structurally self-sufficient in crude terms but technologically isolated.</p>
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>Russia is <strong>the unique case of "voluntarily surrendering production network sovereignty for territorial objectives"</strong> — before 2022 Russia held one of the most valuable supply chain geopolitics assets in modern history: upstream control over European energy supply via a diversified pipeline network (Nord Stream 1/2, Yamal-Europe, Ukraine transit, TurkStream, Blue Stream) + defense export relationships across the developing world. This was genuine production network power — not petrostate "resource curse" but structural leverage over the most advanced industrial economies on Earth. Russia's revealed preference (<em>invading Ukraine despite certainty of sanctions</em>) demonstrates Moscow <strong>valued territorial and security objectives above production network sovereignty</strong> — an extraordinarily rare act in modern history. The result is a stunning structural dependency reversal: before 2022 Europe depended on Russian gas; by 2026 Russia depends on Chinese purchases of discounted crude, Chinese technology substitutes for Western sources, and Chinese financial infrastructure bypassing SWIFT. The Power of Siberia pipeline gives Beijing leverage over Russia rather than the reverse. Russia has descended from "upstream energy controller of Europe" to "discounted resource supplier to China" — a catastrophic fall in the supply chain geopolitics hierarchy. The only remaining upstream leverage is <strong>Rosatom</strong> — the core subject of Blind Spot #16.</p>
+</div>
 
-<h2>Import Dependencies (Critical/High)</h2>
+<h2>I. Structural Profile: From Empire to Vassal</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>Pre-2021</th><th>2026</th></tr></thead>
+<tbody>
+<tr><td>European energy leverage</td><td>40% EU gas, 30% oil</td><td>Near zero</td></tr>
+<tr><td>Gas export infrastructure</td><td>6 pipelines, ~200 bcm/yr to Europe</td><td>Only TurkStream (~16 bcm) operating</td></tr>
+<tr><td>Oil markets</td><td>High-price European buyers + Asia</td><td>India/China discount (-$15-20/bbl)</td></tr>
+<tr><td>Uranium enrichment leverage</td><td>~44% global share</td><td>Maintained — <strong>exempted from all 16 EU sanctions packages</strong></td></tr>
+<tr><td>Technology imports</td><td>Western advanced tech access</td><td>Chinese substitutes + gray market</td></tr>
+<tr><td>Financial system</td><td>SWIFT integration</td><td>Partial exit, turn to RMB/SPFS</td></tr>
+<tr><td>Defense exports</td><td>India, Algeria, Egypt</td><td>Ukraine war consumes capacity; delivery delays</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+Russia is the <strong>reverse case</strong> in supply chain geopolitics analysis — a country that <em>actively destroyed its own most valuable production network asset</em>. This behavior reveals: a state's revealed preference may <em>not</em> be production network sovereignty maximization, but territory/security/regime continuation. The supply chain geopolitics framework can explain most actors, but actors who "trade production network sovereignty for other objectives" (such as 2022 Russia) require supplementary geopolitics and regime dynamics analysis.
+</div>
+
+<h2>II. Import Dependencies</h2>
 <table>
 <thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
 <tr><td>—</td><td>—</td><td>—</td><td>No critical or high import dependencies from assessed countries</td></tr>
 </tbody>
 </table>
-<p class="note">Note: Russia's actual import vulnerabilities (semiconductor chips, precision machinery, aircraft parts) flow through sanctions-circumventing gray markets (Turkey, UAE, Kazakhstan, China) and do not appear in official trade flow data. These shadow supply chains are structurally fragile and subject to secondary sanctions enforcement.</p>
+<p class="note">Note: Russia's actual import vulnerabilities (semiconductor chips, precision machinery, aircraft parts, consumer electronics) flow through sanctions-circumventing gray markets (Turkey, UAE, Kazakhstan, China) and do not appear in official trade flow data. These shadow supply chains are structurally fragile: once the West strengthens secondary sanctions (penalties on transit countries/companies), supply could be cut instantly. The significant decline in Tu-204 flight hours in 2024 and automotive production at less than 50% of pre-war levels reflect this constraint.</p>
 
-<h2>Export Leverage</h2>
+<h2>III. Export Leverage</h2>
 <table>
 <thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
@@ -128,34 +291,147 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <tr><td>India</td><td>Defense Equipment (S-400, Su-30MKI)</td><td>$7.0B</td><td>High — platform dependency</td></tr>
 <tr><td>Turkey</td><td>TurkStream Gas Pipeline</td><td>$12.0B</td><td>High — active leverage</td></tr>
 <tr><td>Germany</td><td>Yamal-Europe Gas [HALTED]</td><td>$0.0B</td><td>High — voluntarily halted</td></tr>
+<tr><td>EU</td><td>Rosatom uranium enrichment (not sanctioned)</td><td>~$1.5B</td><td>Critical — only strategic export not sanctioned</td></tr>
 </tbody>
 </table>
 
-<h2>Chokepoint Exposure</h2>
-<p>Russia's primary export routes have minimal maritime chokepoint exposure. Pipeline exports to China (Power of Siberia) and Turkey (TurkStream) bypass all major maritime chokepoints. Russian crude oil exports to India and China transit the <strong>Strait of Malacca</strong> (for some seaborne China-bound cargo) but primarily use direct Pacific (Kozmino terminal) and Indian Ocean routing. Russia's most significant "chokepoints" <em>are not maritime but infrastructural</em>: the destroyed Nord Stream pipelines represent permanent capacity loss of approximately 110 bcm/yr to Europe, and the halted Yamal-Europe pipeline eliminates another 33 bcm/yr. These are not chokepoints in the traditional sense but destroyed or denied infrastructure that cannot be rebuilt within this geopolitical cycle.</p>
+<h2>IV. Structural Transmission Chains</h2>
 
-<h2>Key Risks (2026 Context)</h2>
+<h3>Chain 1: Nord Stream Destruction's Permanent Cascade (on Russia's side)</h3>
+<div class="chain-trace">September 2022 Nord Stream pipelines destroyed (attribution remains undisclosed)
+  ↓
+Russia's gas export infrastructure to Europe permanently lost
+  ↓
+European demand structurally pivots to LNG + nuclear restart + renewables
+  ↓
+Even if sanctions lifted, Europe will not return to Russian gas dependence
+  ↓
+Russia forced into:
+  - Discount sales to China (Power of Siberia $10B/yr vs former European $40B+/yr)
+  - Discount to India (average $15-20/bbl discount)
+  - Build shadow tanker fleet to evade sanctions
+  ↓
+Annual revenue persists but structurally declining + buyer bargaining power rises</div>
+
+<h3>Chain 2: The Rosatom Exemption Paradox</h3>
+<p>The EU sanctions regime of 16 packages fully exempts Rosatom — a structure analyzed in detail in the <a href="supply-chain-mad.html">Supply Chain MAD</a> report and Blind Spot #16:</p>
+<div class="chain-trace">EU official position: weaken Russia
+  ↓
+But 19 VVER reactors in the EU (Bulgaria, Czech Rep, Finland, Hungary, Slovakia) depend on Rosatom fuel
+  ↓
+Westinghouse VVER fuel alternatives only partially used in Czech Rep; other countries require 5-10 years
+  ↓
++ Rosatom controls ~44% of global uranium enrichment capacity (Tenex, TVEL subsidiaries also unsanctioned)
+  ↓
++ EU paid Rosatom over €1B in 2024
+  ↓
+Result: Western "sanction Russia" narrative <em>barely holds in nuclear domain</em> — European baseload electricity still depends on Moscow
+  ↓
+Duration of this exemption: until full VVER alternative fuel deployment (~2030+)</div>
+<p>For Russia: <em>Rosatom is the last "un-weaponizable" strategic asset</em> — not because it's strong enough to retaliate against the West, but because the West depends on it too much to dare sanction it. This leverage will decay with VVER alternatives' progress but remains effective for the next 5-8 years.</p>
+
+<h3>Chain 3: Dependency Reversal Toward China</h3>
+<div class="chain-trace">Post-2022 Russia pivots to China
+  ↓
+Energy: China becomes #1 crude buyer + LNG buyer
+  ↓
+But China accepts only discounted crude (-$15-20/bbl); Russia's bargaining space is limited
+  ↓
+Technology: Chinese replacements for Western semiconductors (but 2-3 generations behind), auto parts, consumer electronics
+  ↓
+China exports to Russia grow ~3x; Russia-to-China growth slower
+  ↓
+Finance: Russian central bank reserves 60%+ shift to RMB + gold
+  ↓
++ Russian commercial settlements through Chinese banks bypass SWIFT
+  ↓
+Structural result: past "Europe depended on Russian gas" asymmetry → present "Russia depends on Chinese market + finance" reverse asymmetry
+  ↓
+Beijing's bargaining power over Russia continues rising (limited alternative buyers; Russia has no retreat option)</div>
+
+<h2>V. Time-Variant</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>Energy exports to Europe</td><td>Near zero</td><td>Near zero maintained</td><td>Permanently near zero</td></tr>
+<tr><td>Crude exports to China</td><td>~1.5M bpd</td><td>~1.8M bpd (Power of Siberia 2 may come online)</td><td>~2M bpd</td></tr>
+<tr><td>Rosatom exemption duration</td><td>Full exemption</td><td>Some EU states substitute (Czech leading)</td><td>Most substitution complete</td></tr>
+<tr><td>Shadow tanker fleet size</td><td>~600 ships</td><td>~500 (sanctions strengthened)</td><td>~400</td></tr>
+<tr><td>Defense exports (actual delivery)</td><td>Sharp decline (Ukraine war consumption)</td><td>Gradual recovery</td><td>Partial market loss to Korea/China</td></tr>
+<tr><td>Working-age population</td><td>~80M</td><td>~77M</td><td>~73M</td></tr>
+<tr><td>RMB share of reserves</td><td>~30%</td><td>~40%</td><td>Continues rising</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>The peculiarity of Russia's time trajectory</strong>: nearly all strategic assets are declining (European leverage, defense exports, economic scale), <em>except</em> Rosatom (maintained) and Asian energy exports (slow growth). Key question: can Russia use this window (2026-2030) to rebuild production network position, or will it evolve into "raw material vassal to China"? Current trajectory tends toward the latter — this process is historically extremely difficult to reverse.
+</div>
+
+<h2>VI. Scenarios</h2>
+
+<h3>Scenario A: Ukraine Peace Negotiations and Partial Sanctions Relief (2026-2027)</h3>
 <ul>
-<li><strong>Permanent loss of European gas market</strong>: Nord Stream destruction ($0B from former ~$40B/yr), Yamal-Europe halt, and Ukraine transit expiry collectively eliminate Russia's European gas leverage — Power of Siberia to China ($10B) and TurkStream to Turkey ($12B) cannot substitute for lost European revenue</li>
-<li><strong>Hormuz blockade benefits and risks</strong>: Higher global oil prices benefit Russian crude revenue, but Russia's Iran partnership complicates diplomatic positioning; Russian crude discounts to India/China narrow as global prices rise</li>
-<li><strong>Technology sanctions</strong>: Western export controls deny Russia access to advanced semiconductors, precision machinery, and aircraft components; Chinese substitution is partial and lower quality</li>
-<li><strong>Defense industry strain</strong>: Ukraine war consumes military production capacity; defense export commitments to India ($7B) face delivery delays and quality issues</li>
-<li><strong>Shadow economy fragility</strong>: Sanctions-circumventing supply chains through Central Asia and Turkey are subject to secondary sanctions enforcement and sudden disruption</li>
-<li><strong>Chinese dependency deepening</strong>: Pivot to China for technology, consumer goods, and financial infrastructure creates new dependency that reverses the pre-2022 leverage relationship</li>
+<li><strong>Trigger</strong>: Front-line stalemate deepens + US reassesses Ukraine support + European sanctions fatigue</li>
+<li><strong>Transmission</strong>: Partial sanctions lifted but Nord Stream non-restorable → European exports symbolic at most → main Russian benefit is financial thaw (release of ~$300B frozen assets unlikely; partial SWIFT re-integration possible)</li>
+<li><strong>Falsification conditions</strong>: (i) War continues or escalates; (ii) US maintains hardest sanctions position</li>
+<li><strong>Structural consequences</strong>: <em>Cannot restore pre-2022 production network position</em> — infrastructure destroyed, market shifted. Any "restoration" is marginal</li>
 </ul>
 
-<h2>Structural Assessment (Supply Chain Geopolitics Framework)</h2>
-<p>Russia represents the most dramatic case of production network sovereignty destruction in modern history. Before 2022, Russia occupied an enviable upstream position: controlling Europe's primary energy supply through a diversified pipeline network (Nord Stream 1/2, Yamal-Europe, Ukraine transit, TurkStream, Blue Stream) while maintaining defense export relationships across the developing world. This was genuine production network power — not the "resource curse" of a petrostate but structural leverage over the most advanced industrial economies on earth.</p>
-<p>The Ukraine war and subsequent Western response destroyed this position with unprecedented speed. Nord Stream's physical destruction (September 2022) permanently eliminated the infrastructure of Russian energy leverage. European demand destruction through LNG substitution, nuclear restart, and renewables acceleration ensures that even if pipelines were rebuilt, the market has structurally shifted. Russia's revealed preference — invading Ukraine despite the certainty of sanctions — demonstrates that <em>Moscow valued territorial and security objectives above production network sovereignty</em>. This is a rare case where a state voluntarily surrendered its most valuable supply chain geopolitics asset for classical geopolitical objectives.</p>
-<p>Russia's pivot to China creates a <em>structural dependency reversal</em>. Before 2022, Europe depended on Russian gas; now Russia depends on Chinese purchases of discounted crude, Chinese technology imports to replace Western sources, and Chinese financial infrastructure to bypass SWIFT sanctions. The Power of Siberia pipeline ($10B/yr) gives China leverage over Russia rather than the reverse — Beijing can negotiate price discounts from a supplier with no alternative market. In supply chain geopolitics terms, Russia has moved from "upstream energy controller of Europe" to "discounted resource supplier to China" — a catastrophic descent in the production network hierarchy.</p>
-
-<h2>Recommendations</h2>
+<h3>Scenario B: Rosatom Eventually Sanctioned by EU (2028-2032)</h3>
 <ul>
-<li><strong>Maximize TurkStream leverage</strong>: Turkey remains Russia's most valuable remaining energy customer in the Western orbit; expand TurkStream capacity and develop Turkish gas hub to access residual European demand via intermediary</li>
-<li><strong>Diversify Asian energy customers</strong>: Expand crude exports to Indonesia, Vietnam, and Bangladesh to reduce dependency on China-India duopsony; develop Power of Siberia 2 pipeline only with pricing guarantees</li>
-<li><strong>Build domestic semiconductor capacity</strong>: Current dependence on Chinese and gray-market chips is strategically untenable; invest in domestic fabrication capacity even at 28nm+ mature nodes for military and industrial applications</li>
-<li><strong>Stabilize defense export relationships</strong>: Maintain India, Algeria, and Egypt defense partnerships despite Ukraine war production strain; these relationships are Russia's remaining non-energy production network assets</li>
-<li><strong>Develop Arctic shipping route</strong>: Northern Sea Route offers sanctions-resistant export corridor to Asia that bypasses all chokepoints; invest in icebreaker fleet and port infrastructure along route</li>
+<li><strong>Trigger</strong>: Westinghouse VVER alternative fuel scales + Hungary/Slovakia political shifts + EU security demands escalate</li>
+<li><strong>Transmission</strong>: Russia loses last upstream leverage → nuclear fuel sales revenue shrinks → Rosatom focuses on Turkey, Egypt, Bangladesh and other emerging markets for reactor construction</li>
+<li><strong>Falsification conditions</strong>: (i) Westinghouse alternative progress slow; (ii) EU nuclear demand rises making sanctions cost too high</li>
+<li><strong>Structural consequences</strong>: Russia's last structural leverage with Europe lost, completing descent to "vassal energy exporter"</li>
+</ul>
+
+<h3>Scenario C: Taiwan Strait Crisis's Implication for Russia (2027-2032)</h3>
+<ul>
+<li><strong>Trigger</strong>: See CHN Scenario B</li>
+<li><strong>Russia-side transmission</strong>: (i) Global oil prices surge → Russia short-term revenue jumps; (ii) Chinese demand for Russia weakens (blockaded, production contracting) → China exports shrink; (iii) West may escalate sanctions (treating Russia as China camp)</li>
+<li><strong>Falsification conditions</strong>: See CHN report</li>
+<li><strong>Structural consequences</strong>: Short-term revenue increase but long-term strategic positioning further deteriorates (locked in China camp)</li>
+</ul>
+
+<h2>VII. Structural Assessment</h2>
+
+<h3>Voluntary Supply Chain Geopolitics Suicide</h3>
+<p>Russia's case <em>does not fit</em> pure economic rationality models. Before 2022, the supply chain geopolitics framework would predict Russia maximizing its European energy leverage — one of the world's most valuable production network assets. But the Putin regime's revealed preference was the opposite: <strong>sacrifice this asset for territorial objectives</strong>. This is either a different calculation for regime stability (fearing democratization wave threats to personal power), or excessive security fear of NATO eastward expansion, or political decisions completely decoupled from economic rationality. Whatever the explanation, the result is <em>decisions outside the supply chain geopolitics framework</em> dominated an originally supply-chain-geopolitically powerful country. This is an important correction to "structural determinism" — <strong>regime political survival logic can override production network sovereignty maximization logic</strong>.</p>
+
+<h3>The Rosatom Anomaly — The Last Strategic Bastion</h3>
+<p>Amid Russia's overall downward trajectory, Rosatom is the exception. The reason is not how strong Rosatom itself is (its nuclear technology is on par with Westinghouse, with better scale capability) but the <em>long-term Western nuclear investment shortfall</em> that hollowed out European nuclear fuel supply. This makes Rosatom the "too-dependent-to-sanction" strategic asset — its value comes from <em>adversary fragility</em>, not its own strength.</p>
+<p>Strategic implication for Russia: Rosatom is Russia's <strong>last negotiable bargaining chip</strong>. In any sanctions-relief negotiation, Rosatom's nuclear fuel commitments (maintaining supply to European reactors) are Russia's main bargaining tool. Moscow's clever move is to <em>not show off this leverage</em> — keep it hidden within the EU's "sanctions blind spot" rather than drawing public and political attention.</p>
+
+<h3>Cross-Links with Thematic Reports</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">Supply Chain MAD</a></strong>: Russia is a core case of "middle-country erosion" — the Rosatom exemption shows the separation between formal sanctions narrative and production network reality</li>
+<li><strong><a href="ai-power-infrastructure.html">AI Physical Constraints</a></strong>: China's growing demand for Russian energy (especially gas) partly stems from AI data center power demand — "East-Data-West-Compute" western data centers are close to Russian borders</li>
+<li><strong>Blind Spot #16</strong>: Rosatom is the core subject of the newly added blind spot</li>
+</ul>
+
+<h2>VIII. Recommendations (From Russia's Perspective)</h2>
+
+<h3>2026-2028 Damage Control</h3>
+<ul>
+<li>Maximize TurkStream + Bulgaria-Serbia-Hungary corridor as "indirect entry to Europe" channel</li>
+<li>Diversify Asian energy customers (Indonesia, Vietnam, Bangladesh) to reduce China-India duopsony dependence</li>
+<li>Rosatom strategy: <em>keep low profile</em>, don't use it as public leverage — let the EU continue exemption</li>
+<li>Maintain India, Algeria, Egypt defense export relationships (after post-war capacity recovery)</li>
+</ul>
+
+<h3>2028-2032 Structural Rebuild (if possible)</h3>
+<ul>
+<li>Invest in domestic semiconductor capacity — even at 28nm+ mature nodes, break complete China dependency</li>
+<li>Northern Sea Route (Arctic NSR) development — bypass all maritime chokepoints as export channel</li>
+<li>Rare earths and critical minerals — Russia has reserves but lacks mining/processing investment; post-2022 lost Western investment</li>
+</ul>
+
+<h3>2032+ Strategic Repositioning</h3>
+<ul>
+<li>Accept end of "energy superpower" era — transition to "Asian energy supplier + nuclear technology exporter + Arctic infrastructure" hybrid model</li>
+<li>Long-term bet: population policy (current population decline + Ukraine war casualties)</li>
+<li>Manage China relationship — from "anti-Western alliance" to "mutually beneficial transactions," avoiding complete vassalization</li>
 </ul>
 
 </section>

@@ -6,23 +6,31 @@
 <title>韩国供应链脆弱性评估 / South Korea Supply Chain Vulnerability Assessment (2026)</title>
 <link rel="stylesheet" href="reports.css">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.7; font-size: 15px; }
-h1 { font-size: 24px; border-bottom: 2px solid #e63946; padding-bottom: 8px; margin-bottom: 6px; }
-h1 + h1 { border: none; padding-bottom: 0; font-size: 18px; color: #666; font-weight: 500; margin-top: 2px; margin-bottom: 18px; }
-h2 { font-size: 18px; color: #333; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
-th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; }
-td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; background: #fafafa; color: #1a1a1a; line-height: 1.75; font-size: 15px; }
+h1 { font-size: 26px; border-bottom: 2px solid #e63946; padding-bottom: 10px; margin-bottom: 4px; line-height: 1.3; }
+h1 + h1 { border: none; padding-bottom: 0; font-size: 20px; color: #666; font-weight: 500; margin-top: 4px; margin-bottom: 14px; }
+h2 { font-size: 20px; color: #1a1a1a; margin-top: 32px; margin-bottom: 12px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+h3 { font-size: 16px; color: #333; margin-top: 20px; margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin: 5px 0; }
+strong { color: #1a1a1a; font-weight: 600; }
+em { color: #e63946; font-style: normal; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+th { background: #2a2a2a; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 7px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
 tr:hover td { background: #f0f0f0; }
-ul { padding-left: 22px; margin-bottom: 14px; }
-li { margin: 6px 0; }
-strong { color: #e63946; }
-em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 .back-links { margin-bottom: 20px; font-size: 14px; }
 .back-links a { color: #2a9d8f; text-decoration: none; margin-right: 18px; }
 .back-links a:hover { text-decoration: underline; }
 .score-line { font-size: 16px; color: #666; margin: 8px 0 20px; }
 .score-line strong { font-size: 28px; color: #e63946; font-weight: 800; }
+.tldr { background: #fff8e1; border: 1px solid #f4c542; border-radius: 6px; padding: 14px 18px; margin: 20px 0 28px; font-size: 15px; }
+.tldr h3 { margin-top: 0; font-size: 13px; color: #8a6a00; text-transform: uppercase; letter-spacing: 1px; }
+.callout { background: #fef3e2; border-left: 3px solid #d97706; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight { background: #e0f2fe; border-left: 3px solid #0284c7; padding: 12px 16px; margin: 18px 0; font-size: 14px; }
+.insight::before { content: "💡 "; font-size: 16px; }
+.chain-trace { background: #f5f0ff; border: 1px solid #c4b5fd; border-radius: 6px; padding: 14px 16px; margin: 16px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; line-height: 1.6; white-space: pre-line; }
 </style>
 </head>
 <body data-lang="zh">
@@ -45,10 +53,31 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>South Korea Supply Chain Vulnerability Assessment (2026)</h1>
 <div class="score-line">风险评分：<strong>100/100</strong> — 净脆弱 / NET VULNERABLE</div>
 
-<h2>执行摘要</h2>
-<p>韩国与德国并列最高脆弱性评分，其驱动因素为完全的能源进口依赖、对中国电池材料加工的关键依赖、以及同时暴露于五大海上咽喉。韩国的位置独特地岌岌可危，因为其最有价值的出口——先进存储芯片——依赖于来自每一条主要地缘政治断层线的上游投入：荷兰光刻、日本化学品、中国电池材料、波斯湾能源。2026年霍尔木兹封锁叠加于美中技术脱钩现有压力之上，将韩国半导体产业置于大国竞争的交火区。</p>
+<div class="tldr">
+<h3>核心论点</h3>
+<p>韩国是<strong>"极端中游脆弱"的典范</strong>——所有投入依赖进口（光刻、化学品、原料、能源），所有产出需要出口市场，自身几乎不控制任何端点。唯一真正的上游杠杆是Samsung+SK海力士的HBM双寡头（全球AI内存95%+），但这一狭窄资产被<em>广泛的依赖画像</em>淹没：能源100%进口（经霍尔木兹）、电池材料~70-80%经中国加工、半导体先进制程依赖ASML EUV和日本光刻胶。更危险的结构问题：韩国的战略模糊空间正在坍塌——过去20年"维持美韩安全同盟+保留中国市场"的平衡策略，在美中技术管制收紧后几乎不可持续。每一个选择都有代价：限制对华出口失去最大市场（280亿美元DRAM/NAND）；违抗美国管制威胁联盟准入。HBM是韩国唯一的"双向议价筹码"——能同时对美（AI算力）和中（供应链）说不，但这一筹码的时间价值短于五年（三星可能被中国替代，中国HBM 3/3e研发正在推进）。</p>
+</div>
 
-<h2>进口依赖（关键/高）</h2>
+<h2>一、结构性画像：中游陷阱</h2>
+
+<table>
+<thead><tr><th>维度</th><th>韩国位置</th><th>结构含义</th></tr></thead>
+<tbody>
+<tr><td>存储芯片（DRAM/NAND）</td><td>Samsung + SK海力士占全球~60%</td><td>中游优势但受ASML/日本材料制约</td></tr>
+<tr><td>HBM（AI内存）</td><td>SK海力士 + Samsung占全球95%+</td><td>唯一真正的上游杠杆</td></tr>
+<tr><td>电池制造（LG、三星SDI、SK On）</td><td>全球最具竞争力的电芯</td><td>但70-80%上游材料来自中国加工</td></tr>
+<tr><td>造船</td><td>全球前三（与中国、日本分庭抗礼）</td><td>中游优势但油价敏感</td></tr>
+<tr><td>能源自给</td><td>~3%</td><td>近乎完全进口（核电~30%）</td></tr>
+<tr><td>国防</td><td>F-35、萨德依赖美国</td><td>联盟绑定</td></tr>
+<tr><td>先进芯片生产</td><td>Samsung Foundry追赶TSMC但落后</td><td>ASML EUV依赖</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>韩国与日本的对比</strong>：同是"中游"经济体，但结构非常不同。<em>日本</em>在狭窄的专业材料上拥有深厚的不可替代垄断（EUV光刻胶、CMP浆料、光掩膜毛坯），使其能在多个谈判中保持杠杆。<em>韩国</em>擅长大规模精密制造（存储、电池、显示），但几乎每个环节的上游投入都依赖他人——中国的电池材料、日本的半导体化学品、荷兰的光刻、美国的设计工具。韩国是<strong>"极端中游脆弱"</strong>的典范，日本是<strong>"中游但有狭窄上游杠杆"</strong>。两者在MAD框架中的议价权有本质不同。
+</div>
+
+<h2>二、进口依赖（关键/高）</h2>
 <table>
 <thead><tr><th>来源</th><th>商品</th><th>金额</th><th>脆弱度</th></tr></thead>
 <tbody>
@@ -56,9 +85,9 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <tr><td>中国</td><td>电池正/负极材料</td><td>$15.0B</td><td>关键 — LG、三星SDI依赖</td></tr>
 <tr><td>中国</td><td>精炼钴（电池级）</td><td>$4.0B</td><td>关键 — 唯一精炼源</td></tr>
 <tr><td>中国</td><td>氢氧化锂/碳酸锂</td><td>$6.0B</td><td>关键 — 精炼垄断</td></tr>
-<tr><td>日本</td><td>氟化氢、光刻胶</td><td>$3.2B</td><td>高 — 半导体化学品</td></tr>
-<tr><td>沙特阿拉伯</td><td>原油</td><td>$25.0B</td><td>高 — 主要能源</td></tr>
-<tr><td>卡塔尔</td><td>液化天然气</td><td>$14.0B</td><td>高 — 天然气供应</td></tr>
+<tr><td>日本</td><td>氟化氢、光刻胶</td><td>$3.2B</td><td>高 — 2019曾被限制</td></tr>
+<tr><td>沙特阿拉伯</td><td>原油</td><td>$25.0B</td><td>高 — 经霍尔木兹</td></tr>
+<tr><td>卡塔尔</td><td>液化天然气</td><td>$14.0B</td><td>高 — 经霍尔木兹</td></tr>
 <tr><td>智利</td><td>碳酸锂</td><td>$4.5B</td><td>高 — 直接矿物源</td></tr>
 <tr><td>刚果（金）</td><td>钴</td><td>$2.0B</td><td>高 — 原材料</td></tr>
 <tr><td>美国</td><td>国防系统（F-35、萨德）</td><td>$8.5B</td><td>高 — 联盟依赖</td></tr>
@@ -66,40 +95,152 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>出口杠杆</h2>
+<h2>三、出口杠杆</h2>
 <table>
 <thead><tr><th>目的地</th><th>商品</th><th>金额</th><th>杠杆类型</th></tr></thead>
 <tbody>
-<tr><td>美国</td><td>AI用高带宽存储（HBM）</td><td>$12.0B</td><td>关键 — 三星/SK海力士双寡头</td></tr>
+<tr><td>美国</td><td>HBM（AI用高带宽存储）</td><td>$12.0B</td><td>关键 — Samsung/SK海力士双寡头</td></tr>
 <tr><td>中国</td><td>DRAM与NAND存储</td><td>$28.0B</td><td>高 — 市场主导</td></tr>
 </tbody>
 </table>
 
-<h2>咽喉要道暴露</h2>
-<p>韩国供应链跨越五大咽喉要道：<strong>霍尔木兹海峡</strong>（沙特原油250亿美元、卡塔尔LNG 140亿美元——现已封锁）、<strong>马六甲海峡</strong>（东南亚与中东路线）、<strong>台湾海峡</strong>（半导体零部件贸易与区域航运）、<strong>苏伊士运河</strong>（欧洲与中东货物）、<strong>曼德海峡</strong>（红海能源与货物路线）。这是所有受评估国家中第二高的咽喉暴露。霍尔木兹封锁直接威胁390亿美元年度能源进口，无管道替代——韩国在供应链意义上是<em>岛屿经济体</em>，完全依赖海上运输。</p>
+<h2>四、结构性传导链</h2>
 
-<h2>主要风险（2026年背景）</h2>
+<h3>传导链1：霍尔木兹 → 能源与半导体双击</h3>
+<div class="chain-trace">霍尔木兹封锁
+  ↓
+韩国沙特$25B原油 + 卡塔尔$14B LNG（$39B/年能源）直接切断
+  ↓
+韩国SPR ~90天石油 / LNG储备仅~2周
+  ↓
+→ 2周内LNG紧缺引发工业用电配给
+  ↓
+同时：卡塔尔氦气下线影响Samsung/SK海力士半导体生产
+  ↓
+→ HBM产能受限 → Nvidia GPU交付进一步延迟
+  ↓
+韩国同时遭受：
+  (a) 能源危机（工业停工风险）
+  (b) 半导体出口断崖（自身收入来源萎缩）
+  ↓
+45-90天内进入结构性经济危机</div>
+
+<h3>传导链2：2019日韩先例——中游武器化的证明</h3>
+<p>2019年日本对韩氟化氢/光刻胶/氟化聚酰亚胺实施逐案审批，是<a href="JPN.html">日本材料帝国</a>首次也是目前唯一一次使用其垄断杠杆。韩国的经验教训：</p>
+<div class="chain-trace">2019.8 日本"逐案审批" (非全面禁止)
+  ↓
+三星、SK海力士库存压力：1-3个月
+  ↓
+韩国政府紧急投资60亿美元"去日化"计划
+  ↓
+2020-2022成果：
+  - 氟化氢：国产化率~50%（Soulbrain、SK Materials）
+  - 光刻胶：国产化率~15%（东进世美肯较慢）
+  - 氟化聚酰亚胺：快速替代（Kolon Industries）
+  ↓
+结论：部分替代可行但速度慢 + 成本高 + 技术深度差距仍存在</div>
+<p>对2026年的含义：如果日本、中国、或美国对韩实施类似的"渐进武器化"，韩国拥有2019年积累的<em>紧急替代经验</em>——但每一次新的管制都测试不同产品线的韧性。</p>
+
+<h3>传导链3：美中夹缝——战略模糊的坍塌</h3>
+<div class="chain-trace">美国要求：限制向中国出口HBM、DRAM、NAND
+  ↓
+中国280亿美元存储市场（占韩国存储出口~30%）面临萎缩
+  ↓
+中国反制：电池材料出口管制、稀土管制
+  ↓
+韩国三家电池champion停产风险
+  ↓
+→ 同时在半导体出口和电池生产两个方向受损
+  ↓
+政府必须选择：
+  [路径A] 追随美国管制 → 失去中国市场 + 面对中国反制
+  [路径B] 违抗美国 → 面临联盟准入风险（F-35、情报共享）
+  ↓
+两条路径都有重大代价，过去20年"同时拥抱"策略结束</div>
+
+<h2>五、时间变量</h2>
+
+<table>
+<thead><tr><th>维度</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>HBM全球市占（Samsung+SK海力士）</td><td>~90%</td><td>~85%（Micron追赶）</td><td>~75%（中国CXMT追赶）</td></tr>
+<tr><td>电池材料中国依赖</td><td>70-80%</td><td>60-70%（本土化加速）</td><td>50-60%</td></tr>
+<tr><td>先进制程地位</td><td>Samsung 3nm追赶TSMC</td><td>2nm Rapidus/Samsung竞争</td><td>可能被TSMC进一步拉开</td></tr>
+<tr><td>能源进口依赖</td><td>~97%</td><td>~95%（核电+可再生微调）</td><td>~90%</td></tr>
+<tr><td>劳动年龄人口</td><td>~3600万</td><td>~3400万</td><td>~3100万</td></tr>
+<tr><td>国防支出GDP占比</td><td>~2.7%</td><td>~3%</td><td>~3%+</td></tr>
+<tr><td>中国存储芯片本土份额</td><td>~15%</td><td>~25%</td><td>~35%</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>HBM杠杆的半衰期</strong>：韩国HBM垄断地位<em>短于</em>一般认知。SK海力士在HBM3e领先Nvidia认证，但Samsung + Micron不断追赶，加上中国CXMT的研发（目标2027年HBM2e、2030年HBM3）——到2030年HBM可能像DRAM一样成为寡头竞争市场而非双寡头。韩国必须在这5年窗口<em>最大化</em>使用HBM作为议价筹码，否则杠杆衰减。
+</div>
+
+<h2>六、情景分析</h2>
+
+<h3>情景A：美国强制HBM对华管制（2026-2028）</h3>
 <ul>
-<li><strong>霍尔木兹封锁能源危机</strong>：390亿美元沙特原油和卡塔尔LNG直接中断；韩国SPR覆盖约90天石油但LNG储存仅约2周；持续封锁45天内工业停产风险</li>
-<li><strong>中国电池材料扼制点</strong>：三星SDI和LG新能源依赖中国加工的正极材料、钴和锂；任何中国出口限制停止韩国EV电池生产</li>
-<li><strong>美中半导体交火</strong>：华盛顿施压韩国限制对华芯片销售（280亿美元DRAM/NAND市场）；北京以电池材料限制反击——韩国双向受损</li>
-<li><strong>ASML依赖</strong>：三星代工3nm以下抱负需要持续的ASML EUV准入；任何荷兰出口管制扩张将停止三星先进芯片开发</li>
-<li><strong>日本半导体化学品杠杆</strong>：2019年争端先例证明东京限制对韩氟化氢和光刻胶出口的意愿</li>
-<li><strong>台海情景</strong>：韩国半导体供应链依赖台积电提供逻辑芯片投入，依赖台海航运进行更广泛贸易；冲突将同时切断多条供应线</li>
+<li><strong>触发条件</strong>：Nvidia H100+级别芯片对华完全禁止，扩大到HBM中间产品</li>
+<li><strong>传导</strong>：Samsung、SK海力士对华HBM销售骤降 → 中国反制（电池材料管制升级）→ 韩国两条产业线同时受损 → 必须选择站队</li>
+<li><strong>落空条件</strong>：(i) 美国接受"现状HBM管制"不扩大；(ii) 中国自研HBM突破使管制意义降低</li>
+<li><strong>结构性影响</strong>：<em>韩国战略模糊时代结束</em>，被迫公开选择阵营——这是1960年代以来最重大的外交转折</li>
 </ul>
 
-<h2>结构性评估（产缘政治框架）</h2>
-<p>韩国代表产缘政治框架中"中游脆弱性"的最极端案例。韩国工业在特定制造层级上卓越——接收上游投入（光刻系统、化学品、原材料、能源）并将其转换为世界级中间和最终商品（存储芯片、电池、显示器、船舶）。但韩国几乎不控制任何投入，对其客户指定条款的能力也有限。三星-SK海力士的HBM双寡头给予韩国在一个狭窄领域（AI存储）真正的上游杠杆，但这种杠杆被韩国依赖的广度所淹没。</p>
-<p>电池供应链精确地说明了这一结构陷阱。韩国三家电池冠军（LG、三星SDI、SK On）在电芯制造上全球竞争力强，但其70-80%的正极、负极、钴和锂投入来自中国加工设施。韩国试图多元化——从智利直接采购锂，从刚果采购钴——但精炼环节仍被中国控制。这是产缘政治洞察的行动版：<em>开采矿石不赋予主权，如果精炼被地缘政治竞争对手垄断</em>。</p>
-<p>韩国的揭示偏好一直是战略模糊——维持美国安全联盟同时保留中国市场（280亿美元存储芯片出口）。但美中技术管制的收紧正在瓦解模糊的空间。韩国被迫做出选择，每个选择都有代价：限制对华销售失去最大市场；违抗美国限制冒着联盟破裂和技术准入风险。这是缺乏上游控制的中游定位的结构性成本。</p>
-
-<h2>建议</h2>
+<h3>情景B：中国电池材料报复性管制（2026-2027）</h3>
 <ul>
-<li><strong>建立国内电池材料加工</strong>：在韩国投资氢氧化锂精炼、合成石墨生产、硫酸钴加工；接受3-5年成本溢价以打破中国加工依赖</li>
-<li><strong>紧急扩大LNG多元化</strong>：确保额外的美国和澳大利亚长期LNG合同；建设4+周LNG储存容量（目前约2周）；开发浮式储存和再气化装置</li>
-<li><strong>战略性利用HBM垄断</strong>：三星和SK海力士控制AI HBM的95%以上——用这一杠杆从美国和中国客户协商供应链让步</li>
-<li><strong>降低日本化学品依赖</strong>：开发国内光刻胶和氟化氢生产能力；2019年争端证明盟友供应商可以不可靠</li>
-<li><strong>建立电池材料战略储备</strong>：储备6-12个月的正极前体、硫酸钴和氢氧化锂作为对中国出口管制的保险</li>
+<li><strong>触发条件</strong>：韩国加入美国关键矿产"友岸外包"联盟；或限制对华半导体出口</li>
+<li><strong>传导</strong>：中国对韩氢氧化锂、硫酸钴、石墨采取管制 → LG/Samsung SDI/SK On停产风险 → 电池全球价格上升 → 美国IRA资助的韩国电池厂被动受损</li>
+<li><strong>落空条件</strong>：(i) 中国避免升级以保留杠杆；(ii) 韩国国内加工产能在2028年前上线</li>
+<li><strong>结构性影响</strong>：加速韩国电池材料国产化——但过程痛苦（3-5年）</li>
+</ul>
+
+<h3>情景C：台海危机（2027-2032）</h3>
+<ul>
+<li><strong>触发条件</strong>：见CHN情景B</li>
+<li><strong>韩国方向传导</strong>：(i) TSMC停产 → Samsung Foundry唯一先进制程生产方（但受ASML EUV供应影响）；(ii) 与中国供应链立即中断；(iii) LNG价格飙升；(iv) 驻韩美军可能被调动</li>
+<li><strong>落空条件</strong>：见CHN报告</li>
+<li><strong>结构性影响</strong>：韩国同时失去最大市场（中国）和关键供应链节点——可能是所有主要经济体中单一情景下损失最严重的</li>
+</ul>
+
+<h2>七、结构性评估</h2>
+
+<h3>"极端中游"的结构意义</h3>
+<p>在<a href="supply-chain-mad.html">供应链地缘政治</a>框架中，韩国是<em>最不利位置</em>的教科书案例：没有上游资源（矿产、能源）、没有下游市场控制（消费品主要出口）、仅有中游制造能力但每个细分都有上游依赖。过去的韩国"奇迹"建立在<strong>三个外部条件都稳定</strong>的假设上：(1) 自由贸易（让中游制造商能进入全球市场）；(2) 美韩同盟（提供安全保障）；(3) 中美和平共处（让韩国能同时在两个市场运作）。2025年后这三个条件同时受损。</p>
+
+<h3>HBM——短期杠杆，不是长期盾牌</h3>
+<p>SK海力士+Samsung的HBM双寡头是韩国真正的上游杠杆——但<em>其时间价值有限</em>。Micron、CXMT、Samsung自己的竞争将使HBM在2030年前后从"双寡头"变为"寡头"竞争市场。韩国必须在此之前：(a) 最大化议价使用（同时对美中施压，获取供应链让步）；(b) 将HBM收益转化为其他领域的上游投资（本土电池材料、本土光刻胶），建立更持久的杠杆。否则HBM窗口关闭后，韩国将回到"纯中游"的最差位置。</p>
+
+<h3>与主题报告的交叉链接</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">供应链MAD</a></strong>：韩国是MAD的"被拉扯玩家"——夹在中美之间，每一次升级都损害韩国利益。但HBM是韩国可以反过来影响美中双方的工具</li>
+<li><strong><a href="semiconductor-supply-chain.html">半导体六层迷宫</a></strong>：韩国在第4层（晶圆）占据存储，第5层（HBM封装）占据主导。但第2层（光刻胶、氟化氢）依赖日本，第3层（ASML EUV）依赖荷兰</li>
+<li><strong><a href="ai-power-infrastructure.html">AI物理约束</a></strong>：SK海力士是AI产业电力需求方（为训练模型提供HBM），同时是AI基建关键供应方——双重身份使韩国在AI时代的角色独特</li>
+</ul>
+
+<h2>八、建议（按时间分层）</h2>
+
+<h3>2026-2028 紧急</h3>
+<ul>
+<li>HBM最大化议价利用——对美换取关键材料技术转让，对中换取电池材料稳定供应</li>
+<li>LNG储备扩建至4+周（目前2周）</li>
+<li>电池材料国产化加速：氢氧化锂、合成石墨、硫酸钴——接受5年3-5%成本溢价</li>
+<li>日本化学品国产化：光刻胶和氟化氢在2019基础上进一步降低依赖</li>
+</ul>
+
+<h3>2028-2032 结构建设</h3>
+<ul>
+<li>决定站队——延迟已不可行。最可能的路径是"亲美同时保留与中国经济纽带"——需要明确的政治叙事支持</li>
+<li>Samsung Foundry 2nm量产必须成功——成为TSMC之外唯一的先进制程生产方</li>
+<li>造船业结构升级——向LNG船、军舰等高附加值细分集中</li>
+<li>核电扩大（当前30%+继续提升）——对冲能源依赖</li>
+</ul>
+
+<h3>2032+ 长期重定位</h3>
+<ul>
+<li>人口崩塌（TFR 0.8左右）是最根本约束——移民 + 自动化 + 有选择性的重男轻女文化重构</li>
+<li>AI产业链本土化——利用HBM地位建立韩国AI生态（而非仅作为Nvidia/美国AI的组件供应商）</li>
+<li>与日本深化合作——韩日作为"上游工业供应商"对抗中国大规模制造和美国技术主权</li>
 </ul>
 
 </section>
@@ -110,10 +251,31 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <h1>韩国供应链脆弱性评估</h1>
 <div class="score-line">Risk Score: <strong>100/100</strong> — NET VULNERABLE</div>
 
-<h2>Executive Summary</h2>
-<p>South Korea shares the highest vulnerability score alongside Germany, driven by total energy import dependency, critical reliance on Chinese battery material processing, and exposure to five major maritime chokepoints simultaneously. Korea's position is uniquely precarious because its most valuable export — advanced memory chips — depends on upstream inputs from every major geopolitical fault line: Dutch lithography, Japanese chemicals, Chinese battery materials, and Persian Gulf energy. The 2026 Hormuz blockade compounds existing pressures from US-China tech decoupling, which places Korea's semiconductor industry in the crossfire of great power competition.</p>
+<div class="tldr">
+<h3>Core Thesis</h3>
+<p>South Korea is <strong>the textbook case of "extreme midstream vulnerability"</strong> — all inputs depend on imports (lithography, chemicals, raw materials, energy), all outputs require export markets, Korea controls almost no endpoint. The only genuine upstream leverage is the Samsung + SK Hynix HBM duopoly (95%+ of global AI memory), but this narrow asset is drowned by a <em>broad dependency profile</em>: 100% energy imports (via Hormuz), battery materials 70-80% through Chinese processing, advanced-node semiconductors depend on ASML EUV and Japanese photoresist. More dangerously, Korea's strategic ambiguity space is collapsing — the past 20-year "maintain US-Korea security alliance + preserve China market" balancing strategy is nearly unsustainable under tightening US-China tech controls. Every choice has costs: restricting China exports loses the largest market ($28B DRAM/NAND); defying US controls threatens alliance access. HBM is Korea's only "two-way bargaining chip" — can say no to both US (AI compute) and China (supply chain) — but this chip's time value is shorter than five years (Samsung may be replaced by China; Chinese HBM 3/3e development is underway).</p>
+</div>
 
-<h2>Import Dependencies (Critical/High)</h2>
+<h2>I. Structural Profile: The Midstream Trap</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>Korea position</th><th>Structural meaning</th></tr></thead>
+<tbody>
+<tr><td>Memory chips (DRAM/NAND)</td><td>Samsung + SK Hynix hold ~60% globally</td><td>Midstream advantage but constrained by ASML/Japan materials</td></tr>
+<tr><td>HBM (AI memory)</td><td>SK Hynix + Samsung hold 95%+ globally</td><td>Only genuine upstream leverage</td></tr>
+<tr><td>Battery manufacturing (LG, Samsung SDI, SK On)</td><td>Most competitive globally in cells</td><td>But 70-80% of upstream materials from Chinese processing</td></tr>
+<tr><td>Shipbuilding</td><td>Global top 3 (with China, Japan)</td><td>Midstream advantage but oil-price sensitive</td></tr>
+<tr><td>Energy self-sufficiency</td><td>~3%</td><td>Near-total imports (nuclear ~30%)</td></tr>
+<tr><td>Defense</td><td>F-35, THAAD depend on US</td><td>Alliance binding</td></tr>
+<tr><td>Advanced chip production</td><td>Samsung Foundry catching up to TSMC but behind</td><td>ASML EUV dependency</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>Korea vs Japan contrast</strong>: both "midstream" economies, but structurally very different. <em>Japan</em> holds deep irreplaceable monopolies in narrow specialty materials (EUV photoresist, CMP slurry, photomask blanks), enabling it to maintain leverage across multiple negotiations. <em>Korea</em> excels at large-scale precision manufacturing (memory, batteries, displays) but nearly every segment's upstream inputs depend on others — Chinese battery materials, Japanese semiconductor chemicals, Dutch lithography, US design tools. Korea is the model of <strong>"extreme midstream vulnerability"</strong>; Japan is <strong>"midstream with narrow upstream leverage."</strong> The two have fundamentally different bargaining power in the MAD framework.
+</div>
+
+<h2>II. Import Dependencies (Critical/High)</h2>
 <table>
 <thead><tr><th>Source</th><th>Commodity</th><th>Value</th><th>Vulnerability</th></tr></thead>
 <tbody>
@@ -121,9 +283,9 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 <tr><td>China</td><td>Battery Cathode/Anode Materials</td><td>$15.0B</td><td>Critical — LG, Samsung SDI dependency</td></tr>
 <tr><td>China</td><td>Refined Cobalt (battery-grade)</td><td>$4.0B</td><td>Critical — sole refining source</td></tr>
 <tr><td>China</td><td>Lithium Hydroxide/Carbonate</td><td>$6.0B</td><td>Critical — refining monopoly</td></tr>
-<tr><td>Japan</td><td>Hydrogen Fluoride, Photoresists</td><td>$3.2B</td><td>High — semiconductor chemicals</td></tr>
-<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$25.0B</td><td>High — primary energy</td></tr>
-<tr><td>Qatar</td><td>LNG</td><td>$14.0B</td><td>High — gas supply</td></tr>
+<tr><td>Japan</td><td>Hydrogen Fluoride, Photoresists</td><td>$3.2B</td><td>High — restricted in 2019</td></tr>
+<tr><td>Saudi Arabia</td><td>Crude Oil</td><td>$25.0B</td><td>High — via Hormuz</td></tr>
+<tr><td>Qatar</td><td>LNG</td><td>$14.0B</td><td>High — via Hormuz</td></tr>
 <tr><td>Chile</td><td>Lithium Carbonate</td><td>$4.5B</td><td>High — direct mineral source</td></tr>
 <tr><td>DR Congo</td><td>Cobalt</td><td>$2.0B</td><td>High — raw material</td></tr>
 <tr><td>United States</td><td>Defense Systems (F-35, THAAD)</td><td>$8.5B</td><td>High — alliance dependency</td></tr>
@@ -131,7 +293,7 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>Export Leverage</h2>
+<h2>III. Export Leverage</h2>
 <table>
 <thead><tr><th>Destination</th><th>Commodity</th><th>Value</th><th>Leverage Type</th></tr></thead>
 <tbody>
@@ -140,31 +302,143 @@ em { color: #2a9d8f; font-style: normal; font-weight: 500; }
 </tbody>
 </table>
 
-<h2>Chokepoint Exposure</h2>
-<p>South Korea's supply chains transit five major chokepoints: <strong>Strait of Hormuz</strong> (Saudi crude $25B, Qatari LNG $14B — now blockaded), <strong>Strait of Malacca</strong> (Southeast Asian and Middle Eastern routing), <strong>Taiwan Strait</strong> (semiconductor component trade and regional shipping), <strong>Suez Canal</strong> (European and Middle Eastern goods), and <strong>Bab el-Mandeb</strong> (Red Sea energy and goods routing). This is the second-highest chokepoint exposure of any assessed country. The Hormuz blockade directly threatens $39B in annual energy imports with no pipeline alternative — Korea is an <em>island economy</em> in supply chain terms, entirely dependent on maritime shipping.</p>
+<h2>IV. Structural Transmission Chains</h2>
 
-<h2>Key Risks (2026 Context)</h2>
+<h3>Chain 1: Hormuz → Energy + Semiconductor Double Hit</h3>
+<div class="chain-trace">Hormuz blockade
+  ↓
+Korea's $25B Saudi crude + $14B Qatari LNG ($39B/year energy) directly cut
+  ↓
+Korea SPR ~90 days oil / LNG reserves only ~2 weeks
+  ↓
+→ LNG shortage triggers industrial power rationing within 2 weeks
+  ↓
+Simultaneously: Qatari helium offline affects Samsung/SK Hynix semiconductor production
+  ↓
+→ HBM capacity constrained → Nvidia GPU deliveries further delayed
+  ↓
+Korea simultaneously suffers:
+  (a) Energy crisis (industrial shutdown risk)
+  (b) Semiconductor export cliff (own revenue source shrinks)
+  ↓
+Structural economic crisis within 45-90 days</div>
+
+<h3>Chain 2: The 2019 Japan-Korea Precedent — Proof of Midstream Weaponization</h3>
+<p>In 2019 Japan imposed case-by-case review on hydrogen fluoride / photoresist / fluorinated polyimide exports to Korea — the first and to date only use of the <a href="JPN.html">Japanese materials empire's</a> monopoly leverage. Korea's lessons learned:</p>
+<div class="chain-trace">Aug 2019 Japan "case-by-case review" (not outright ban)
+  ↓
+Samsung, SK Hynix inventory pressure: 1-3 months
+  ↓
+Korean government emergency $6B "de-Japanization" investment
+  ↓
+2020-2022 outcomes:
+  - Hydrogen fluoride: ~50% domestic (Soulbrain, SK Materials)
+  - Photoresist: ~15% domestic (Dongjin Semichem slower)
+  - Fluorinated polyimide: rapid substitution (Kolon Industries)
+  ↓
+Conclusion: partial substitution feasible but slow + costly + technical depth gap persists</div>
+<p>Implications for 2026: if Japan, China, or the US implements similar "gradual weaponization" against Korea, Korea has <em>emergency substitution experience</em> accumulated in 2019 — but each new control tests resilience of different product lines.</p>
+
+<h3>Chain 3: US-China Squeeze — Collapse of Strategic Ambiguity</h3>
+<div class="chain-trace">US demand: restrict HBM, DRAM, NAND exports to China
+  ↓
+China's $28B memory market (~30% of Korean memory exports) faces shrinkage
+  ↓
+China retaliation: battery materials export controls, rare earth controls
+  ↓
+Korea's three battery champions risk shutdown
+  ↓
+→ Simultaneously damaged in both semiconductor exports and battery production
+  ↓
+Government must choose:
+  [Path A] Follow US controls → lose China market + face China retaliation
+  [Path B] Defy US → face alliance access risk (F-35, intelligence sharing)
+  ↓
+Both paths have major costs; past 20-year "embrace both" strategy ends</div>
+
+<h2>V. Time-Variant</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>2025</th><th>2028</th><th>2030+</th></tr></thead>
+<tbody>
+<tr><td>HBM global share (Samsung+SK Hynix)</td><td>~90%</td><td>~85% (Micron catching up)</td><td>~75% (China CXMT catching up)</td></tr>
+<tr><td>Battery material China dependency</td><td>70-80%</td><td>60-70% (localization accelerating)</td><td>50-60%</td></tr>
+<tr><td>Advanced-node position</td><td>Samsung 3nm catching TSMC</td><td>2nm Rapidus/Samsung competition</td><td>Possibly further behind TSMC</td></tr>
+<tr><td>Energy import dependency</td><td>~97%</td><td>~95% (nuclear + renewable tweaks)</td><td>~90%</td></tr>
+<tr><td>Working-age population</td><td>~36M</td><td>~34M</td><td>~31M</td></tr>
+<tr><td>Defense % of GDP</td><td>~2.7%</td><td>~3%</td><td>~3%+</td></tr>
+<tr><td>China domestic memory chip share</td><td>~15%</td><td>~25%</td><td>~35%</td></tr>
+</tbody>
+</table>
+
+<div class="insight">
+<strong>HBM leverage half-life</strong>: Korea's HBM monopoly position is <em>shorter</em> than commonly perceived. SK Hynix leads HBM3e in Nvidia qualification, but Samsung + Micron are catching up, and Chinese CXMT's R&D (targeting HBM2e 2027, HBM3 2030) means HBM may move from "duopoly" to "oligopoly" competitive market by 2030 — like DRAM. Korea must <em>maximize</em> using HBM as bargaining chip within this 5-year window, otherwise leverage decays.
+</div>
+
+<h2>VI. Scenarios</h2>
+
+<h3>Scenario A: US Forces HBM Controls on China (2026-2028)</h3>
 <ul>
-<li><strong>Hormuz blockade energy crisis</strong>: $39B in Saudi crude and Qatari LNG directly disrupted; Korea's SPR covers ~90 days of oil but LNG storage is only ~2 weeks; industrial shutdown risk within 45 days of sustained blockade</li>
-<li><strong>Chinese battery material chokepoint</strong>: Samsung SDI and LG Energy Solution depend on Chinese-processed cathode materials, cobalt, and lithium; any Chinese export restriction halts Korean EV battery production</li>
-<li><strong>US-China semiconductor crossfire</strong>: Washington pressures Korea to restrict chip sales to China ($28B DRAM/NAND market); Beijing retaliates with battery material restrictions — Korea loses in both directions</li>
-<li><strong>ASML dependency</strong>: Samsung Foundry's sub-3nm ambitions require continued ASML EUV access; any Dutch export control expansion would halt Samsung's leading-edge chip development</li>
-<li><strong>Japan semiconductor chemical leverage</strong>: 2019 dispute precedent demonstrated Tokyo's willingness to restrict hydrogen fluoride and photoresist exports to Korea</li>
-<li><strong>Taiwan Strait scenario</strong>: Korean semiconductor supply chain depends on TSMC for logic chip inputs and on Taiwan-strait shipping for broader trade; a conflict would sever multiple supply lines simultaneously</li>
+<li><strong>Trigger</strong>: Nvidia H100+ class chips fully banned to China, extends to HBM intermediate products</li>
+<li><strong>Transmission</strong>: Samsung, SK Hynix HBM sales to China plummet → China retaliates (battery materials controls escalate) → Korea's two industrial lines damaged simultaneously → must choose a side</li>
+<li><strong>Falsification conditions</strong>: (i) US accepts "status-quo HBM controls" without expansion; (ii) China self-development of HBM makes controls meaningless</li>
+<li><strong>Structural consequences</strong>: <em>End of Korea's strategic ambiguity era</em>, forced to openly choose camp — the most significant diplomatic turn since the 1960s</li>
 </ul>
 
-<h2>Structural Assessment (Supply Chain Geopolitics Framework)</h2>
-<p>South Korea represents the most extreme case of "midstream vulnerability" in the supply chain geopolitics framework. Korean industry excels at a specific manufacturing tier — taking upstream inputs (lithography systems, chemicals, raw materials, energy) and converting them into world-class intermediate and final goods (memory chips, batteries, displays, ships). But Korea controls almost none of its inputs and has limited ability to dictate terms to its customers. The Samsung-SK Hynix HBM duopoly gives Korea genuine upstream leverage in one narrow domain (AI memory), but this leverage is dwarfed by the breadth of Korean dependencies.</p>
-<p>The battery supply chain illustrates this structural trap precisely. Korea's three battery champions (LG, Samsung SDI, SK On) are globally competitive in cell manufacturing, but 70-80% of their cathode, anode, cobalt, and lithium inputs flow from Chinese processing facilities. Korea has attempted to diversify — direct lithium sourcing from Chile, cobalt from Congo — but the refining step remains Chinese-controlled. This is the supply chain geopolitics insight in action: <em>mining the ore does not confer sovereignty if the refining is monopolized by a geopolitical competitor</em>.</p>
-<p>Korea's revealed preference has been strategic ambiguity — maintaining the US security alliance while preserving the China market ($28B in memory chip exports). But the tightening of US-China tech controls is collapsing the space for ambiguity. Korea is being forced to choose, and every choice costs: restricting China sales loses the largest market; defying US restrictions risks alliance fracture and technology access. This is the structural cost of midstream positioning without upstream control.</p>
-
-<h2>Recommendations</h2>
+<h3>Scenario B: Chinese Battery Material Retaliation Controls (2026-2027)</h3>
 <ul>
-<li><strong>Build domestic battery material processing</strong>: Invest in lithium hydroxide refining, synthetic graphite production, and cobalt sulfate processing in Korea; accept 3-5 year cost premium to break Chinese processing dependency</li>
-<li><strong>Expand LNG diversification urgently</strong>: Secure additional long-term US and Australian LNG contracts; build 4+ weeks of LNG storage capacity (currently ~2 weeks); develop floating storage and regasification units</li>
-<li><strong>Leverage HBM monopoly strategically</strong>: Samsung and SK Hynix control 95%+ of HBM for AI — use this leverage to negotiate supply chain concessions from both US and Chinese customers</li>
-<li><strong>Reduce Japan chemical dependency</strong>: Develop domestic photoresist and hydrogen fluoride production capacity; the 2019 dispute demonstrated that allied suppliers can be unreliable</li>
-<li><strong>Build strategic reserves for battery materials</strong>: Stockpile 6-12 months of cathode precursors, cobalt sulfate, and lithium hydroxide as insurance against Chinese export controls</li>
+<li><strong>Trigger</strong>: Korea joins US critical mineral "friend-shoring" alliance; or restricts semiconductor exports to China</li>
+<li><strong>Transmission</strong>: China imposes controls on Korean lithium hydroxide, cobalt sulfate, graphite → LG/Samsung SDI/SK On production halt risk → battery prices rise globally → US IRA-funded Korean battery plants damaged indirectly</li>
+<li><strong>Falsification conditions</strong>: (i) China avoids escalation to preserve leverage; (ii) Korean domestic processing online before 2028</li>
+<li><strong>Structural consequences</strong>: Accelerates Korean battery material localization — but process painful (3-5 years)</li>
+</ul>
+
+<h3>Scenario C: Taiwan Strait Crisis (2027-2032)</h3>
+<ul>
+<li><strong>Trigger</strong>: See CHN Scenario B</li>
+<li><strong>Korea-side transmission</strong>: (i) TSMC halts → Samsung Foundry sole advanced-node producer (but ASML EUV supply affected); (ii) China supply chain immediately severed; (iii) LNG prices surge; (iv) US forces in Korea may be redeployed</li>
+<li><strong>Falsification conditions</strong>: See CHN report</li>
+<li><strong>Structural consequences</strong>: Korea simultaneously loses largest market (China) and key supply chain node — possibly the greatest single-scenario loss among major economies</li>
+</ul>
+
+<h2>VII. Structural Assessment</h2>
+
+<h3>Structural Meaning of "Extreme Midstream"</h3>
+<p>In the <a href="supply-chain-mad.html">Supply Chain Geopolitics</a> framework, Korea is a textbook case of the <em>most unfavorable position</em>: no upstream resources (minerals, energy), no downstream market control (consumer goods primarily exported), only midstream manufacturing capability where every segment has upstream dependency. The past Korean "miracle" was built on the assumption that <strong>three external conditions simultaneously hold</strong>: (1) free trade (letting midstream manufacturers access global markets); (2) US-Korea alliance (providing security); (3) US-China peaceful coexistence (letting Korea operate in both markets). After 2025 all three conditions are damaged simultaneously.</p>
+
+<h3>HBM — Short-Term Leverage, Not a Long-Term Shield</h3>
+<p>SK Hynix + Samsung HBM duopoly is Korea's genuine upstream leverage — but <em>its time value is limited</em>. Micron, CXMT, Samsung's own competition will make HBM transition from "duopoly" to "oligopoly" competitive market by ~2030 — like DRAM. Korea must, before then: (a) maximize bargaining use (simultaneously pressuring US and China, extracting supply chain concessions); (b) convert HBM profits to upstream investment in other domains (domestic battery materials, domestic photoresist), building more persistent leverage. Otherwise after the HBM window closes, Korea returns to the worst "pure midstream" position.</p>
+
+<h3>Cross-Links with Thematic Reports</h3>
+<ul>
+<li><strong><a href="supply-chain-mad.html">Supply Chain MAD</a></strong>: Korea is the "pulled player" of MAD — caught between US and China, every escalation damages Korean interests. But HBM is the tool Korea can use to pressure both sides</li>
+<li><strong><a href="semiconductor-supply-chain.html">Semiconductor Six-Layer Labyrinth</a></strong>: Korea holds Layer 4 (memory wafers), leads Layer 5 (HBM packaging). But Layer 2 (photoresist, HF) depends on Japan; Layer 3 (ASML EUV) depends on Netherlands</li>
+<li><strong><a href="ai-power-infrastructure.html">AI Physical Constraints</a></strong>: SK Hynix is both an AI industry power-demand source (providing HBM for training models) and a key AI infrastructure supplier — dual identity makes Korea's AI-era role unique</li>
+</ul>
+
+<h2>VIII. Recommendations (By Time Horizon)</h2>
+
+<h3>2026-2028 Emergency</h3>
+<ul>
+<li>Maximize HBM bargaining use — extract key material technology transfers from US, stable battery material supply from China</li>
+<li>Expand LNG reserves to 4+ weeks (currently 2)</li>
+<li>Accelerate battery material localization: lithium hydroxide, synthetic graphite, cobalt sulfate — accept 5-year 3-5% cost premium</li>
+<li>Japanese chemical localization: further reduce dependency on photoresist and hydrogen fluoride beyond 2019 baseline</li>
+</ul>
+
+<h3>2028-2032 Structural Build</h3>
+<ul>
+<li>Decide alignment — delay no longer feasible. Most likely path is "pro-US while retaining economic ties to China" — requires explicit political narrative support</li>
+<li>Samsung Foundry 2nm volume production must succeed — become only advanced-node producer outside TSMC</li>
+<li>Shipbuilding structural upgrade — focus on LNG carriers, warships, and other high-value niches</li>
+<li>Nuclear expansion (current 30%+ continuing to rise) — hedge energy dependency</li>
+</ul>
+
+<h3>2032+ Long-Term Repositioning</h3>
+<ul>
+<li>Population collapse (TFR around 0.8) is the most fundamental constraint — immigration + automation + selective reconstruction of gendered culture</li>
+<li>AI supply chain localization — leverage HBM position to build Korean AI ecosystem (rather than merely being component supplier to Nvidia/US AI)</li>
+<li>Deepen Japan cooperation — Korea-Japan as "upstream industrial suppliers" countering Chinese mass manufacturing and US technology sovereignty</li>
 </ul>
 
 </section>
